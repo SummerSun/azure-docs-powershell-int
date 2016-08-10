@@ -31,6 +31,8 @@ if(Test-Path $levelOneToc)
   Remove-Item $levelOneToc
 }
 
+Write-Host "Level one toc $levelOneToc"
+
 Add-Content -Path $levelOneToc -Value "- name: AzurePowerShell"
 Add-Content -Path $levelOneToc -Value "  href: Index.md"
 Add-Content -Path $levelOneToc -Value "  items:"
@@ -41,6 +43,9 @@ if(Test-Path $levelTwoToc)
 {
   Remove-Item $levelTwoToc
 }
+
+Write-Host "Level two toc $levelTwoToc"
+Write-Host "Start writing..."
 
 foreach($folder in $folders)
 {
@@ -69,3 +74,5 @@ foreach($folder in $folders)
     }
   }
 }
+
+Write-Host "Toc was generated successfully."
