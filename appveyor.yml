@@ -3,7 +3,8 @@ environment:
     secure: 72vtK7YlrRVopAblPj9s/2v8VhrFOw8gBBh3cZlCJkM7V+5CT16LGsyPEbMRrD+M
 
 build_script:
-  - ps: .\GenerateToc.ps1
+  - ps: .\ValidateFiles.ps1
+  - ps: .\GenerateToc.ps1 -DocFolder AzurePowerShell
 
 on_success:
   - git clone -q --branch=%TargetBranch% %ContentRepo% %TEMP%\AzurePowerShell

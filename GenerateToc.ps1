@@ -1,20 +1,30 @@
 param
 (
     [string] $RootFolderPath,
-    [string] $FileExtension
+    [string] $Extension,
+    [string] $DocFolder
 )
+
+# must point out the specified doc folder name
+if($DocFolder -eq "")
+{
+  Write-Host 'No documentation folder found'
+  exit
+}
+
 # use current directory if no setting
 if($RootFolderPath -eq "")
 {
   $RootFolderPath = (Get-Item -Path ".\" -Verbose).FullName
 }
+
 # generate toc for .md files if no setting
-if($FileExtension -eq "")
+if($Extension -eq "")
 {
-  $FileExtension = ".md"
+  $Extension = ".md"
 }
 
-$docPath = Join-Path $RootFolderPath "AzurePowerShell"
+$docPath = Join-Path $RootFolderPath $DocFolder
 
 $folders = Get-ChildItem $docPath | select-object name
 
@@ -60,7 +70,7 @@ foreach($folder in $folders)
     Add-Content -Path $levelOneToc -Value ("    - name: " + $folderName)
     Add-Content -Path $levelOneToc -Value ("      href: AzurePowerShell/" + $folderName+ "/" + $folderName + ".md")
 
-    $files = (Get-ChildItem (Join-Path $docPath $folderName) -Recurse) | Where-Object { $_.Extension -eq $FileExtension }
+    $files = (Get-ChildItem (Join-Path $docPath $folderName) -Recurse) | Where-Object { $_.Extension -eq $Extension }
     
     foreach($file in $files)
     {
