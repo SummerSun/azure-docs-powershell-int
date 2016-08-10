@@ -6,10 +6,10 @@ build_script:
   - ps: .\GenerateToc.ps1
 
 on_success:
-  - git clone -q --branch=%TargetBranch% %ContentRepo% %TEMP%\POCTest
-  - copy %APPVEYOR_BUILD_FOLDER%\toc.yml %TEMP%\POCTest\
-  - robocopy %APPVEYOR_BUILD_FOLDER%\AzurePowerShell %TEMP%\POCTest\AzurePowerShell /e & IF %ERRORLEVEL% LEQ 1 exit 0
-  - cd %TEMP%\POCTest
+  - git clone -q --branch=%TargetBranch% %ContentRepo% %TEMP%\AzurePowerShell
+  - copy %APPVEYOR_BUILD_FOLDER%\toc.yml %TEMP%\AzurePowerShell
+  - robocopy %APPVEYOR_BUILD_FOLDER%\%DocFolder% %TEMP%\AzurePowerShell\%DocFolder% /e & IF %ERRORLEVEL% LEQ 1 exit 0
+  - cd %TEMP%\AzurePowerShell
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
   - git config --global user.email %Email%
