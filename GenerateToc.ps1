@@ -1,0 +1,71 @@
+param
+(
+    [string] $RootFolderPath,
+    [string] $FileExtension
+)
+# use current directory if no setting
+if($RootFolderPath -eq "")
+{
+  $RootFolderPath = (Get-Item -Path ".\" -Verbose).FullName
+}
+# generate toc for .md files if no setting
+if($FileExtension -eq "")
+{
+  $FileExtension = ".md"
+}
+
+$docPath = Join-Path $RootFolderPath "AzurePowerShell"
+
+$folders = Get-ChildItem $docPath | select-object name
+
+if($folders -eq $null -or $folders.count -lt 1)
+{
+  Write-Host "No documentation folders inside the given root folder"
+  exit
+}
+
+$levelOneToc = Join-Path $RootFolderPath "toc.yml"
+
+if(Test-Path $levelOneToc)
+{
+  Remove-Item $levelOneToc
+}
+
+Add-Content -Path $levelOneToc -Value "- name: AzurePowerShell"
+Add-Content -Path $levelOneToc -Value "  href: Index.md"
+Add-Content -Path $levelOneToc -Value "  items:"
+
+$levelTwoToc = Join-Path $docPath "toc.yml"
+
+if(Test-Path $levelTwoToc)
+{
+  Remove-Item $levelTwoToc
+}
+
+foreach($folder in $folders)
+{
+  $folderName = $folder.name
+
+  Add-Content -Path $levelTwoToc -Value ("- name:" + $folderName)
+  Add-Content -Path $levelTwoToc -Value ("  href: " + $folderName + "/" + $folderName + ".md")
+  Add-Content -Path $levelTwoToc -Value "  items:"
+
+  if (Test-Path (Join-Path $docPath $folderName) -PathType Container)
+  {
+    Add-Content -Path $levelOneToc -Value ("    - name: " + $folderName)
+    Add-Content -Path $levelOneToc -Value ("      href: AzurePowerShell/" + $folderName+ "/" + $folderName + ".md")
+
+    $files = (Get-ChildItem (Join-Path $docPath $folderName) -Recurse) | Where-Object { $_.Extension -eq $FileExtension }
+    
+    foreach($file in $files)
+    {
+      $fileName = $file.name
+      
+      if($fileName.substring(0, $fileName.LastIndexOf('.')) -ne $folderName)
+      {
+        Add-Content -Path $levelTwoToc -Value ("    - name: " + $fileName.substring(0, $fileName.IndexOf('.')))
+        Add-Content -Path $levelTwoToc -Value ("      href: " + $folderName + "/" + $fileName)
+      }
+    }
+  }
+}

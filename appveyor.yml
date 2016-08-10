@@ -1,0 +1,20 @@
+environment:
+  github_access_token:
+    secure: 72vtK7YlrRVopAblPj9s/2v8VhrFOw8gBBh3cZlCJkM7V+5CT16LGsyPEbMRrD+M
+
+build_script:
+  - GenerateToc.ps1
+  
+artifacts:
+  - path: poc\artifacts
+
+on_success:
+  - git clone -q --branch=master https://github.com/SummerSun/POC.git %TEMP%\POC
+  - robocopy %APPVEYOR_BUILD_FOLDER%\poc\artifacts %TEMP%\POC /e & IF %ERRORLEVEL% LEQ 1 exit 0
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email victoriasqq@gmail.com
+  - git config --global user.name Summer
+  - git add -A
+  - git commit -m "commit from appveyor with generated toc"
+  - git push origin master
