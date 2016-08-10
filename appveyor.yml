@@ -1,6 +1,6 @@
 environment:
   github_access_token:
-    secure: 72vtK7YlrRVopAblPj9s/2v8VhrFOw8gBBh3cZlCJkM7V+5CT16LGsyPEbMRrD+M
+    secure: NB58hfge6r/BINkfthdBUVYiKPzkqjHgjdxN+qKYCt5XJhIFgvYjRQolcub9pBPh
 
 build_script:
   - ps: .\ValidateFiles.ps1
