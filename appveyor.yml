@@ -3,12 +3,13 @@ environment:
     secure: NB58hfge6r/BINkfthdBUVYiKPzkqjHgjdxN+qKYCt5XJhIFgvYjRQolcub9pBPh
 
 build_script:
-  - ps: .\ValidateFiles.ps1
+  - ps: .\ValidateFiles.ps1 -DocFolder AzurePowerShell
   - ps: .\GenerateToc.ps1 -DocFolder AzurePowerShell
 
 on_success:
   - git clone -q --branch=%TargetBranch% %ContentRepo% %TEMP%\AzurePowerShell
   - copy %APPVEYOR_BUILD_FOLDER%\toc.yml %TEMP%\AzurePowerShell
+  - if exist %TEMP%\AzurePowerShell\%DocFolder% rmdir /s /q %TEMP%\AzurePowerShell\%DocFolder%
   - robocopy %APPVEYOR_BUILD_FOLDER%\%DocFolder% %TEMP%\AzurePowerShell\%DocFolder% /e & IF %ERRORLEVEL% LEQ 1 exit 0
   - cd %TEMP%\AzurePowerShell
   - git config --global credential.helper store
