@@ -19,6 +19,15 @@ Set-AzureServiceADDomainExtension [[-ServiceName] <String>] [[-Slot] <String>] [
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
+### JoinDomainUsingJoinOption
+```
+Set-AzureServiceADDomainExtension [[-ServiceName] <String>] [[-Slot] <String>] [[-Role] <String[]>]
+ [[-X509Certificate] <X509Certificate2>] [[-ThumbprintAlgorithm] <String>] [-DomainName] <String> [-Restart]
+ [[-Credential] <PSCredential>] [[-UnjoinDomainCredential] <PSCredential>] [-JoinOption] <UInt32>
+ [[-OUPath] <String>] [[-Version] <String>] [[-ExtensionId] <String>] [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
 ### WorkGroupName
 ```
 Set-AzureServiceADDomainExtension [[-ServiceName] <String>] [[-Slot] <String>] [[-Role] <String[]>]
@@ -27,11 +36,11 @@ Set-AzureServiceADDomainExtension [[-ServiceName] <String>] [[-Slot] <String>] [
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### JoinDomainUsingJoinOption
+### JoinDomainUsingEnumOptionsAndThumbprint
 ```
 Set-AzureServiceADDomainExtension [[-ServiceName] <String>] [[-Slot] <String>] [[-Role] <String[]>]
- [[-X509Certificate] <X509Certificate2>] [[-ThumbprintAlgorithm] <String>] [-DomainName] <String> [-Restart]
- [[-Credential] <PSCredential>] [[-UnjoinDomainCredential] <PSCredential>] [-JoinOption] <UInt32>
+ [-CertificateThumbprint] <String> [[-ThumbprintAlgorithm] <String>] [-DomainName] <String> [-Restart]
+ [[-Credential] <PSCredential>] [[-UnjoinDomainCredential] <PSCredential>] [[-Options] <JoinOptions>]
  [[-OUPath] <String>] [[-Version] <String>] [[-ExtensionId] <String>] [-Profile <AzureSMProfile>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
@@ -49,15 +58,6 @@ Set-AzureServiceADDomainExtension [[-ServiceName] <String>] [[-Slot] <String>] [
 Set-AzureServiceADDomainExtension [[-ServiceName] <String>] [[-Slot] <String>] [[-Role] <String[]>]
  [-CertificateThumbprint] <String> [[-ThumbprintAlgorithm] <String>] [-DomainName] <String> [-Restart]
  [[-Credential] <PSCredential>] [[-UnjoinDomainCredential] <PSCredential>] [-JoinOption] <UInt32>
- [[-OUPath] <String>] [[-Version] <String>] [[-ExtensionId] <String>] [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
-### JoinDomainUsingEnumOptionsAndThumbprint
-```
-Set-AzureServiceADDomainExtension [[-ServiceName] <String>] [[-Slot] <String>] [[-Role] <String[]>]
- [-CertificateThumbprint] <String> [[-ThumbprintAlgorithm] <String>] [-DomainName] <String> [-Restart]
- [[-Credential] <PSCredential>] [[-UnjoinDomainCredential] <PSCredential>] [[-Options] <JoinOptions>]
  [[-OUPath] <String>] [[-Version] <String>] [[-ExtensionId] <String>] [-Profile <AzureSMProfile>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
@@ -128,7 +128,7 @@ Specifies an x509 certificate that when specified will be automatically uploaded
 
 ```yaml
 Type: X509Certificate2
-Parameter Sets: JoinDomainUsingEnumOptions, WorkGroupName, JoinDomainUsingJoinOption
+Parameter Sets: JoinDomainUsingEnumOptions, JoinDomainUsingJoinOption, WorkGroupName
 Aliases: 
 
 Required: False
@@ -159,7 +159,7 @@ Specifies the AD domain name.
 
 ```yaml
 Type: String
-Parameter Sets: JoinDomainUsingEnumOptions, JoinDomainUsingJoinOption, JoinDomainUsingJoinOptionAndThumbprint, JoinDomainUsingEnumOptionsAndThumbprint
+Parameter Sets: JoinDomainUsingEnumOptions, JoinDomainUsingJoinOption, JoinDomainUsingEnumOptionsAndThumbprint, JoinDomainUsingJoinOptionAndThumbprint
 Aliases: 
 
 Required: True
@@ -205,7 +205,7 @@ Specifies the credentials (user name and password) to unjoin the AD domain.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: JoinDomainUsingEnumOptions, JoinDomainUsingJoinOption, JoinDomainUsingJoinOptionAndThumbprint, JoinDomainUsingEnumOptionsAndThumbprint
+Parameter Sets: JoinDomainUsingEnumOptions, JoinDomainUsingJoinOption, JoinDomainUsingEnumOptionsAndThumbprint, JoinDomainUsingJoinOptionAndThumbprint
 Aliases: 
 
 Required: False
@@ -235,7 +235,7 @@ Specifies the Organization Unit (OU) path for the AD domain join operation.
 
 ```yaml
 Type: String
-Parameter Sets: JoinDomainUsingEnumOptions, JoinDomainUsingJoinOption, JoinDomainUsingJoinOptionAndThumbprint, JoinDomainUsingEnumOptionsAndThumbprint
+Parameter Sets: JoinDomainUsingEnumOptions, JoinDomainUsingJoinOption, JoinDomainUsingEnumOptionsAndThumbprint, JoinDomainUsingJoinOptionAndThumbprint
 Aliases: 
 
 Required: False
@@ -358,7 +358,7 @@ If you do not specify a certificate, this cmdlet creates a certificate.
 
 ```yaml
 Type: String
-Parameter Sets: WorkGroupNameThumbprint, JoinDomainUsingJoinOptionAndThumbprint, JoinDomainUsingEnumOptionsAndThumbprint
+Parameter Sets: JoinDomainUsingEnumOptionsAndThumbprint, WorkGroupNameThumbprint, JoinDomainUsingJoinOptionAndThumbprint
 Aliases: 
 
 Required: True

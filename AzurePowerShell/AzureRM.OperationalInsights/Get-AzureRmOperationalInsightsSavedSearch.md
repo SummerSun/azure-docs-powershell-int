@@ -6,6 +6,7 @@ schema: 2.0.0
 
 # Get-AzureRmOperationalInsightsSavedSearch
 ## SYNOPSIS
+Get existing SavedSearch under given Workspace.
 
 ## SYNTAX
 
@@ -15,6 +16,7 @@ Get-AzureRmOperationalInsightsSavedSearch [-ResourceGroupName] <String> [-Worksp
 ```
 
 ## DESCRIPTION
+The Get-AzureRmOperationalInsightsSavedSearch cmdlet get existing saved search under given Workspace.
 
 ## EXAMPLES
 

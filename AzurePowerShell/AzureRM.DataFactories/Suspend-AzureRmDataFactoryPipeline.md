@@ -12,14 +12,13 @@ Suspends a pipeline in Data Factory.
 
 ### ByFactoryName (Default)
 ```
-Suspend-AzureRmDataFactoryPipeline [-Force] [-Name] <String> [-DataFactoryName] <String>
- [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
+Suspend-AzureRmDataFactoryPipeline [-Name] <String> [-DataFactoryName] <String> [-ResourceGroupName] <String>
+ [-WhatIf] [-Confirm]
 ```
 
 ### ByFactoryObject
 ```
-Suspend-AzureRmDataFactoryPipeline [-Force] [-Name] <String> [-DataFactory] <PSDataFactory> [-WhatIf]
- [-Confirm]
+Suspend-AzureRmDataFactoryPipeline [-Name] <String> [-DataFactory] <PSDataFactory> [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -74,21 +73,6 @@ Required: True
 Position: 2
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Indicates that this cmdlet suspends a pipeline without prompting you for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -173,4 +157,6 @@ Keywords: azure, azurerm, arm, resource, management, manager, data, factories
 [Resume-AzureRmDataFactoryPipeline]()
 
 [Set-AzureRmDataFactoryPipelineActivePeriod]()
+
+[]()
 

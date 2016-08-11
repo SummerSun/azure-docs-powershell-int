@@ -11,7 +11,7 @@ Deletes a user account from a Batch compute node.
 ## SYNTAX
 
 ```
-Remove-AzureBatchComputeNodeUser [-PoolId] <String> [-ComputeNodeId] <String> [-Name] <String> [-Force]
+Remove-AzureBatchComputeNodeUser [-PoolId] <String> [-ComputeNodeId] <String> [-Name] <String>
  -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
 ```
 
@@ -62,21 +62,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -21,13 +21,6 @@ Get-AzureRmResource -ResourceId <String> [-ExpandProperties] [-ODataQuery <Strin
  [-Pre]
 ```
 
-### Get a resource by name and type.
-```
-Get-AzureRmResource [-ResourceName <String>] [-ResourceType <String>] [-ExtensionResourceName <String>]
- [-ExtensionResourceType <String>] [-ExpandProperties] [-IsCollection] [-ODataQuery <String>]
- [-ApiVersion <String>] [-Pre]
-```
-
 ### Lists the resources based on the specified scope at the tenant level.
 ```
 Get-AzureRmResource [-ResourceName <String>] [-ResourceType <String>] [-ExtensionResourceName <String>]
@@ -54,6 +47,13 @@ Get-AzureRmResource -ResourceName <String> -ResourceType <String> [-ExtensionRes
 Get-AzureRmResource [-ResourceName <String>] [-ExtensionResourceName <String>]
  [-ExtensionResourceType <String>] [-ExpandProperties] [-IsCollection] [-ODataQuery <String>]
  [-ResourceGroupName <String>] [-ApiVersion <String>] [-Pre]
+```
+
+### Get a resource by name and type.
+```
+Get-AzureRmResource [-ResourceName <String>] [-ResourceType <String>] [-ExtensionResourceName <String>]
+ [-ExtensionResourceType <String>] [-ExpandProperties] [-IsCollection] [-ODataQuery <String>]
+ [-ApiVersion <String>] [-Pre]
 ```
 
 ### Get resource collection
@@ -192,7 +192,7 @@ For example: Get-AzureRmResource | Where-Object Name -eq "ConsotoLabWeb"
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\>Get-AzureRmResource -Tag @{Name="Department";Value="IT"}
+PS C:\>Get-AzureRmResource -Tag @{Department="IT"}
 ```
 
 This command gets resources that have a tag named "Department with a value of "IT".
@@ -271,7 +271,7 @@ By default, GetAzureResource gets all resources in the subscription.
 
 ```yaml
 Type: String
-Parameter Sets: Get a resource by name and type., Lists the resources based on the specified scope at the tenant level.
+Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get a resource by name and type.
 Aliases: 
 
 Required: False
@@ -337,13 +337,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
-The extension resource name.
+The extension resource type.
 e.g.
-to specify a database MyServer/MyDatabase.
+Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
-Parameter Sets: Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get resource by name, group and type, Get a single resource at the tenant level., Get resource by name and group
+Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get resource by name, group and type, Get a single resource at the tenant level., Get resource by name and group, Get a resource by name and type.
 Aliases: 
 
 Required: False
@@ -360,7 +360,7 @@ Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
-Parameter Sets: Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get resource by name, group and type, Get a single resource at the tenant level., Get resource by name and group
+Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get resource by name, group and type, Get a single resource at the tenant level., Get resource by name and group, Get a resource by name and type.
 Aliases: 
 
 Required: False
@@ -387,7 +387,7 @@ When specified, ensures that the query is run against a collection instead of a 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get a single resource at the tenant level., Get resource by name and group, Get resource collection
+Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get a single resource at the tenant level., Get resource by name and group, Get a resource by name and type., Get resource collection
 Aliases: 
 
 Required: False
@@ -449,7 +449,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get resource by name and group
+Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get resource by name and group, Get a resource by name and type.
 Aliases: Name
 
 Required: False

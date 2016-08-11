@@ -10,10 +10,17 @@ Updates an existing resource lock.
 
 ## SYNTAX
 
-### A lock at the subscription resource scope. (Default)
+### A lock at the specified scope. (Default)
 ```
 Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -ResourceName <String> -ResourceType <String> [-ApiVersion <String>] [-Pre]
+ -Scope <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### A lock at the tenant resource scope.
+```
+Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
+ -ResourceName <String> -ResourceType <String> [-TenantLevel] [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -24,17 +31,17 @@ Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <S
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
+### A lock at the subscription resource scope.
+```
+Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
+ -ResourceName <String> -ResourceType <String> [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
 ### A lock at the resource group resource scope.
 ```
 Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
  -ResourceName <String> -ResourceType <String> -ResourceGroupName <String> [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
-### A lock at the tenant resource scope.
-```
-Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -ResourceName <String> -ResourceType <String> [-TenantLevel] [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -43,13 +50,6 @@ Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <S
 Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
  [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
  [-WhatIf] [-Confirm]
-```
-
-### A lock at the specified scope.
-```
-Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -Scope <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### A lock, by Id.
@@ -127,7 +127,7 @@ The name of the lock.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the resource group scope., A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription scope., A lock at the specified scope.
+Parameter Sets: A lock at the specified scope., A lock at the tenant resource scope., A lock at the resource group scope., A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the subscription scope.
 Aliases: ExtensionResourceName, Name
 
 Required: True
@@ -144,7 +144,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the tenant resource scope., A lock at the subscription resource scope., A lock at the resource group resource scope.
 Aliases: 
 
 Required: True
@@ -161,7 +161,7 @@ Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the tenant resource scope., A lock at the subscription resource scope., A lock at the resource group resource scope.
 Aliases: 
 
 Required: True

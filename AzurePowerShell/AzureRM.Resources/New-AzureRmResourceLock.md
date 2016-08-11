@@ -10,10 +10,17 @@ Create a new resource lock.
 
 ## SYNTAX
 
-### A lock at the subscription resource scope. (Default)
+### A lock at the specified scope. (Default)
 ```
 New-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -ResourceName <String> -ResourceType <String> [-ApiVersion <String>] [-Pre]
+ -Scope <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### A lock at the tenant resource scope.
+```
+New-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
+ -ResourceName <String> -ResourceType <String> [-TenantLevel] [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -24,17 +31,17 @@ New-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <S
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
+### A lock at the subscription resource scope.
+```
+New-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
+ -ResourceName <String> -ResourceType <String> [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
 ### A lock at the resource group resource scope.
 ```
 New-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
  -ResourceName <String> -ResourceType <String> -ResourceGroupName <String> [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
-### A lock at the tenant resource scope.
-```
-New-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -ResourceName <String> -ResourceType <String> [-TenantLevel] [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -43,13 +50,6 @@ New-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <S
 New-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
  [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
  [-WhatIf] [-Confirm]
-```
-
-### A lock at the specified scope.
-```
-New-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -Scope <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### A lock, by Id.
@@ -61,8 +61,8 @@ New-AzureRmResourceLock -LockLevel <LockLevel> [-LockNotes <String>] [-Force] -L
 
 ## DESCRIPTION
 Create a new resource lock.
-Resource Locks are useful to prevent accidental deletions of your azure resources.
-Once a lock is placed on a resource, it can't be deleted unless the lock is removed.
+Resource Lock is useful to prevent accidental deletion or update of your azure resource.
+Once a lock is placed on a resource, based on lock level it can't be deleted or updated unless the lock is removed.
 
 If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
@@ -80,9 +80,12 @@ Create a new resource lock on a website
 ## PARAMETERS
 
 ### -LockLevel
-TThe level of the lock.
-The currently supported lock level is "CannotDelete".
-When this level is set on a resource, that resource cannont be deleted unless the lock is removed.
+The level of the lock.
+The currently supported lock levels are "CannotDelete" and "ReadOnly".
+
+CannotDelete - When this level is set on a resource, that resource cannot be deleted unless the lock is removed.
+
+ReadOnly - When this level is set on a resource, that resource cannot updated or deleted unless the lock is removed.
 
 ```yaml
 Type: LockLevel
@@ -132,7 +135,7 @@ The name of the lock.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the resource group scope., A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription scope., A lock at the specified scope.
+Parameter Sets: A lock at the specified scope., A lock at the tenant resource scope., A lock at the resource group scope., A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the subscription scope.
 Aliases: ExtensionResourceName, Name
 
 Required: True
@@ -149,7 +152,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the tenant resource scope., A lock at the subscription resource scope., A lock at the resource group resource scope.
 Aliases: 
 
 Required: True
@@ -166,7 +169,7 @@ Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the tenant resource scope., A lock at the subscription resource scope., A lock at the resource group resource scope.
 Aliases: 
 
 Required: True

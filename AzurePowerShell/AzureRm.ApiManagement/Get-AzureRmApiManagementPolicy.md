@@ -23,18 +23,18 @@ Get-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <Strin
  [-Confirm]
 ```
 
-### API level
-```
-Get-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] [-SaveAs <String>]
- -ApiId <String> [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
-```
-
 ### Operation level
 ```
 Get-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] [-SaveAs <String>]
  -ApiId <String> -OperationId <String> [-Force] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### API level
+```
+Get-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] [-SaveAs <String>]
+ -ApiId <String> [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
+ [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -171,7 +171,7 @@ This parameters is required.
 
 ```yaml
 Type: String
-Parameter Sets: API level, Operation level
+Parameter Sets: Operation level, API level
 Aliases: 
 
 Required: True

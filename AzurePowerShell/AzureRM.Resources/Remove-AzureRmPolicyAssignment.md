@@ -12,13 +12,13 @@ Removes the specified policy assignment
 
 ### The policy assignment name parameter set. (Default)
 ```
-Remove-AzureRmPolicyAssignment -Name <String> -Scope <String> [-Force] [-ApiVersion <String>] [-Pre]
+Remove-AzureRmPolicyAssignment -Name <String> -Scope <String> [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### The policy assignment Id parameter set.
 ```
-Remove-AzureRmPolicyAssignment -Id <String> [-Force] [-ApiVersion <String>] [-Pre]
+Remove-AzureRmPolicyAssignment -Id <String> [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -79,21 +79,6 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Do not ask for confirmation
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

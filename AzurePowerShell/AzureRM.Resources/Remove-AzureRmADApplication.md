@@ -11,7 +11,8 @@ Deletes the azure active directory application.
 ## SYNTAX
 
 ```
-Remove-AzureRmADApplication -ApplicationObjectId <Guid> [-Force] [-WhatIf] [-Confirm]
+Remove-AzureRmADApplication -ObjectId <Guid> [-Force] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -23,15 +24,15 @@ Deletes the azure active directory application.
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\> Remove-AzureRmADApplication -ApplicationObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 -Force
+PS C:\> Remove-AzureRmADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 -Force
 ```
 
 Deletes the azure active directory application.
 
 ## PARAMETERS
 
-### -ApplicationObjectId
-@{Text=}
+### -ObjectId
+The object id of the application to delete.
 
 ```yaml
 Type: Guid
@@ -46,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}
+Switch to delete an application without a confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -60,13 +61,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -InformationAction
+@{Text=}
 
 ```yaml
-Type: SwitchParameter
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: cf
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
 
 Required: False
 Position: Named
@@ -76,12 +92,27 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-{{Fill WhatIf Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -100,4 +131,10 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 ## RELATED LINKS
 
 [New-AzureRmADApplication]()
+
+[Get-AzureRmADApplication]()
+
+[Set-AzureRmADApplication]()
+
+[Remove-AzureRmADAppCredential]()
 

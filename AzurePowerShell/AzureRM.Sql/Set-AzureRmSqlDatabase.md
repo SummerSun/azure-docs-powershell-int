@@ -12,9 +12,9 @@ Sets properties for an Azure SQL database, or moves an existing database into an
 
 ```
 Set-AzureRmSqlDatabase [-DatabaseName] <String> [-MaxSizeBytes <Int64>] [-Edition <DatabaseEdition>]
- [-RequestedServiceObjectiveName <String>] [-ElasticPoolName <String>]
- [-Tags <System.Collections.Generic.Dictionary`2[System.String,System.String]>] [-ServerName] <String>
- [-ResourceGroupName] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-RequestedServiceObjectiveName <String>] [-ElasticPoolName <String>] [-Tags <Hashtable>]
+ [-ServerName] <String> [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -167,12 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies a dictionary of tags that this cmdlet associates with the new server.
+Specifies a hashtable of tags that this cmdlet associates with the new server.
 
 ```yaml
-Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases: Tag
 
 Required: False
 Position: Named

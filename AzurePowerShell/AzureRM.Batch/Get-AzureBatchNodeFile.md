@@ -16,15 +16,15 @@ Get-AzureBatchNodeFile [-PoolId] <String> [-ComputeNodeId] <String> [[-Name] <St
  -BatchContext <BatchAccountContext>
 ```
 
+### Task_Id
+```
+Get-AzureBatchNodeFile -JobId <String> -TaskId <String> [[-Name] <String>] -BatchContext <BatchAccountContext>
+```
+
 ### Task_ODataFilter
 ```
 Get-AzureBatchNodeFile -JobId <String> -TaskId <String> [-Filter <String>] [-MaxCount <Int32>] [-Recursive]
  -BatchContext <BatchAccountContext>
-```
-
-### Task_Id
-```
-Get-AzureBatchNodeFile -JobId <String> -TaskId <String> [[-Name] <String>] -BatchContext <BatchAccountContext>
 ```
 
 ### ParentTask
@@ -216,7 +216,7 @@ Specifies the ID of the job that contains the target task.
 
 ```yaml
 Type: String
-Parameter Sets: Task_ODataFilter, Task_Id
+Parameter Sets: Task_Id, Task_ODataFilter
 Aliases: 
 
 Required: True
@@ -311,7 +311,7 @@ Specifies the ID of the task for which this cmdlet gets properties of node files
 
 ```yaml
 Type: String
-Parameter Sets: Task_ODataFilter, Task_Id
+Parameter Sets: Task_Id, Task_ODataFilter
 Aliases: 
 
 Required: True

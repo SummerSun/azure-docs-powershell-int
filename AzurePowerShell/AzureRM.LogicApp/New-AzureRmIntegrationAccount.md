@@ -16,8 +16,6 @@ New-AzureRmIntegrationAccount -ResourceGroupName <String> -Name <String> -Locati
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The New-AzureRmIntegrationAccount cmdlet creates an integration account and returns an object that represents the integration account.
 Use this cmdlet to create a new integration account.
 You can create an integration account with a name, location, resource group name and SKU name .
@@ -69,7 +67,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -140,13 +138,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -155,13 +153,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

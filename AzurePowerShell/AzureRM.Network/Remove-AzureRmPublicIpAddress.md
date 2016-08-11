@@ -20,12 +20,14 @@ The Remove-AzureRmPublicIpAddress cmdlet removes an Azure public IP address.
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
+### --------------------------  1: Remove a public IP address resource  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
-
+Remove-AzureRmPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName
 ```
+
+This command removes the public IP address resource named $publicIpName in the resource group $rgName.
 
 ## PARAMETERS
 
@@ -120,13 +122,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -135,13 +137,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

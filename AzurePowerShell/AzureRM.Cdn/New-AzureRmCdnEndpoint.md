@@ -6,21 +6,32 @@ schema: 2.0.0
 
 # New-AzureRmCdnEndpoint
 ## SYNOPSIS
-Creates a Cdn endpoint
+Creates a CDN endpoint.
 
 ## SYNTAX
 
+### Parameter Set for fields parameters (Default)
 ```
 New-AzureRmCdnEndpoint -EndpointName <String> -ProfileName <String> -ResourceGroupName <String>
  -Location <String> [-OriginHostHeader <String>] [-OriginPath <String>] [-ContentTypesToCompress <String[]>]
  [-IsCompressionEnabled <Boolean>] [-IsHttpAllowed <Boolean>] [-IsHttpsAllowed <Boolean>]
  [-QueryStringCachingBehavior <PSQueryStringCachingBehavior>] -OriginName <String> -OriginHostName <String>
  [-HttpPort <Int32>] [-HttpsPort <Int32>] [-Tags <Hashtable>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### Parameter Set for object parameters
+```
+New-AzureRmCdnEndpoint -EndpointName <String> -CdnProfile <PSProfile> [-OriginHostHeader <String>]
+ [-OriginPath <String>] [-ContentTypesToCompress <String[]>] [-IsCompressionEnabled <Boolean>]
+ [-IsHttpAllowed <Boolean>] [-IsHttpsAllowed <Boolean>]
+ [-QueryStringCachingBehavior <PSQueryStringCachingBehavior>] -OriginName <String> -OriginHostName <String>
+ [-HttpPort <Int32>] [-HttpsPort <Int32>] [-Tags <Hashtable>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-Creates a Cdn endpoint
+Creates a CDN endpoint.
 
 ## EXAMPLES
 
@@ -34,7 +45,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -EndpointName
-The name of the endpoint
+The name of the endpoint.
 
 ```yaml
 Type: String
@@ -49,7 +60,158 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the profile
+The name of the profile.
+
+```yaml
+Type: String
+Parameter Sets: Parameter Set for fields parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+The name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: Parameter Set for fields parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+The resource location of the endpoint.
+
+```yaml
+Type: String
+Parameter Sets: Parameter Set for fields parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OriginHostHeader
+The host header the endpoint will send with requests to the origin.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OriginPath
+The path to the assets the origin server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentTypesToCompress
+The content types to compress from the edge node to client.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsCompressionEnabled
+Indicates if compression is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsHttpAllowed
+Indicates if HTTP traffic is allowed.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsHttpsAllowed
+Indicates if HTTPS traffic is allowed.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -QueryStringCachingBehavior
+Determines how the CDN caches content when a query string parameter is present in the request. 
+Valid values are IgnoreQueryString, BypassCaching, and UseQueryString.
+
+```yaml
+Type: PSQueryStringCachingBehavior
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OriginName
+The display name of the origin.
 
 ```yaml
 Type: String
@@ -63,8 +225,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-The name of the resource group
+### -OriginHostName
+The host name (address) of the origin.
 
 ```yaml
 Type: String
@@ -72,6 +234,51 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPort
+The HTTP port on the origin.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpsPort
+The HTTPS port on the origin.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tags
+The tags associated with this resource.
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
@@ -108,28 +315,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Location
-The resource location of the endpoint
+### -CdnProfile
+The CDN profile object to which the endpoint will be added.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: PSProfile
+Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
 Required: True
 Position: Named
 Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -OriginHostHeader
-The origin host head of the endpoint
+### -Confirm
+{{Fill Confirm Description}}
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
@@ -138,163 +345,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OriginPath
-The path of the origin
+### -WhatIf
+{{Fill WhatIf Description}}
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContentTypesToCompress
-The content type to compress from the edge node to client
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsCompressionEnabled
-Is compression enabled or not
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsHttpAllowed
-Is http traffic allowed
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsHttpsAllowed
-Is https traffic allowed
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QueryStringCachingBehavior
-The behavior of cdn endpoint when query string exist in the request url
-
-```yaml
-Type: PSQueryStringCachingBehavior
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OriginName
-The resource name of the origin
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OriginHostName
-The host name of the origin
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPort
-The http port number on the origin
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpsPort
-The https port number on the origin
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tags
-The tags associated with this resource
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
+Aliases: wi
 
 Required: False
 Position: Named

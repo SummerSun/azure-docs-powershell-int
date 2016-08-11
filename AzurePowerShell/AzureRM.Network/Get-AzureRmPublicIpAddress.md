@@ -27,12 +27,32 @@ The Get-AzureRmPublicIPAddress cmdlet gets one or more public IP addresses in a 
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
+### --------------------------  1: Get a public IP resource  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
-
+$publicIp = Get-AzureRmPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName
+$publicIp
 ```
+
+This command gets a public IP address resource with name $publicIPName in the resource group $rgName.
+
+Name                     : mypublicip
+ResourceGroupName        : arm-test
+Location                 : centralus
+Id                       : /subscriptions/.../resourceGroups/arm-test/providers/Microsoft.Network/publicIPAddresses/mypublicip
+Etag                     : W/"..."
+ResourceGuid             : 3158adf7-21e3-4c88-afab-b7953bf02c9d
+ProvisioningState        : Succeeded
+Tags                     : 
+PublicIpAllocationMethod : Dynamic
+IpAddress                : Not Assigned
+IdleTimeoutInMinutes     : 4
+IpConfiguration          : null
+DnsSettings              : {
+                             "DomainNameLabel": "mypublicipdnslabel",
+                             "Fqdn": "mypublicipdnslabel.centralus.cloudapp.azure.com"
+                           }
 
 ## PARAMETERS
 

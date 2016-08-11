@@ -6,6 +6,7 @@ schema: 2.0.0
 
 # Get-AzureRmOperationalInsightsSchema
 ## SYNOPSIS
+Get schema of a Workspace.
 
 ## SYNTAX
 
@@ -15,6 +16,7 @@ Get-AzureRmOperationalInsightsSchema [-ResourceGroupName] <String> [-WorkspaceNa
 ```
 
 ## DESCRIPTION
+The Get-AzureRmOperationalInsightsSchema cmdlet get
 
 ## EXAMPLES
 

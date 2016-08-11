@@ -17,19 +17,19 @@ Invoke-AzureRmResourceAction [-Parameters <Hashtable>] -Action <String> -Resourc
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
-### Resource that resides at the subscription level.
-```
-Invoke-AzureRmResourceAction [-Parameters <Hashtable>] -Action <String> -ResourceName <String>
- -ResourceType <String> [-ExtensionResourceName <String>] [-ExtensionResourceType <String>]
- [-ODataQuery <String>] [-ResourceGroupName <String>] [-Force] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
 ### Resource that resides at the tenant level.
 ```
 Invoke-AzureRmResourceAction [-Parameters <Hashtable>] -Action <String> -ResourceName <String>
  -ResourceType <String> [-ExtensionResourceName <String>] [-ExtensionResourceType <String>]
  [-ODataQuery <String>] [-TenantLevel] [-Force] [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### Resource that resides at the subscription level.
+```
+Invoke-AzureRmResourceAction [-Parameters <Hashtable>] -Action <String> -ResourceName <String>
+ -ResourceType <String> [-ExtensionResourceName <String>] [-ExtensionResourceType <String>]
+ [-ODataQuery <String>] [-ResourceGroupName <String>] [-Force] [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -184,7 +184,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: Name
 
 Required: True
@@ -201,7 +201,7 @@ Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: 
 
 Required: True
@@ -218,7 +218,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: 
 
 Required: False
@@ -235,7 +235,7 @@ Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: 
 
 Required: False

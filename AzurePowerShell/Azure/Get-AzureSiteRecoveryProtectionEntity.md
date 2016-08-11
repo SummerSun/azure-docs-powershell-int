@@ -27,15 +27,15 @@ Get-AzureSiteRecoveryProtectionEntity -Id <String> -ProtectionContainerId <Strin
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### ByIDsWithName
-```
-Get-AzureSiteRecoveryProtectionEntity -Name <String> -ProtectionContainerId <String>
- [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### ByObjectWithName
 ```
 Get-AzureSiteRecoveryProtectionEntity -Name <String> -ProtectionContainer <ASRProtectionContainer>
+ [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### ByIDsWithName
+```
+Get-AzureSiteRecoveryProtectionEntity -Name <String> -ProtectionContainerId <String>
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ByIDsWithName, ByObjectWithName
+Parameter Sets: ByObjectWithName, ByIDsWithName
 Aliases: 
 
 Required: True

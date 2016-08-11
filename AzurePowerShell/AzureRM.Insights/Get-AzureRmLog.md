@@ -10,17 +10,24 @@ Gets the events associated with the current SubscriptionId or CorrelationId or R
 
 ## SYNTAX
 
-### Query at subscription level
-```
-Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
- [-DetailedOutput] [-MaxEvents <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### Query on ResourceGroupProvider
 ```
 Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
  [-DetailedOutput] [-ResourceGroup] <String> [-MaxEvents <Int32>] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>]
+```
+
+### Query on ResourceProvider
+```
+Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
+ [-DetailedOutput] [-ResourceProvider] <String> [-MaxEvents <Int32>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
+```
+
+### Query at subscription level
+```
+Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
+ [-DetailedOutput] [-MaxEvents <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ### Query on CorrelationId
@@ -34,13 +41,6 @@ Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] 
 ```
 Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
  [-DetailedOutput] [-ResourceId] <String> [-MaxEvents <Int32>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
-### Query on ResourceProvider
-```
-Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
- [-DetailedOutput] [-ResourceProvider] <String> [-MaxEvents <Int32>] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>]
 ```
 

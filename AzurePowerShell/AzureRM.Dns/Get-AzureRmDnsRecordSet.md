@@ -10,15 +10,15 @@ Gets a DNS record set.
 
 ## SYNTAX
 
-### Object
-```
-Get-AzureRmDnsRecordSet [-Name <String>] -Zone <DnsZone> [-RecordType <RecordType>]
-```
-
 ### Fields
 ```
 Get-AzureRmDnsRecordSet [-Name <String>] -ZoneName <String> -ResourceGroupName <String>
  [-RecordType <RecordType>]
+```
+
+### Object
+```
+Get-AzureRmDnsRecordSet [-Name <String>] -Zone <DnsZone> [-RecordType <RecordType>]
 ```
 
 ## DESCRIPTION
@@ -61,25 +61,25 @@ If you do not specify the Name parameter, all record sets of the specified type 
 
 ```yaml
 Type: String
-Parameter Sets: Object
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
 Parameter Sets: Fields
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: Object
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

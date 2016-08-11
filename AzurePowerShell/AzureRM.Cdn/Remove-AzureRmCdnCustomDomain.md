@@ -6,11 +6,11 @@ schema: 2.0.0
 
 # Remove-AzureRmCdnCustomDomain
 ## SYNOPSIS
-Remove a custom domain
+Removes a custom domain.
 
 ## SYNTAX
 
-### Parameter Set for fields parameters
+### Parameter Set for fields parameters (Default)
 ```
 Remove-AzureRmCdnCustomDomain -CustomDomainName <String> -EndpointName <String> -ProfileName <String>
  -ResourceGroupName <String> [-PassThru] [-InformationAction <ActionPreference>]
@@ -24,7 +24,7 @@ Remove-AzureRmCdnCustomDomain -CdnCustomDomain <PSCustomDomain> [-PassThru]
 ```
 
 ## DESCRIPTION
-Remove the custom domain from the Cdn endpoint
+Removes a custom domain from a CDN endpoint.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -CustomDomainName
-The resource name of the custom domain
+The resource (display) name of the custom domain.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointName
-The name of the endpoint
+The name of the endpoint.
 
 ```yaml
 Type: String
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the profile
+The name of the profile.
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -97,18 +97,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CdnCustomDomain
-The custom domain object
+### -PassThru
+@{Text=}
 
 ```yaml
-Type: PSCustomDomain
-Parameter Sets: Parameter Set for object parameters
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: 
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -142,8 +142,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
-{{Fill Confirm Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -157,33 +172,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PassThru
-Return object if specified.
+### -CdnCustomDomain
+The custom domain object to be deleted.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: PSCustomDomain
+Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WhatIf
-{{Fill WhatIf Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

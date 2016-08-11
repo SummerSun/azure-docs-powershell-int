@@ -16,8 +16,6 @@ Remove-AzureRmIntegrationAccountSchema -ResourceGroupName <String> -Name <String
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Remove-AzureRmIntegrationAccountSchema cmdlet removes the integration account schema from the Azure resource group.
 Use this cmdlet to remove integration account schema from specified resource group.
 You can remove a integration account schema by specifying the integration account name, resource group name and schema name.
@@ -60,7 +58,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -130,13 +128,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -145,13 +143,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

@@ -26,20 +26,20 @@ Set-AzureVMExtension [-ExtensionName] <String> [-Publisher] <String> [-Version] 
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### SetByReferenceNameAndConfigFile
-```
-Set-AzureVMExtension [-ReferenceName] <String> [[-PublicConfigPath] <String>] [[-PrivateConfigPath] <String>]
- [-Disable] [-Uninstall] [[-PublicConfigKey] <String>] [[-PrivateConfigKey] <String>] [-ForceUpdate]
- -VM <IPersistentVM> [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
 ### SetByReferenceName
 ```
 Set-AzureVMExtension [-ReferenceName] <String> [[-PublicConfiguration] <String>]
  [[-PrivateConfiguration] <String>] [-Disable] [-Uninstall] [[-PublicConfigKey] <String>]
  [[-PrivateConfigKey] <String>] [-ForceUpdate] -VM <IPersistentVM> [-Profile <AzureSMProfile>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### SetByReferenceNameAndConfigFile
+```
+Set-AzureVMExtension [-ReferenceName] <String> [[-PublicConfigPath] <String>] [[-PrivateConfigPath] <String>]
+ [-Disable] [-Uninstall] [[-PublicConfigKey] <String>] [[-PrivateConfigKey] <String>] [-ForceUpdate]
+ -VM <IPersistentVM> [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: SetByReferenceNameAndConfigFile, SetByReferenceName
+Parameter Sets: SetByReferenceName, SetByReferenceNameAndConfigFile
 Aliases: 
 
 Required: True

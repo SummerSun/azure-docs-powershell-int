@@ -10,17 +10,17 @@ Sets the goal state for a front-end IP configuration in a load balancer.
 
 ## SYNTAX
 
-### SetByResourceIdSubnet
-```
-Set-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
- [-PrivateIpAddress <String>] -SubnetId <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
 ### SetByResourceSubnet
 ```
 Set-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
  [-PrivateIpAddress <String>] -Subnet <PSSubnet> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
+```
+
+### SetByResourceIdSubnet
+```
+Set-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
+ [-PrivateIpAddress <String>] -SubnetId <String> [-InformationAction <ActionPreference>]
  [-InformationVariable <String>]
 ```
 
@@ -87,7 +87,7 @@ Specify this parameter only if you also specify the Subnet parameter.
 
 ```yaml
 Type: String
-Parameter Sets: SetByResourceIdSubnet, SetByResourceSubnet
+Parameter Sets: SetByResourceSubnet, SetByResourceIdSubnet
 Aliases: 
 
 Required: False

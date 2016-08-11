@@ -10,22 +10,28 @@ Migrate a Virtual Network to Azure Resource Manager stack
 
 ## SYNTAX
 
+### ValidateMigrationParameterSet
+```
+Move-AzureVirtualNetwork [-VirtualNetworkName] <String> [-Validate] [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
 ### AbortMigrationParameterSet
 ```
-Move-AzureVirtualNetwork [-Abort] [-VirtualNetworkName] <String> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Move-AzureVirtualNetwork [-VirtualNetworkName] <String> [-Abort] [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### CommitMigrationParameterSet
 ```
-Move-AzureVirtualNetwork [-Commit] [-VirtualNetworkName] <String> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Move-AzureVirtualNetwork [-VirtualNetworkName] <String> [-Commit] [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### PrepareMigrationParameterSet
 ```
-Move-AzureVirtualNetwork [-Prepare] [-VirtualNetworkName] <String> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Move-AzureVirtualNetwork [-VirtualNetworkName] <String> [-Prepare] [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -51,25 +57,10 @@ Move-AzureVirtualNetwork -Commit -VirtualNetworkName "contosoVNET"
 @{paragraph=PS C:\\\>}
 
 ```
-
+Move-AzureVirtualNetwork -Validate -VirtualNetworkName "contosoVNET"
 ```
 
 ## PARAMETERS
-
-### -Abort
-Cancel the Virtual Network migration
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AbortMigrationParameterSet
-Aliases: 
-
-Required: True
-Position: 0
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -VirtualNetworkName
 Name of the Virtual Network to migrate
@@ -83,6 +74,21 @@ Required: True
 Position: 1
 Default value: 
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Validate
+Validate the Virtual Network for migration
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ValidateMigrationParameterSet
+Aliases: 
+
+Required: True
+Position: 0
+Default value: 
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -131,6 +137,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Abort
+Cancel the Virtual Network migration
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AbortMigrationParameterSet
+Aliases: 
+
+Required: True
+Position: 0
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Commit
 Start the Virtual Network migration
 
@@ -156,6 +177,36 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+{{Fill Confirm Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+{{Fill WhatIf Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
 Default value: 
 Accept pipeline input: False
 Accept wildcard characters: False

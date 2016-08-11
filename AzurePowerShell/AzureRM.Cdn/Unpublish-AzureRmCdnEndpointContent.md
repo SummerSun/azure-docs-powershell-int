@@ -6,24 +6,25 @@ schema: 2.0.0
 
 # Unpublish-AzureRmCdnEndpointContent
 ## SYNOPSIS
-Purge Cdn endpoint
+Purges a CDN endpoint.
 
 ## SYNTAX
 
-### Parameter Set for fields parameters
+### Parameter Set for fields parameters (Default)
 ```
 Unpublish-AzureRmCdnEndpointContent -EndpointName <String> -ProfileName <String> -ResourceGroupName <String>
  -PurgeContent <String[]> [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-WhatIf] [-Confirm]
 ```
 
 ### Parameter Set for object parameters
 ```
 Unpublish-AzureRmCdnEndpointContent -CdnEndpoint <PSEndpoint> -PurgeContent <String[]> [-PassThru]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-Purge the content on the Cdn endpoint
+Purges content from a CDN endpoint.
 
 ## EXAMPLES
 
@@ -37,7 +38,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -EndpointName
-The name of the endpoint
+The name of the endpoint.
 
 ```yaml
 Type: String
@@ -52,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The profile name of the endpoint
+The profile name of the endpoint.
 
 ```yaml
 Type: String
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name of the endpoint
+The resource group name of the endpoint.
 
 ```yaml
 Type: String
@@ -78,6 +79,36 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PurgeContent
+An array of relative paths on the origin that are to be purged.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -111,23 +142,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PurgeContent
-An array of files(relative path) on the origin that need to be purged.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CdnEndpoint
-The endpoint object
+The endpoint object to purge.
 
 ```yaml
 Type: PSEndpoint
@@ -141,18 +157,33 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -PassThru
-Return object if specified.
+### -Confirm
+{{Fill Confirm Description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: 
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+{{Fill WhatIf Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

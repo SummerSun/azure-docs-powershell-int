@@ -13,14 +13,14 @@ Creates a DNS record set.
 ### Fields
 ```
 New-AzureRmDnsRecordSet -Name <String> -ZoneName <String> -ResourceGroupName <String> -Ttl <UInt32>
- -RecordType <RecordType> [-Metadata <Hashtable[]>] [-DnsRecords <DnsRecordBase[]>] [-Overwrite] [-Force]
+ -RecordType <RecordType> [-Metadata <Hashtable>] [-DnsRecords <DnsRecordBase[]>] [-Overwrite] [-Force]
  [-WhatIf] [-Confirm]
 ```
 
 ### Object
 ```
 New-AzureRmDnsRecordSet -Name <String> -Zone <DnsZone> -Ttl <UInt32> -RecordType <RecordType>
- [-Metadata <Hashtable[]>] [-DnsRecords <DnsRecordBase[]>] [-Overwrite] [-Force] [-WhatIf] [-Confirm]
+ [-Metadata <Hashtable>] [-DnsRecords <DnsRecordBase[]>] [-Overwrite] [-Force] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -169,7 +169,7 @@ Specifies an array of tags to associate with the RecordSet.
 Metadata are name-value pairs that are represented as hash tables, for example @(@{"Name"="dept"; "Value"="shopping"}, @{"Name"="env"; "Value"="production"}).
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 

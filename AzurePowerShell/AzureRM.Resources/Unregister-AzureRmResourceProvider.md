@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Unregister-AzureRmResourceProvider -ProviderNamespace <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf]
+Unregister-AzureRmResourceProvider -ProviderNamespace <String> [-ApiVersion <String>] [-Pre] [-WhatIf]
  [-Confirm]
 ```
 
@@ -42,21 +42,6 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

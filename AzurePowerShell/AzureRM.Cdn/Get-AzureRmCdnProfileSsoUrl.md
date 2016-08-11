@@ -6,11 +6,11 @@ schema: 2.0.0
 
 # Get-AzureRmCdnProfileSsoUrl
 ## SYNOPSIS
-Get the SSO Url of the Azure Cdn Profile
+Gets a SSO URL for an Azure CDN profile.
 
 ## SYNTAX
 
-### Parameter Set for fields parameters
+### Parameter Set for fields parameters (Default)
 ```
 Get-AzureRmCdnProfileSsoUrl -ProfileName <String> -ResourceGroupName <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
@@ -23,8 +23,9 @@ Get-AzureRmCdnProfileSsoUrl -CdnProfile <PSProfile> [-InformationAction <ActionP
 ```
 
 ## DESCRIPTION
-Get the SSO(single sign on) url of the Azure Cdn Profile.
-This url would allow users to log into supplementary portal and use extra functionalities of Azure Cdn.
+Gets the single sign-on URL for an Azure CDN Profile.
+This URL allows users to log into the supplementary portal and use extra functionalities of Azure CDN. 
+This applies only to Azure CDN from Verizon profiles.
 
 ## EXAMPLES
 
@@ -37,8 +38,23 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
+### -ProfileName
+The name of the profile.
+
+```yaml
+Type: String
+Parameter Sets: Parameter Set for fields parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
-The resource group name
+The resource group name.
 
 ```yaml
 Type: String
@@ -83,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -CdnProfile
-The profile
+The profile object.
 
 ```yaml
 Type: PSProfile
@@ -94,21 +110,6 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -ProfileName
-The name of the profile
-
-```yaml
-Type: String
-Parameter Sets: Parameter Set for fields parameters
-Aliases: 
-
-Required: True
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

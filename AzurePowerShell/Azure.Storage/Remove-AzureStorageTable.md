@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force to remove the table without confirmation
+Force to remove the table and all content in it
 
 ```yaml
 Type: SwitchParameter

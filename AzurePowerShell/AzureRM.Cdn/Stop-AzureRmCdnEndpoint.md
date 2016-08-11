@@ -6,11 +6,11 @@ schema: 2.0.0
 
 # Stop-AzureRmCdnEndpoint
 ## SYNOPSIS
-Stop the Cdn endpoint
+Stops a CDN endpoint.
 
 ## SYNTAX
 
-### Parameter Set for fields parameters
+### Parameter Set for fields parameters (Default)
 ```
 Stop-AzureRmCdnEndpoint -EndpointName <String> -ProfileName <String> -ResourceGroupName <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
@@ -23,7 +23,7 @@ Stop-AzureRmCdnEndpoint -CdnEndpoint <PSEndpoint> [-PassThru] [-InformationActio
 ```
 
 ## DESCRIPTION
-Stop the Azure Cdn endpoint
+Stops an Azure CDN endpoint.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -EndpointName
-The name of the endpoint
+The name of the endpoint.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the profile
+The name of the profile.
 
 ```yaml
 Type: String
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -81,18 +81,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CdnEndpoint
-The endpoint object
+### -PassThru
+@{Text=}
 
 ```yaml
-Type: PSEndpoint
-Parameter Sets: Parameter Set for object parameters
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: 
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -126,8 +126,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
-{{Fill Confirm Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -141,33 +156,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PassThru
-Return object if specified.
+### -CdnEndpoint
+The endpoint object to stop.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: PSEndpoint
+Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WhatIf
-{{Fill WhatIf Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

@@ -15,16 +15,16 @@ Gets details of a Data Lake Store account.
 Get-AzureRmDataLakeStoreAccount [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### All In Resource Group
-```
-Get-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
 ### Specific Account
 ```
 Get-AzureRmDataLakeStoreAccount [[-ResourceGroupName] <String>] [-Name] <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### All In Resource Group
+```
+Get-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -78,10 +78,10 @@ Specifies the name of the resource group that contains the Data Lake Store accou
 
 ```yaml
 Type: String
-Parameter Sets: All In Resource Group
+Parameter Sets: Specific Account
 Aliases: 
 
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -90,10 +90,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Specific Account
+Parameter Sets: All In Resource Group
 Aliases: 
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)

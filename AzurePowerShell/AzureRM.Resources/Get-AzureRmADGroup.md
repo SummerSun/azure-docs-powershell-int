@@ -12,17 +12,18 @@ Filters active directory groups.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADGroup [-ObjectId <Guid>]
+Get-AzureRmADGroup [-ObjectId <Guid>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADGroup -SearchString <String>
+Get-AzureRmADGroup -SearchString <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADGroup -ObjectId <Guid>
+Get-AzureRmADGroup -ObjectId <Guid> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -83,6 +84,36 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

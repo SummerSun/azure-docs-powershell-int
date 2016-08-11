@@ -20,12 +20,16 @@ The Get-AzureRmLoadBalancerBackendAddressPoolConfig cmdlet gets a single backend
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
+### --------------------------  Example 1 Get backend address pool configuration of a load balancer  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
+PS C:\> $loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 
+PS C:\> Get-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02"  -LoadBalancer $loadbalancer
 ```
+
+The first command gets an existing load balancer called "MyLoadBalancer" within the resource group "My Resource Group." The second command gets the associated backend address pool configuration associated with that loadbalancer, here it is called "BackendAddressPool02."
 
 ## PARAMETERS
 

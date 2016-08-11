@@ -6,66 +6,98 @@ schema: 2.0.0
 
 # Get-AzureRmADApplication
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Lists existing azure active directory applications.
 
 ## SYNTAX
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADApplication
+Get-AzureRmADApplication [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ### ApplicationObjectIdParameterSet
 ```
-Get-AzureRmADApplication -ApplicationObjectId <Guid>
+Get-AzureRmADApplication -ObjectId <Guid> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### ApplicationIdParameterSet
 ```
-Get-AzureRmADApplication -ApplicationId <Guid>
+Get-AzureRmADApplication -ApplicationId <Guid> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### ApplicationDisplayNameParameterSet
 ```
-Get-AzureRmADApplication -DisplayNameStartWith <String>
+Get-AzureRmADApplication -DisplayNameStartWith <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### ApplicationIdentifierUriParameterSet
 ```
-Get-AzureRmADApplication -IdentifierUri <String>
+Get-AzureRmADApplication -IdentifierUri <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Lists existing azure active directory applications.
+Application lookup can be done by ObjectId, ApplicationId, IdentifierUri or DisplayName.
+If no parameter is provided, it fetches all applications under the tenant.
 
 ## EXAMPLES
 
-### Example 1
+### --------------------------  Example 1  --------------------------
+@{paragraph=PS C:\\\>}
+
 ```
-PS C:\> {{ Add example code here }}
+PS E:\> Get-AzureRmADApplication
 ```
 
-{{ Add example description here }}
+Lists all the applications under a tenant.
+
+### --------------------------  Example 2  --------------------------
+@{paragraph=PS C:\\\>}
+
+```
+PS E:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
+```
+
+Gets the application with identifier uri as "http://mySecretApp1".
 
 ## PARAMETERS
 
-### -ApplicationId
-The application id.
+### -InformationAction
+@{Text=}
 
 ```yaml
-Type: Guid
-Parameter Sets: ApplicationIdParameterSet
-Aliases: 
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
 
-Required: True
+Required: False
 Position: Named
 Default value: 
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ApplicationObjectId
-The application object id.
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ObjectId
+The object id of the application to fetch.
 
 ```yaml
 Type: Guid
@@ -79,8 +111,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ApplicationId
+The application id of the application to fetch.
+
+```yaml
+Type: Guid
+Parameter Sets: ApplicationIdParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -DisplayNameStartWith
-The display name.
+Fetch all applications starting with the display name.
 
 ```yaml
 Type: String
@@ -95,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierUri
-The identifierUri of the application.
+Unique identifier Uri of the application to fetch.
 
 ```yaml
 Type: String
@@ -111,16 +158,21 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### System.Guid
-System.String
-
-
 ## OUTPUTS
-
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Resources.Models.ActiveDirectory.PSADApplication, Microsoft.Azure.Commands.Resources, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
-
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzureRmADAppCredential]()
+
+[New-AzureRmADAppCredential]()
+
+[Get-AzureRmADAppCredential]()
+
+[Remove-AzureRmADApplication]()
+
+[Set-AzureRmADApplication]()
+
+[New-AzureRmADApplication]()
 

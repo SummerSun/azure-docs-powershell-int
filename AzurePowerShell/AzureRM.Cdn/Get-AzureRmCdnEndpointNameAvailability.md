@@ -6,7 +6,7 @@ schema: 2.0.0
 
 # Get-AzureRmCdnEndpointNameAvailability
 ## SYNOPSIS
-Check if the Cdn endpoint name is available
+Checks if a proposed CDN endpoint name is available.
 
 ## SYNTAX
 
@@ -16,7 +16,7 @@ Get-AzureRmCdnEndpointNameAvailability -EndpointName <String> [-InformationActio
 ```
 
 ## DESCRIPTION
-Check if the Azure Cdn endpoint name is available
+Checks if a proposed CDN endpoint name is available.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -EndpointName
-The name of the endpoint
+The proposed name of the endpoint to check.
 
 ```yaml
 Type: String

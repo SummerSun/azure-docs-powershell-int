@@ -12,9 +12,10 @@ Creates an application gateway.
 
 ```
 New-AzureRmApplicationGateway -Name <String> -ResourceGroupName <String> -Location <String>
- -Sku <PSApplicationGatewaySku>
+ -Sku <PSApplicationGatewaySku> [-SslPolicy <PSApplicationGatewaySslPolicy>]
  -GatewayIPConfigurations <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayIPConfiguration]>
  [-SslCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate]>]
+ [-AuthenticationCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]>]
  [-FrontendIPConfigurations <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration]>]
  -FrontendPorts <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendPort]>
  [-Probes <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe]>]
@@ -23,8 +24,8 @@ New-AzureRmApplicationGateway -Name <String> -ResourceGroupName <String> -Locati
  -HttpListeners <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener]>
  [-UrlPathMaps <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap]>]
  -RequestRoutingRules <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRequestRoutingRule]>
- [-Tag <Hashtable[]>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-WhatIf] [-Confirm]
+ [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
+ [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -287,7 +288,7 @@ Accept wildcard characters: False
 Specifies the dictionary of tags associated with the application gateway.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -343,8 +344,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
-{{Fill Confirm Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -358,18 +374,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -AuthenticationCertificates
+The list of authentication certificates
 
 ```yaml
-Type: SwitchParameter
+Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]
 Parameter Sets: (All)
-Aliases: wi
+Aliases: 
 
 Required: False
 Position: Named
 Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SslPolicy
+The SSL policy of application gateway
+
+```yaml
+Type: PSApplicationGatewaySslPolicy
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

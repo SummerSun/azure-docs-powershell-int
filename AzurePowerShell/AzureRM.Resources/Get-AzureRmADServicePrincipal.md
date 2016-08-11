@@ -12,22 +12,26 @@ Filters active directory service principals.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>]
+Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADServicePrincipal -SearchString <String>
+Get-AzureRmADServicePrincipal -SearchString <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADServicePrincipal -ObjectId <Guid>
+Get-AzureRmADServicePrincipal -ObjectId <Guid> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### SPNParameterSet
 ```
-Get-AzureRmADServicePrincipal -ServicePrincipalName <String>
+Get-AzureRmADServicePrincipal -ServicePrincipalName <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -42,16 +46,16 @@ Filters active directory service principals.
 PS C:\> Get-AzureRmADServicePrincipal -SPN 36f81fc3-b00f-48cd-8218-3879f51ff39f
 ```
 
-Gets service principals with 36f81fc3-b00f-48cd-8218-3879f51ff39f SPN
+Gets service principals with 36f81fc3-b00f-48cd-8218-3879f51ff39f SPN.
 
 ### --------------------------  Filters service principals using Search String  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\> Get-AzureRmADServicePrincipal -SearchString Web
+PS C:\> Get-AzureRmADServicePrincipal -SearchString "Web"
 ```
 
-Filters all ad service principals that has Web in the display name.
+Filters all ad service principals that have display name starting with "Web".
 
 ### --------------------------  List AD service principals  --------------------------
 @{paragraph=PS C:\\\>}
@@ -60,7 +64,7 @@ Filters all ad service principals that has Web in the display name.
 PS C:\> Get-AzureRmADServicePrincipal
 ```
 
-Gets all AD service principals
+Gets all AD service principals.
 
 ## PARAMETERS
 
@@ -91,8 +95,38 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SearchString
-The service principal display name
+Fetches all service principals that have the display name starting with this value.
 
 ```yaml
 Type: String
@@ -129,9 +163,13 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AzureRmADGroup]()
+[New-AzureRmADServicePrincipal]()
 
-[Get-AzureRmADUser]()
+[Set-AzureRmADServicePrincipal]()
 
-[Get-AzureRmADGroupMember]()
+[Remove-AzureRmADServicePrincipal]()
+
+[Get-AzureRmADApplication]()
+
+[Get-AzureRmADSpCredential]()
 

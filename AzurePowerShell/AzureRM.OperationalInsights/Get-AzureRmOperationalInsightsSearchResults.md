@@ -6,6 +6,7 @@ schema: 2.0.0
 
 # Get-AzureRmOperationalInsightsSearchResults
 ## SYNOPSIS
+Run any search query and return the results.
 
 ## SYNTAX
 
@@ -17,6 +18,7 @@ Get-AzureRmOperationalInsightsSearchResults [-ResourceGroupName] <String> [-Work
 ```
 
 ## DESCRIPTION
+The Get-AzureRmOperationalInsightsSearchResults cmdlet run any search query and return the results.
 
 ## EXAMPLES
 

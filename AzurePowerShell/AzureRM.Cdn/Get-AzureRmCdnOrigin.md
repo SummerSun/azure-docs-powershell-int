@@ -6,17 +6,24 @@ schema: 2.0.0
 
 # Get-AzureRmCdnOrigin
 ## SYNOPSIS
-Get an Azure Cdn Origin.
+Gets an Azure CDN origin.
 
 ## SYNTAX
 
+### Parameter Set for fields parameters (Default)
 ```
-Get-AzureRmCdnOrigin -OriginName <String> -EndpointName <String> -ProfileName <String>
+Get-AzureRmCdnOrigin [-OriginName <String>] -EndpointName <String> -ProfileName <String>
  -ResourceGroupName <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
+### Parameter Set for object parameters
+```
+Get-AzureRmCdnOrigin [-OriginName <String>] -CdnEndpoint <PSEndpoint> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
+```
+
 ## DESCRIPTION
-Get an Azure Cdn Origin and all the configuration on the Origin.
+Gets an Azure CDN origin and all its configuration.
 
 ## EXAMPLES
 
@@ -37,7 +44,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
@@ -45,11 +52,11 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointName
-The name of the Endpoint that the Origin belongs to.
+The name of the endpoint that the origin belongs to.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
@@ -60,11 +67,11 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the Profile that the Origin belongs to.
+The name of the profile that the origin belongs to.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
@@ -75,11 +82,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the Resource Group that the Origin belongs to.
+The name of the resource group that the origin belongs to.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
@@ -116,6 +123,21 @@ Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CdnEndpoint
+The CDN endpoint object to which the origin belongs.
+
+```yaml
+Type: PSEndpoint
+Parameter Sets: Parameter Set for object parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

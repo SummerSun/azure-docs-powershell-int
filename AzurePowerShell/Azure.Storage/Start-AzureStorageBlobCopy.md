@@ -19,14 +19,6 @@ Start-AzureStorageBlobCopy [-SrcBlob] <String> -SrcContainer <String> -DestConta
  [-Confirm]
 ```
 
-### BlobInstanceToBlobInstance
-```
-Start-AzureStorageBlobCopy -CloudBlob <CloudBlob> -DestCloudBlob <CloudBlob> [-Context <AzureStorageContext>]
- [-DestContext <AzureStorageContext>] [-Force] [-ServerTimeoutPerRequest <Int32>]
- [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-PipelineVariable <String>] [-WhatIf] [-Confirm]
-```
-
 ### BlobInstance
 ```
 Start-AzureStorageBlobCopy -CloudBlob <CloudBlob> -DestContainer <String> [-DestBlob <String>]
@@ -34,6 +26,14 @@ Start-AzureStorageBlobCopy -CloudBlob <CloudBlob> -DestContainer <String> [-Dest
  [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>] [-WhatIf]
  [-Confirm]
+```
+
+### BlobInstanceToBlobInstance
+```
+Start-AzureStorageBlobCopy -CloudBlob <CloudBlob> -DestCloudBlob <CloudBlob> [-Context <AzureStorageContext>]
+ [-DestContext <AzureStorageContext>] [-Force] [-ServerTimeoutPerRequest <Int32>]
+ [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-PipelineVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### ContainerInstance
@@ -72,6 +72,14 @@ Start-AzureStorageBlobCopy -SrcDir <CloudFileDirectory> -SrcFilePath <String> -D
  [-Confirm]
 ```
 
+### FileInstanceToBlobInstance
+```
+Start-AzureStorageBlobCopy -SrcFile <CloudFile> -DestCloudBlob <CloudBlob> [-Context <AzureStorageContext>]
+ [-DestContext <AzureStorageContext>] [-Force] [-ServerTimeoutPerRequest <Int32>]
+ [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-PipelineVariable <String>] [-WhatIf] [-Confirm]
+```
+
 ### FileInstance
 ```
 Start-AzureStorageBlobCopy -SrcFile <CloudFile> -DestContainer <String> [-DestBlob <String>]
@@ -79,14 +87,6 @@ Start-AzureStorageBlobCopy -SrcFile <CloudFile> -DestContainer <String> [-DestBl
  [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>] [-WhatIf]
  [-Confirm]
-```
-
-### FileInstanceToBlobInstance
-```
-Start-AzureStorageBlobCopy -SrcFile <CloudFile> -DestCloudBlob <CloudBlob> [-Context <AzureStorageContext>]
- [-DestContext <AzureStorageContext>] [-Force] [-ServerTimeoutPerRequest <Int32>]
- [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-PipelineVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### UriPipeline
@@ -232,7 +232,7 @@ You can create it by New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
-Parameter Sets: ContainerName, BlobInstanceToBlobInstance, BlobInstance, ContainerInstance, ShareName, ShareInstance, DirInstance, FileInstance, FileInstanceToBlobInstance
+Parameter Sets: ContainerName, BlobInstance, BlobInstanceToBlobInstance, ContainerInstance, ShareName, ShareInstance, DirInstance, FileInstanceToBlobInstance, FileInstance
 Aliases: SrcContext
 
 Required: False
@@ -366,7 +366,7 @@ You can create it or use Get-AzureStorageBlob cmdlet.
 
 ```yaml
 Type: CloudBlob
-Parameter Sets: BlobInstanceToBlobInstance, BlobInstance
+Parameter Sets: BlobInstance, BlobInstanceToBlobInstance
 Aliases: SrcICloudBlob, SrcCloudBlob, ICloudBlob
 
 Required: True
@@ -474,7 +474,7 @@ You can create it or use Get-AzureStorageFile cmdlet.
 
 ```yaml
 Type: CloudFile
-Parameter Sets: FileInstance, FileInstanceToBlobInstance
+Parameter Sets: FileInstanceToBlobInstance, FileInstance
 Aliases: 
 
 Required: True

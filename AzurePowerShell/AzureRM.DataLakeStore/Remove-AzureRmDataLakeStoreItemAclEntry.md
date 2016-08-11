@@ -13,14 +13,14 @@ Removes an entry (ACE) from the access control list (ACL) of a file or folder in
 ### Remove ACL Entries using ACL object (Default)
 ```
 Remove-AzureRmDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
- [-Acl] <DataLakeStoreItemAcl> [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-Acl] <DataLakeStoreItemAcl> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
  [-WhatIf] [-Confirm]
 ```
 
 ### Remove specific ACE
 ```
 Remove-AzureRmDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
- [-AceType] <AceType> [[-Id] <Guid>] [-Default] [-Force] [-InformationAction <ActionPreference>]
+ [-AceType] <AceType> [[-Id] <Guid>] [-Default] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -80,21 +80,6 @@ Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

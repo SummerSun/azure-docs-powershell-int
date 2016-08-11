@@ -290,7 +290,14 @@ Accept wildcard characters: False
 ```
 
 ### -WmfVersion
-Specifies the WMF version.
+Specifies the version of the Windows Management Framework (WMF) to install on the VM.
+The DSC Azure Extension depends on DSC features that are only available in the WMF updates.
+This parameter specifies which version of the update to install on the VM.
+The possible values are "4.0","5.0","5.1PP","latest".A value of "4.0" will install WMF 4.0 Update packages (https://support.microsoft.com/en-us/kb/3119938) on Windows 8.1 or Windows Server 2012 R2, or (https://support.microsoft.com/en-us/kb/3109118) on Windows Server 2008 R2 and on other versions of Windows if newer version is not already installed.
+A value of "5.0" will install the latest release of WMF 5.0 (https://www.microsoft.com/en-us/download/details.aspx?id=50395).
+A value of "5.1PP" will install the WMF 5.1 preview (https://www.microsoft.com/en-us/download/details.aspx?id=53347).
+A value of "latest" will install the latest WMF, currently WMF 5.0.
+The default value is "latest"
 
 ```yaml
 Type: String
@@ -299,7 +306,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Latest
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

@@ -20,7 +20,7 @@ The Set-AzureRmVirtualNetwork cmdlet sets the goal state for an Azure virtual ne
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Creates a virtual network and removes one of its subnets   --------------------------
+### --------------------------  Example 1: Creates a virtual network and removes one of its subnets  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```

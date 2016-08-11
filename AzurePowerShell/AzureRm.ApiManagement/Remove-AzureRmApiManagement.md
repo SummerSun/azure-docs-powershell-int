@@ -11,7 +11,7 @@ Removes existing API Management.
 ## SYNTAX
 
 ```
-Remove-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-PassThru] [-Force]
+Remove-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -63,21 +63,6 @@ Accept wildcard characters: False
 
 ### -PassThru
 Writes true to the pipeline if operation succeeds.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Do not confirm on the removal of the API Management service.
 
 ```yaml
 Type: SwitchParameter

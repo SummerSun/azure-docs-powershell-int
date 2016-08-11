@@ -16,8 +16,6 @@ Get-AzureRmIntegrationAccountCallbackUrl -ResourceGroupName <String> -Name <Stri
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmIntegrationAccountCallbackUrl cmdlet retrieves integration account callback URL from the Azure resource group and returns an object that represents the integration account Callback Url.
 Use this cmdlet to get the integration account callback URL from specified resource group.
 You can get the integration account callback URL by specifying the integration account name and resource group name.
@@ -63,7 +61,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named

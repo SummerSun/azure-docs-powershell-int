@@ -12,7 +12,7 @@ Sets the tenant, subscription, and environment for cmdlets to use in the current
 
 ### SubscriptionName (Default)
 ```
-Set-AzureRmContext [-SubscriptionName <String>] [-WhatIf] [-Confirm] [-TenantId <String>]
+Set-AzureRmContext [-SubscriptionName <String>] [-TenantId <String>] [-WhatIf] [-Confirm]
 ```
 
 ### Context
@@ -22,7 +22,7 @@ Set-AzureRmContext -Context <PSAzureContext> [-WhatIf] [-Confirm]
 
 ### SubscriptionId
 ```
-Set-AzureRmContext [-WhatIf] [-Confirm] [-SubscriptionId <String>] [-TenantId <String>]
+Set-AzureRmContext [-TenantId <String>] [-SubscriptionId <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION

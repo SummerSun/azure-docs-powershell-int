@@ -16,15 +16,15 @@ Get-AzureServiceAvailableExtension [[-ExtensionName] <String>] [[-ProviderNamesp
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### ListAllVersions
-```
-Get-AzureServiceAvailableExtension [-ExtensionName] <String> [-ProviderNamespace] <String> [-AllVersions]
- [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### ListSingleVersion
 ```
 Get-AzureServiceAvailableExtension [-ExtensionName] <String> [-ProviderNamespace] <String> [-Version] <String>
+ [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### ListAllVersions
+```
+Get-AzureServiceAvailableExtension [-ExtensionName] <String> [-ProviderNamespace] <String> [-AllVersions]
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ListAllVersions, ListSingleVersion
+Parameter Sets: ListSingleVersion, ListAllVersions
 Aliases: 
 
 Required: True
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ListAllVersions, ListSingleVersion
+Parameter Sets: ListSingleVersion, ListAllVersions
 Aliases: 
 
 Required: True
@@ -216,12 +216,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Version
-Specifies the extension version.
+### -AllVersions
+Indicates that this cmdlet gets all versions of an extension.
 
 ```yaml
-Type: String
-Parameter Sets: ListSingleVersion
+Type: SwitchParameter
+Parameter Sets: ListAllVersions
 Aliases: 
 
 Required: True
@@ -231,12 +231,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AllVersions
-Indicates that this cmdlet gets all versions of an extension.
+### -Version
+Specifies the extension version.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: ListAllVersions
+Type: String
+Parameter Sets: ListSingleVersion
 Aliases: 
 
 Required: True

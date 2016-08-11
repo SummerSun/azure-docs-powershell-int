@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-When the Force parameter is provided, export will be performed without any confirmation prompts.
+When the Force parameter is provided, reboot will be performed without any confirmation prompts.
 
 ```yaml
 Type: SwitchParameter
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-By default Reset-AzureRmRedisCache export does not return any value.
+By default Reset-AzureRmRedisCache does not return any value.
 If the PassThru parameter is provided then Reset-AzureRmRedisCache returns a boolean value indicating the success of the operation.
 
 ```yaml

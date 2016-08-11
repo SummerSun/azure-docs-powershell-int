@@ -35,6 +35,19 @@ Move-AzureService [-Prepare] [-ServiceName] <String> [-DeploymentName] <String> 
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
+### ValidateExistingMigrationParameterSet
+```
+Move-AzureService [-Validate] [-ServiceName] <String> [-DeploymentName] <String> [-UseExistingVirtualNetwork]
+ [-VirtualNetworkResourceGroupName] <String> [-VirtualNetworkName] <String> [-SubnetName] <String>
+ [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### ValidateNewMigrationParameterSet
+```
+Move-AzureService [-Validate] [-ServiceName] <String> [-DeploymentName] <String> [-CreateNewVirtualNetwork]
+ [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
 ## DESCRIPTION
 This cmdlet allows you to migrate a cloud service and a deployment inside it to a resource group in the Azure Resource Manager stack.
 
@@ -66,6 +79,20 @@ Move-AzureService -Abort -ServiceName "contosoService" -DeploymentName "contosoV
 
 ```
 Move-AzureService -Prepare -ServiceName "contosoService" -DeploymentName "contosoVM" -UseExistingVirtualNetwork -VirtualNetworkResourceGroupName "vnetRG" -VirtualNetworkName "contosoVNET" -SubnetName "contosoSubnet"
+```
+
+### --------------------------  Example 5  --------------------------
+@{paragraph=PS C:\\\>}
+
+```
+Move-AzureService -Validate -ServiceName "contosoService" -DeploymentName "contosoVM" -CreateNewVirtualNetwork
+```
+
+### --------------------------  Example 6  --------------------------
+@{paragraph=PS C:\\\>}
+
+```
+Move-AzureService -Validate -ServiceName "contosoService" -DeploymentName "contosoVM" -UseExistingVirtualNetwork -VirtualNetworkResourceGroupName "vnetRG" -VirtualNetworkName "contosoVNET" -SubnetName "contosoSubnet"
 ```
 
 ## PARAMETERS
@@ -190,12 +217,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CreateNewVirtualNetwork
+Used to specify when a new Virtual Network needs to be created in Azure Resource Manager stack
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PrepareNewMigrationParameterSet, ValidateNewMigrationParameterSet
+Aliases: 
+
+Required: True
+Position: 3
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseExistingVirtualNetwork
 Used to migrate the cloud service to an existing Virtual Network in the Azure Resource Manager stack
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: PrepareExistingMigrationParameterSet
+Parameter Sets: PrepareExistingMigrationParameterSet, ValidateExistingMigrationParameterSet
 Aliases: 
 
 Required: True
@@ -210,7 +252,7 @@ Name of the Resource Group of the existing Virtual Network
 
 ```yaml
 Type: String
-Parameter Sets: PrepareExistingMigrationParameterSet
+Parameter Sets: PrepareExistingMigrationParameterSet, ValidateExistingMigrationParameterSet
 Aliases: 
 
 Required: True
@@ -225,7 +267,7 @@ Name of the existing Virtual Network
 
 ```yaml
 Type: String
-Parameter Sets: PrepareExistingMigrationParameterSet
+Parameter Sets: PrepareExistingMigrationParameterSet, ValidateExistingMigrationParameterSet
 Aliases: 
 
 Required: True
@@ -240,7 +282,7 @@ Name of the existing Subnet inside the existing Virtual Network
 
 ```yaml
 Type: String
-Parameter Sets: PrepareExistingMigrationParameterSet
+Parameter Sets: PrepareExistingMigrationParameterSet, ValidateExistingMigrationParameterSet
 Aliases: 
 
 Required: True
@@ -250,16 +292,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CreateNewVirtualNetwork
-Used to specify when a new Virtual Network needs to be created in Azure Resource Manager stack
+### -Validate
+Validate the cloud service for migration
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: PrepareNewMigrationParameterSet
+Parameter Sets: ValidateExistingMigrationParameterSet, ValidateNewMigrationParameterSet
 Aliases: 
 
 Required: True
-Position: 3
+Position: 0
 Default value: 
 Accept pipeline input: False
 Accept wildcard characters: False

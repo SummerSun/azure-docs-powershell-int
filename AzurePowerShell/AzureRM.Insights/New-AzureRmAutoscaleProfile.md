@@ -10,10 +10,10 @@ Creates an autoscale profile.
 
 ## SYNTAX
 
-### Parameters for New-AzureRmAutoscaleProfile cmdlet without scheduled times
+### Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
 ```
 New-AzureRmAutoscaleProfile -Name <String> -DefaultCapacity <String> -MaximumCapacity <String>
- -MinimumCapacity <String>
+ -MinimumCapacity <String> -StartTimeWindow <DateTime> -EndTimeWindow <DateTime> -TimeWindowTimeZone <String>
  -Rules <System.Collections.Generic.List`1[Microsoft.Azure.Management.Insights.Models.ScaleRule]>
 ```
 
@@ -27,10 +27,10 @@ New-AzureRmAutoscaleProfile -Name <String> -DefaultCapacity <String> -MaximumCap
  -Rules <System.Collections.Generic.List`1[Microsoft.Azure.Management.Insights.Models.ScaleRule]>
 ```
 
-### Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
+### Parameters for New-AzureRmAutoscaleProfile cmdlet without scheduled times
 ```
 New-AzureRmAutoscaleProfile -Name <String> -DefaultCapacity <String> -MaximumCapacity <String>
- -MinimumCapacity <String> -StartTimeWindow <DateTime> -EndTimeWindow <DateTime> -TimeWindowTimeZone <String>
+ -MinimumCapacity <String>
  -Rules <System.Collections.Generic.List`1[Microsoft.Azure.Management.Insights.Models.ScaleRule]>
 ```
 

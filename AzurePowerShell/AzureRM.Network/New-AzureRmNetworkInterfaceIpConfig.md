@@ -89,6 +89,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Primary
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Subnet
 Specifies a Subnet object.
 This cmdlet creates a reference to a subnet in which this network interface IPConfiguration will be created.
@@ -268,21 +283,6 @@ Required: False
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Primary
-The flag to specify if this is a primary IpConfiguration on the nic.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

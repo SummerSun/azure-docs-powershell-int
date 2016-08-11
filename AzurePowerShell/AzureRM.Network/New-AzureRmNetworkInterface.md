@@ -15,7 +15,7 @@ Creates a new network interface.
 New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location <String>
  -IpConfiguration <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkInterfaceIPConfiguration]>
  [-DnsServer <System.Collections.Generic.List`1[System.String]>] [-InternalDnsNameLabel <String>]
- [-EnableIPForwarding] [-Tag <Hashtable[]>] [-Force] [-InformationAction <ActionPreference>]
+ [-EnableIPForwarding] [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -25,7 +25,7 @@ New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location
  -IpConfiguration <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkInterfaceIPConfiguration]>
  [-NetworkSecurityGroupId <String>] [-NetworkSecurityGroup <PSNetworkSecurityGroup>]
  [-DnsServer <System.Collections.Generic.List`1[System.String]>] [-InternalDnsNameLabel <String>]
- [-EnableIPForwarding] [-Tag <Hashtable[]>] [-Force] [-InformationAction <ActionPreference>]
+ [-EnableIPForwarding] [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -38,7 +38,7 @@ New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location
  [-ApplicationGatewayBackendAddressPoolId <System.Collections.Generic.List`1[System.String]>]
  [-PrivateIpAddress <String>] [-IpConfigurationName <String>]
  [-DnsServer <System.Collections.Generic.List`1[System.String]>] [-InternalDnsNameLabel <String>]
- [-EnableIPForwarding] [-Tag <Hashtable[]>] [-Force] [-InformationAction <ActionPreference>]
+ [-EnableIPForwarding] [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -51,7 +51,7 @@ New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location
  [-ApplicationGatewayBackendAddressPool <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool]>]
  [-PrivateIpAddress <String>] [-IpConfigurationName <String>]
  [-DnsServer <System.Collections.Generic.List`1[System.String]>] [-InternalDnsNameLabel <String>]
- [-EnableIPForwarding] [-Tag <Hashtable[]>] [-Force] [-InformationAction <ActionPreference>]
+ [-EnableIPForwarding] [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 Specifies a dictionary of tags to associate with a network interface.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -242,6 +242,36 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -459,36 +489,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Confirm
-{{Fill Confirm Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-{{Fill WhatIf Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

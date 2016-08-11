@@ -10,15 +10,15 @@ Gets a virtual network in a resource group.
 
 ## SYNTAX
 
-### Expand
-```
-Get-AzureRmVirtualNetwork -Name <String> -ResourceGroupName <String> -ExpandResource <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### NoExpand
 ```
 Get-AzureRmVirtualNetwork [-Name <String>] [-ResourceGroupName <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### Expand
+```
+Get-AzureRmVirtualNetwork -Name <String> -ResourceGroupName <String> -ExpandResource <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -78,10 +78,10 @@ Specifies the name of the virtual network to get.
 
 ```yaml
 Type: String
-Parameter Sets: Expand
+Parameter Sets: NoExpand
 Aliases: ResourceName
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -90,10 +90,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: NoExpand
+Parameter Sets: Expand
 Aliases: ResourceName
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -105,10 +105,10 @@ Specifies the name of the resource group that contains the virtual network.
 
 ```yaml
 Type: String
-Parameter Sets: Expand
+Parameter Sets: NoExpand
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -117,10 +117,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: NoExpand
+Parameter Sets: Expand
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

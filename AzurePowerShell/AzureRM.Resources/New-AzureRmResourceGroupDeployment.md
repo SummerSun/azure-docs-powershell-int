@@ -17,13 +17,6 @@ New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> 
  [-Confirm]
 ```
 
-### Deployment via template uri and template parameters object
-```
-New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
- [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterObject <Hashtable> -TemplateUri <String>
- [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
-```
-
 ### Deployment via template file and template parameters object
 ```
 New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
@@ -31,10 +24,10 @@ New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> 
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
-### Deployment via template uri and template parameters file
+### Deployment via template uri and template parameters object
 ```
 New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
- [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterFile <String> -TemplateUri <String>
+ [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterObject <Hashtable> -TemplateUri <String>
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
@@ -42,6 +35,13 @@ New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> 
 ```
 New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
  [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterFile <String> -TemplateFile <String>
+ [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+```
+
+### Deployment via template uri and template parameters file
+```
+New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
+ [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterFile <String> -TemplateUri <String>
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
@@ -171,7 +171,7 @@ If you miss a required parameter, the cmdlet prompts you for the value.
 
 ```yaml
 Type: Hashtable
-Parameter Sets: Deployment via template uri and template parameters object, Deployment via template file and template parameters object
+Parameter Sets: Deployment via template file and template parameters object, Deployment via template uri and template parameters object
 Aliases: 
 
 Required: True
@@ -222,7 +222,7 @@ If you miss a required parameter, the cmdlet prompts you for the value.
 
 ```yaml
 Type: String
-Parameter Sets: Deployment via template uri and template parameters file, Deployment via template file and template parameters file
+Parameter Sets: Deployment via template file and template parameters file, Deployment via template uri and template parameters file
 Aliases: 
 
 Required: True

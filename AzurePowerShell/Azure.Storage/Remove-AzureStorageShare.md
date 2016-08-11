@@ -12,7 +12,7 @@ Remove an Azure Storage file share.
 
 ### ShareName (Default)
 ```
-Remove-AzureStorageShare [-Name] <String> [-PassThru] [-Context <AzureStorageContext>]
+Remove-AzureStorageShare [-Name] <String> [-Force] [-PassThru] [-Context <AzureStorageContext>]
  [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>] [-WhatIf]
  [-Confirm]
@@ -20,7 +20,7 @@ Remove-AzureStorageShare [-Name] <String> [-PassThru] [-Context <AzureStorageCon
 
 ### Share
 ```
-Remove-AzureStorageShare [-Share] <CloudFileShare> [-PassThru] [-ServerTimeoutPerRequest <Int32>]
+Remove-AzureStorageShare [-Share] <CloudFileShare> [-Force] [-PassThru] [-ServerTimeoutPerRequest <Int32>]
  [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-PipelineVariable <String>] [-WhatIf] [-Confirm]
 ```
@@ -53,6 +53,21 @@ Required: True
 Position: 0
 Default value: 
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Force
+Force to remove the share and all content in it
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -179,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+@{Text=}
 
 ```yaml
 Type: SwitchParameter

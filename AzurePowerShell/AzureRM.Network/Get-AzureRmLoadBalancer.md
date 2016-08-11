@@ -27,12 +27,15 @@ The Get-AzureRmLoadBalancer cmdlet gets one or more Azure load balancers that ar
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
+### --------------------------  Example 1 Get a Load Balancer  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
-
+PS C:\>Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 ```
+
+This command gets the load balancer named MyLoadBalancer.
+Note that MyLoadBalancer must exist before this command can be executed successfully.
 
 ## PARAMETERS
 

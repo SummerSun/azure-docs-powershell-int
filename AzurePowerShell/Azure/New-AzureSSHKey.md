@@ -45,7 +45,7 @@ This command creates a certificate setting object for an existing certificate an
 PS C:\>Add-AzureCertificate -ServiceName "MySvc" -CertToDeploy "C:\temp\MyLxCert.cer"
 $myLxCert = New-AzureSSHKey ?Fingerprint $fingerprint -Path "/home/username/.ssh/authorized_keys"
 New-AzureVMConfig -Name "MyVM2" -InstanceSize Small -ImageName $LxImage `
-| Add-AzureProvisioningConfig -Linux -LinuxUser $lxUser -SSHPublicKeys $myLxCert -Password 'pass@word1' `
+| Add-AzureProvisioningConfig -Linux -LinuxUser $lxUser -SSHPublicKeys $myLxCert -Password 'password' `
 | New-AzureVM -ServiceName "MySvc"
 ```
 

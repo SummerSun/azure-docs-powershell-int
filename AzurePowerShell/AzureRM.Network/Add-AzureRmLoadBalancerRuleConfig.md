@@ -41,7 +41,8 @@ PS C:\>$LoadBalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceG
 PS C:\> $LoadBalancer | Add-AzureRmLoadBalancerRuleConfig -Name "LbRuleConfig" -FrontendIPConfiguration $LoadBalancer.Properties.FrontendIPConfigurations[0] -BackendAddressPool $LoadBalancer.Properties.BackendAddressPools[0] -Probe $LoadBalancer.Properties.Probes[0] -Protocol "Tcp" -FrontendPort 80 -BackendPort 80 -IdleTimeoutInSeconds 15 -EnableFloatingIP | Set-AzureRmLoadBalancer
 ```
 
-The first command gets the load balancer named MyLoadBalancer, and then stores it in the $LoadBalancer variable.
+The first command gets an existing load balancer named MyLoadBalancer, and then stores it in the $LoadBalancer variable.
+The second command adds a newly created rule configuration to this load balancer called "LbRuleConfig" with
 
 ## PARAMETERS
 

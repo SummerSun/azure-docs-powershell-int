@@ -6,18 +6,25 @@ schema: 2.0.0
 
 # New-AzureRmCdnCustomDomain
 ## SYNOPSIS
-Create a custom domain
+Creates a custom domain.
 
 ## SYNTAX
 
+### Parameter Set for fields parameters (Default)
 ```
 New-AzureRmCdnCustomDomain -HostName <String> -CustomDomainName <String> -EndpointName <String>
  -ProfileName <String> -ResourceGroupName <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### Parameter Set for object parameters
+```
+New-AzureRmCdnCustomDomain -HostName <String> -CustomDomainName <String> -CdnEndpoint <PSEndpoint>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-Create a custom domain for the Cdn endpoint.
+Creates a custom domain for a CDN endpoint.
 
 ## EXAMPLES
 
@@ -31,7 +38,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -HostName
-The host name of the custom domain
+The host name of the custom domain.
 
 ```yaml
 Type: String
@@ -46,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomDomainName
-The resource name of the custom domain
+The resource name of the custom domain.
 
 ```yaml
 Type: String
@@ -61,11 +68,11 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointName
-The endpoint name
+The endpoint name.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
@@ -76,11 +83,11 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The profile name
+The profile name.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
@@ -91,11 +98,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name
+The resource group name.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
@@ -127,6 +134,51 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CdnEndpoint
+The CDN endpoint object to which the custom domain will be added.
+
+```yaml
+Type: PSEndpoint
+Parameter Sets: Parameter Set for object parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+{{Fill Confirm Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+{{Fill WhatIf Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

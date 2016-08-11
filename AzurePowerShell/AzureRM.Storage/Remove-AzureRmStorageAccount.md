@@ -11,8 +11,8 @@ Remove Storage Account from Azure
 ## SYNTAX
 
 ```
-Remove-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Remove-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -59,6 +59,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Force
+Force to Delete the Account
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InformationAction
 @{Text=}
 
@@ -81,6 +96,36 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+{{Fill WhatIf Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

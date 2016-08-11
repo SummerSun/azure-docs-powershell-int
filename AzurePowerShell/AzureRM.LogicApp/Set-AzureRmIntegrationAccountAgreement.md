@@ -19,8 +19,6 @@ Set-AzureRmIntegrationAccountAgreement -ResourceGroupName <String> -Name <String
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Set-AzureRmIntegrationAccountAgreement cmdlet updates an integration account agreement and returns an object that represents the integration account agreement.
 Use this cmdlet to update an integration account agreement.
 You can update an integration account agreement by specifying the integration account name, resource group name and agreement name.
@@ -115,7 +113,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -267,6 +265,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InformationAction
 @{Text=}
 
@@ -297,43 +310,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Do not ask for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
-{{Fill WhatIf Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

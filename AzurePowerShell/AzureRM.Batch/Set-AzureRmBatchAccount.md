@@ -11,7 +11,7 @@ Updates a Batch account.
 ## SYNTAX
 
 ```
-Set-AzureRmBatchAccount [-AccountName] <String> [-Tag] <Hashtable[]> [-ResourceGroupName <String>]
+Set-AzureRmBatchAccount [-AccountName] <String> [-Tag] <Hashtable> [-ResourceGroupName <String>]
  [-AutoStorageAccountId <String>]
 ```
 
@@ -25,7 +25,7 @@ Currently, this cmdlet can update only tags.
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\>Set-AzureRmBatchAccount -AccountName "cmdletexample" -Tag @(@{Name = "tag1";Value = "value1"},@{Name = "tag2";Value = "value2"})
+PS C:\>Set-AzureRmBatchAccount -AccountName "cmdletexample" -Tag @{tag1 = "value1"; tag2 = "value2"}
           AccountName                  : cmdletexample
 
           Location                     : westus
@@ -101,10 +101,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Specifies an array of hash tables of tags for the account.
+Specifies a hash table of tags for the account.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

@@ -18,8 +18,6 @@ Set-AzureRmIntegrationAccountCertificate -ResourceGroupName <String> -Name <Stri
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Set-AzureRmIntegrationAccountCertificate cmdlet updates an integration account certificate and returns an object that represents the integration account certificate .
 Use this cmdlet to update an integration account certificate.
 You can update an integration account by specifying the integration account name, resource group name and certificate name.
@@ -76,7 +74,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -178,6 +176,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InformationAction
 @{Text=}
 
@@ -208,43 +221,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Do not ask for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
-{{Fill WhatIf Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

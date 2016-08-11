@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}
+Force to remove the container and all content in it
 
 ```yaml
 Type: SwitchParameter

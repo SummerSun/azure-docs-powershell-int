@@ -12,8 +12,7 @@ Modifies the owner of a file or folder in Data Lake Store.
 
 ```
 Set-AzureRmDataLakeStoreItemOwner [-Account] <String> [-Path] <DataLakeStorePathInstance> [-Type] <Owner>
- [-Id] <Guid> [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-Id] <Guid> [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -88,21 +87,6 @@ Aliases:
 
 Required: True
 Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

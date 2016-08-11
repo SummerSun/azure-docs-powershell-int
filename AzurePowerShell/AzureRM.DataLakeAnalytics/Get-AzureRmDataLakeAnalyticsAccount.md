@@ -15,16 +15,16 @@ Gets information about a Data Lake Analytics account.
 Get-AzureRmDataLakeAnalyticsAccount [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### Specific Account
-```
-Get-AzureRmDataLakeAnalyticsAccount [[-ResourceGroupName] <String>] [-Name] <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### All In Resource Group
 ```
 Get-AzureRmDataLakeAnalyticsAccount [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
  [-InformationVariable <String>]
+```
+
+### Specific Account
+```
+Get-AzureRmDataLakeAnalyticsAccount [[-ResourceGroupName] <String>] [-Name] <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -78,10 +78,10 @@ Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
 Type: String
-Parameter Sets: Specific Account
+Parameter Sets: All In Resource Group
 Aliases: 
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -90,10 +90,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: All In Resource Group
+Parameter Sets: Specific Account
 Aliases: 
 
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)

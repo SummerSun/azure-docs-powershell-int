@@ -13,14 +13,14 @@ Configures the active period for data slices.
 ### ByFactoryName (Default)
 ```
 Set-AzureRmDataFactoryPipelineActivePeriod [-PipelineName] <String> [-DataFactoryName] <String>
- [-StartDateTime] <DateTime> [[-EndDateTime] <DateTime>] [-AutoResolve] [-ForceRecalculate] [-Force]
+ [-StartDateTime] <DateTime> [[-EndDateTime] <DateTime>] [-AutoResolve] [-ForceRecalculate]
  [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
 ```
 
 ### ByFactoryObject
 ```
 Set-AzureRmDataFactoryPipelineActivePeriod [-PipelineName] <String> [-DataFactory] <PSDataFactory>
- [-StartDateTime] <DateTime> [[-EndDateTime] <DateTime>] [-AutoResolve] [-ForceRecalculate] [-Force] [-WhatIf]
+ [-StartDateTime] <DateTime> [[-EndDateTime] <DateTime>] [-AutoResolve] [-ForceRecalculate] [-WhatIf]
  [-Confirm]
 ```
 
@@ -118,21 +118,6 @@ Aliases:
 
 Required: False
 Position: 5
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Indicates that this cmdlet sets the active period without prompting you for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
 Default value: 
 Accept pipeline input: False
 Accept wildcard characters: False

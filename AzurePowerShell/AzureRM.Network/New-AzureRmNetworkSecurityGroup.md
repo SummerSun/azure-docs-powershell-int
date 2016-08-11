@@ -13,8 +13,8 @@ Creates a network security group.
 ```
 New-AzureRmNetworkSecurityGroup -Name <String> -ResourceGroupName <String> -Location <String>
  [-SecurityRules <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSSecurityRule]>]
- [-Tag <Hashtable[]>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-WhatIf] [-Confirm]
+ [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
+ [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -366,7 +366,7 @@ Accept wildcard characters: False
 Specifies a dictionary of tags to associate with a network security group.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -422,13 +422,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -437,13 +437,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

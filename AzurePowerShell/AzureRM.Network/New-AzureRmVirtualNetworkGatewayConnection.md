@@ -15,7 +15,7 @@ New-AzureRmVirtualNetworkGatewayConnection -Name <String> -ResourceGroupName <St
  [-AuthorizationKey <String>] -VirtualNetworkGateway1 <PSVirtualNetworkGateway>
  [-VirtualNetworkGateway2 <PSVirtualNetworkGateway>] [-LocalNetworkGateway2 <PSLocalNetworkGateway>]
  -ConnectionType <String> [-RoutingWeight <Int32>] [-SharedKey <String>] [-Peer <PSPeering>]
- [-EnableBgp <String>] [-Tag <Hashtable[]>] [-Force] [-InformationAction <ActionPreference>]
+ [-EnableBgp <String>] [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -25,7 +25,7 @@ New-AzureRmVirtualNetworkGatewayConnection -Name <String> -ResourceGroupName <St
  [-AuthorizationKey <String>] -VirtualNetworkGateway1 <PSVirtualNetworkGateway>
  [-VirtualNetworkGateway2 <PSVirtualNetworkGateway>] [-LocalNetworkGateway2 <PSLocalNetworkGateway>]
  -ConnectionType <String> [-RoutingWeight <Int32>] [-SharedKey <String>] [-PeerId <String>]
- [-EnableBgp <String>] [-Tag <Hashtable[]>] [-Force] [-InformationAction <ActionPreference>]
+ [-EnableBgp <String>] [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 @{Text=}
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -282,23 +282,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PeerId
+### -WhatIf
 @{Text=}
 
 ```yaml
-Type: String
-Parameter Sets: SetByResourceId
-Aliases: 
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: 
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Confirm
-{{Fill Confirm Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -312,18 +312,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -PeerId
+@{Text=}
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Type: String
+Parameter Sets: SetByResourceId
+Aliases: 
 
 Required: False
 Position: Named
 Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

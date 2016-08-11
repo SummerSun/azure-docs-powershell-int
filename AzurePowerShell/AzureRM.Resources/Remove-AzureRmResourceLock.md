@@ -16,24 +16,23 @@ Remove-AzureRmResourceLock [-Force] -LockId <String> [-ApiVersion <String>] [-Pr
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
-### A lock at the subscription resource scope.
+### A lock at the subscription scope.
 ```
-Remove-AzureRmResourceLock -LockName <String> [-Force] -ResourceName <String> -ResourceType <String>
- [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-WhatIf] [-Confirm]
-```
-
-### A lock at the tenant resource scope.
-```
-Remove-AzureRmResourceLock -LockName <String> [-Force] -ResourceName <String> -ResourceType <String>
- [-TenantLevel] [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm]
+Remove-AzureRmResourceLock -LockName <String> [-Force] [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### A lock at the resource group scope.
 ```
 Remove-AzureRmResourceLock -LockName <String> [-Force] -ResourceGroupName <String> [-ApiVersion <String>]
  [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### A lock at the subscription resource scope.
+```
+Remove-AzureRmResourceLock -LockName <String> [-Force] -ResourceName <String> -ResourceType <String>
+ [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-WhatIf] [-Confirm]
 ```
 
 ### A lock at the resource group resource scope.
@@ -49,10 +48,11 @@ Remove-AzureRmResourceLock -LockName <String> [-Force] -Scope <String> [-ApiVers
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
-### A lock at the subscription scope.
+### A lock at the tenant resource scope.
 ```
-Remove-AzureRmResourceLock -LockName <String> [-Force] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+Remove-AzureRmResourceLock -LockName <String> [-Force] -ResourceName <String> -ResourceType <String>
+ [-TenantLevel] [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -81,7 +81,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the tenant resource scope., A lock at the resource group resource scope.
+Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
 Aliases: 
 
 Required: True
@@ -98,7 +98,7 @@ Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the tenant resource scope., A lock at the resource group resource scope.
+Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
 Aliases: 
 
 Required: True
@@ -264,7 +264,7 @@ The name of the lock.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the tenant resource scope., A lock at the resource group scope., A lock at the resource group resource scope., A lock at the specified scope., A lock at the subscription scope.
+Parameter Sets: A lock at the subscription scope., A lock at the resource group scope., A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the specified scope., A lock at the tenant resource scope.
 Aliases: ExtensionResourceName, Name
 
 Required: True

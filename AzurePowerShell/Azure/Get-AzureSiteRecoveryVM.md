@@ -27,16 +27,16 @@ Get-AzureSiteRecoveryVM -Id <String> -ProtectionContainerId <String> [-Profile <
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### ByIDsWithName
-```
-Get-AzureSiteRecoveryVM -Name <String> -ProtectionContainerId <String> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### ByObjectWithName
 ```
 Get-AzureSiteRecoveryVM -Name <String> -ProtectionContainer <ASRProtectionContainer>
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### ByIDsWithName
+```
+Get-AzureSiteRecoveryVM -Name <String> -ProtectionContainerId <String> [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ### ByIDs
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ByIDsWithName, ByObjectWithName
+Parameter Sets: ByObjectWithName, ByIDsWithName
 Aliases: 
 
 Required: True

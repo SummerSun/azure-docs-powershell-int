@@ -26,16 +26,16 @@ New-AzureStorageFileSASToken [-ShareName] <String> [-Path] <String> -Policy <Str
  [-InformationVariable <String>]
 ```
 
-### FileSasPolicy
+### FileSasPermission
 ```
-New-AzureStorageFileSASToken -File <CloudFile> -Policy <String> [-Protocol <SharedAccessProtocol>]
+New-AzureStorageFileSASToken -File <CloudFile> [-Permission <String>] [-Protocol <SharedAccessProtocol>]
  [-IPAddressOrRange <String>] [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-FullUri]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### FileSasPermission
+### FileSasPolicy
 ```
-New-AzureStorageFileSASToken -File <CloudFile> [-Permission <String>] [-Protocol <SharedAccessProtocol>]
+New-AzureStorageFileSASToken -File <CloudFile> -Policy <String> [-Protocol <SharedAccessProtocol>]
  [-IPAddressOrRange <String>] [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-FullUri]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
@@ -252,7 +252,7 @@ CloudFile object.
 
 ```yaml
 Type: CloudFile
-Parameter Sets: FileSasPolicy, FileSasPermission
+Parameter Sets: FileSasPermission, FileSasPolicy
 Aliases: 
 
 Required: True

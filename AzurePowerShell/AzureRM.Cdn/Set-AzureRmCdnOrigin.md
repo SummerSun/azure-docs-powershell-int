@@ -6,7 +6,7 @@ schema: 2.0.0
 
 # Set-AzureRmCdnOrigin
 ## SYNOPSIS
-Update the Cdn origin
+Updates a CDN origin.
 
 ## SYNTAX
 
@@ -16,7 +16,7 @@ Set-AzureRmCdnOrigin -CdnOrigin <PSOrigin> [-InformationAction <ActionPreference
 ```
 
 ## DESCRIPTION
-Update the Azure Cdn origin
+Updates an Azure CDN origin.
 
 ## EXAMPLES
 
@@ -28,6 +28,21 @@ PS C:\> {{ Add example code here }}
 {{ Add example description here }}
 
 ## PARAMETERS
+
+### -CdnOrigin
+The origin object to update.
+
+```yaml
+Type: PSOrigin
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -InformationAction
 @{Text=}
@@ -56,21 +71,6 @@ Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CdnOrigin
-The origin object
-
-```yaml
-Type: PSOrigin
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: 
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

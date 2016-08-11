@@ -6,11 +6,11 @@ schema: 2.0.0
 
 # Test-AzureRmCdnCustomDomain
 ## SYNOPSIS
-Validate the custom domain
+Validates a custom domain.
 
 ## SYNTAX
 
-### Parameter Set for fields parameters
+### Parameter Set for fields parameters (Default)
 ```
 Test-AzureRmCdnCustomDomain -EndpointName <String> -ProfileName <String> -ResourceGroupName <String>
  -CustomDomainHostName <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
@@ -23,7 +23,7 @@ Test-AzureRmCdnCustomDomain -CdnEndpoint <PSEndpoint> -CustomDomainHostName <Str
 ```
 
 ## DESCRIPTION
-Validate the CName mapping to see of the custom domain can be added to an endpoint
+Validates a CNAME mapping to verify a custom domain can be added to an endpoint.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -EndpointName
-The name of the endpoint
+The name of the endpoint.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the profile
+The name of the profile.
 
 ```yaml
 Type: String
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomDomainHostName
-The host name of the custom domain
+The host name of the custom domain to be verified.
 
 ```yaml
 Type: String
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -CdnEndpoint
-The endpoint object
+The endpoint object.
 
 ```yaml
 Type: PSEndpoint

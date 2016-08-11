@@ -16,28 +16,28 @@ Test-AzureRmResourceGroupDeployment -ResourceGroupName <String> [-Mode <Deployme
  [-ApiVersion <String>] [-Pre]
 ```
 
-### Deployment via template uri and template parameters object
-```
-Test-AzureRmResourceGroupDeployment -ResourceGroupName <String> [-Mode <DeploymentMode>]
- -TemplateParameterObject <Hashtable> -TemplateUri <String> [-ApiVersion <String>] [-Pre]
-```
-
 ### Deployment via template file and template parameters object
 ```
 Test-AzureRmResourceGroupDeployment -ResourceGroupName <String> [-Mode <DeploymentMode>]
  -TemplateParameterObject <Hashtable> -TemplateFile <String> [-ApiVersion <String>] [-Pre]
 ```
 
-### Deployment via template uri and template parameters file
+### Deployment via template uri and template parameters object
 ```
 Test-AzureRmResourceGroupDeployment -ResourceGroupName <String> [-Mode <DeploymentMode>]
- -TemplateParameterFile <String> -TemplateUri <String> [-ApiVersion <String>] [-Pre]
+ -TemplateParameterObject <Hashtable> -TemplateUri <String> [-ApiVersion <String>] [-Pre]
 ```
 
 ### Deployment via template file and template parameters file
 ```
 Test-AzureRmResourceGroupDeployment -ResourceGroupName <String> [-Mode <DeploymentMode>]
  -TemplateParameterFile <String> -TemplateFile <String> [-ApiVersion <String>] [-Pre]
+```
+
+### Deployment via template uri and template parameters file
+```
+Test-AzureRmResourceGroupDeployment -ResourceGroupName <String> [-Mode <DeploymentMode>]
+ -TemplateParameterFile <String> -TemplateUri <String> [-ApiVersion <String>] [-Pre]
 ```
 
 ### Deployment via template uri and template parameters uri
@@ -144,7 +144,7 @@ You must specify values for the template parameters, but you can use this parame
 
 ```yaml
 Type: Hashtable
-Parameter Sets: Deployment via template uri and template parameters object, Deployment via template file and template parameters object
+Parameter Sets: Deployment via template file and template parameters object, Deployment via template uri and template parameters object
 Aliases: 
 
 Required: True
@@ -176,7 +176,7 @@ You must specify values for the template parameters, but you can use this parame
 
 ```yaml
 Type: String
-Parameter Sets: Deployment via template uri and template parameters file, Deployment via template file and template parameters file
+Parameter Sets: Deployment via template file and template parameters file, Deployment via template uri and template parameters file
 Aliases: 
 
 Required: True

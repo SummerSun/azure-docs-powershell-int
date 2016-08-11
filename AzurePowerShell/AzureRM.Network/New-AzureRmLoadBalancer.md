@@ -17,7 +17,7 @@ New-AzureRmLoadBalancer -Name <String> -ResourceGroupName <String> -Location <St
  [-Probe <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSProbe]>]
  [-InboundNatRule <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSInboundNatRule]>]
  [-LoadBalancingRule <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSLoadBalancingRule]>]
- [-Tag <Hashtable[]>]
+ [-Tag <Hashtable>]
  [-InboundNatPool <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSInboundNatPool]>]
  [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
@@ -27,12 +27,31 @@ The New-AzureRmLoadBalancer cmdlet creates an Azure load balancer.
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
+### --------------------------  Example 1 Create a Load Balancer  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
-
+PS C:\> New-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup" -Location 'West US'
 ```
+
+This command created a new load balancer named MyLoadBalancer within the resource group MyResourceGroup in a specified location.
+In this case West US was selected.
+
+Name                     : MyLoadBalancer
+ResourceGroupName        : MyResourceGroup
+Location                 : westus
+Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microso
+                           ft.Network/loadBalancers/MyLoadBalancer
+Etag                     : W/"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+ResourceGuid             : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+ProvisioningState        : Succeeded
+Tags                     : 
+FrontendIpConfigurations : \[\]
+BackendAddressPools      : \[\]
+LoadBalancingRules       : \[\]
+Probes                   : \[\]
+InboundNatRules          : \[\]
+InboundNatPools          : \[\]
 
 ## PARAMETERS
 
@@ -160,7 +179,7 @@ Accept wildcard characters: False
 Specifies an array of tags to associate with a load balancer.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -231,13 +250,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -246,13 +265,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

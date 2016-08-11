@@ -12,12 +12,12 @@ Changes the properties of a resource group
 
 ### Lists the resource group based in the name. (Default)
 ```
-Set-AzureRmResourceGroup [-Name] <String> [-Tag] <Hashtable[]> [-ApiVersion <String>] [-Pre]
+Set-AzureRmResourceGroup [-Name] <String> [-Tag] <Hashtable> [-ApiVersion <String>] [-Pre]
 ```
 
 ### Lists the resource group based in the Id.
 ```
-Set-AzureRmResourceGroup [-Tag] <Hashtable[]> [-Id] <String> [-ApiVersion <String>] [-Pre]
+Set-AzureRmResourceGroup [-Tag] <Hashtable> [-Id] <String> [-ApiVersion <String>] [-Pre]
 ```
 
 ## DESCRIPTION
@@ -34,7 +34,7 @@ If you find an issue with this cmdlet, please create an issue on https://github.
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\>Set-AzureRmResourceGroup -Name ContosoRG -Tag @{Name="Department";Value="IT"}
+PS C:\>Set-AzureRmResourceGroup -Name ContosoRG -Tag @{Department="IT"}
 ```
 
 This command applies a "Department" tag with a value of "IT" to a resource group that has no existing tags.
@@ -55,7 +55,7 @@ PS C:\>$tags = (Get-AzureRmResourceGroup -Name ContosoRG).Tags
           Department  IT
 
 
-          PS C:\>$tags += @{Name="Status";Value="Approved"}, @{Name="FY2016"}
+          PS C:\>$tags += @{Status="Approved";FY2016=$null}
 
           PS C:\>Set-AzureRmResourceGroup -Name ContosoRG -Tag $tags
 
@@ -130,12 +130,12 @@ To add or change a single tag, you must replace the collection of tags for the r
 After you assign tags to resources and groups, you can use the Tag parameters of Get-AzureRmResource and Get-AzureRmResourceGroup to search for resources and groups by tag name or name and value.
 Use tags to categorize your resources, such as by department or cost center, or to track notes or comments about the resources.Each tag must have a Name key.
 It can also have an optional Value key with one value.
-To specify a tag, use a hash table, such as @{Name="FY2015"} or @{Name="Department";Value="IT"}.
-To specify multiple tags, use commas to separate the hash tables, such as  -Tag @{Name="FY2015"}, @{Name="Department";Value="IT"}.To delete a tag, enter a hash table with all tags currently applied to the resource group (from Get-AzureRmResourceGroup), except for the tag you want to delete. 
+To specify a tag, use a hash table, such as @{FY2015=$null} or @{Department="IT"}.
+To specify multiple tags, put them in one hash table, such as -Tag @{FY2015=$null; Department="IT"}.To delete a tag, enter a hash table with all tags currently applied to the resource group (from Get-AzureRmResourceGroup), except for the tag you want to delete. 
 To delete all tags from a resource group, enter an empty hash table (-Tag @{}).
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

@@ -16,8 +16,6 @@ Get-AzureRmLogicAppRunHistory -ResourceGroupName <String> -Name <String> [-RunNa
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmLogicAppRunHistory cmdlet retrieves the Logic App run history and returns a collection of WorkflowRun object for a specified Logic App.
 Use this cmdlet to get the run history of the Logic App from a specified resource group.
 You can get a Logic App's run history by specifying the Logic App name and resource group name.
@@ -30,52 +28,41 @@ If you miss a required template parameter, the cmdlet prompts you for the value.
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\>Get-AzureRmLogicAppActionRunHistory -ResourceGroupName "Resourcegroup1" -Name "LogicApp1"
+PS C:\>Get-AzureRmLogicAppRunHistory -ResourceGroupName "Resourcegroup1" -Name "LogicApp1"
 ```
 
 This command gets a Logic App run history for a specified Logic App and Azure resource group.
 
-CorrelationId    : 55830326-9042-404d-a4c3-fab198106a57
-EndTime          : 1/13/2016 2:46:55 PM
-Error            : {code, message}
-Name             : 08587489104702792076
-Outputs          : {}
-StartTime        : 1/13/2016 2:46:55 PM
-Status           : Failed
-TriggerName      : 
-LogicAppName     : LogicApp1
-LogicAppVersion  : 08587489107859952540
-
-CorrelationId    : d3ddc917-9aaa-47b3-8814-c621c2ae530b
-EndTime          : 1/13/2016 2:42:56 PM
-Error            : {code, message}
-Name             : 08587489107100664541
-Outputs          : {}
-StartTime        : 1/13/2016 2:42:55 PM
-Status           : Failed
-TriggerName      : httpTrigger
-LogicAppName     : LogicApp1
-LogicAppVersion  : 08587489107859952120
+CorrelationId   : ae5d41ae-fecb-490a-9edb-646a9b4a0966
+EndTime         : 7/27/2016 9:21:23 PM
+Error           : 
+Name            : 08587319525829122357126284894
+Outputs         : {}
+StartTime       : 7/27/2016 9:18:22 PM
+Status          : Succeeded
+TriggerName     : manual
+LogicAppName    : testApp
+LogicAppVersion : 08587319526040599968
 
 ### --------------------------  Example 2 : Gets the specific Logic App run for a specified Logic App and Azure resource group.  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\>Get-AzureRmLogicAppActionRunHistory -ResourceGroupName "Resourcegroup1" -Name "LogicApp1" -RunName "08587489104702792076"
+PS C:\>Get-AzureRmLogicAppRunHistory -ResourceGroupName "Resourcegroup1" -Name "LogicApp1" -RunName "08587319525829122357126284894"
 ```
 
 This command gets a Logic App run for a specified Logic App and Azure resource group.
 
-CorrelationId    : 55830326-9042-404d-a4c3-fab198106a57
-EndTime          : 1/13/2016 2:46:55 PM
-Error            : {code, message}
-Name             : 08587489104702792076
-Outputs          : {}
-StartTime        : 1/13/2016 2:46:55 PM
-Status           : Failed
-TriggerName      : 
-LogicAppName     : LogicApp1
-LogicAppVersion  : 08587489107859952120
+CorrelationId   : ae5d41ae-fecb-490a-9edb-646a9b4a0966
+EndTime         : 7/27/2016 9:21:23 PM
+Error           : 
+Name            : 08587319525829122357126284894
+Outputs         : {}
+StartTime       : 7/27/2016 9:18:22 PM
+Status          : Succeeded
+TriggerName     : manual
+LogicAppName    : testApp
+LogicAppVersion : 08587319526040599968
 
 ## PARAMETERS
 
@@ -102,7 +89,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named

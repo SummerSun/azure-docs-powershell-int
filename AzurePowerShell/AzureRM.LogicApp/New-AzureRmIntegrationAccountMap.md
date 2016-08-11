@@ -18,8 +18,6 @@ New-AzureRmIntegrationAccountMap -ResourceGroupName <String> -Name <String> -Map
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The New-AzureRmIntegrationAccountMap cmdlet creates an integration account map and returns an object that represents the integration account map.
 Use this cmdlet to create a new integration account map.
 You can create an integration account map by specifying the integration account name, resource group name, map name and map definition.
@@ -74,7 +72,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -211,13 +209,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -226,13 +224,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

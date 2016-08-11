@@ -10,15 +10,15 @@ Modifies the details of a data source of a Data Lake Analytics account.
 
 ## SYNTAX
 
-### Set a Data Lake storage account
-```
-Set-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-DataLakeStore] <String> [-Default]
- [[-ResourceGroupName] <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### Set a Blob storage account
 ```
 Set-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-Blob] <String> [-AccessKey] <String>
+ [[-ResourceGroupName] <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### Set a Data Lake storage account
+```
+Set-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-DataLakeStore] <String> [-Default]
  [[-ResourceGroupName] <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 

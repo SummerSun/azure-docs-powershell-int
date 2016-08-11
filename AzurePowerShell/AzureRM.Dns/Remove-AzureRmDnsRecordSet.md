@@ -10,16 +10,16 @@ Deletes a record set.
 
 ## SYNTAX
 
-### Mixed
-```
-Remove-AzureRmDnsRecordSet -Name <String> -RecordType <RecordType> -Zone <DnsZone> [-Force] [-PassThru]
- [-WhatIf] [-Confirm]
-```
-
 ### Fields
 ```
 Remove-AzureRmDnsRecordSet -Name <String> -RecordType <RecordType> -ZoneName <String>
  -ResourceGroupName <String> [-Force] [-PassThru] [-WhatIf] [-Confirm]
+```
+
+### Mixed
+```
+Remove-AzureRmDnsRecordSet -Name <String> -RecordType <RecordType> -Zone <DnsZone> [-Force] [-PassThru]
+ [-WhatIf] [-Confirm]
 ```
 
 ### Object
@@ -66,7 +66,7 @@ Specifies the name of the RecordSet to remove.
 
 ```yaml
 Type: String
-Parameter Sets: Mixed, Fields
+Parameter Sets: Fields, Mixed
 Aliases: 
 
 Required: True
@@ -140,7 +140,7 @@ You cannot remove SOA record sets.
 
 ```yaml
 Type: RecordType
-Parameter Sets: Mixed, Fields
+Parameter Sets: Fields, Mixed
 Aliases: 
 Accepted values: A, AAAA, CNAME, MX, NS, PTR, SOA, SRV, TXT
 

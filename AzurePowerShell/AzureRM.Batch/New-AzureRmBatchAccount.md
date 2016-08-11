@@ -12,7 +12,7 @@ Creates a Batch account.
 
 ```
 New-AzureRmBatchAccount [-AccountName] <String> [-Location] <String> [-ResourceGroupName] <String>
- [[-AutoStorageAccountId] <String>] [-Tag <Hashtable[]>]
+ [[-AutoStorageAccountId] <String>] [-Tag <Hashtable>]
 ```
 
 ## DESCRIPTION
@@ -107,10 +107,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Specifies an array of hash tables of tags for the account.
+Specifies a hash table of tags for the account.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

@@ -16,10 +16,10 @@ Get-AzureRmNetworkInterface [-Name <String>] [-ResourceGroupName <String>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### ExpandStandAloneNic
+### NoExpandScaleSetNic
 ```
-Get-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -ExpandResource <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Get-AzureRmNetworkInterface [-Name <String>] -ResourceGroupName <String> [-VirtualMachineScaleSetName <String>]
+ [-VirtualMachineIndex <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ### ExpandScaleSetNic
@@ -29,10 +29,10 @@ Get-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -VirtualM
  [-InformationVariable <String>]
 ```
 
-### NoExpandScaleSetNic
+### ExpandStandAloneNic
 ```
-Get-AzureRmNetworkInterface [-Name <String>] -ResourceGroupName <String> [-VirtualMachineScaleSetName <String>]
- [-VirtualMachineIndex <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Get-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -ExpandResource <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ExpandStandAloneNic, ExpandScaleSetNic
+Parameter Sets: ExpandScaleSetNic, ExpandStandAloneNic
 Aliases: 
 
 Required: True
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ExpandStandAloneNic, ExpandScaleSetNic, NoExpandScaleSetNic
+Parameter Sets: NoExpandScaleSetNic, ExpandScaleSetNic, ExpandStandAloneNic
 Aliases: 
 
 Required: True
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ExpandStandAloneNic, ExpandScaleSetNic
+Parameter Sets: ExpandScaleSetNic, ExpandStandAloneNic
 Aliases: 
 
 Required: True
@@ -164,10 +164,10 @@ Specifies the name of the virtual machine scale set from which network interface
 
 ```yaml
 Type: String
-Parameter Sets: ExpandScaleSetNic
+Parameter Sets: NoExpandScaleSetNic
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
@@ -176,10 +176,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: NoExpandScaleSetNic
+Parameter Sets: ExpandScaleSetNic
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
@@ -191,10 +191,10 @@ Specifies the virtual machine index of the virtual machine scale set from which 
 
 ```yaml
 Type: String
-Parameter Sets: ExpandScaleSetNic
+Parameter Sets: NoExpandScaleSetNic
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
@@ -203,10 +203,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: NoExpandScaleSetNic
+Parameter Sets: ExpandScaleSetNic
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)

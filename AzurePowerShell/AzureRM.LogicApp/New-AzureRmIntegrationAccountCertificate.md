@@ -18,8 +18,6 @@ New-AzureRmIntegrationAccountCertificate -ResourceGroupName <String> -Name <Stri
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The New-AzureRmIntegrationAccountCertificate cmdlet creates an integration account certificate and returns an object that represents the integration account certificate .
 Use this cmdlet to create a new integration account certificate.
 You can create an integration account by specifying the integration account name, resource group name, certificate name, key name,key version and key vault ID.
@@ -76,7 +74,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -210,13 +208,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -225,13 +223,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

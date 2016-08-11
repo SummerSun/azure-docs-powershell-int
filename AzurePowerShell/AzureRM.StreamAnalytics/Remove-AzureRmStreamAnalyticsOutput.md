@@ -12,7 +12,7 @@ Asynchronously deletes a specific output from a Stream Analytics job in Microsof
 ## SYNTAX
 
 ```
-Remove-AzureRmStreamAnalyticsOutput [-JobName] <String> [-Name] <String> [-Force] [-ResourceGroupName] <String>
+Remove-AzureRmStreamAnalyticsOutput [-JobName] <String> [-Name] <String> [-ResourceGroupName] <String>
  [-PipelineVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -60,21 +60,6 @@ Required: True
 Position: 2
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics output without asking for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

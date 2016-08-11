@@ -15,15 +15,15 @@ Gets a list or a particular API Management Service description.
 Get-AzureRmApiManagement [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### Specific API Management Service
-```
-Get-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
 ### All In Resource Group
 ```
 Get-AzureRmApiManagement -ResourceGroupName <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
+```
+
+### Specific API Management Service
+```
+Get-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-InformationAction <ActionPreference>]
  [-InformationVariable <String>]
 ```
 
@@ -57,7 +57,7 @@ Name of resource group under which want to create API Management service.
 
 ```yaml
 Type: String
-Parameter Sets: Specific API Management Service, All In Resource Group
+Parameter Sets: All In Resource Group, Specific API Management Service
 Aliases: 
 
 Required: True

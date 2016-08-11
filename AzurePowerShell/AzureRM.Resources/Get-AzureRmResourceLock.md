@@ -10,23 +10,10 @@ Gets the azure resource lock.
 
 ## SYNTAX
 
-### A lock at the subscription scope.
+### A lock at the resource group scope.
 ```
-Get-AzureRmResourceLock [-LockName <String>] [-AtScope] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
-### A lock at the resource group resource scope.
-```
-Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceName <String> -ResourceType <String>
- -ResourceGroupName <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
-### A lock at the subscription resource scope.
-```
-Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceName <String> -ResourceType <String>
- [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceGroupName <String> [-ApiVersion <String>]
+ [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ### A lock at the tenant resource scope.
@@ -36,15 +23,28 @@ Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceName <String> -
  [-InformationVariable <String>]
 ```
 
-### A lock at the resource group scope.
+### A lock at the subscription resource scope.
 ```
-Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceGroupName <String> [-ApiVersion <String>]
- [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceName <String> -ResourceType <String>
+ [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### A lock at the resource group resource scope.
+```
+Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceName <String> -ResourceType <String>
+ -ResourceGroupName <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### A lock at the specified scope.
 ```
 Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -Scope <String> [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### A lock at the subscription scope.
+```
+Get-AzureRmResourceLock [-LockName <String>] [-AtScope] [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -92,7 +92,7 @@ The name of the lock.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription scope., A lock at the resource group resource scope., A lock at the subscription resource scope., A lock at the tenant resource scope., A lock at the resource group scope., A lock at the specified scope.
+Parameter Sets: A lock at the resource group scope., A lock at the tenant resource scope., A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the specified scope., A lock at the subscription scope.
 Aliases: ExtensionResourceName, Name
 
 Required: False
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the resource group resource scope., A lock at the subscription resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the tenant resource scope., A lock at the subscription resource scope., A lock at the resource group resource scope.
 Aliases: 
 
 Required: True
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the resource group resource scope., A lock at the subscription resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the tenant resource scope., A lock at the subscription resource scope., A lock at the resource group resource scope.
 Aliases: 
 
 Required: True
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the resource group resource scope., A lock at the resource group scope.
+Parameter Sets: A lock at the resource group scope., A lock at the resource group resource scope.
 Aliases: 
 
 Required: True

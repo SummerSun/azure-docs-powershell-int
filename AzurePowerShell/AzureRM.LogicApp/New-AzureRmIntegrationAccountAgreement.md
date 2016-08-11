@@ -19,8 +19,6 @@ New-AzureRmIntegrationAccountAgreement -ResourceGroupName <String> -Name <String
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The New-AzureRmIntegrationAccountAgreement cmdlet creates an integration account agreement  and returns an object that represents the integration account agreement.
 Use this cmdlet to create a new integration account agreement.
 You can create an integration account agreement by specifying the integration account name, resource group name, agreement name, type, partner name & qualifiers and agreement content.
@@ -116,7 +114,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -300,13 +298,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -315,13 +313,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

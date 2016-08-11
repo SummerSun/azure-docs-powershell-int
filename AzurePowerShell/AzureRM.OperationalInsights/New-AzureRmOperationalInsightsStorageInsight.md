@@ -215,23 +215,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Workspace
-Specifies the workspace for the new storage insight.
+### -WhatIf
+@{Text=}
 
 ```yaml
-Type: PSWorkspace
-Parameter Sets: ByWorkspaceObject
-Aliases: 
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Confirm
-{{Fill Confirm Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -245,18 +245,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Workspace
+Specifies the workspace for the new storage insight.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Type: PSWorkspace
+Parameter Sets: ByWorkspaceObject
+Aliases: 
 
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

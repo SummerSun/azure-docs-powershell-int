@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-Format for the blob. 
+Format for the blob.
 Currently "rdb" is the only supported, with other formats expected in the future.
 
 ```yaml
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-By default Import-AzureRmRedisCache imports data in cache and does not return any value.
+By default Import-AzureRmRedisCache imports data into the cache and does not return any value.
 If the PassThru parameter is provided then Import-AzureRmRedisCache returns a boolean value indicating the success of the operation.
 
 ```yaml

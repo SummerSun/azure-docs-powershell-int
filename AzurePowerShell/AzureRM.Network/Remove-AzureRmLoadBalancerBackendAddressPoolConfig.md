@@ -20,12 +20,15 @@ The Remove-AzureRmLoadBalancerBackendAddressPoolConfig cmdlet removes a backend 
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
+### --------------------------  Example 1 Remove Backend Address Pool Configuration of a load balancer  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
-
+PS C:\> Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup" | Remove-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02" | Set-AzureRmLoadBalancer
 ```
+
+The above command gets information about the existing load balancer called "MyLoadBalancer" within resource group "MyResourceGroup" and then removes the Backend Address Pool configuration associated with it called "BackendAddressPool02." Finally, the Set-AzureRmLoadBalancer cmdlet is used to update MyLoadBalancer.
+Note that a backend address pool configuration must exist before one can delete it.
 
 ## PARAMETERS
 

@@ -12,13 +12,13 @@ Removes the specified resource group deployment.
 
 ### The deployment name parameter set. (Default)
 ```
-Remove-AzureRmResourceGroupDeployment -ResourceGroupName <String> -Name <String> [-Force]
- [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+Remove-AzureRmResourceGroupDeployment -ResourceGroupName <String> -Name <String> [-ApiVersion <String>] [-Pre]
+ [-WhatIf] [-Confirm]
 ```
 
 ### The deployment Id parameter set.
 ```
-Remove-AzureRmResourceGroupDeployment -Id <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+Remove-AzureRmResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -69,21 +69,6 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Do not ask for confirmation
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -12,8 +12,8 @@ Asynchronously deletes a specific Stream Analytics job in Microsoft Azure.
 ## SYNTAX
 
 ```
-Remove-AzureRmStreamAnalyticsJob [-Name] <String> [-Force] [-ResourceGroupName] <String>
- [-PipelineVariable <String>] [-WhatIf] [-Confirm]
+Remove-AzureRmStreamAnalyticsJob [-Name] <String> [-ResourceGroupName] <String> [-PipelineVariable <String>]
+ [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -45,21 +45,6 @@ Required: True
 Position: 1
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics job without asking for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

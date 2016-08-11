@@ -11,7 +11,7 @@ Removes an Automation variable.
 ## SYNTAX
 
 ```
-Remove-AzureRmAutomationVariable [-Name] <String> [-Force] [-ResourceGroupName] <String>
+Remove-AzureRmAutomationVariable [-Name] <String> [-ResourceGroupName] <String>
  [-AutomationAccountName] <String> [-WhatIf] [-Confirm]
 ```
 
@@ -43,21 +43,6 @@ Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -11,8 +11,7 @@ Registers a subscription with a resource provider
 ## SYNTAX
 
 ```
-Register-AzureRmResourceProvider -ProviderNamespace <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf]
- [-Confirm]
+Register-AzureRmResourceProvider -ProviderNamespace <String> [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -47,21 +46,6 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

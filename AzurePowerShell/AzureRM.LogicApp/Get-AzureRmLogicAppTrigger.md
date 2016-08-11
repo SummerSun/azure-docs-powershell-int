@@ -16,8 +16,6 @@ Get-AzureRmLogicAppTrigger -ResourceGroupName <String> -Name <String> [-TriggerN
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmLogicAppTrigger cmdlet retrieves the specified trigger from the logic app and returns an object/collection which represents the workflow trigger.
 Use this cmdlet to get the trigger(s) of the logic app from a specified resource group.
 You can get the logic app's trigger by specifying the workflow name, resource group name and trigger name.
@@ -93,7 +91,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named

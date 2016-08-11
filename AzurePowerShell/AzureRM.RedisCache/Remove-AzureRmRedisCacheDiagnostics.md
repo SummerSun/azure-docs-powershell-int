@@ -11,7 +11,7 @@ Disable diagnostics on Azure Redis Cache.
 ## SYNTAX
 
 ```
-Remove-AzureRmRedisCacheDiagnostics -ResourceGroupName <String> -Name <String> [-Force] [-WhatIf] [-Confirm]
+Remove-AzureRmRedisCacheDiagnostics -ResourceGroupName <String> -Name <String> [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -56,21 +56,6 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-When the Force parameter is provided, diagnostics will be disables without any confirmation prompts.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

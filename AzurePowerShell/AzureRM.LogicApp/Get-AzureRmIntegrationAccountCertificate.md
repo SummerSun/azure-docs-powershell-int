@@ -16,8 +16,6 @@ Get-AzureRmIntegrationAccountCertificate [-ResourceGroupName <String>] [-Name <S
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmIntegrationAccountCertificate cmdlet retrieves integration account certificate from the Azure resource group and returns an object that represents the integration account certificate.
 Use this cmdlet to get the integration account certificate from specified resource group.
 You can get the integration account certificate by specifying the integration account name, resource group name and certificate name.
@@ -95,7 +93,7 @@ This parameter is optional.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: False
 Position: Named

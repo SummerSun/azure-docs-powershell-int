@@ -16,8 +16,6 @@ Stop-AzureRmLogicAppRun -ResourceGroupName <String> -Name <String> -RunName <Str
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Stop-AzureRmLogicAppRun cmdlet cancels the run of the Azure Logic App.
 Use this cmdlet to cancel the specified run of a Logic App.
 You can cancel the run of a Logic App by specifying the Logic App name, resource group name and run name.
@@ -60,7 +58,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -82,6 +80,21 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Force
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -115,43 +128,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Do not ask for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
-{{Fill WhatIf Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

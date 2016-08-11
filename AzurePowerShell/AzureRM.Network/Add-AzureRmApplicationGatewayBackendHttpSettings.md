@@ -12,7 +12,9 @@ schema: 2.0.0
 ```
 Add-AzureRmApplicationGatewayBackendHttpSettings -ApplicationGateway <PSApplicationGateway> -Name <String>
  -Port <Int32> -Protocol <String> -CookieBasedAffinity <String> [-RequestTimeout <UInt32>] [-ProbeId <String>]
- [-Probe <PSApplicationGatewayProbe>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-Probe <PSApplicationGatewayProbe>]
+ [-AuthenticationCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -178,6 +180,21 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationCertificates
+Application gateway Authentication Certificates
+
+```yaml
+Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

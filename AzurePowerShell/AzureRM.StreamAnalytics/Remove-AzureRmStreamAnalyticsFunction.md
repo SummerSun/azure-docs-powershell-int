@@ -12,8 +12,8 @@ Asynchronously deletes a specific function from a Stream Analytics job in Micros
 ## SYNTAX
 
 ```
-Remove-AzureRmStreamAnalyticsFunction [-JobName] <String> [-Name] <String> [-Force]
- [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
+Remove-AzureRmStreamAnalyticsFunction [-JobName] <String> [-Name] <String> [-ResourceGroupName] <String>
+ [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -60,21 +60,6 @@ Required: True
 Position: 2
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics function without asking for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

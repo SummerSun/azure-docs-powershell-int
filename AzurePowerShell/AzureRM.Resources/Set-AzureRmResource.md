@@ -13,24 +13,24 @@ Changes the properties of an Azure resource.
 ### The resource Id. (Default)
 ```
 Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
- [-Tag <Hashtable[]>] [-UsePatchSemantics] -ResourceId <String> [-ODataQuery <String>] [-Force]
+ [-Tag <Hashtable>] [-UsePatchSemantics] -ResourceId <String> [-ODataQuery <String>] [-Force]
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
-```
-
-### Resource that resides at the subscription level.
-```
-Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
- [-Tag <Hashtable[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
- [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>]
- [-ResourceGroupName <String>] [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
 ### Resource that resides at the tenant level.
 ```
 Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
- [-Tag <Hashtable[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
+ [-Tag <Hashtable>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
  [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>] [-TenantLevel]
  [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+```
+
+### Resource that resides at the subscription level.
+```
+Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
+ [-Tag <Hashtable>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
+ [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>]
+ [-ResourceGroupName <String>] [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -162,7 +162,7 @@ To specify a predefined tag, use the Get-AzureRmTag cmdlet.To delete a tag, ente
 To delete all tags from the resource, enter an empty hash table (-Tag @{}).
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -199,7 +199,7 @@ You cannot use this cmdlet to change the resource type.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: 
 
 Required: True
@@ -231,7 +231,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: 
 
 Required: False
@@ -248,7 +248,7 @@ Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: 
 
 Required: False
@@ -372,7 +372,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: Name
 
 Required: True

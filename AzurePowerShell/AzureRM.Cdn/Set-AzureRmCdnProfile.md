@@ -6,17 +6,17 @@ schema: 2.0.0
 
 # Set-AzureRmCdnProfile
 ## SYNOPSIS
-Update the Cdn profile
+Updates a CDN profile.
 
 ## SYNTAX
 
 ```
 Set-AzureRmCdnProfile -CdnProfile <PSProfile> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-Update the Azure Cdn profile
+Updates an Azure CDN profile.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -CdnProfile
-The profile object
+The profile object to be updated.
 
 ```yaml
 Type: PSProfile
@@ -66,6 +66,36 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+{{Fill Confirm Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+{{Fill WhatIf Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

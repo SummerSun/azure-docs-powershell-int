@@ -11,7 +11,7 @@ Deletes a certificate from an account.
 ## SYNTAX
 
 ```
-Remove-AzureBatchCertificate [-ThumbprintAlgorithm] <String> [-Thumbprint] <String> [-Force]
+Remove-AzureBatchCertificate [-ThumbprintAlgorithm] <String> [-Thumbprint] <String>
  -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
 ```
 
@@ -57,21 +57,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

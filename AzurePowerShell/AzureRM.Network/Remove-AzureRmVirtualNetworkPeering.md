@@ -6,6 +6,7 @@ schema: 2.0.0
 
 # Remove-AzureRmVirtualNetworkPeering
 ## SYNOPSIS
+Deletes a Virtual network Peering that has been previously created
 
 ## SYNTAX
 
@@ -19,12 +20,14 @@ Remove-AzureRmVirtualNetworkPeering -VirtualNetworkName <String> -Name <String> 
 
 ## EXAMPLES
 
-### Example 1
+### --------------------------  Example 1 Delete a Virtual Network Peering  --------------------------
+@{paragraph=PS C:\\\>}
+
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmVirtualNetworkPeering -Name "LinkToVNet2" -VirtualNetworkName "MyVirtualNetwork" -ResourceGroupName "MyResourceGroup"
 ```
 
-{{ Add example description here }}
+This command deletes a previously created Virtual Network Peering called "LinkToVNet2" located in "MyVirtualNetwork" within the resource group called "MyResourceGroup"
 
 ## PARAMETERS
 
@@ -133,13 +136,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -148,13 +151,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

@@ -13,7 +13,7 @@ Creates an Azure Key Vault instance.
 ```
 New-AzureRmKeyVault [-VaultName] <String> [-ResourceGroupName] <String> [-Location] <String>
  [-EnabledForDeployment] [-EnabledForTemplateDeployment] [-EnabledForDiskEncryption] [-Sku <String>]
- [-Tag <Hashtable[]>]
+ [-Tag <Hashtable>]
 ```
 
 ## DESCRIPTION
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 Specifies a hash table that represents resource tags.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

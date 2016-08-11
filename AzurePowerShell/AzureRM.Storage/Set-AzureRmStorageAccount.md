@@ -11,11 +11,11 @@ Update the Storage Account properties
 ## SYNTAX
 
 ```
-Set-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [[-SkuName] <String>]
+Set-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force] [[-SkuName] <String>]
  [[-AccessTier] <String>] [[-CustomDomainName] <String>] [[-UseSubDomain] <Boolean>]
  [[-EnableEncryptionService] <EncryptionSupportServiceEnum>]
- [[-DisableEncryptionService] <EncryptionSupportServiceEnum>] [[-Tag] <Hashtable[]>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [[-DisableEncryptionService] <EncryptionSupportServiceEnum>] [[-Tag] <Hashtable>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -27,16 +27,16 @@ This cmdlet allows you to update the Storage Account properties.
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\> # Set account type
+PS C:\> # Set SkuName
               Set-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" - SkuName "Standard_RAGRS"
 ```
 
-### --------------------------  Set Custom Domain  --------------------------
+### --------------------------  Set Custom Domain and Tags  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\> #Set custom domain
-          Set-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -CustomDomainName "www.domainname.com" -UseSubDomain $true
+PS C:\> #Set custom domain and Tags
+          Set-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -CustomDomainName "www.domainname.com" -UseSubDomain $true -Tag @{tag0="value0";tag1="value1";tag2="value2"}
 ```
 
 ### --------------------------  Enable Storage Service Encryption and set Access Tier to cool  --------------------------
@@ -76,6 +76,21 @@ Required: True
 Position: 1
 Default value: 
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Force
+Force to Set the Account
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -189,7 +204,7 @@ Accept wildcard characters: False
 Tags to set on the storage account.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -222,6 +237,36 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+{{Fill WhatIf Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

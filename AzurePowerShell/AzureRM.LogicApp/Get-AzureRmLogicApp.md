@@ -11,13 +11,11 @@ Gets the specified Logic App from the Azure resource group.
 ## SYNTAX
 
 ```
-Get-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+Get-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-Version <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmLogicApp cmdlet retrieves Azure Logic App from the Azure resource group and returns an object that represents the Workflow.
 Use this cmdlet to get a Logic App from specified resource group.
 You can get a Logic App by specifying the Logic App name and resource group name.
@@ -35,25 +33,45 @@ PS C:\>Get-AzureRmLogicApp -ResourceGroupName "ResourceGroup1" -Name "LogicApp1"
 
 This command gets a Logic App from the specified Azure resource group.
 
-Id                           : /subscriptions/\<subscriptionid\>/resourceGroups/\<ResourceGroup\>/providers/Microsoft.Logic/workflows/LogicApp1
+Id                           : /subscriptions/\<subscriptionId\>/resourceGroups/ResourceGroup1/providers/Microsoft.Logic/workflows/LogicApp1
 Name                         : LogicApp1
 Type                         : Microsoft.Logic/workflows
 Location                     : westus
-ChangedTime                  : 1/13/2016 2:41:39 PM
-CreatedTime                  : 1/13/2016 2:41:39 PM
-AccessEndpoint               : https://\<baseurl\>/subscriptions/\<susbcriptionid\>/resourcegroups/\<ResourceGroup\>/providers/Microsoft.Logic/workflows/LogicApp1
+ChangedTime                  : 7/27/2016 9:18:45 PM
+CreatedTime                  : 7/27/2016 9:16:54 PM
+AccessEndpoint               : https://prod-03.westus.logic.azure.com:443/workflows/c4ed9335bc864140a11f4508d19acea3
 State                        : Enabled
-DefinitionLinkUri            : 
-DefinitionLinkContentVersion : 
 Definition                   : {$schema, contentVersion, parameters, triggers...}
-ParametersLinkUri            : 
-ParametersLinkContentVersion : 
-Parameters                   : {\[destinationUri, Microsoft.Azure.Management.Logic.Models.WorkflowParameter\]}
-SkuName                      : Standard
-PlanName                     : StandardServicePlan
-PlanType                     : Microsoft.Web/ServerFarms
-PlanId                       : /subscriptions/\<subscriptionid\>/resourceGroups/\<ResourceGroup\>/providers/Microsoft.Web/serverfarms/StandardServicePlan
-Version                      : 08587489107859952120
+Parameters                   : {}
+SkuName                      : 
+AppServicePlan               : 
+PlanType                     : 
+PlanId                       : 
+Version                      : 08587319525596153866
+
+### --------------------------  Example 2 : Get a Logic App of specified version from specified Azure resource group.  --------------------------
+@{paragraph=PS C:\\\>}
+
+```
+PS C:\>Get-AzureRmLogicApp -ResourceGroupName "ResourceGroup1" -Name "LogicApp1" -Version "08587319525596153866"
+```
+
+This command gets a Logic App of specified version from the specified Azure resource group.
+
+CreatedTime        : 7/27/2016 9:18:45 PM
+ChangedTime        : 7/27/2016 9:18:45 PM
+State              : 
+Version            : 08587319525596153866
+AccessEndpoint     : 
+Sku                : 
+IntegrationAccount : 
+Definition         : {$schema, contentVersion, parameters, triggers...}
+Parameters         : {}
+Id                 : /subscriptions/\<subscriptionId\>/resourceGroups/ResourceGroup1/providers/Microsoft.Logic/workflows/LogicApp1/versions/08587319525596153866
+Name               : 08587319525596153866
+Type               : Microsoft.Logic/workflows/versions
+Location           : westus
+Tags               :
 
 ## PARAMETERS
 
@@ -80,9 +98,25 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Version
+Specifies the version of the Logic App.
+This parameter is optional.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False

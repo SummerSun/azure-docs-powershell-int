@@ -12,9 +12,9 @@ Creates a copy of an existing Azure SQL Database using the snapshot of the data 
 
 ```
 New-AzureRmSqlDatabaseCopy [-DatabaseName] <String> [-ServiceObjectiveName <String>]
- [-ElasticPoolName <String>] [-Tags <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
- [-CopyResourceGroupName <String>] [-CopyServerName <String>] -CopyDatabaseName <String> [-ServerName] <String>
- [-ResourceGroupName] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-ElasticPoolName <String>] [-Tags <Hashtable>] [-CopyResourceGroupName <String>] [-CopyServerName <String>]
+ -CopyDatabaseName <String> [-ServerName] <String> [-ResourceGroupName] <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -83,9 +83,9 @@ Accept wildcard characters: False
 The tags to associate with the Azure SQL Database copy.
 
 ```yaml
-Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases: Tag
 
 Required: False
 Position: Named

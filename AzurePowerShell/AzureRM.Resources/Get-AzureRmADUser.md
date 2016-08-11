@@ -12,27 +12,30 @@ Filters active directory users.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADUser [-UserPrincipalName <String>]
+Get-AzureRmADUser [-UserPrincipalName <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADUser -SearchString <String>
+Get-AzureRmADUser -SearchString <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADUser -ObjectId <Guid>
+Get-AzureRmADUser -ObjectId <Guid> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ### UPNParameterSet
 ```
-Get-AzureRmADUser -UserPrincipalName <String>
+Get-AzureRmADUser -UserPrincipalName <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ### MailParameterSet
 ```
-Get-AzureRmADUser -Mail <String>
+Get-AzureRmADUser -Mail <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -96,6 +99,36 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SearchString
 The user display name
 
@@ -149,9 +182,9 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AzureRmADGroup]()
+[New-AzureRmADUser]()
 
-[Get-AzureRmADServicePrincipal]()
+[Set-AzureRmADUser]()
 
-[Get-AzureRmADGroupMember]()
+[Remove-AzureRmADUser]()
 

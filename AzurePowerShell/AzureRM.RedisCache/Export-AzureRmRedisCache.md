@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-Format for the blob. 
+Format for the blob.
 Currently "rdb" is the only supported, with other formats expected in the future.
 
 ```yaml
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-By default Export-AzureRmRedisCache export does not return any value.
+By default Export-AzureRmRedisCache does not return any value.
 If the PassThru parameter is provided then Export-AzureRmRedisCache returns a boolean value indicating the success of the operation.
 
 ```yaml

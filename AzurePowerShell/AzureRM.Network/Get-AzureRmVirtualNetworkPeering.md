@@ -6,6 +6,7 @@ schema: 2.0.0
 
 # Get-AzureRmVirtualNetworkPeering
 ## SYNOPSIS
+Gets a Virtual Network Peering to view the status of VNet peering link
 
 ## SYNTAX
 
@@ -18,12 +19,21 @@ Get-AzureRmVirtualNetworkPeering -VirtualNetworkName <String> -ResourceGroupName
 
 ## EXAMPLES
 
-### Example 1
+### --------------------------  Example 1 Get a peering between 2 virtual networks  --------------------------
+@{paragraph=PS C:\\\>}
+
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmVirtualNetworkPeering -Name "LinkToVNet2" -VirtualNetwork "MyVirtualNetwork" -ResourceGroupName "MyResourceGroup"
 ```
 
-{{ Add example description here }}
+This command gets a previously created Virtual Network Peering called "LinkToVNet2" located in "MyVirtualNetwork" within the resource group called "MyResourceGroup"
+
+### --------------------------  Unknown  --------------------------
+@{paragraph=PS C:\\\>}
+
+```
+
+```
 
 ## PARAMETERS
 

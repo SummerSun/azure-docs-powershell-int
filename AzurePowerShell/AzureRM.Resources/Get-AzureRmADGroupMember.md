@@ -11,7 +11,8 @@ Get a group members.
 ## SYNTAX
 
 ```
-Get-AzureRmADGroupMember [-GroupObjectId <Guid>]
+Get-AzureRmADGroupMember [-GroupObjectId <Guid>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -42,6 +43,36 @@ Required: False
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

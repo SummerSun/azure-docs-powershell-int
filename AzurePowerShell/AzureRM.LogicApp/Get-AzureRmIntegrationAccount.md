@@ -16,8 +16,6 @@ Get-AzureRmIntegrationAccount [-ResourceGroupName <String>] [-Name <String>]
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmIntegrationAccount cmdlet retrieves integration account from the Azure resource group and returns an object that represents the integration account.
 Use this cmdlet to get the integration account from specified resource group.
 You can get the integration account by specifying the integration account name and resource group name.
@@ -102,7 +100,7 @@ This parameter is optional.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: False
 Position: Named

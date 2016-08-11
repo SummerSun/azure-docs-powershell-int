@@ -19,15 +19,6 @@ Add-AzureEndpoint [-Name] <String> [-Protocol] <String> [-LocalPort] <Int32> [-P
  [-InformationVariable <String>]
 ```
 
-### LBNoProbe
-```
-Add-AzureEndpoint [-Name] <String> [-Protocol] <String> [-LocalPort] <Int32> [-PublicPort <Int32>]
- [-DirectServerReturn <Boolean>] [-ACL <NetworkAclObject>] -LBSetName <String> [-NoProbe]
- [-InternalLoadBalancerName <String>] [-IdleTimeoutInMinutes <Int32>] [-LoadBalancerDistribution <String>]
- [-VirtualIPName <String>] -VM <IPersistentVM> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### LBDefaultProbe
 ```
 Add-AzureEndpoint [-Name] <String> [-Protocol] <String> [-LocalPort] <Int32> [-PublicPort <Int32>]
@@ -44,6 +35,15 @@ Add-AzureEndpoint [-Name] <String> [-Protocol] <String> [-LocalPort] <Int32> [-P
  -ProbeProtocol <String> [-ProbePath <String>] [-ProbeIntervalInSeconds <Int32>]
  [-ProbeTimeoutInSeconds <Int32>] [-InternalLoadBalancerName <String>] [-IdleTimeoutInMinutes <Int32>]
  [-LoadBalancerDistribution <String>] [-VirtualIPName <String>] -VM <IPersistentVM> [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### LBNoProbe
+```
+Add-AzureEndpoint [-Name] <String> [-Protocol] <String> [-LocalPort] <Int32> [-PublicPort <Int32>]
+ [-DirectServerReturn <Boolean>] [-ACL <NetworkAclObject>] -LBSetName <String> [-NoProbe]
+ [-InternalLoadBalancerName <String>] [-IdleTimeoutInMinutes <Int32>] [-LoadBalancerDistribution <String>]
+ [-VirtualIPName <String>] -VM <IPersistentVM> [-Profile <AzureSMProfile>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -326,7 +326,7 @@ Specifies the name of the load balancer set for the endpoint.
 
 ```yaml
 Type: String
-Parameter Sets: LBNoProbe, LBDefaultProbe, LBCustomProbe
+Parameter Sets: LBDefaultProbe, LBCustomProbe, LBNoProbe
 Aliases: LoadBalancedEndpointSetName
 
 Required: True

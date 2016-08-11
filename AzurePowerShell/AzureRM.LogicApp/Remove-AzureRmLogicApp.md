@@ -16,8 +16,6 @@ Remove-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-Force]
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Remove-AzureRmLogicApp cmdlet removes a Logic App from an Azure resource group.
 Use this cmdlet to remove Logic App from specified resource group.
 You can remove a Logic App by specifying the Logic App name and resource group name.
@@ -60,7 +58,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -114,13 +112,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -129,13 +127,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

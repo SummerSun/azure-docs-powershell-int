@@ -16,8 +16,6 @@ Get-AzureRmIntegrationAccountAgreement [-ResourceGroupName <String>] [-Name <Str
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmIntegrationAccountAgreement cmdlet retrieves integration account agreement from the Azure resource group and returns an object that represents the integration account agreement.
 Use this cmdlet to get the integration account agreement from specified resource group.
 You can get the integration account agreement by specifying the integration account name, resource group name and agreement name.
@@ -155,7 +153,7 @@ This parameter is optional.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: False
 Position: Named

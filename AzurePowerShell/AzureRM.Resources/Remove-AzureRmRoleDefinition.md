@@ -20,7 +20,7 @@ Remove-AzureRmRoleDefinition -Id <Guid> [-Scope <String>] [-Force] [-PassThru]
 
 ### RoleDefinitionNameParameterSet
 ```
-Remove-AzureRmRoleDefinition -Name <String> [-Scope <String>] [-Force] [-PassThru]
+Remove-AzureRmRoleDefinition [-Name] <String> [-Scope <String>] [-Force] [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -139,23 +139,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-Name of the Role definition to be deleted.
+### -WhatIf
+@{Text=}
 
 ```yaml
-Type: String
-Parameter Sets: RoleDefinitionNameParameterSet
-Aliases: 
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
-Required: True
+Required: False
 Position: Named
 Default value: 
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Confirm
-{{Fill Confirm Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -169,18 +169,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Name
+Name of the Role definition to be deleted.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Type: String
+Parameter Sets: RoleDefinitionNameParameterSet
+Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

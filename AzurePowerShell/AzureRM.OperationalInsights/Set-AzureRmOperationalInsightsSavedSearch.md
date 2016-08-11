@@ -6,6 +6,7 @@ schema: 2.0.0
 
 # Set-AzureRmOperationalInsightsSavedSearch
 ## SYNOPSIS
+Update an existing saved search.
 
 ## SYNTAX
 
@@ -17,6 +18,7 @@ Set-AzureRmOperationalInsightsSavedSearch [-ResourceGroupName] <String> [-Worksp
 ```
 
 ## DESCRIPTION
+The Set-AzureRmOperationalInsightsSavedSearch cmdlet update an existing saved search.
 
 ## EXAMPLES
 

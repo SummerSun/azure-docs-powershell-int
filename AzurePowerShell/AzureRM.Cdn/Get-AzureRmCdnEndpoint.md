@@ -6,17 +6,25 @@ schema: 2.0.0
 
 # Get-AzureRmCdnEndpoint
 ## SYNOPSIS
-Get an Azure Cdn Endpoint.
+Get an Azure CDN endpoint or a collection of endpoints.
 
 ## SYNTAX
 
+### Parameter Set for fields parameters (Default)
 ```
-Get-AzureRmCdnEndpoint -EndpointName <String> -ProfileName <String> -ResourceGroupName <String>
+Get-AzureRmCdnEndpoint [-EndpointName <String>] -ProfileName <String> -ResourceGroupName <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
+### Parameter Set for object parameters
+```
+Get-AzureRmCdnEndpoint [-EndpointName <String>] -CdnProfile <PSProfile> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
+```
+
 ## DESCRIPTION
-Get an Azure Cdn Endpoint and all the configuration on the Endpoint.
+Gets an Azure CDN endpoint and all its configuration. 
+If the EndpointName parameter is omitted, returns a collection of endpoints matching the specified parameters.
 
 ## EXAMPLES
 
@@ -30,15 +38,15 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -EndpointName
-The name of the Endpoint.
-Note that the name of the Endpoint is not the host name of the Endpoint.
+The display name of the endpoint.
+Note that this is not the full host name of the endpoint, though it may be part of the fully qualified host name.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
@@ -46,11 +54,11 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the Profile that the Endpoint belongs to.
+The name of the profile that the endpoint belongs to.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
@@ -61,11 +69,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the Resource Group that the Endpoint belongs to.
+The name of the resource group that the endpoint belongs to.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
@@ -102,6 +110,21 @@ Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CdnProfile
+The CDN profile object to which the endpoint belongs.
+
+```yaml
+Type: PSProfile
+Parameter Sets: Parameter Set for object parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

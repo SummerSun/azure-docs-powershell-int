@@ -16,8 +16,6 @@ Get-AzureRmIntegrationAccountPartner [-ResourceGroupName <String>] [-Name <Strin
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmIntegrationAccountPartner cmdlet retrieves integration account partner from the Azure resource group and returns an object that represents the integration account partner.
 Use this cmdlet to get the integration account partner from specified resource group.
 You can get the integration account partner by specifying the integration account name, resource group name and partner name.
@@ -87,7 +85,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: False
 Position: Named

@@ -12,11 +12,9 @@ Creates a new secondary database for an existing Azure SQL Database and starts d
 
 ```
 New-AzureRmSqlDatabaseSecondary [-DatabaseName] <String> [-SecondaryServiceObjectiveName <String>]
- [-SecondaryElasticPoolName <String>]
- [-Tags <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
- -PartnerResourceGroupName <String> -PartnerServerName <String> [-AllowConnections <AllowConnections>]
- [-ServerName] <String> [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-SecondaryElasticPoolName <String>] [-Tags <Hashtable>] -PartnerResourceGroupName <String>
+ -PartnerServerName <String> [-AllowConnections <AllowConnections>] [-ServerName] <String>
+ [-ResourceGroupName] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -83,9 +81,9 @@ Accept wildcard characters: False
 The tags to associate with the Azure SQL Database replication link.
 
 ```yaml
-Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases: Tag
 
 Required: False
 Position: Named

@@ -12,13 +12,13 @@ Updates the state of an Azure virtual machine.
 
 ### ResourceGroupNameParameterSetName (Default)
 ```
-Update-AzureRmVM -VM <PSVirtualMachine> [-Tags <Hashtable[]>] [-ResourceGroupName] <String>
+Update-AzureRmVM -VM <PSVirtualMachine> [-Tags <Hashtable>] [-ResourceGroupName] <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### IdParameterSetName
 ```
-Update-AzureRmVM -VM <PSVirtualMachine> [-Tags <Hashtable[]>] [-Id] <String>
+Update-AzureRmVM -VM <PSVirtualMachine> [-Tags <Hashtable>] [-Id] <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -63,14 +63,14 @@ Adding tags to resources enables you to group resources together across resource
 Each resource or resource group can have a maximum of 15 tags.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

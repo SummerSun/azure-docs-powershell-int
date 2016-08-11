@@ -11,7 +11,8 @@ Changes the auditing policy of an Azure SQL server.
 ## SYNTAX
 
 ```
-Set-AzureRmSqlServerAuditingPolicy [-PassThru] [-EventType <String[]>] [-StorageAccountName <String>]
+Set-AzureRmSqlServerAuditingPolicy [-AuditType <AuditType>] [-AuditActionGroup <AuditActionGroups[]>]
+ [-AuditAction <String[]>] [-PassThru] [-EventType <String[]>] [-StorageAccountName <String>]
  [-StorageKeyType <String>] [-RetentionInDays <UInt32>] [-TableIdentifier <String>] -ServerName <String>
  [-ResourceGroupName] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
@@ -237,6 +238,51 @@ Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditAction
+The set of the audit actions
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuditActionGroup
+The set of the audit action groups
+
+```yaml
+Type: AuditActionGroups[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuditType
+The audit type.
+
+```yaml
+Type: AuditType
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

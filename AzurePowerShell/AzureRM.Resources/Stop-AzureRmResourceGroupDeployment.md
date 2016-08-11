@@ -12,13 +12,13 @@ Cancels a resource group deployment
 
 ### The deployment name parameter set. (Default)
 ```
-Stop-AzureRmResourceGroupDeployment [-ResourceGroupName] <String> [-Name] <String> [-Force]
- [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+Stop-AzureRmResourceGroupDeployment [-ResourceGroupName] <String> [-Name] <String> [-ApiVersion <String>]
+ [-Pre] [-WhatIf] [-Confirm]
 ```
 
 ### The deployment Id parameter set.
 ```
-Stop-AzureRmResourceGroupDeployment -Id <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+Stop-AzureRmResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -74,22 +74,6 @@ Required: True
 Position: 1
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Suppresses the confirmation prompt.
-By default, Stop-AzureRmResourceGroupDeployment prompts you before stopping a deployment.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

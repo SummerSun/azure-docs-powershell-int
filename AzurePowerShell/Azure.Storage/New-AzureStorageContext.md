@@ -17,25 +17,6 @@ New-AzureStorageContext [-StorageAccountName] <String> [-StorageAccountKey] <Str
  [-PipelineVariable <String>]
 ```
 
-### AnonymousAccount
-```
-New-AzureStorageContext [-StorageAccountName] <String> [-Anonymous] [-Protocol <String>] [-Endpoint <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>]
-```
-
-### AccountNameAndKeyEnvironment
-```
-New-AzureStorageContext [-StorageAccountName] <String> [-StorageAccountKey] <String> [-Protocol <String>]
- -Environment <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-PipelineVariable <String>]
-```
-
-### AnonymousAccountEnvironment
-```
-New-AzureStorageContext [-StorageAccountName] <String> [-Anonymous] [-Protocol <String>] -Environment <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>]
-```
-
 ### SasToken
 ```
 New-AzureStorageContext [-StorageAccountName] <String> -SasToken <String> [-Protocol <String>]
@@ -46,6 +27,25 @@ New-AzureStorageContext [-StorageAccountName] <String> -SasToken <String> [-Prot
 ### SasTokenWithAzureEnvironment
 ```
 New-AzureStorageContext [-StorageAccountName] <String> -SasToken <String> -Environment <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>]
+```
+
+### AccountNameAndKeyEnvironment
+```
+New-AzureStorageContext [-StorageAccountName] <String> [-StorageAccountKey] <String> [-Protocol <String>]
+ -Environment <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-PipelineVariable <String>]
+```
+
+### AnonymousAccount
+```
+New-AzureStorageContext [-StorageAccountName] <String> [-Anonymous] [-Protocol <String>] [-Endpoint <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>]
+```
+
+### AnonymousAccountEnvironment
+```
+New-AzureStorageContext [-StorageAccountName] <String> [-Anonymous] [-Protocol <String>] -Environment <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>]
 ```
 
@@ -150,7 +150,7 @@ Azure Storage Account name
 
 ```yaml
 Type: String
-Parameter Sets: AccountNameAndKey, AnonymousAccount, AccountNameAndKeyEnvironment, AnonymousAccountEnvironment, SasToken, SasTokenWithAzureEnvironment
+Parameter Sets: AccountNameAndKey, SasToken, SasTokenWithAzureEnvironment, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment
 Aliases: 
 
 Required: True
@@ -180,7 +180,7 @@ Transfer Protocol (https/http).
 
 ```yaml
 Type: String
-Parameter Sets: AccountNameAndKey, AnonymousAccount, AccountNameAndKeyEnvironment, AnonymousAccountEnvironment, SasToken
+Parameter Sets: AccountNameAndKey, SasToken, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment
 Aliases: 
 
 Required: False
@@ -195,7 +195,7 @@ Azure Storage Endpoint.
 
 ```yaml
 Type: String
-Parameter Sets: AccountNameAndKey, AnonymousAccount, SasToken
+Parameter Sets: AccountNameAndKey, SasToken, AnonymousAccount
 Aliases: 
 
 Required: False
@@ -255,25 +255,25 @@ Azure Environment
 
 ```yaml
 Type: String
-Parameter Sets: AccountNameAndKeyEnvironment, AnonymousAccountEnvironment
-Aliases: Name, EnvironmentName
-
-Required: True
-Position: Named
-Default value: AzureCloud | AzureChinaCloud
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
 Parameter Sets: SasTokenWithAzureEnvironment
 Aliases: Name, EnvironmentName
 
 Required: True
 Position: Named
 Default value: AzureCloud | AzureChinaCloud
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: AccountNameAndKeyEnvironment, AnonymousAccountEnvironment
+Aliases: Name, EnvironmentName
+
+Required: True
+Position: Named
+Default value: AzureCloud | AzureChinaCloud
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

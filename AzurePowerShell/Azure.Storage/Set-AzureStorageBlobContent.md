@@ -19,15 +19,6 @@ Set-AzureStorageBlobContent [-File] <String> [-Container] <String> [-Blob <Strin
  [-Confirm]
 ```
 
-### ContainerPipeline
-```
-Set-AzureStorageBlobContent [-File] <String> [-Blob <String>] -CloudBlobContainer <CloudBlobContainer>
- [-BlobType <String>] [-Properties <Hashtable>] [-Metadata <Hashtable>] [-Force]
- [-Context <AzureStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
- [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-PipelineVariable <String>] [-WhatIf] [-Confirm]
-```
-
 ### BlobPipeline
 ```
 Set-AzureStorageBlobContent [-File] <String> -CloudBlob <CloudBlob> [-BlobType <String>]
@@ -35,6 +26,15 @@ Set-AzureStorageBlobContent [-File] <String> -CloudBlob <CloudBlob> [-BlobType <
  [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>] [-WhatIf]
  [-Confirm]
+```
+
+### ContainerPipeline
+```
+Set-AzureStorageBlobContent [-File] <String> [-Blob <String>] -CloudBlobContainer <CloudBlobContainer>
+ [-BlobType <String>] [-Properties <Hashtable>] [-Metadata <Hashtable>] [-Force]
+ [-Context <AzureStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+ [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-PipelineVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ContainerPipeline, BlobPipeline
+Parameter Sets: BlobPipeline, ContainerPipeline
 Aliases: FullName
 
 Required: True

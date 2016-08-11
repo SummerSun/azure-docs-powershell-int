@@ -12,8 +12,7 @@ Remove existing operation.
 
 ```
 Remove-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <String> -OperationId <String>
- [-Force] [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -74,22 +73,6 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
-Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces delete operation (prevents confirmation dialog).
-This parameter is optional.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)

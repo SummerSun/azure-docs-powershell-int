@@ -10,16 +10,16 @@ Submits a job.
 
 ## SYNTAX
 
-### Submit SQL-IP Job
+### Submit job with script path for SQL-IP
 ```
-Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-Script] <String>
+Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-ScriptPath] <String>
  [[-Runtime] <String>] [[-CompileMode] <String>] [-CompileOnly] [[-DegreeOfParallelism] <Int32>]
  [[-Priority] <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### Submit job with script path for SQL-IP
+### Submit SQL-IP Job
 ```
-Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-ScriptPath] <String>
+Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-Script] <String>
  [[-Runtime] <String>] [[-CompileMode] <String>] [-CompileOnly] [[-DegreeOfParallelism] <Int32>]
  [[-Priority] <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```

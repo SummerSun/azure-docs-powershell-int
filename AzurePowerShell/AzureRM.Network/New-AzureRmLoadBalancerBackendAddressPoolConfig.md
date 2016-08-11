@@ -20,12 +20,14 @@ The New-AzureRmLoadBalancerBackendAddressPoolConfig cmdlet creates a backend add
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
+### --------------------------  Example 1 Creating a new backend address pool configuration for a load balancer  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
-
+PS C:\> New-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02"
 ```
+
+This command creates a new backend address pool configuration called "BackendAddressPool02" for a load balancer.
 
 ## PARAMETERS
 

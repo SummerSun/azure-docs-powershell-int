@@ -6,16 +6,18 @@ schema: 2.0.0
 
 # Remove-AzureRmOperationalInsightsSavedSearch
 ## SYNOPSIS
+Delete an existing saved search.
 
 ## SYNTAX
 
 ```
 Remove-AzureRmOperationalInsightsSavedSearch [-ResourceGroupName] <String> [-WorkspaceName] <String>
- [-SavedSearchId] <String> [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-WhatIf] [-Confirm]
+ [-SavedSearchId] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
+ [-Confirm]
 ```
 
 ## DESCRIPTION
+The Remove-AzureRmOperationalInsightsSavedSearch cmdlet delete an existing saved search.
 
 ## EXAMPLES
 
@@ -73,21 +75,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Force
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 @{Text=}
 
@@ -118,13 +105,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -133,13 +120,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

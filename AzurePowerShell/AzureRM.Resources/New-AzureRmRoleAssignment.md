@@ -16,15 +16,9 @@ New-AzureRmRoleAssignment -ObjectId <Guid> -Scope <String> -RoleDefinitionName <
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### RoleIdWithScopeAndObjectIdParameterSet
+### ScopeWithObjectIdParameterSet
 ```
-New-AzureRmRoleAssignment -ObjectId <Guid> -Scope <String> -RoleDefinitionId <Guid>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
-### ResourceGroupWithObjectIdParameterSet
-```
-New-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -RoleDefinitionName <String>
+New-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionName <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -35,9 +29,22 @@ New-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -Resource
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### ScopeWithObjectIdParameterSet
+### ResourceGroupWithObjectIdParameterSet
 ```
-New-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionName <String>
+New-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -RoleDefinitionName <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### RoleIdWithScopeAndObjectIdParameterSet
+```
+New-AzureRmRoleAssignment -ObjectId <Guid> -Scope <String> -RoleDefinitionId <Guid>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### ResourceWithSignInNameParameterSet
+```
+New-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -ResourceName <String>
+ -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -50,13 +57,6 @@ New-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -Role
 ### ScopeWithSignInNameParameterSet
 ```
 New-AzureRmRoleAssignment -SignInName <String> [-Scope <String>] -RoleDefinitionName <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
-### ResourceWithSignInNameParameterSet
-```
-New-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -ResourceName <String>
- -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -153,7 +153,7 @@ Azure AD Objectid of the user, group or service principal.
 
 ```yaml
 Type: Guid
-Parameter Sets: EmptyParameterSet, RoleIdWithScopeAndObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet, ResourceWithObjectIdParameterSet, ScopeWithObjectIdParameterSet
+Parameter Sets: EmptyParameterSet, ScopeWithObjectIdParameterSet, ResourceWithObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet, RoleIdWithScopeAndObjectIdParameterSet
 Aliases: Id, PrincipalId
 
 Required: True
@@ -201,7 +201,7 @@ Reader, Contributor, Virtual Network Administrator, etc.
 
 ```yaml
 Type: String
-Parameter Sets: EmptyParameterSet, ResourceGroupWithObjectIdParameterSet, ResourceWithObjectIdParameterSet, ScopeWithObjectIdParameterSet, ResourceGroupWithSignInNameParameterSet, ScopeWithSignInNameParameterSet, ResourceWithSignInNameParameterSet, ResourceGroupWithSPNParameterSet, ResourceWithSPNParameterSet, ScopeWithSPNParameterSet
+Parameter Sets: EmptyParameterSet, ScopeWithObjectIdParameterSet, ResourceWithObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet, ResourceWithSignInNameParameterSet, ResourceGroupWithSignInNameParameterSet, ScopeWithSignInNameParameterSet, ResourceGroupWithSPNParameterSet, ResourceWithSPNParameterSet, ScopeWithSPNParameterSet
 Aliases: 
 
 Required: True
@@ -248,7 +248,7 @@ When used in conjunction with ResourceName, ResourceType and (optionally)ParentR
 
 ```yaml
 Type: String
-Parameter Sets: ResourceGroupWithObjectIdParameterSet, ResourceWithObjectIdParameterSet, ResourceGroupWithSignInNameParameterSet, ResourceWithSignInNameParameterSet, ResourceGroupWithSPNParameterSet, ResourceWithSPNParameterSet
+Parameter Sets: ResourceWithObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet, ResourceWithSignInNameParameterSet, ResourceGroupWithSignInNameParameterSet, ResourceGroupWithSPNParameterSet, ResourceWithSPNParameterSet
 Aliases: 
 
 Required: True
@@ -330,7 +330,7 @@ The email address or the user principal name of the user.
 
 ```yaml
 Type: String
-Parameter Sets: ResourceGroupWithSignInNameParameterSet, ScopeWithSignInNameParameterSet, ResourceWithSignInNameParameterSet
+Parameter Sets: ResourceWithSignInNameParameterSet, ResourceGroupWithSignInNameParameterSet, ScopeWithSignInNameParameterSet
 Aliases: Email, UserPrincipalName
 
 Required: True

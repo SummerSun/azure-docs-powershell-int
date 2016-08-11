@@ -11,7 +11,7 @@ Creates an Azure resource group
 ## SYNTAX
 
 ```
-New-AzureRmResourceGroup -Name <String> -Location <String> [-Tag <Hashtable[]>] [-Force] [-ApiVersion <String>]
+New-AzureRmResourceGroup -Name <String> -Location <String> [-Tag <Hashtable>] [-Force] [-ApiVersion <String>]
  [-Pre] [-WhatIf] [-Confirm]
 ```
 
@@ -40,7 +40,7 @@ You can use the New-AzureRmResource or New-AzureRmResourceGroupDeployment cmdlet
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\>New-AzureRmResourceGroup -Name RG1 -Location "South Central US" -Tag @{Name="Empty"}, @{Name="Department";Value="Marketing"}
+PS C:\>New-AzureRmResourceGroup -Name RG1 -Location "South Central US" -Tag @{Empty=$null; Department="Marketing"}
 ```
 
 This command creates a new empty resource group.
@@ -93,14 +93,13 @@ Accept wildcard characters: False
 Applies the specified tags to the new resource group.
 Enter new tags or predefined tags that you created by using the New-AzureRmTag cmdlet.A "tag" is a name-value pair that you can apply to resources and resource groups.
 Use tags to categorize your resources, such as by department or cost center, or to track notes or comments about the resources.
-After you assign tags to resources, you can use the Tag parameters of Find-AzureRmResource and Find-AzureRmResourceGroup to search for resources and groups by tag name or name and value.Every tag must have a Name key.
-It can also have an optional Value key with one value.
-To specify a new tag, use a hash table, such as @{Name="FY2015"} or @{Name="Department";Value="IT"}.
-To specify multiple tags, use commas to separate the hash tables, such as  -Tag @{Name="FY2015"}, @{Name="Department";Value="IT"}.
+After you assign tags to resources, you can use the Tag parameters of Find-AzureRmResource and Find-AzureRmResourceGroup to search for resources and groups by tag name or name and value.Every tag must have a name and an optional value.
+To specify a new tag, use a hash table, such as @{FY2015=$null} or @{Department="IT"}.
+To specify multiple tags, put them in one hash table, such as  -Tag @{FY2015=$null;Department="IT"}.
 To get your predefined tags, use the Get-AzureRmTag cmdlet.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

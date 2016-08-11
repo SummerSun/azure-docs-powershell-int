@@ -33,19 +33,19 @@ Set-AzureRmVMOSDisk [-VM] <PSVirtualMachine> [-Name] <String> [-VhdUri] <String>
  [-InformationVariable <String>]
 ```
 
-### LinuxParamSet
-```
-Set-AzureRmVMOSDisk [-VM] <PSVirtualMachine> [-Name] <String> [-VhdUri] <String> [[-Caching] <CachingTypes>]
- [[-SourceImageUri] <String>] [-CreateOption] <DiskCreateOptionTypes> [-Linux] [-DiskSizeInGB <Int32>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### LinuxDiskEncryptionParameterSet
 ```
 Set-AzureRmVMOSDisk [-VM] <PSVirtualMachine> [-Name] <String> [-VhdUri] <String> [[-Caching] <CachingTypes>]
  [[-SourceImageUri] <String>] [-CreateOption] <DiskCreateOptionTypes> [-Linux] [-DiskEncryptionKeyUrl] <String>
  [-DiskEncryptionKeyVaultId] <String> [[-KeyEncryptionKeyUrl] <String>] [[-KeyEncryptionKeyVaultId] <String>]
  [-DiskSizeInGB <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### LinuxParamSet
+```
+Set-AzureRmVMOSDisk [-VM] <PSVirtualMachine> [-Name] <String> [-VhdUri] <String> [[-Caching] <CachingTypes>]
+ [[-SourceImageUri] <String>] [-CreateOption] <DiskCreateOptionTypes> [-Linux] [-DiskSizeInGB <Int32>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -355,7 +355,7 @@ Specify this parameter for user image based virtual machine deployment.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: LinuxParamSet, LinuxDiskEncryptionParameterSet
+Parameter Sets: LinuxDiskEncryptionParameterSet, LinuxParamSet
 Aliases: 
 
 Required: False

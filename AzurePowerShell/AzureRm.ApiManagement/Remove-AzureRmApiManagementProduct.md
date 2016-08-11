@@ -12,8 +12,7 @@ Remove existing product.
 
 ```
 Remove-AzureRmApiManagementProduct -Context <PsApiManagementContext> -ProductId <String> [-DeleteSubscriptions]
- [-Force] [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -67,22 +66,6 @@ Accept wildcard characters: False
 ### -DeleteSubscriptions
 Whether to delete subscriptions to the product or not.
 If not set and subscriptions exists exception will be thrown.
-This parameter is optional.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces delete operation (prevents confirmation dialog).
 This parameter is optional.
 
 ```yaml

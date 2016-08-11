@@ -12,7 +12,7 @@ Lists all Azure RBAC roles that are available for assignment.
 
 ### RoleDefinitionNameParameterSet
 ```
-Get-AzureRmRoleDefinition [-Name <String>] [-Scope <String>] [-AtScopeAndBelow]
+Get-AzureRmRoleDefinition [[-Name] <String>] [-Scope <String>] [-AtScopeAndBelow]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -65,7 +65,7 @@ Parameter Sets: RoleDefinitionNameParameterSet
 Aliases: 
 
 Required: False
-Position: Named
+Position: 0
 Default value: 
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

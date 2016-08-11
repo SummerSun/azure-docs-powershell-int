@@ -13,24 +13,24 @@ Creates a new resource in a resource group
 ### The resource Id. (Default)
 ```
 New-AzureRmResource [-Location <String>] [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>]
- [-Sku <Hashtable>] [-Tag <Hashtable[]>] [-IsFullObject] -ResourceId <String> [-ODataQuery <String>] [-Force]
+ [-Sku <Hashtable>] [-Tag <Hashtable>] [-IsFullObject] -ResourceId <String> [-ODataQuery <String>] [-Force]
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
-```
-
-### Resource that resides at the subscription level.
-```
-New-AzureRmResource [-Location <String>] [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>]
- [-Sku <Hashtable>] [-Tag <Hashtable[]>] [-IsFullObject] -ResourceName <String> -ResourceType <String>
- [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>]
- [-ResourceGroupName <String>] [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
 ### Resource that resides at the tenant level.
 ```
 New-AzureRmResource [-Location <String>] [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>]
- [-Sku <Hashtable>] [-Tag <Hashtable[]>] [-IsFullObject] -ResourceName <String> -ResourceType <String>
+ [-Sku <Hashtable>] [-Tag <Hashtable>] [-IsFullObject] -ResourceName <String> -ResourceType <String>
  [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>] [-TenantLevel]
  [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+```
+
+### Resource that resides at the subscription level.
+```
+New-AzureRmResource [-Location <String>] [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>]
+ [-Sku <Hashtable>] [-Tag <Hashtable>] [-IsFullObject] -ResourceName <String> -ResourceType <String>
+ [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>]
+ [-ResourceGroupName <String>] [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -134,7 +134,7 @@ To specify multiple tags, use commas to separate the hash tables, such as  -Tag 
 To get your predefined tags, use the Get-AzureRmTag cmdlet.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -187,7 +187,7 @@ Wildcards are not permitted.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: 
 
 Required: True
@@ -219,7 +219,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: 
 
 Required: False
@@ -236,7 +236,7 @@ Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: 
 
 Required: False
@@ -360,7 +360,7 @@ to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: Resource that resides at the tenant level., Resource that resides at the subscription level.
 Aliases: Name
 
 Required: True

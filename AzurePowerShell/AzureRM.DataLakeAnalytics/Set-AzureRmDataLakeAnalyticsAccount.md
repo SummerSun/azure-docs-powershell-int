@@ -11,7 +11,7 @@ Modifies a Data Lake Analytics account.
 ## SYNTAX
 
 ```
-Set-AzureRmDataLakeAnalyticsAccount [-Name] <String> [[-DefaultDataLakeStore] <String>] [[-Tags] <Hashtable[]>]
+Set-AzureRmDataLakeAnalyticsAccount [-Name] <String> [[-DefaultDataLakeStore] <String>] [[-Tags] <Hashtable>]
  [[-ResourceGroupName] <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 

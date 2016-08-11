@@ -13,7 +13,7 @@ Creates an Azure Traffic Manager profile.
 ```
 New-AzureRmTrafficManagerProfile -Name <String> -ResourceGroupName <String> [-ProfileStatus <String>]
  -RelativeDnsName <String> -Ttl <UInt32> -TrafficRoutingMethod <String> -MonitorProtocol <String>
- -MonitorPort <UInt32> -MonitorPath <String> [-Tag <Hashtable[]>]
+ -MonitorPort <UInt32> -MonitorPath <String> [-Tag <Hashtable>]
 ```
 
 ## DESCRIPTION
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 A hash table which represents resource tags.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

@@ -10,23 +10,29 @@ Updates a new Logic App in an azure resource group.
 
 ## SYNTAX
 
+### Consumption (Default)
+```
+Set-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-UseConsumptionModel] [-State <String>]
+ [-Definition <Object>] [-DefinitionFilePath <String>] [-IntegrationAccountId <String>] [-Parameters <Object>]
+ [-ParameterFilePath <String>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-WhatIf] [-Confirm]
+```
+
+### HostingPlan
 ```
 Set-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-AppServicePlan <String>] [-State <String>]
- [-DefinitionLinkUri <String>] [-DefinitionLinkContentVersion <String>] [-Definition <Object>]
- [-DefinitionFilePath <String>] [-ParameterLinkUri <String>] [-ParameterLinkContentVersion <String>]
- [-Parameters <Object>] [-ParameterFilePath <String>] [-Force] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-Definition <Object>] [-DefinitionFilePath <String>] [-IntegrationAccountId <String>] [-Parameters <Object>]
+ [-ParameterFilePath <String>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Set-AzureRmLogicApp cmdlet updates an Azure Logic App and returns an object that represents the Workflow.
 Use this cmdlet to update a Logic App.
 You can update a Logic App with a name, Logic App definition, resource group name, App Service Plan name.
 However, typically, you use a Logic App template for definition and parameters which is JSON-based model.
-To update a Logic App, you can specify definition as DefinitionFilePath or DefinitionLinkUri parameters or as a Definition object(string).
-To specify values for the Logic App template parameters, use a JSON-formatted parameter file (-ParameterFilePath) or a HashTable of parameter names and values (-Parameters) or ParametersLinkUri parameters.
+To update a Logic App, you can specify definition as DefinitionFilePath or as a Definition object(string).
+To specify values for the Logic App template parameters, use a JSON-formatted parameter file (-ParameterFilePath) or a HashTable of parameter names and values (-Parameters).
 To use the dynamic parameters, just type them in the command, or type a hyphen sign(-) to indicate a parameter name and then press the TAB key repeatedly to cycle through the available parameters.
 If you miss a required template parameter, the cmdlet prompts you for the value.
 Template parameter file values that you specify at the command line take precedence over template parameter values in a template parameter object.
@@ -50,16 +56,29 @@ ChangedTime                  : 1/13/2016 2:41:39 PM
 CreatedTime                  : 1/13/2016 2:41:39 PM
 AccessEndpoint               : https://\<baseurl\>/subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourcegroups/ResourceGroup1/providers/Microsoft.Logic/workflows/LogicApp1
 State                        : Enabled
-DefinitionLinkUri            : 
-DefinitionLinkContentVersion : 
 Definition                   : {$schema, contentVersion, parameters, triggers...}
-ParametersLinkUri            : 
-ParametersLinkContentVersion : 
 Parameters                   : {\[destinationUri, Microsoft.Azure.Management.Logic.Models.WorkflowParameter\]}
-SkuName                      : Standard
-PlanName                     : ServicePlan1
-PlanType                     : Microsoft.Web/ServerFarms
-PlanId                       : /subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourceGroups/ResourceGroup1/providers/Microsoft.Web/serverfarms/ServicePlan1
+Version                      : 08587489107859952120
+
+### --------------------------  Example 2 : Update a Logic App using a hosting plan to use consumption based model.  --------------------------
+@{paragraph=PS C:\\\>}
+
+```
+PS C:\>Set-AzureRmLogicApp -ResourceGroupName "ResourceGroup1" -Name "LogicApp1" -UseConsumptionModel
+```
+
+This command updates an existing Logic App using a hosting plan to use consumption based billing model instead.
+
+Id                           : /subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourceGroups/LogicAppCmdletTest/providers/Microsoft.Logic/workflows/LogicApp1
+Name                         : LogicApp1
+Type                         : Microsoft.Logic/workflows
+Location                     : westus
+ChangedTime                  : 1/13/2016 2:41:39 PM
+CreatedTime                  : 1/13/2016 2:41:39 PM
+AccessEndpoint               : https://\<baseurl\>/subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourcegroups/ResourceGroup1/providers/Microsoft.Logic/workflows/LogicApp1
+State                        : Enabled
+Definition                   : {$schema, contentVersion, parameters, triggers...}
+Parameters                   : {\[destinationUri, Microsoft.Azure.Management.Logic.Models.WorkflowParameter\]}
 Version                      : 08587489107859952120
 
 ## PARAMETERS
@@ -87,7 +106,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -96,19 +115,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppServicePlan
-Specifies the name of the App Service Plan.
-This parameter is required.
+### -UseConsumptionModel
+Specifies the usage of consumption based model for LogicApp billing.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: Consumption
 Aliases: 
 
 Required: False
 Position: Named
 Default value: 
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -116,37 +134,6 @@ Accept wildcard characters: False
 Specifies a state of the Logic App.
 Expected values e.g.
 Enabled, Disabled
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefinitionLinkUri
-Specifies Definition link Uri of the Logic App.
-If DefinitionLinkUri is provided as parameter then user must provide the "DefinitionLinkContentVersion" parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefinitionLinkContentVersion
-Specifies the content version of the Definition link Uri.
 
 ```yaml
 Type: String
@@ -191,24 +178,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ParameterLinkUri
-Specifies parameter link Uri of the Logic App.
-If ParameterLinkUri is provided as parameter then user must provide the "ParameterLinkContentVersion" parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ParameterLinkContentVersion
-Specifies the content version of the Parameter Link Uri of the Logic App.
+### -IntegrationAccountId
+Specifies the integration account ID used for the LogicApp.
+This parameter is optional.
+e.g.
+"/subscriptions/valid-subscription-guid/resourceGroups/valid-group-name/providers/Microsoft.Logic/integrationAccounts/valid-name-of-integration-account"
 
 ```yaml
 Type: String
@@ -253,6 +227,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InformationAction
 @{Text=}
 
@@ -283,8 +272,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
-{{Fill Confirm Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -298,33 +302,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Do not ask for confirmation.
+### -AppServicePlan
+Specifies the name of the App Service Plan.
+This parameter is optional.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: HostingPlan
 Aliases: 
 
 Required: False
 Position: Named
 Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-{{Fill WhatIf Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

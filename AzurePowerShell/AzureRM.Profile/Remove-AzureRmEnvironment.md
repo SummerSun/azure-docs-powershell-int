@@ -11,7 +11,7 @@ Removes endpoints and metadata for connecting to a given Azure instance.
 ## SYNTAX
 
 ```
-Remove-AzureRmEnvironment [-Name] <String> [-Force] [-WhatIf] [-Confirm]
+Remove-AzureRmEnvironment [-Name] <String> [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -25,21 +25,6 @@ The Remove-AzureRmEnvironment cmdlet removes endpoints and metadata information 
 ```
 
 ## PARAMETERS
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Name
 Specifies the name of the environment to remove.

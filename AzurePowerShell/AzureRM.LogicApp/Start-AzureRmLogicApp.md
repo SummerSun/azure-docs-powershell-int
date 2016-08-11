@@ -16,8 +16,6 @@ Start-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-Parameters <O
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Start-AzureRmLogicApp cmdlet runs the Azure Logic App.
 Use this cmdlet to run a Logic App from a specified resource group.
 You can run a Logic App by specifying the Logic App name, resource group name, parameters(optional) and trigger name.
@@ -60,7 +58,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -131,13 +129,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-{{Fill Confirm Description}}
+### -WhatIf
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -146,13 +144,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-{{Fill WhatIf Description}}
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named

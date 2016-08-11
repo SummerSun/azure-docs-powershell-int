@@ -4,19 +4,19 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-AzureRMCdnProfile
+# Get-AzureRmCdnProfile
 ## SYNOPSIS
-Get an Azure Cdn Profile.
+Gets an Azure CDN profile.
 
 ## SYNTAX
 
 ```
-Get-AzureRMCdnProfile [-ProfileName <String>] [-ResourceGroupName <String>]
+Get-AzureRmCdnProfile [-ProfileName <String>] [-ResourceGroupName <String>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
-Get an Azure Cdn Profile and all the related information.
+Gets an Azure CDN profile and all related information.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -ProfileName
-The name of the Profile.
+The name of the profile.
 
 ```yaml
 Type: String
@@ -40,12 +40,12 @@ Aliases:
 Required: False
 Position: Named
 Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the Resource Group that the Profile belongs to.
+The name of the resource group to which the profile belongs.
 
 ```yaml
 Type: String
@@ -55,7 +55,7 @@ Aliases:
 Required: False
 Position: Named
 Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

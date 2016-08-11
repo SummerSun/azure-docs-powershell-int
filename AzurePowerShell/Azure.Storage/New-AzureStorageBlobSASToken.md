@@ -18,17 +18,17 @@ New-AzureStorageBlobSASToken [-Container] <String> [-Blob] <String> [-Permission
  [-InformationVariable <String>] [-PipelineVariable <String>]
 ```
 
-### BlobPipelineWithPolicy
+### BlobPipelineWithPermission
 ```
-New-AzureStorageBlobSASToken -CloudBlob <CloudBlob> -Policy <String> [-Protocol <SharedAccessProtocol>]
+New-AzureStorageBlobSASToken -CloudBlob <CloudBlob> [-Permission <String>] [-Protocol <SharedAccessProtocol>]
  [-IPAddressOrRange <String>] [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-FullUri]
  [-Context <AzureStorageContext>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
  [-PipelineVariable <String>]
 ```
 
-### BlobPipelineWithPermission
+### BlobPipelineWithPolicy
 ```
-New-AzureStorageBlobSASToken -CloudBlob <CloudBlob> [-Permission <String>] [-Protocol <SharedAccessProtocol>]
+New-AzureStorageBlobSASToken -CloudBlob <CloudBlob> -Policy <String> [-Protocol <SharedAccessProtocol>]
  [-IPAddressOrRange <String>] [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-FullUri]
  [-Context <AzureStorageContext>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
  [-PipelineVariable <String>]
@@ -239,7 +239,7 @@ CloudBlob object
 
 ```yaml
 Type: CloudBlob
-Parameter Sets: BlobPipelineWithPolicy, BlobPipelineWithPermission
+Parameter Sets: BlobPipelineWithPermission, BlobPipelineWithPolicy
 Aliases: ICloudBlob
 
 Required: True

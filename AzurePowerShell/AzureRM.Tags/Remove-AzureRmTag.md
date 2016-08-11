@@ -11,7 +11,7 @@ Deletes predefined Azure tags or values.
 ## SYNTAX
 
 ```
-Remove-AzureRmTag [-Name] <String> [[-Value] <String[]>] [-Force] [-PassThru] [-WhatIf] [-Confirm]
+Remove-AzureRmTag [-Name] <String> [[-Value] <String[]>] [-PassThru] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -56,21 +56,6 @@ It does not delete the tag.
 If the value has been applied to any resources or resource groups, the command fails.
 
 ## PARAMETERS
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Name
 Specifies the name of the tag to be deleted.

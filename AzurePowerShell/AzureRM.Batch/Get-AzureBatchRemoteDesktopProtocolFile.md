@@ -22,15 +22,15 @@ Get-AzureBatchRemoteDesktopProtocolFile [-PoolId] <String> [-ComputeNodeId] <Str
  -DestinationStream <Stream> -BatchContext <BatchAccountContext>
 ```
 
-### InputObject_Path
-```
-Get-AzureBatchRemoteDesktopProtocolFile [[-ComputeNode] <PSComputeNode>] -DestinationPath <String>
- -BatchContext <BatchAccountContext>
-```
-
 ### InputObject_Stream
 ```
 Get-AzureBatchRemoteDesktopProtocolFile [[-ComputeNode] <PSComputeNode>] -DestinationStream <Stream>
+ -BatchContext <BatchAccountContext>
+```
+
+### InputObject_Path
+```
+Get-AzureBatchRemoteDesktopProtocolFile [[-ComputeNode] <PSComputeNode>] -DestinationPath <String>
  -BatchContext <BatchAccountContext>
 ```
 
@@ -95,7 +95,7 @@ To obtain a compute node object, use the Get-AzureBatchComputeNode cmdlet.
 
 ```yaml
 Type: PSComputeNode
-Parameter Sets: InputObject_Path, InputObject_Stream
+Parameter Sets: InputObject_Stream, InputObject_Path
 Aliases: 
 
 Required: False

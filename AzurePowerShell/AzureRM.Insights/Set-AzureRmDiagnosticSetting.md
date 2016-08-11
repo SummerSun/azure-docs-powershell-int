@@ -11,8 +11,8 @@ Sets the logs and metrics settings for the resource.
 ## SYNTAX
 
 ```
-Set-AzureRmDiagnosticSetting -ResourceId <String> -StorageAccountId <String> -Enabled <Boolean>
- [-Categories <System.Collections.Generic.List`1[System.String]>]
+Set-AzureRmDiagnosticSetting -ResourceId <String> [-StorageAccountId <String>] [-ServiceBusRuleId <String>]
+ -Enabled <Boolean> [-Categories <System.Collections.Generic.List`1[System.String]>]
  [-Timegrains <System.Collections.Generic.List`1[System.String]>] [-RetentionEnabled <Boolean>]
  [-RetentionInDays <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
@@ -108,7 +108,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
@@ -219,6 +219,21 @@ Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceBusRuleId
+The service bus rule id
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

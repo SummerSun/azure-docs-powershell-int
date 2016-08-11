@@ -16,8 +16,6 @@ Get-AzureRmIntegrationAccountMap [-ResourceGroupName <String>] [-Name <String>] 
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmIntegrationAccountMap cmdlet retrieves integration account map from the Azure resource group and returns an object that represents the integration account map.
 Use this cmdlet to get the integration account map from specified resource group.
 You can get the integration account map by specifying the integration account name, resource group name and map name.
@@ -91,7 +89,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: False
 Position: Named

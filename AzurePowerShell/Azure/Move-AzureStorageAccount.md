@@ -10,6 +10,12 @@ Migrate a Storage Account to Azure Resource Manager stack
 
 ## SYNTAX
 
+### ValidateMigrationParameterSet
+```
+Move-AzureStorageAccount [-Validate] [-StorageAccountName] <String> [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
 ### AbortMigrationParameterSet
 ```
 Move-AzureStorageAccount [-Abort] [-StorageAccountName] <String> [-Profile <AzureSMProfile>]
@@ -51,17 +57,17 @@ Move-AzureStorageAccount -Commit -StorageAccountName "contosoStorageName"
 @{paragraph=PS C:\\\>}
 
 ```
-
+Move-AzureStorageAccount -Validate -StorageAccountName "contosoStorageName"
 ```
 
 ## PARAMETERS
 
-### -Abort
-Cancel the Storage Account migration
+### -Validate
+Validate the Storage Account for migration
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: AbortMigrationParameterSet
+Parameter Sets: ValidateMigrationParameterSet
 Aliases: 
 
 Required: True
@@ -126,6 +132,21 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Abort
+Cancel the Storage Account migration
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AbortMigrationParameterSet
+Aliases: 
+
+Required: True
+Position: 0
 Default value: 
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -11,7 +11,7 @@ Remove existing API.
 ## SYNTAX
 
 ```
-Remove-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String> [-Force] [-PassThru]
+Remove-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
@@ -57,22 +57,6 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
-Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces delete operation (prevents confirmation dialog).
-This parameter is optional.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)

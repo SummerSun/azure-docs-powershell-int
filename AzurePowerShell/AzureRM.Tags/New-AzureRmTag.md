@@ -100,7 +100,7 @@ Count:  0
 Values: 
         Name        Count
         =========   =====
-        0001        0 PS C:\>Set-AzureRmResourceGroup -Name "EngineerBlog" -Tag @{Name="CostCenter";Value="0001"}
+        0001        0 PS C:\>Set-AzureRmResourceGroup -Name "EngineerBlog" -Tag @{CostCenter="0001"}
 Name:      EngineerBlog
 Location:  East US
 Resources: 
@@ -119,7 +119,7 @@ Count:  1
 Values: 
         Name        Count
         =========   =====
-        0001        1 PS C:\>Get-AzureRmResourceGroup -Tag @{Name="CostCenter"}
+        0001        1 PS C:\>Get-AzureRmResourceGroup -Tag @{CostCenter=$null}
 Name:      EngineerBlog
 Location:  East US
 Resources: 

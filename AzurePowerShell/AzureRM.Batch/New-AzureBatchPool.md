@@ -10,7 +10,19 @@ Creates a pool in the Batch service.
 
 ## SYNTAX
 
-### TargetDedicated (Default)
+### CloudServiceAndTargetDedicated (Default)
+```
+New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>]
+ [-ResizeTimeout <TimeSpan>] [-TargetDedicated <Int32>] [-MaxTasksPerComputeNode <Int32>]
+ [-TaskSchedulingPolicy <PSTaskSchedulingPolicy>] [-Metadata <IDictionary>]
+ [-InterComputeNodeCommunicationEnabled] [-StartTask <PSStartTask>]
+ [-CertificateReferences <PSCertificateReference[]>]
+ [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
+ [-CloudServiceConfiguration <PSCloudServiceConfiguration>] [-NetworkConfiguration <PSNetworkConfiguration>]
+ -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
+```
+
+### VirtualMachineAndTargetDedicated
 ```
 New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>]
  [-ResizeTimeout <TimeSpan>] [-TargetDedicated <Int32>] [-MaxTasksPerComputeNode <Int32>]
@@ -19,10 +31,22 @@ New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <St
  [-CertificateReferences <PSCertificateReference[]>]
  [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
  [-VirtualMachineConfiguration <PSVirtualMachineConfiguration>]
- [-CloudServiceConfiguration <PSCloudServiceConfiguration>] -BatchContext <BatchAccountContext>
+ [-NetworkConfiguration <PSNetworkConfiguration>] -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
 ```
 
-### AutoScale
+### CloudServiceAndAutoScale
+```
+New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>]
+ [-AutoScaleEvaluationInterval <TimeSpan>] [-AutoScaleFormula <String>] [-MaxTasksPerComputeNode <Int32>]
+ [-TaskSchedulingPolicy <PSTaskSchedulingPolicy>] [-Metadata <IDictionary>]
+ [-InterComputeNodeCommunicationEnabled] [-StartTask <PSStartTask>]
+ [-CertificateReferences <PSCertificateReference[]>]
+ [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
+ [-CloudServiceConfiguration <PSCloudServiceConfiguration>] [-NetworkConfiguration <PSNetworkConfiguration>]
+ -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
+```
+
+### VirtualMachineAndAutoScale
 ```
 New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>]
  [-AutoScaleEvaluationInterval <TimeSpan>] [-AutoScaleFormula <String>] [-MaxTasksPerComputeNode <Int32>]
@@ -31,7 +55,7 @@ New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <St
  [-CertificateReferences <PSCertificateReference[]>]
  [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
  [-VirtualMachineConfiguration <PSVirtualMachineConfiguration>]
- [-CloudServiceConfiguration <PSCloudServiceConfiguration>] -BatchContext <BatchAccountContext>
+ [-NetworkConfiguration <PSNetworkConfiguration>] -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -90,7 +114,7 @@ The default value is 15 minutes, and the minimum value is 5 minutes.
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: AutoScale
+Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
 Aliases: 
 
 Required: False
@@ -105,7 +129,7 @@ Specifies the formula for automatically scaling the pool.
 
 ```yaml
 Type: String
-Parameter Sets: AutoScale
+Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
 Aliases: 
 
 Required: False
@@ -152,7 +176,7 @@ Specifies configuration settings for a pool based on the Azure cloud service pla
 
 ```yaml
 Type: PSCloudServiceConfiguration
-Parameter Sets: (All)
+Parameter Sets: CloudServiceAndTargetDedicated, CloudServiceAndAutoScale
 Aliases: 
 
 Required: False
@@ -239,12 +263,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NetworkConfiguration
+Specifies the network configuration of the pool.
+Specify the ARM resource identifier of the virtual network subnet which the compute nodes of the pool will join.
+The virtual network must be in the same region and subscription as the Azure Batch account.
+
+```yaml
+Type: PSNetworkConfiguration
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResizeTimeout
 Specifies the timeout for allocating compute nodes to the pool.
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: TargetDedicated
+Parameter Sets: CloudServiceAndTargetDedicated, VirtualMachineAndTargetDedicated
 Aliases: 
 
 Required: False
@@ -275,7 +316,7 @@ Specifies the target number of compute nodes to allocate to the pool.
 
 ```yaml
 Type: Int32
-Parameter Sets: TargetDedicated
+Parameter Sets: CloudServiceAndTargetDedicated, VirtualMachineAndTargetDedicated
 Aliases: 
 
 Required: False
@@ -305,7 +346,7 @@ Specifies configuration settings for a pool on the virtual machines infrastructu
 
 ```yaml
 Type: PSVirtualMachineConfiguration
-Parameter Sets: (All)
+Parameter Sets: VirtualMachineAndTargetDedicated, VirtualMachineAndAutoScale
 Aliases: 
 
 Required: False
@@ -327,6 +368,36 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+{{Fill Confirm Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+{{Fill WhatIf Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

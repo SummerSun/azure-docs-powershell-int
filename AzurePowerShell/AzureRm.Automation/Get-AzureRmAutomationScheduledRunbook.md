@@ -21,16 +21,16 @@ Get-AzureRmAutomationScheduledRunbook -JobScheduleId <Guid> [-ResourceGroupName]
  [-AutomationAccountName] <String>
 ```
 
-### ByRunbookNameAndScheduleName
-```
-Get-AzureRmAutomationScheduledRunbook -RunbookName <String> -ScheduleName <String>
- [-ResourceGroupName] <String> [-AutomationAccountName] <String>
-```
-
 ### ByRunbookName
 ```
 Get-AzureRmAutomationScheduledRunbook -RunbookName <String> [-ResourceGroupName] <String>
  [-AutomationAccountName] <String>
+```
+
+### ByRunbookNameAndScheduleName
+```
+Get-AzureRmAutomationScheduledRunbook -RunbookName <String> -ScheduleName <String>
+ [-ResourceGroupName] <String> [-AutomationAccountName] <String>
 ```
 
 ### ByScheduleName
@@ -119,7 +119,7 @@ Specifies the name of a runbook for which this cmdlet gets scheduled runbooks.
 
 ```yaml
 Type: String
-Parameter Sets: ByRunbookNameAndScheduleName, ByRunbookName
+Parameter Sets: ByRunbookName, ByRunbookNameAndScheduleName
 Aliases: Name
 
 Required: True

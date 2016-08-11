@@ -13,7 +13,7 @@ Allows you to create a new Storage Account using the ARM deployment model
 ```
 New-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-SkuName] <String>
  [-Location] <String> [[-Kind] <String>] [[-AccessTier] <String>] [[-CustomDomainName] <String>]
- [[-UseSubDomain] <Boolean>] [[-EnableEncryptionService] <EncryptionSupportServiceEnum>] [[-Tag] <Hashtable[]>]
+ [[-UseSubDomain] <Boolean>] [[-EnableEncryptionService] <EncryptionSupportServiceEnum>] [[-Tag] <Hashtable>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -26,7 +26,7 @@ This cmdlet allows you to create a new Storage Account using the ARM deployment 
 @{paragraph=PS C:\\\>}
 
 ```
-New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Location "US West" -SkuName "Standard_GRS" -Kind "Storage"
+New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Location "US West" -SkuName "Standard_GRS" -Kind "Storage" -Tag @{tag0="value0";tag1="value1"}
 ```
 
 ### --------------------------  Example 2  --------------------------
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 Tags to set on the storage account.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

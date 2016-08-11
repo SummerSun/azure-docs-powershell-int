@@ -6,6 +6,7 @@ schema: 2.0.0
 
 # Get-AzureRmOperationalInsightsSavedSearchResults
 ## SYNOPSIS
+Run saved search and return the results.
 
 ## SYNTAX
 
@@ -15,6 +16,7 @@ Get-AzureRmOperationalInsightsSavedSearchResults [-ResourceGroupName] <String> [
 ```
 
 ## DESCRIPTION
+The Get-AzureRmOperationalInsightsSavedSearchResults cmdlet runs a saved search and return the search result back.
 
 ## EXAMPLES
 

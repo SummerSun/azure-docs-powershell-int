@@ -14,18 +14,16 @@ Adds the Chef extension to the virtual machine.
 ```
 Set-AzureVMChefExtension [-Version <String>] -ValidationPem <String> [-ClientRb <String>]
  [-BootstrapOptions <String>] [-RunList <String>] [-ChefServerUrl <String>] [-ValidationClientName <String>]
- [-OrganizationName <String>] [-AutoUpdateChefClient] [-DeleteChefConfig] [-BootstrapVersion <String>]
- [-UninstallChefClient] [-Windows] -VM <IPersistentVM> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-OrganizationName <String>] [-BootstrapVersion <String>] [-Windows] -VM <IPersistentVM>
+ [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ### Linux
 ```
 Set-AzureVMChefExtension [-Version <String>] -ValidationPem <String> [-ClientRb <String>]
  [-BootstrapOptions <String>] [-RunList <String>] [-ChefServerUrl <String>] [-ValidationClientName <String>]
- [-OrganizationName <String>] [-AutoUpdateChefClient] [-DeleteChefConfig] [-BootstrapVersion <String>]
- [-UninstallChefClient] [-Linux] -VM <IPersistentVM> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-OrganizationName <String>] [-BootstrapVersion <String>] [-Linux] -VM <IPersistentVM>
+ [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -198,56 +196,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AutoUpdateChefClient
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DeleteChefConfig
-Indicates that this cmdlet deletes the Chef configuration on the virtual machine.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -BootstrapVersion
 Specifies the version of chef-client to be installed with the extension.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -UninstallChefClient
-Indicates that this cmdlet uninstalls the Chef Client on the vitual machine.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 

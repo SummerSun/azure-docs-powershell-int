@@ -16,8 +16,6 @@ Get-AzureRmLogicAppRunAction -ResourceGroupName <String> -Name <String> -RunName
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmLogicAppActionRun cmdlet retrieves action from a specified Logic App run and returns an object that represents the WorkflowRunAction.
 Use this cmdlet to get action(s) from the Logic App run in the specified resource group.
 You can get a Logic App's run action by specifying the Logic App name, resource group name, run name and action name.
@@ -30,21 +28,21 @@ If you miss a required template parameter, the cmdlet prompts you for the value.
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\>Get-AzureRmLogicAppActionRun -ResourceGroupName "Resourcegroup1" -Name "LogicApp1" -RunName "LogicAppRun1" -ActionName "LogicAppAction1"
+PS C:\>Get-AzureRmLogicAppRunAction -ResourceGroupName "Resourcegroup1" -Name "LogicApp1" -RunName "LogicAppRun1" -ActionName "ActionName1"
 ```
 
 This command gets a Logic App action from the specified Logic App run in an Azure resource group.
 
-Code        : NotFound
-EndTime     : 1/13/2016 2:42:56 PM
+Code        : OK
+EndTime     : 7/27/2016 9:21:23 PM
 Error       : 
-InputsLink  : Microsoft.Azure.Management.Logic.Models.ContentLink
-Name        : LogicAppAction1
-OutputsLink : Microsoft.Azure.Management.Logic.Models.ContentLink
-StartTime   : 1/13/2016 2:42:55 PM
-Status      : Failed
+InputsLink  : \<URL\>
+Name        : Delay
+OutputsLink : 
+StartTime   : 7/27/2016 9:18:22 PM
+Status      : Succeeded
 TrackingId  : 
-Type        :
+Type        : Microsoft.Logic/workflows/runs/actions
 
 ### --------------------------  Example 2 : Get all the actions from a Logic App run from a specified Azure resource group.  --------------------------
 @{paragraph=PS C:\\\>}
@@ -55,16 +53,16 @@ PS C:\>Get-AzureRmLogicAppActionRun -ResourceGroupName "Resourcegroup1" -Name "L
 
 This command gets all the actions from a Logic App run in a specified Azure resource group.
 
-Code        : NotFound
-EndTime     : 1/13/2016 2:42:56 PM
+Code        : OK
+EndTime     : 7/27/2016 9:21:23 PM
 Error       : 
-InputsLink  : Microsoft.Azure.Management.Logic.Models.ContentLink
-Name        : LogicAppAction1
-OutputsLink : Microsoft.Azure.Management.Logic.Models.ContentLink
-StartTime   : 1/13/2016 2:42:55 PM
-Status      : Failed
+InputsLink  : \<URL\>
+Name        : Delay
+OutputsLink : 
+StartTime   : 7/27/2016 9:18:22 PM
+Status      : Succeeded
 TrackingId  : 
-Type        :
+Type        : Microsoft.Logic/workflows/runs/actions
 
 ## PARAMETERS
 
@@ -91,7 +89,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named

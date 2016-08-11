@@ -12,8 +12,8 @@ Creates an Azure SQL Database server.
 
 ```
 New-AzureRmSqlServer -ServerName <String> -SqlAdministratorCredentials <PSCredential> -Location <String>
- [-Tags <System.Collections.Generic.Dictionary`2[System.String,System.String]>] [-ServerVersion <String>]
- [-ResourceGroupName] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-Tags <Hashtable>] [-ServerVersion <String>] [-ResourceGroupName] <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -88,12 +88,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies a dictionary of tags that this cmdlet associates with the new server.
+Specifies a hashtable of tags that this cmdlet associates with the new server.
 
 ```yaml
-Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases: Tag
 
 Required: False
 Position: Named

@@ -12,74 +12,72 @@ Removes a role assignment to the specified principal who is assigned to a partic
 
 ### EmptyParameterSet (Default)
 ```
-Remove-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionName <String> [-Force]
- [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
-### ScopeWithObjectIdParameterSet
-```
-Remove-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionName <String> [-Force]
- [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
-### RoleIdWithScopeAndObjectIdParameterSet
-```
-Remove-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionId <Guid> [-Force] [-PassThru]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
-### ResourceWithObjectIdParameterSet
-```
-Remove-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -ResourceName <String>
- -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String> [-Force] [-PassThru]
+Remove-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionName <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### ResourceGroupWithObjectIdParameterSet
 ```
-Remove-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -RoleDefinitionName <String> [-Force]
+Remove-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -RoleDefinitionName <String>
  [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
-### ResourceGroupWithSignInNameParameterSet
+### ResourceWithObjectIdParameterSet
 ```
-Remove-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -RoleDefinitionName <String>
- [-Force] [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+Remove-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -ResourceName <String>
+ -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String> [-PassThru]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
-### ResourceWithSignInNameParameterSet
+### ScopeWithObjectIdParameterSet
 ```
-Remove-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -ResourceName <String>
- -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String> [-Force] [-PassThru]
+Remove-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionName <String> [-PassThru]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### RoleIdWithScopeAndObjectIdParameterSet
+```
+Remove-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionId <Guid> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### ScopeWithSignInNameParameterSet
 ```
-Remove-AzureRmRoleAssignment -SignInName <String> [-Scope <String>] -RoleDefinitionName <String> [-Force]
+Remove-AzureRmRoleAssignment -SignInName <String> [-Scope <String>] -RoleDefinitionName <String> [-PassThru]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### ResourceWithSignInNameParameterSet
+```
+Remove-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -ResourceName <String>
+ -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String> [-PassThru]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### ResourceGroupWithSignInNameParameterSet
+```
+Remove-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -RoleDefinitionName <String>
  [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### ResourceWithSPNParameterSet
 ```
 Remove-AzureRmRoleAssignment -ServicePrincipalName <String> -ResourceGroupName <String> -ResourceName <String>
- -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String> [-Force] [-PassThru]
+ -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
-### ScopeWithSPNParameterSet
-```
-Remove-AzureRmRoleAssignment -ServicePrincipalName <String> [-Scope <String>] -RoleDefinitionName <String>
- [-Force] [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
 ```
 
 ### ResourceGroupWithSPNParameterSet
 ```
 Remove-AzureRmRoleAssignment -ServicePrincipalName <String> -ResourceGroupName <String>
- -RoleDefinitionName <String> [-Force] [-PassThru] [-InformationAction <ActionPreference>]
+ -RoleDefinitionName <String> [-PassThru] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### ScopeWithSPNParameterSet
+```
+Remove-AzureRmRoleAssignment -ServicePrincipalName <String> [-Scope <String>] -RoleDefinitionName <String>
+ [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -129,7 +127,7 @@ Azure AD ObjectId of the user, group or service principal.
 
 ```yaml
 Type: Guid
-Parameter Sets: EmptyParameterSet, ScopeWithObjectIdParameterSet, RoleIdWithScopeAndObjectIdParameterSet, ResourceWithObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet
+Parameter Sets: EmptyParameterSet, ResourceGroupWithObjectIdParameterSet, ResourceWithObjectIdParameterSet, ScopeWithObjectIdParameterSet, RoleIdWithScopeAndObjectIdParameterSet
 Aliases: Id, PrincipalId
 
 Required: True
@@ -165,28 +163,13 @@ Reader, Contributor, Virtual Network Administrator, etc.
 
 ```yaml
 Type: String
-Parameter Sets: EmptyParameterSet, ScopeWithObjectIdParameterSet, ResourceWithObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet, ResourceGroupWithSignInNameParameterSet, ResourceWithSignInNameParameterSet, ScopeWithSignInNameParameterSet, ResourceWithSPNParameterSet, ScopeWithSPNParameterSet, ResourceGroupWithSPNParameterSet
+Parameter Sets: EmptyParameterSet, ResourceGroupWithObjectIdParameterSet, ResourceWithObjectIdParameterSet, ScopeWithObjectIdParameterSet, ScopeWithSignInNameParameterSet, ResourceWithSignInNameParameterSet, ResourceGroupWithSignInNameParameterSet, ResourceWithSPNParameterSet, ResourceGroupWithSPNParameterSet, ScopeWithSPNParameterSet
 Aliases: 
 
 Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-If specified, the command does not prompt for a confirmation before deleting the role assignment.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -235,6 +218,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 The resource group name that the role is assigned to.
 Attempts to delete an assignment at the specified resource group scope.
@@ -242,7 +255,7 @@ When used in conjunction with ResourceName, ResourceType and (optionally)ParentR
 
 ```yaml
 Type: String
-Parameter Sets: ResourceWithObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet, ResourceGroupWithSignInNameParameterSet, ResourceWithSignInNameParameterSet, ResourceWithSPNParameterSet, ResourceGroupWithSPNParameterSet
+Parameter Sets: ResourceGroupWithObjectIdParameterSet, ResourceWithObjectIdParameterSet, ResourceWithSignInNameParameterSet, ResourceGroupWithSignInNameParameterSet, ResourceWithSPNParameterSet, ResourceGroupWithSPNParameterSet
 Aliases: 
 
 Required: True
@@ -324,7 +337,7 @@ The email address or the user principal name of the user.
 
 ```yaml
 Type: String
-Parameter Sets: ResourceGroupWithSignInNameParameterSet, ResourceWithSignInNameParameterSet, ScopeWithSignInNameParameterSet
+Parameter Sets: ScopeWithSignInNameParameterSet, ResourceWithSignInNameParameterSet, ResourceGroupWithSignInNameParameterSet
 Aliases: Email, UserPrincipalName
 
 Required: True
@@ -339,43 +352,13 @@ The ServicePrincipalName of the Azure AD application
 
 ```yaml
 Type: String
-Parameter Sets: ResourceWithSPNParameterSet, ScopeWithSPNParameterSet, ResourceGroupWithSPNParameterSet
+Parameter Sets: ResourceWithSPNParameterSet, ResourceGroupWithSPNParameterSet, ScopeWithSPNParameterSet
 Aliases: SPN
 
 Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Confirm
-{{Fill Confirm Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-{{Fill WhatIf Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

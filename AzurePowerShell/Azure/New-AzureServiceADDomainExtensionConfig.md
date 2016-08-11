@@ -19,6 +19,14 @@ New-AzureServiceADDomainExtensionConfig [[-Role] <String[]>] [[-X509Certificate]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
+### WorkGroupName
+```
+New-AzureServiceADDomainExtensionConfig [[-Role] <String[]>] [[-X509Certificate] <X509Certificate2>]
+ [[-ThumbprintAlgorithm] <String>] [-WorkgroupName] <String> [-Restart] [[-Credential] <PSCredential>]
+ [[-Version] <String>] [[-ExtensionId] <String>] [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
 ### JoinDomainUsingJoinOption
 ```
 New-AzureServiceADDomainExtensionConfig [[-Role] <String[]>] [[-X509Certificate] <X509Certificate2>]
@@ -28,9 +36,9 @@ New-AzureServiceADDomainExtensionConfig [[-Role] <String[]>] [[-X509Certificate]
  [-InformationVariable <String>]
 ```
 
-### WorkGroupName
+### WorkGroupNameThumbprint
 ```
-New-AzureServiceADDomainExtensionConfig [[-Role] <String[]>] [[-X509Certificate] <X509Certificate2>]
+New-AzureServiceADDomainExtensionConfig [[-Role] <String[]>] [-CertificateThumbprint] <String>
  [[-ThumbprintAlgorithm] <String>] [-WorkgroupName] <String> [-Restart] [[-Credential] <PSCredential>]
  [[-Version] <String>] [[-ExtensionId] <String>] [-Profile <AzureSMProfile>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
@@ -52,14 +60,6 @@ New-AzureServiceADDomainExtensionConfig [[-Role] <String[]>] [-CertificateThumbp
  [[-UnjoinDomainCredential] <PSCredential>] [-JoinOption] <UInt32> [[-OUPath] <String>] [[-Version] <String>]
  [[-ExtensionId] <String>] [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>]
-```
-
-### WorkGroupNameThumbprint
-```
-New-AzureServiceADDomainExtensionConfig [[-Role] <String[]>] [-CertificateThumbprint] <String>
- [[-ThumbprintAlgorithm] <String>] [-WorkgroupName] <String> [-Restart] [[-Credential] <PSCredential>]
- [[-Version] <String>] [[-ExtensionId] <String>] [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -101,7 +101,7 @@ Specifies an X.509 certificate that is automatically uploaded to the cloud servi
 
 ```yaml
 Type: X509Certificate2
-Parameter Sets: JoinDomainUsingEnumOptions, JoinDomainUsingJoinOption, WorkGroupName
+Parameter Sets: JoinDomainUsingEnumOptions, WorkGroupName, JoinDomainUsingJoinOption
 Aliases: 
 
 Required: False
@@ -294,21 +294,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkgroupName
-Specifies the workgroup name.
-
-```yaml
-Type: String
-Parameter Sets: WorkGroupName, WorkGroupNameThumbprint
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -JoinOption
 Specifies the join option enumeration.
 
@@ -324,6 +309,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -WorkgroupName
+Specifies the workgroup name.
+
+```yaml
+Type: String
+Parameter Sets: WorkGroupName, WorkGroupNameThumbprint
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -CertificateThumbprint
 Specifies a certificate thumbprint to use to encrypt the private configuration.
 This certificate has to already exist in the certificate store.
@@ -331,7 +331,7 @@ If you do not specify a certificate, this cmdlet creates a certificate.
 
 ```yaml
 Type: String
-Parameter Sets: JoinDomainUsingEnumOptionsAndThumbprint, JoinDomainUsingJoinOptionAndThumbprint, WorkGroupNameThumbprint
+Parameter Sets: WorkGroupNameThumbprint, JoinDomainUsingEnumOptionsAndThumbprint, JoinDomainUsingJoinOptionAndThumbprint
 Aliases: 
 
 Required: True

@@ -16,8 +16,6 @@ Get-AzureRmLogicAppTriggerHistory -ResourceGroupName <String> -Name <String> -Tr
 ```
 
 ## DESCRIPTION
-This is the Description section
-
 The Get-AzureRmLogicAppTriggerHistory cmdlet retrieves the history of the specified trigger in the Logic App and returns an object/collection which represents the Logic App trigger history.
 Use this cmdlet to get the trigger history of the Logic App from a specified resource group.
 You can get the Logic App's trigger history by specifying the Logic App name, resource group name, trigger name and history name (optional).
@@ -111,7 +109,7 @@ This parameter is required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named

@@ -40,7 +40,7 @@ PS C:\> $AppGw = Add-AzureRmApplicationGatewayIPConfiguration -ApplicationGatewa
 
 The first command creates a virtual network.
 
-The fouth command adds the IP configuration to the application gateway stored in $AppGw.
+The fourth command adds the IP configuration to the application gateway stored in $AppGw.
 
 ## PARAMETERS
 

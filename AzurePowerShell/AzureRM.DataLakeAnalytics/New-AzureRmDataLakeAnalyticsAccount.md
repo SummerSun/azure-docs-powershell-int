@@ -12,7 +12,7 @@ Creates a new Data Lake Analytics account.
 
 ```
 New-AzureRmDataLakeAnalyticsAccount [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [-DefaultDataLakeStore] <String> [[-Tags] <Hashtable[]>] [-InformationAction <ActionPreference>]
+ [-DefaultDataLakeStore] <String> [[-Tags] <Hashtable>] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>]
 ```
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 

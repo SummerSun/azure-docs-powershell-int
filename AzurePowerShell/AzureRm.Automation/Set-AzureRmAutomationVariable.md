@@ -10,16 +10,16 @@ Modifies an Automation variable.
 
 ## SYNTAX
 
-### UpdateVariableValue
-```
-Set-AzureRmAutomationVariable [-Name] <String> -Encrypted <Boolean> -Value <Object>
- [-ResourceGroupName] <String> [-AutomationAccountName] <String>
-```
-
 ### UpdateVariableDescription
 ```
 Set-AzureRmAutomationVariable [-Name] <String> -Description <String> [-ResourceGroupName] <String>
  [-AutomationAccountName] <String>
+```
+
+### UpdateVariableValue
+```
+Set-AzureRmAutomationVariable [-Name] <String> -Encrypted <Boolean> -Value <Object>
+ [-ResourceGroupName] <String> [-AutomationAccountName] <String>
 ```
 
 ## DESCRIPTION

@@ -11,10 +11,9 @@ Modifies properties of an Azure SQL Database server.
 ## SYNTAX
 
 ```
-Set-AzureRmSqlServer [-ServerName] <String> [-SqlAdministratorPassword <SecureString>]
- [-Tags <System.Collections.Generic.Dictionary`2[System.String,System.String]>] [-ServerVersion <String>]
- [-Force] [-ResourceGroupName] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-WhatIf] [-Confirm]
+Set-AzureRmSqlServer [-ServerName] <String> [-SqlAdministratorPassword <SecureString>] [-Tags <Hashtable>]
+ [-ServerVersion <String>] [-Force] [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -76,12 +75,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies a dictionary of tags that this cmdlet associates with the server.
+Specifies a hashtable of tags that this cmdlet associates with the server.
 
 ```yaml
-Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases: Tag
 
 Required: False
 Position: Named

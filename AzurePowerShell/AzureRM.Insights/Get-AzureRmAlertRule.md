@@ -10,11 +10,6 @@ Gets alert rules
 
 ## SYNTAX
 
-### Parameters for Get-AzureRmAlertRule cmdlet using target resource uri
-```
-Get-AzureRmAlertRule -ResourceGroup <String> -TargetResourceId <String> [-DetailedOutput]
-```
-
 ### Parameters for Get-AzureRmAlertRule cmdlet
 ```
 Get-AzureRmAlertRule -ResourceGroup <String> [-DetailedOutput]
@@ -23,6 +18,11 @@ Get-AzureRmAlertRule -ResourceGroup <String> [-DetailedOutput]
 ### Parameters for Get-AzureRmAlertRule cmdlet using name
 ```
 Get-AzureRmAlertRule -ResourceGroup <String> -Name <String> [-DetailedOutput]
+```
+
+### Parameters for Get-AzureRmAlertRule cmdlet using target resource uri
+```
+Get-AzureRmAlertRule -ResourceGroup <String> -TargetResourceId <String> [-DetailedOutput]
 ```
 
 ## DESCRIPTION

@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force to remove the queue without confirmation
+Force to remove the queue and all content in it
 
 ```yaml
 Type: SwitchParameter

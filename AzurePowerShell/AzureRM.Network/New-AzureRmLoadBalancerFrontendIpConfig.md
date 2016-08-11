@@ -10,15 +10,15 @@ Creates a front-end IP configuration for a load balancer.
 
 ## SYNTAX
 
-### SetByResourceIdSubnet
-```
-New-AzureRmLoadBalancerFrontendIpConfig -Name <String> [-PrivateIpAddress <String>] -SubnetId <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### SetByResourceSubnet
 ```
 New-AzureRmLoadBalancerFrontendIpConfig -Name <String> [-PrivateIpAddress <String>] -Subnet <PSSubnet>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### SetByResourceIdSubnet
+```
+New-AzureRmLoadBalancerFrontendIpConfig -Name <String> [-PrivateIpAddress <String>] -SubnetId <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -35,16 +35,38 @@ New-AzureRmLoadBalancerFrontendIpConfig -Name <String> -PublicIpAddress <PSPubli
 ```
 
 ## DESCRIPTION
-The New-AzureRmLoadBalancerFrontendIpConfig cmdlet creates a  front-end IP configuration for an Azure load balancer.
+The New-AzureRmLoadBalancerFrontendIpConfig cmdlet creates a front-end IP configuration for an Azure load balancer.
+A front-end IP configuration contains IP addresses (also known as virtual IPs/VIPs) for incoming network traffic.
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
+### --------------------------  Example 1 Create a new front end IP configuration for a load balancer  --------------------------
 @{paragraph=PS C:\\\>}
 
 ```
+PS C:\> $publicip = New-AzureRmPublicIpAddress -ResourceGroupName MyResourceGroup -name MyPublicIP -location 'West US' -AllocationMethod Dynamic
 
+PS C:\> New-AzureRmLoadBalancerFrontendIpConfig -Name "FrontendIpConfig01" -PublicIpAddress $publicip
 ```
+
+The first command creates a new dynamic public IP address within the resource group "MyResourceGroup" called "MyPublicIP" located in West US.
+The second command creates a new Frontend IP configuration called "FrontendIpConfig01" using the puclicip created in the first command.
+
+Name                      : FrontendIpConfig01
+Id                        : /subscriptions/366db6b2-be71-49ce-84b3-84a26f93b59f/resourceGroups/ResourceGroupNotSet/providers/Microsoft.Network/l
+                            oadBalancers/LoadBalancerNameNotSet/frontendIPConfigurations/FrontendIpConfig01
+Etag                      : 
+ProvisioningState         : 
+PrivateIpAddress          : 
+PrivateIpAllocationMethod : 
+Subnet                    : null
+PublicIpAddress           : {
+                              "Id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.Network/pub
+                            licIPAddresses/MyPublicIP"
+                            }
+InboundNatRules           : null
+LoadBalancingRules        : null
+InboundNatPools           : null
 
 ## PARAMETERS
 
@@ -69,7 +91,7 @@ Specify this parameter only if you also specify the Subnet parameter.
 
 ```yaml
 Type: String
-Parameter Sets: SetByResourceIdSubnet, SetByResourceSubnet
+Parameter Sets: SetByResourceSubnet, SetByResourceIdSubnet
 Aliases: 
 
 Required: False

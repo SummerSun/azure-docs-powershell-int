@@ -11,10 +11,11 @@ Sets the auditing policy for an Azure SQL database.
 ## SYNTAX
 
 ```
-Set-AzureRmSqlDatabaseAuditingPolicy [-PassThru] [-EventType <String[]>] [-StorageAccountName <String>]
- [-StorageKeyType <String>] [-RetentionInDays <UInt32>] [-TableIdentifier <String>] [-ServerName] <String>
- [-DatabaseName] <String> [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+Set-AzureRmSqlDatabaseAuditingPolicy [-AuditType <AuditType>] [-PassThru]
+ [-AuditActionGroup <AuditActionGroups[]>] [-AuditAction <String[]>] [-EventType <String[]>]
+ [-StorageAccountName <String>] [-StorageKeyType <String>] [-RetentionInDays <UInt32>]
+ [-TableIdentifier <String>] [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -257,6 +258,51 @@ Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditAction
+The set of the audit actions
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuditActionGroup
+The set of the audit action groups
+
+```yaml
+Type: AuditActionGroups[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuditType
+The audit type.
+
+```yaml
+Type: AuditType
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

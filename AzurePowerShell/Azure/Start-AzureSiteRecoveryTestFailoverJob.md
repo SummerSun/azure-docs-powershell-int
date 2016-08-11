@@ -23,6 +23,13 @@ Start-AzureSiteRecoveryTestFailoverJob -RpId <String> [-Network <ASRNetwork>] [-
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
+### ByRPId
+```
+Start-AzureSiteRecoveryTestFailoverJob -RpId <String> [-Network <ASRNetwork>] [-NetworkType <String>]
+ -Direction <String> [-WaitForCompletion] [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
+```
+
 ### ByRPIdWithVMNetwork
 ```
 Start-AzureSiteRecoveryTestFailoverJob -RpId <String> -Network <ASRNetwork> [-NetworkType <String>]
@@ -34,20 +41,6 @@ Start-AzureSiteRecoveryTestFailoverJob -RpId <String> -Network <ASRNetwork> [-Ne
 ```
 Start-AzureSiteRecoveryTestFailoverJob -RpId <String> [-Network <ASRNetwork>] [-NetworkType <String>]
  -Direction <String> [-WaitForCompletion] -VmNetworkId <String> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
-### ByRPId
-```
-Start-AzureSiteRecoveryTestFailoverJob -RpId <String> [-Network <ASRNetwork>] [-NetworkType <String>]
- -Direction <String> [-WaitForCompletion] [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
-### ByPEObjectWithVMNetwork
-```
-Start-AzureSiteRecoveryTestFailoverJob -Network <ASRNetwork> [-NetworkType <String>] -Direction <String>
- -ProtectionEntity <ASRProtectionEntity> [-WaitForCompletion] [-Profile <AzureSMProfile>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -65,10 +58,17 @@ Start-AzureSiteRecoveryTestFailoverJob -Network <ASRNetwork> [-NetworkType <Stri
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### ByRPObjectWithLogicalNetworkID
+### ByPEObjectWithVMNetwork
+```
+Start-AzureSiteRecoveryTestFailoverJob -Network <ASRNetwork> [-NetworkType <String>] -Direction <String>
+ -ProtectionEntity <ASRProtectionEntity> [-WaitForCompletion] [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### ByRPObjectWithVMNetworkID
 ```
 Start-AzureSiteRecoveryTestFailoverJob [-Network <ASRNetwork>] [-NetworkType <String>]
- -RecoveryPlan <ASRRecoveryPlan> -Direction <String> [-WaitForCompletion] -LogicalNetworkId <String>
+ -RecoveryPlan <ASRRecoveryPlan> -Direction <String> [-WaitForCompletion] -VmNetworkId <String>
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -79,10 +79,10 @@ Start-AzureSiteRecoveryTestFailoverJob [-Network <ASRNetwork>] [-NetworkType <St
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### ByRPObjectWithVMNetworkID
+### ByRPObjectWithLogicalNetworkID
 ```
 Start-AzureSiteRecoveryTestFailoverJob [-Network <ASRNetwork>] [-NetworkType <String>]
- -RecoveryPlan <ASRRecoveryPlan> -Direction <String> [-WaitForCompletion] -VmNetworkId <String>
+ -RecoveryPlan <ASRRecoveryPlan> -Direction <String> [-WaitForCompletion] -LogicalNetworkId <String>
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -100,11 +100,11 @@ Start-AzureSiteRecoveryTestFailoverJob [-Network <ASRNetwork>] [-NetworkType <St
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### ByPEObjectWithLogicalNetworkID
+### ByPEObjectWithVMNetworkID
 ```
 Start-AzureSiteRecoveryTestFailoverJob [-Network <ASRNetwork>] [-NetworkType <String>] -Direction <String>
- -ProtectionEntity <ASRProtectionEntity> [-WaitForCompletion] -LogicalNetworkId <String>
- [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ -ProtectionEntity <ASRProtectionEntity> [-WaitForCompletion] -VmNetworkId <String> [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ### ByPEObject
@@ -114,11 +114,11 @@ Start-AzureSiteRecoveryTestFailoverJob [-Network <ASRNetwork>] [-NetworkType <St
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### ByPEObjectWithVMNetworkID
+### ByPEObjectWithLogicalNetworkID
 ```
 Start-AzureSiteRecoveryTestFailoverJob [-Network <ASRNetwork>] [-NetworkType <String>] -Direction <String>
- -ProtectionEntity <ASRProtectionEntity> [-WaitForCompletion] -VmNetworkId <String> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ -ProtectionEntity <ASRProtectionEntity> [-WaitForCompletion] -LogicalNetworkId <String>
+ [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -139,7 +139,7 @@ PS C:\> {{ Add example code here }}
 
 ```yaml
 Type: ASRNetwork
-Parameter Sets: ByPEId, ByRPIdWithLogicalNetworkID, ByRPIdWithVMNetworkID, ByRPId, ByRPObjectWithLogicalNetworkID, ByRPObject, ByRPObjectWithVMNetworkID, ByPEIdWithLogicalNetworkID, ByPEIdWithVMNetworkID, ByPEObjectWithLogicalNetworkID, ByPEObject, ByPEObjectWithVMNetworkID
+Parameter Sets: ByPEId, ByRPIdWithLogicalNetworkID, ByRPId, ByRPIdWithVMNetworkID, ByRPObjectWithVMNetworkID, ByRPObject, ByRPObjectWithLogicalNetworkID, ByPEIdWithLogicalNetworkID, ByPEIdWithVMNetworkID, ByPEObjectWithVMNetworkID, ByPEObject, ByPEObjectWithLogicalNetworkID
 Aliases: 
 
 Required: False
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: ASRNetwork
-Parameter Sets: ByRPIdWithVMNetwork, ByPEObjectWithVMNetwork, ByRPObjectWithVMNetwork, ByPEIdWithVMNetwork
+Parameter Sets: ByRPIdWithVMNetwork, ByRPObjectWithVMNetwork, ByPEIdWithVMNetwork, ByPEObjectWithVMNetwork
 Aliases: 
 
 Required: True
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ByRPIdWithLogicalNetworkID, ByRPIdWithVMNetwork, ByRPIdWithVMNetworkID, ByRPId
+Parameter Sets: ByRPIdWithLogicalNetworkID, ByRPId, ByRPIdWithVMNetwork, ByRPIdWithVMNetworkID
 Aliases: 
 
 Required: True
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: ASRProtectionEntity
-Parameter Sets: ByPEObjectWithVMNetwork, ByPEObjectWithLogicalNetworkID, ByPEObjectWithVMNetworkID
+Parameter Sets: ByPEObjectWithVMNetwork, ByPEObjectWithVMNetworkID, ByPEObjectWithLogicalNetworkID
 Aliases: 
 
 Required: True
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: ASRRecoveryPlan
-Parameter Sets: ByRPObjectWithVMNetwork, ByRPObjectWithLogicalNetworkID, ByRPObjectWithVMNetworkID
+Parameter Sets: ByRPObjectWithVMNetwork, ByRPObjectWithVMNetworkID, ByRPObjectWithLogicalNetworkID
 Aliases: 
 
 Required: True

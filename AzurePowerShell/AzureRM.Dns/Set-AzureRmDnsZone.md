@@ -12,7 +12,7 @@ Updates a DNS zone.
 
 ### Fields
 ```
-Set-AzureRmDnsZone -Name <String> -ResourceGroupName <String> [-Tag <Hashtable[]>]
+Set-AzureRmDnsZone -Name <String> -ResourceGroupName <String> [-Tag <Hashtable>]
 ```
 
 ### Object
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 A hash table which represents resource tags.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: Fields
 Aliases: Tags
 

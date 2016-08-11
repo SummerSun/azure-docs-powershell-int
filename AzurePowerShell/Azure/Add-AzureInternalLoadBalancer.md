@@ -16,18 +16,18 @@ Add-AzureInternalLoadBalancer [-InternalLoadBalancerName] <String> [-ServiceName
  [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
-### SubnetNameAndIP
-```
-Add-AzureInternalLoadBalancer [-InternalLoadBalancerName] <String> [-ServiceName] <String>
- [-SubnetName] <String> [-StaticVNetIPAddress] <IPAddress> [-Profile <AzureSMProfile>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### SubnetNameOnly
 ```
 Add-AzureInternalLoadBalancer [-InternalLoadBalancerName] <String> [-ServiceName] <String>
  [-SubnetName] <String> [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>]
+```
+
+### SubnetNameAndIP
+```
+Add-AzureInternalLoadBalancer [-InternalLoadBalancerName] <String> [-ServiceName] <String>
+ [-SubnetName] <String> [-StaticVNetIPAddress] <IPAddress> [-Profile <AzureSMProfile>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -148,7 +148,7 @@ Specifies the name of the subnet for an internal load balancer that this cmdlet 
 
 ```yaml
 Type: String
-Parameter Sets: SubnetNameAndIP, SubnetNameOnly
+Parameter Sets: SubnetNameOnly, SubnetNameAndIP
 Aliases: 
 
 Required: True

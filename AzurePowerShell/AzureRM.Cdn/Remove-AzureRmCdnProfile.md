@@ -6,24 +6,24 @@ schema: 2.0.0
 
 # Remove-AzureRmCdnProfile
 ## SYNOPSIS
-Remove the Cdn profile
+Removes a CDN profile.
 
 ## SYNTAX
 
 ### Parameter Set for fields parameters
 ```
-Remove-AzureRmCdnProfile -ProfileName <String> -ResourceGroupName <String> [-PassThru]
+Remove-AzureRmCdnProfile -ProfileName <String> -ResourceGroupName <String> [-PassThru] [-Force]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### Parameter Set for object parameters
 ```
-Remove-AzureRmCdnProfile -CdnProfile <PSProfile> [-PassThru] [-InformationAction <ActionPreference>]
+Remove-AzureRmCdnProfile -CdnProfile <PSProfile> [-PassThru] [-Force] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-Remove the Azure Cdn profile
+Removes an Azure CDN profile.
 
 ## EXAMPLES
 
@@ -36,8 +36,8 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -ResourceGroupName
-The name of the resource group
+### -ProfileName
+The name of the profile.
 
 ```yaml
 Type: String
@@ -51,18 +51,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CdnProfile
-The profile object
+### -ResourceGroupName
+The name of the resource group.
 
 ```yaml
-Type: PSProfile
-Parameter Sets: Parameter Set for object parameters
+Type: String
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
 Position: Named
 Default value: 
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Force
+Forces completion without interactive confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -96,15 +126,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProfileName
-The name of the profile
+### -WhatIf
+@{Text=}
 
 ```yaml
-Type: String
-Parameter Sets: Parameter Set for fields parameters
-Aliases: 
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
-Required: True
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
@@ -112,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-{{Fill Confirm Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -126,33 +156,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PassThru
-Return object if specified.
+### -CdnProfile
+The profile object to be deleted.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: PSProfile
+Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WhatIf
-{{Fill WhatIf Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

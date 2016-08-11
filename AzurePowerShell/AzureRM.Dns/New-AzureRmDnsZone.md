@@ -11,7 +11,7 @@ Creates a new DNS zone.
 ## SYNTAX
 
 ```
-New-AzureRmDnsZone -Name <String> -ResourceGroupName <String> [-Tag <Hashtable[]>]
+New-AzureRmDnsZone -Name <String> -ResourceGroupName <String> [-Tag <Hashtable>]
 ```
 
 ## DESCRIPTION
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 A hash table which represents resource tags.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

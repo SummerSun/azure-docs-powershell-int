@@ -12,9 +12,9 @@ Creates an elastic database pool in Azure SQL Database.
 
 ```
 New-AzureRmSqlElasticPool -ElasticPoolName <String> [-Edition <DatabaseEdition>] [-Dtu <Int32>]
- [-StorageMB <Int32>] [-DatabaseDtuMin <Int32>] [-DatabaseDtuMax <Int32>]
- [-Tags <System.Collections.Generic.Dictionary`2[System.String,System.String]>] [-ServerName] <String>
- [-ResourceGroupName] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-StorageMB <Int32>] [-DatabaseDtuMin <Int32>] [-DatabaseDtuMax <Int32>] [-Tags <Hashtable>]
+ [-ServerName] <String> [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -166,12 +166,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies a dictionary of tags that this cmdlet associates with the elastic pool.
+Specifies a hashtable of tags that this cmdlet associates with the elastic pool.
 
 ```yaml
-Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases: Tag
 
 Required: False
 Position: Named

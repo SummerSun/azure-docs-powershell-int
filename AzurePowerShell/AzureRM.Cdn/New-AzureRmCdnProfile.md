@@ -6,17 +6,18 @@ schema: 2.0.0
 
 # New-AzureRmCdnProfile
 ## SYNOPSIS
-Creates a Cdn profile
+Creates a CDN profile.
 
 ## SYNTAX
 
 ```
 New-AzureRmCdnProfile -ProfileName <String> -Location <String> -Sku <PSSkuName> -ResourceGroupName <String>
- [-Tags <Hashtable>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-Tags <Hashtable>] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
+ [-Confirm]
 ```
 
 ## DESCRIPTION
-Creates a Cdn profile
+Creates a CDN profile.
 
 ## EXAMPLES
 
@@ -29,8 +30,23 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
+### -ProfileName
+Name of the profile.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Location
-Resource location of the profile
+Resource location of the profile.
 
 ```yaml
 Type: String
@@ -45,7 +61,8 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Sku of the profile
+SKU (Azure CDN product) of the profile. 
+Valid values are StandardVerizon, StandardAkamai, and PremiumVerizon.
 
 ```yaml
 Type: PSSkuName
@@ -60,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name of the profile
+Resource group the profile will be created in.
 
 ```yaml
 Type: String
@@ -68,6 +85,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+Tags associated with this profile
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
@@ -104,28 +136,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProfileName
-Name of the profile
+### -Confirm
+{{Fill Confirm Description}}
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
-Required: True
+Required: False
 Position: Named
 Default value: 
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tags
-Tags associated with this profile
+### -WhatIf
+{{Fill WhatIf Description}}
 
 ```yaml
-Type: Hashtable
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: wi
 
 Required: False
 Position: Named

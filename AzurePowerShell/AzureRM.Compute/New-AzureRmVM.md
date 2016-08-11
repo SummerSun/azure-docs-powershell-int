@@ -12,8 +12,8 @@ Creates a virtual machine.
 
 ```
 New-AzureRmVM [-ResourceGroupName] <String> [-Location] <String> [-VM] <PSVirtualMachine>
- [-DisableBginfoExtension] [-Tags <Hashtable[]>] [-LicenseType <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-DisableBginfoExtension] [-Tags <Hashtable>] [-LicenseType <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -203,7 +203,7 @@ Adding tags to resources enables you to group resources together across resource
 Each resource or resource group can have a maximum of 15 tags.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 

@@ -291,21 +291,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DiagnosticsConfiguration
-@{Text=}
-
-```yaml
-Type: ExtensionConfigurationInput[]
-Parameter Sets: SetExtensionUsingDiagnosticsConfiguration
-Aliases: 
-
-Required: True
-Position: 2
-Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -CertificateThumbprint
 Specifies a certificate thumbprint to use to encrypt the private configuration.
 This certificate has to already exist in the certificate store.
@@ -319,6 +304,21 @@ Aliases:
 Required: False
 Position: 3
 Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DiagnosticsConfiguration
+@{Text=}
+
+```yaml
+Type: ExtensionConfigurationInput[]
+Parameter Sets: SetExtensionUsingDiagnosticsConfiguration
+Aliases: 
+
+Required: True
+Position: 2
+Default value: 
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

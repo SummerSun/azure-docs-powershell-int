@@ -23,18 +23,18 @@ Add-AzureRmAccount [-Environment <AzureEnvironment>] [-EnvironmentName <String>]
  [-AccountId <String>] [-SubscriptionId <String>] [-WhatIf] [-Confirm]
 ```
 
-### SubscriptionName
-```
-Add-AzureRmAccount [-Environment <AzureEnvironment>] [-EnvironmentName <String>] [-Credential <PSCredential>]
- [-CertificateThumbprint <String>] [-ApplicationId <String>] [-TenantId <String>] [-AccessToken <String>]
- [-AccountId <String>] [-SubscriptionName <String>] [-WhatIf] [-Confirm]
-```
-
 ### ServicePrincipal
 ```
 Add-AzureRmAccount [-Environment <AzureEnvironment>] [-EnvironmentName <String>] -Credential <PSCredential>
  [-ServicePrincipal] -TenantId <String> [-SubscriptionId <String>] [-SubscriptionName <String>] [-WhatIf]
  [-Confirm]
+```
+
+### SubscriptionName
+```
+Add-AzureRmAccount [-Environment <AzureEnvironment>] [-EnvironmentName <String>] [-Credential <PSCredential>]
+ [-CertificateThumbprint <String>] [-ApplicationId <String>] [-TenantId <String>] [-AccessToken <String>]
+ [-AccountId <String>] [-SubscriptionName <String>] [-WhatIf] [-Confirm]
 ```
 
 ### ServicePrincipalCertificate
@@ -228,7 +228,7 @@ Specifies the name of the subscription.
 
 ```yaml
 Type: String
-Parameter Sets: SubscriptionName, ServicePrincipal
+Parameter Sets: ServicePrincipal, SubscriptionName
 Aliases: 
 
 Required: False

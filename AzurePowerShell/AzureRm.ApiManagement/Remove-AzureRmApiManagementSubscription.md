@@ -12,7 +12,7 @@ Deletes existing subscription.
 
 ```
 Remove-AzureRmApiManagementSubscription -Context <PsApiManagementContext> -SubscriptionId <String> [-PassThru]
- [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -65,23 +65,6 @@ Accept wildcard characters: False
 
 ### -PassThru
 If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces delete operation (prevents confirmation dialog).
 This parameter is optional.
 Default value is false.
 

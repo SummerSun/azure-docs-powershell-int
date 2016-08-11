@@ -6,11 +6,11 @@ schema: 2.0.0
 
 # Publish-AzureRmCdnEndpointContent
 ## SYNOPSIS
-Load endpoint content.
+Pre-loads endpoint content.
 
 ## SYNTAX
 
-### Parameter Set for fields parameters
+### Parameter Set for fields parameters (Default)
 ```
 Publish-AzureRmCdnEndpointContent -EndpointName <String> -ProfileName <String> -ResourceGroupName <String>
  -LoadContent <String[]> [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
@@ -23,7 +23,8 @@ Publish-AzureRmCdnEndpointContent -CdnEndpoint <PSEndpoint> -LoadContent <String
 ```
 
 ## DESCRIPTION
-Load content from origin for the Cdn endpoint.
+Pre-loads content from an origin on the CDN edge servers. 
+Only valid for Azure CDN from Verizon endpoints.
 
 ## EXAMPLES
 
@@ -37,7 +38,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -EndpointName
-The name of the endpoint
+The name of the endpoint.
 
 ```yaml
 Type: String
@@ -52,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the profile
+The name of the profile.
 
 ```yaml
 Type: String
@@ -78,6 +79,36 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoadContent
+An array of relative paths for the content on origin.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -111,21 +142,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LoadContent
-An array of relative path of the content on origin.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: 
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CdnEndpoint
 The endpoint object.
 
@@ -138,21 +154,6 @@ Required: True
 Position: Named
 Default value: 
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -PassThru
-Return object if specified.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

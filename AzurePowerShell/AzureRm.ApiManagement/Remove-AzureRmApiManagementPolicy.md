@@ -12,27 +12,26 @@ Removes policy from specified scope.
 
 ### Tenant level (Default)
 ```
-Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-PassThru] [-Force]
+Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### Product level
 ```
-Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ProductId <String> [-PassThru] [-Force]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
-### API level
-```
-Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> [-PassThru] [-Force]
+Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ProductId <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### Operation level
 ```
 Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> -OperationId <String>
- [-PassThru] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### API level
+```
+Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> [-PassThru]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -111,23 +110,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Force
-Forces delete operation (prevents confirmation dialog).
-This parameter is optional.
-Default value is false.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ProductId
 Identifier of existing product.
 If specified will remove product-scope policy.
@@ -152,7 +134,7 @@ This parameters is required.
 
 ```yaml
 Type: String
-Parameter Sets: API level, Operation level
+Parameter Sets: Operation level, API level
 Aliases: 
 
 Required: True

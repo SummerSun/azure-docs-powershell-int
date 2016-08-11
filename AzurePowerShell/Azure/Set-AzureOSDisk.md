@@ -10,16 +10,16 @@ Modifies the host cache mode of an Azure virtual machine.
 
 ## SYNTAX
 
-### Resize
-```
-Set-AzureOSDisk [[-HostCaching] <String>] [-ResizedSizeInGB] <Int32> -VM <IPersistentVM>
- [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
 ### NoResize
 ```
 Set-AzureOSDisk [-HostCaching] <String> -VM <IPersistentVM> [-Profile <AzureSMProfile>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+```
+
+### Resize
+```
+Set-AzureOSDisk [[-HostCaching] <String>] [-ResizedSizeInGB] <Int32> -VM <IPersistentVM>
+ [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
 ## DESCRIPTION
@@ -61,10 +61,10 @@ Valid values are:
 
 ```yaml
 Type: String
-Parameter Sets: Resize
+Parameter Sets: NoResize
 Aliases: 
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
@@ -73,10 +73,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: NoResize
+Parameter Sets: Resize
 Aliases: 
 
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False

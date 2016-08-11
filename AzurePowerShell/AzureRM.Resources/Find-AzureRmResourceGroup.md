@@ -34,7 +34,7 @@ Finds all resource group.
 @{paragraph=PS C:\\\>}
 
 ```
-Find-AzureRmResourceGroup -Tag @{ Name = "testtag" }
+Find-AzureRmResourceGroup -Tag @{ testtag = $null }
 ```
 
 Finds all resource group with a tag with name 'testtag'.
@@ -43,7 +43,7 @@ Finds all resource group with a tag with name 'testtag'.
 @{paragraph=PS C:\\\>}
 
 ```
-Find-AzureRmResourceGroup -Tag @{ Name = "testtag"; Value = "testval" }
+Find-AzureRmResourceGroup -Tag @{ testtag = "testval" }
 ```
 
 Finds all resource group with a tag with name 'testtag' and value 'testval'.
@@ -52,7 +52,7 @@ Finds all resource group with a tag with name 'testtag' and value 'testval'.
 
 ### -Tag
 The tag filter for the OData query.
-The expected format is @{Name = 'tagName'} or @{Name = 'tagName'; Value = 'tagValue'}.
+The expected format is @{tagName=$null} or @{tagName = 'tagValue'}.
 
 ```yaml
 Type: Hashtable

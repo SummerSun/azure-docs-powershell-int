@@ -12,31 +12,39 @@ Creates a new azure active directory application.
 
 ### ApplicationWithoutCredentialParameterSet (Default)
 ```
-New-AzureRmADApplication -DisplayName <String> -HomePage <String> -IdentifierUris <String[]>
+New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+ [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm]
 ```
 
 ### ApplicationWithPasswordPlainParameterSet
 ```
-New-AzureRmADApplication -DisplayName <String> -HomePage <String> -IdentifierUris <String[]> -Password <String>
- [-StartDate <DateTime>] [-EndDate <DateTime>]
-```
-
-### ApplicationWithPasswordCredentialParameterSet
-```
-New-AzureRmADApplication -DisplayName <String> -HomePage <String> -IdentifierUris <String[]>
- -PasswordCredentials <PSADPasswordCredential[]>
-```
-
-### ApplicationWithKeyPlainParameterSet
-```
-New-AzureRmADApplication -DisplayName <String> -HomePage <String> -IdentifierUris <String[]> -KeyValue <String>
- [-KeyType <String>] [-KeyUsage <String>] [-StartDate <DateTime>] [-EndDate <DateTime>]
+New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+ [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -Password <String> [-StartDate <DateTime>]
+ [-EndDate <DateTime>] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
+ [-Confirm]
 ```
 
 ### ApplicationWithKeyCredentialParameterSet
 ```
-New-AzureRmADApplication -DisplayName <String> -HomePage <String> -IdentifierUris <String[]>
- -KeyCredentials <PSADKeyCredential[]>
+New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+ [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -KeyCredentials <PSADKeyCredential[]>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### ApplicationWithPasswordCredentialParameterSet
+```
+New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+ [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -PasswordCredentials <PSADPasswordCredential[]>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### ApplicationWithKeyPlainParameterSet
+```
+New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+ [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -CertValue <String> [-StartDate <DateTime>]
+ [-EndDate <DateTime>] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
+ [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -53,31 +61,6 @@ PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http:/
 
 Creates a new azure active directory application without any credentials.
 
-Type                    : Application
-ApplicationId           : 9400567a-3d4f-4c99-a690-276ba94fbf47
-ApplicationObjectId     : 4de22120-3c65-4786-aa51-9886c079d892
-AvailableToOtherTenants : False
-AppPermissions          : {{
-                            "claimValue": "user_impersonation",
-                            "description": "Allow the application to access NewApplication on behalf of the signed-in
-                          user.",
-                            "directAccessGrantTypes": \[\],
-                            "displayName": "Access NewApplication",
-                            "impersonationAccessGrantTypes": \[
-                              {
-                                "impersonated": "User",
-                                "impersonator": "Application"
-                              }
-                            \],
-                            "isDisabled": false,
-                            "origin": "Application",
-                            "permissionId": "0efb9772-220f-48d4-9f86-eb3e01402d54",
-                            "resourceScopeType": "Personal",
-                            "userConsentDescription": "Allow the application to access NewApplication on your behalf.",
-                            "userConsentDisplayName": "Access NewApplication",
-                            "lang": null
-                          }}
-
 ### --------------------------  Create new AAD application with password.  --------------------------
 @{paragraph=PS C:\\\>}
 
@@ -88,50 +71,10 @@ PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http:/
 
 Creates a new azure active directory application and associates password credentials with it.
 
-Type                    : Application
-ApplicationId           : a3dad041-8119-4182-b500-f8f959bf31db
-ApplicationObjectId     : b4cd1619-80b3-4cfb-9f8f-9f2333425738
-AvailableToOtherTenants : False
-AppPermissions          : {{
-                            "claimValue": "user_impersonation",
-                            "description": "Allow the application to access NewApplication on behalf of the signed-in
-                          user.",
-                            "directAccessGrantTypes": \[\],
-                            "displayName": "Access NewApplication",
-                            "impersonationAccessGrantTypes": \[
-                              {
-                                "impersonated": "User",
-                                "impersonator": "Application"
-                              }
-                            \],
-                            "isDisabled": false,
-                            "origin": "Application",
-                            "permissionId": "18509754-f97a-47f9-9c31-d4a16046e0ee",
-                            "resourceScopeType": "Personal",
-                            "userConsentDescription": "Allow the application to access NewApplication on your behalf.",
-                            "userConsentDisplayName": "Access NewApplication",
-                            "lang": null
-                          }}
-
 ## PARAMETERS
 
 ### -DisplayName
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -HomePage
-@{Text=}
+Display name of the new application.
 
 ```yaml
 Type: String
@@ -146,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierUris
-@{Text=}
+The URIs that identify the application.
 
 ```yaml
 Type: String[]
@@ -160,8 +103,113 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Password
+### -HomePage
+The URL to the application homepage.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReplyUrls
+The application reply urls.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AvailableToOtherTenants
+The value specifying whether the application is a single tenant or a multi-tenant.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
 @{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Password
+The password to be associated with the application.
 
 ```yaml
 Type: String
@@ -176,7 +224,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-@{Text=}
+The effective start date of the credential usage.
+The default start date value is today. 
+For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
 ```yaml
 Type: DateTime
@@ -191,7 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-@{Text=}
+The effective end date of the credential usage.
+The default end date value is one year from today. 
+For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
 
 ```yaml
 Type: DateTime
@@ -206,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordCredentials
-@{Text=}
+The list of password credentials associated with the application.
 
 ```yaml
 Type: PSADPasswordCredential[]
@@ -220,8 +272,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -KeyValue
-@{Text=}
+### -CertValue
+The value of the "asymmetric" credential type.
+It represents the base 64 encoded certificate.
 
 ```yaml
 Type: String
@@ -235,38 +288,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -KeyType
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: ApplicationWithKeyPlainParameterSet
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -KeyUsage
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: ApplicationWithKeyPlainParameterSet
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -KeyCredentials
-@{Text=}
+The list of certificate credentials associated with the application.
 
 ```yaml
 Type: PSADKeyCredential[]
@@ -291,7 +314,13 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 [Remove-AzureRmADApplication]()
 
+[Get-AzureRmADApplication]()
+
 [New-AzureRmADServicePrincipal]()
 
-[Remove-AzureRmADServicePrincipal]()
+[Get-AzureRmADAppCredential]()
+
+[New-AzureRmADAppCredential]()
+
+[Remove-AzureRmADAppCredential]()
 

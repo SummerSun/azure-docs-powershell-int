@@ -12,13 +12,13 @@ Resumes a suspended pipeline in Data Factory.
 
 ### ByFactoryName (Default)
 ```
-Resume-AzureRmDataFactoryPipeline [-Force] [-Name] <String> [-DataFactoryName] <String>
- [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
+Resume-AzureRmDataFactoryPipeline [-Name] <String> [-DataFactoryName] <String> [-ResourceGroupName] <String>
+ [-WhatIf] [-Confirm]
 ```
 
 ### ByFactoryObject
 ```
-Resume-AzureRmDataFactoryPipeline [-Force] [-Name] <String> [-DataFactory] <PSDataFactory> [-WhatIf] [-Confirm]
+Resume-AzureRmDataFactoryPipeline [-Name] <String> [-DataFactory] <PSDataFactory> [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -73,21 +73,6 @@ Required: True
 Position: 2
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Indicates that this cmdlet resumes a pipeline without prompting you for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

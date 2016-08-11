@@ -11,7 +11,7 @@ Modifies a Data Lake Store account.
 ## SYNTAX
 
 ```
-Set-AzureRmDataLakeStoreAccount [-Name] <String> [[-DefaultGroup] <String>] [[-Tags] <Hashtable[]>]
+Set-AzureRmDataLakeStoreAccount [-Name] <String> [[-DefaultGroup] <String>] [[-Tags] <Hashtable>]
  [[-ResourceGroupName] <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
 ```
 
@@ -67,7 +67,7 @@ Specifies tags as key-value pairs.
 You can use tags to identify a Data Lake Store account from other Azure resources.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 

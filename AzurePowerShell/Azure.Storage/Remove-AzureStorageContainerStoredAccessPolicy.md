@@ -11,7 +11,7 @@ Remove Stored Access Policy from Azure Storage container.
 ## SYNTAX
 
 ```
-Remove-AzureStorageContainerStoredAccessPolicy [-Container] <String> [-Policy] <String> [-Force] [-PassThru]
+Remove-AzureStorageContainerStoredAccessPolicy [-Container] <String> [-Policy] <String> [-PassThru]
  [-Context <AzureStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
  [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
  [-PipelineVariable <String>] [-WhatIf] [-Confirm]
@@ -58,21 +58,6 @@ Required: True
 Position: 1
 Default value: 
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Force to remove the policy without confirmation
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: 
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

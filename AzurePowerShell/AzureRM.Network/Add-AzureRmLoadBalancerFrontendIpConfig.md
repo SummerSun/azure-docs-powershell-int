@@ -10,17 +10,17 @@ Adds a front-end IP configuration to a load balancer.
 
 ## SYNTAX
 
-### SetByResourceIdSubnet
-```
-Add-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
- [-PrivateIpAddress <String>] -SubnetId <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
 ### SetByResourceSubnet
 ```
 Add-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
  [-PrivateIpAddress <String>] -Subnet <PSSubnet> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>]
+```
+
+### SetByResourceIdSubnet
+```
+Add-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
+ [-PrivateIpAddress <String>] -SubnetId <String> [-InformationAction <ActionPreference>]
  [-InformationVariable <String>]
 ```
 
@@ -109,7 +109,7 @@ Specifies the PublicIpAddress object to associate with a front-end IP configurat
 
 ```yaml
 Type: String
-Parameter Sets: SetByResourceIdSubnet, SetByResourceSubnet
+Parameter Sets: SetByResourceSubnet, SetByResourceIdSubnet
 Aliases: 
 
 Required: False

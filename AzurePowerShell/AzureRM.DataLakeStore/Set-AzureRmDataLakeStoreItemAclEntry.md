@@ -10,18 +10,18 @@ Modifies an entry (ACE) in the access control list (ACL) of a file or folder in 
 
 ## SYNTAX
 
-### Set ACL Entries using ACL object
-```
-Set-AzureRmDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
- [-Acl] <DataLakeStoreItemAcl> [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-WhatIf] [-Confirm]
-```
-
 ### Set specific ACE
 ```
 Set-AzureRmDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
- [-AceType] <AceType> [[-Id] <Guid>] [-Permissions] <Permission> [-Default] [-Force]
+ [-AceType] <AceType> [[-Id] <Guid>] [-Permissions] <Permission> [-Default]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+```
+
+### Set ACL Entries using ACL object
+```
+Set-AzureRmDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
+ [-Acl] <DataLakeStoreItemAcl> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -80,21 +80,6 @@ Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
