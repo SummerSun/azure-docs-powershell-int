@@ -61,7 +61,7 @@ foreach($folder in $folders)
 {
   $folderName = $folder.name
 
-  Add-Content -Path $levelTwoToc -Value ("- name:" + $folderName)
+  Add-Content -Path $levelTwoToc -Value ("- name: " + $folderName)
   Add-Content -Path $levelTwoToc -Value ("  href: " + $folderName + "/" + $folderName + ".md")
   Add-Content -Path $levelTwoToc -Value "  items:"
 
