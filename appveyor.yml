@@ -67,7 +67,7 @@ build_script:
             $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
             if($found -and $matches[1].contains("Module Name"))
             {
-              Add-Content -Path $tocPath -Value ($pre + "  href:" + (Get-Item $file | Resolve-Path -Relative))
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative))
               Write-Host "found landing page $file in $folderPath"
               $landingPage = $file
               break
