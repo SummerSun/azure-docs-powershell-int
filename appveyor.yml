@@ -4,7 +4,7 @@ environment:
 
 build_script:
   - ps: |
-      $DocFolder = 'AzurePowerShell'      
+      $DocFolder = 'azureps-cmdlets-docs'      
       $RootFolderPath = (Get-Item -Path ".\" -Verbose).FullName      
       $Extension = '.md'
 
@@ -28,69 +28,72 @@ build_script:
       }
       Write-Host 'Finished validate files.'
   - ps: |
-      $DocFolder = 'AzurePowerShell'
-      $RootFolderPath = (Get-Item -Path ".\" -Verbose).FullName
-      $Extension = '.md'
+      function DoGetToc
+      {
+        $DocFolder = 'azureps-cmdlets-docs'
+        $RootFolderPath = (Get-Item -Path ".\" -Verbose).FullName
+        $Extension = '.md'
      
-      $docPath = Join-Path $RootFolderPath $DocFolder
-      $folders = Get-ChildItem $docPath | select-object name
-
-      if($folders -eq $null -or $folders.count -lt 1)
-      {
-        Write-Host "No documentation folders inside the given root folder"
-        exit
-      }
-      
-      $levelOneToc = Join-Path $RootFolderPath "toc.yml"
-
-      if(Test-Path $levelOneToc)
-      {
-        Remove-Item $levelOneToc
-      }
-
-      Write-Host "Level one toc $levelOneToc"
-
-      Add-Content -Path $levelOneToc -Value "- name: AzurePowerShell"
-      Add-Content -Path $levelOneToc -Value "  href: Index.md"
-      Add-Content -Path $levelOneToc -Value "  items:"
-      
-      $levelTwoToc = Join-Path $docPath "toc.yml"
-
-      if(Test-Path $levelTwoToc)
-      {
-        Remove-Item $levelTwoToc
-      }
-
-      Write-Host "Level two toc $levelTwoToc"
-      Write-Host "Start writing..."
-
-      foreach($folder in $folders)
-      {
-        $folderName = $folder.name
+        $docPath = Join-Path $RootFolderPath $DocFolder
+        $folders = Get-ChildItem $docPath | select-object name
+        $tocPath = Join-Path $RootFolderPath "toc.yml"
         
-        Add-Content -Path $levelTwoToc -Value ("- name: " + $folderName)
-        Add-Content -Path $levelTwoToc -Value ("  href: " + $folderName + "/" + $folderName + ".md")
-        Add-Content -Path $levelTwoToc -Value "  items:"
-
-        if(Test-Path (Join-Path $docPath $folderName) -PathType Container)
+        if(Test-Path $tocPath)
         {
-          Add-Content -Path $levelOneToc -Value ("    - name: " + $folderName)
-          Add-Content -Path $levelOneToc -Value ("      href: AzurePowerShell/" + $folderName+ "/" + $folderName + ".md")
-          $files = (Get-ChildItem (Join-Path $docPath $folderName) -Recurse) | Where-Object { $_.Extension -eq $Extension }
+          Remove-Item $tocPath
+        }
+        New-Item -path $RootFolderPath -name toc.yml
+        GetToc $docPath $tocPath '.md' 0
+      }
+      
+      function global:GetToc($folderPath, $tocPath, $extension, $level)
+      {
+        Write-Host "constructing toc in $folderPath"
+        $pre = ""
+        for($i=0;$i -lt $level;$i++)
+        {
+          $pre = -Join($pre, "    ")
+        }
+        Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $folderPath -Leaf))
+        $subFolders = Get-ChildItem $folderPath -Directory | Select-Object FullName
 
+        if($subFolders -eq $null)
+        {
+          $files = (Get-ChildItem $folderPath) | Where-Object { $_.Extension -eq $Extension } | select -ExpandProperty FullName
+          # finding landing page inside folders
+          $landingPage = ""
           foreach($file in $files)
           {
-            $fileName = $file.name
-
-            if($fileName.substring(0, $fileName.LastIndexOf('.')) -ne $folderName)
+            $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
+            if($found -and $matches[1].contains("Module Name"))
             {
-              Add-Content -Path $levelTwoToc -Value ("    - name: " + $fileName.substring(0, $fileName.IndexOf('.')))
-              Add-Content -Path $levelTwoToc -Value ("      href: " + $folderName + "/" + $fileName)
+              Add-Content -Path $tocPath -Value ($pre + "  href:" + (Get-Item $file | Resolve-Path -Relative))
+              Write-Host "found landing page $file in $folderPath"
+              $landingPage = $file
+              break
+            }
+          }
+          Add-Content -Path $tocPath -Value ($pre + "  items:")
+          $pre = -Join($pre, "    ")
+          foreach($file in $files)
+          {
+            if($file -ne $landingPage)
+            {
+              Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $file -Leaf -Resolve).split('\.')[-2])
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative))
             }
           }
         }
+        else
+        {
+          Add-Content -Path $tocPath -Value ($pre + "  items:")
+          foreach($subFolder in $subFolders)
+          {
+            GetToc $subFolder.FullName $tocPath $extension ($level+1)
+          }
+        }
       }
-      Write-Host "Toc was generated successfully."
+      DoGetToc
 on_success:
   - git clone -q --branch=%TargetBranch% %ContentRepo% %TEMP%\AzurePowerShell
   - copy %APPVEYOR_BUILD_FOLDER%\toc.yml %TEMP%\AzurePowerShell
