@@ -16,14 +16,14 @@ build_script:
 
       foreach($file in $files)
       {
-        $found = [System.IO.File]::ReadAllText($file) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
+        $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
 
         if($found -and ($matches[1].contains('{{')) -or $matches[1].contains('}}'))
         {
           Write-Host 'Found a bad file $file'
           $result = $matches[1].replace('{{', '').replace('}}', '')
-          $content = [System.IO.File]::ReadAllText($file).Replace($matches[1], $result)
-          System.IO.File]::WriteAllText($file, $content)
+          $content = (Get-Content $file | Out-String).Replace($matches[1], $result)
+          Set-Content $file $content
         }
       }
       Write-Host 'Finished validate files.'
