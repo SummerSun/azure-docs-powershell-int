@@ -1,8 +1,8 @@
 ---
 Module Name: AzureRM.Storage
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link: Please enter FwLink manually
+Help Version: Please enter version of help manually (X.X.X.X) format
 Locale: en-US
 ---
 
@@ -193,4 +193,5 @@ Locale: en-US
 
 ### [Stop-AzureStorageFileCopy](Stop-AzureStorageFileCopy.md)
 {{Manually Enter Stop-AzureStorageFileCopy Description Here}}
+
 
