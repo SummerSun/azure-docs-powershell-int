@@ -4,13 +4,10 @@ environment:
 
 build_script:
   - ps: |
-      $DocFolder = 'azureps-cmdlets-docs'      
       $RootFolderPath = (Get-Item -Path ".\" -Verbose).FullName      
-      $Extension = '.md'
-
-      $docPath = Join-Path $RootFolderPath $DocFolder
+      $docPath = Join-Path $RootFolderPath $env:DocFolder
       
-      $files = Get-ChildItem -Path $docPath -Recurse | where {$_.extension -eq $Extension} | % { $_.FullName }
+      $files = Get-ChildItem -Path $docPath -Recurse | where {$_.extension -eq $env:Extension} | % { $_.FullName }
       
       Write-Host "Found " $files.count "Files"
 
@@ -30,11 +27,8 @@ build_script:
   - ps: |
       function DoGetToc
       {
-        $DocFolder = 'azureps-cmdlets-docs'
         $RootFolderPath = (Get-Item -Path ".\" -Verbose).FullName
-        $Extension = '.md'
-     
-        $docPath = Join-Path $RootFolderPath $DocFolder
+        $docPath = Join-Path $RootFolderPath $env:DocFolder
         $folders = Get-ChildItem $docPath | select-object name
         $tocPath = Join-Path $RootFolderPath "toc.yml"
         
@@ -43,7 +37,7 @@ build_script:
           Remove-Item $tocPath
         }
         New-Item -path $RootFolderPath -name toc.yml
-        GetToc $docPath $tocPath '.md' 0
+        GetToc $docPath $tocPath $env:Extension 0
       }
       
       function global:GetToc($folderPath, $tocPath, $extension, $level)
