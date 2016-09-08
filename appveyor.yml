@@ -8,14 +8,13 @@ build_script:
 
       $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:DocFolder
       $files = Get-ChildItem -Path $docPath -Recurse | where {$_.extension -eq $env:Extension} | % { $_.FullName }
-      $source_repo = "source_repo: " + $env:SourceRepo
-      $source_branch = "source_branch: " + $env:SourceBranch
+      $pattern = '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
 
       Write-Host "Found " $files.count "Files"
 
       foreach($file in $files)
       {
-        if(!((Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'))
+        if(!((Get-Content $file | Out-String) -match $pattern))
         {
           continue
         }
@@ -26,7 +25,7 @@ build_script:
         #metadata: updated_at
         $date = [datetime](Get-ItemProperty -Path $file -Name LastWriteTime).lastwritetime
 
-        if($header -match '$env:updateat[\s\S].*')
+        if($header -match 'updated_at[\s\S].*')
         {
           $new_header = $new_header.replace($matches[0], 'updated_at: ' + (Get-Date $date -format g))
         }
@@ -35,7 +34,7 @@ build_script:
           $new_header = $new_header + 'updated_at: ' + (Get-Date $date -format g) + "`r`n"
         }
         #metadata: ms.date
-        if($header -match 'ms.date:[\s\S].*')
+        if($header -match 'ms.date[\s\S].*')
         {
           $new_header = $new_header.replace($matches[0], 'ms.date: ' + (Get-Date $date -format d))
         }
@@ -43,7 +42,12 @@ build_script:
         {
           $new_header = $new_header + 'ms.date: ' + (Get-Date $date -format d) + "`r`n"
         }
+        Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
         
+        (Get-Content $file | Out-String) -match $pattern | out-null
+        $header = $matches[1]
+        $new_header = $matches[1]
+
         #metadata: ms.topic
         $topicType = 'reference'
         if($header -match 'Module Name')
@@ -51,7 +55,7 @@ build_script:
           $topicType = 'conceptual'
         }
         
-        if($header -match 'ms.topic:[\s|\S].*')
+        if($header -match 'ms.topic[\s\S].*')
         {
           $new_header = $new_header.replace($matches[0], 'ms.topic: ' + $topicType)
         }
@@ -60,35 +64,42 @@ build_script:
           $new_header = $new_header + 'ms.topic: ' + $topicType + "`r`n"
         }
 
-        #metadata: source_repo
-        if($header -match 'source_repo[\s|\S].*')
+        #metadata: content_git_url and original_content_git_url
+        $rel_path = Get-Item $file | Resolve-Path -Relative
+        $git_url_path = $env:source_repo + '/blob/' + $env:source_branch +'/' + $rel_path
+        $git_url = (New-object System.Uri $git_url_path).AbsoluteUri
+
+        if($header -match 'content_git_url[\s\S].*')
         {
-          $new_header = $new_header.replace($matches[0], $source_repo)
+          $new_header = $new_header.replace($matches[0], 'content_git_url: ' + $git_url)
         }
         else
         {
-          $new_header = $new_header + $source_repo +"`r`n"
+          $new_header = $new_header + 'content_git_url: ' + $git_url + "`r`n"
         }
-
-        #metadata: source_branch
-        if($header -match 'source_branch[\s|\S].*')
+        
+        if($header -match 'original_content_git_url[\s\S].*')
         {
-          $new_header = $new_header.replace($matches[0], $source_branch)
+          $new_header = $new_header.replace($matches[0], 'original_content_git_url: ' + $git_url)
         }
         else
         {
-          $new_header = $new_header + $source_branch + "`r`n"
+          $new_header = $new_header + 'original_content_git_url: ' + $git_url + "`r`n"
         }
 
-        #metadata: git_commit
+        #metadata: gitcommit
         $commitId = (git rev-list -1 HEAD $file)
-        if($header -match 'git_commit:[\s|\S].*')
+        $git_commit_path = $env:source_repo + '/blob/' + $commitId + '/' + $rel_path
+        $git_commit_url = (New-object System.Uri $git_commit_path).AbsoluteUri
+        
+        if($header -match 'gitcommit[\s\S].*')
         {
-          $new_header = $new_header.replace($matches[0], 'git_commit: ' + $commitId)
+        
+          $new_header = $new_header.replace($matches[0], 'gitcommit: ' + $git_commit_url)
         }
         else
         {
-          $new_header = $new_header + 'git_commit: ' + $commitId + "`r`n"
+          $new_header = $new_header + 'gitcommit: ' + $git_commit_url + "`r`n"
         }
 
         #filter invalid characters
