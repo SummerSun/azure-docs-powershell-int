@@ -1,6 +1,6 @@
 environment:
   github_access_token:
-    secure: NB58hfge6r/BINkfthdBUVYiKPzkqjHgjdxN+qKYCt5XJhIFgvYjRQolcub9pBPh
+    secure: XgRTP/48Tcb8jdBahG9aZEhKeu2qBc5gCugjShWkT+zNqcQihEtKIIonzPaGcUV+
 
 build_script:
   - ps: |
