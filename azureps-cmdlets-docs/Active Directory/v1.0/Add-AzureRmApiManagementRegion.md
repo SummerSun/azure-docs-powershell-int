@@ -2,6 +2,12 @@
 external help file: RMAzure_Apimanagement.xml
 online version: 6df0b014-03b0-47aa-9d34-9d0fceee2247
 schema: 2.0.0
+ms.date: 9/8/2016
+ms.topic: reference
+source_branch: master
+updated_at: 9/8/2016 4:39 PM
+git_commit: 1457b00e4be43f52e047ac6fd4ed87f3565c5548
+source_repo: https://github.com/azure/azure-docs-powershell
 ---
 
 # Add-AzureRmApiManagementRegion

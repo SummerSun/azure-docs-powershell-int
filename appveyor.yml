@@ -4,77 +4,153 @@ environment:
 
 build_script:
   - ps: |
-      $RootFolderPath = (Get-Item -Path ".\" -Verbose).FullName
-      $docPath = Join-Path $RootFolderPath $env:DocFolder
-      
+      Write-Host "Begin processing files"
+
+      $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:DocFolder
       $files = Get-ChildItem -Path $docPath -Recurse | where {$_.extension -eq $env:Extension} | % { $_.FullName }
-      
+      $source_repo = "source_repo: " + $env:SourceRepo
+      $source_branch = "source_branch: " + $env:SourceBranch
+
       Write-Host "Found " $files.count "Files"
 
       foreach($file in $files)
       {
-        $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
-
-        if($found -and ($matches[1].contains('{{')) -or $matches[1].contains('}}'))
+        if(!((Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'))
         {
-          Write-Host 'Found a bad file $file'
-          $result = $matches[1].replace('{{', '').replace('}}', '')
-          $content = (Get-Content $file | Out-String).Replace($matches[1], $result)
-          Set-Content $file $content
+          continue
         }
-      }
-      Write-Host 'Finished validate files.'
-  - ps: |
-      function DoGetToc
-      {
-        $RootFolderPath = (Get-Item -Path ".\" -Verbose).FullName
-        $docPath = Join-Path $RootFolderPath $env:DocFolder
-        $folders = Get-ChildItem $docPath | select-object name
-        $tocPath = Join-Path $RootFolderPath "toc.yml"
+
+        $header = $matches[1]
+        $new_header = $matches[1]
+
+        #metadata: updated_at
+        $date = [datetime](Get-ItemProperty -Path $file -Name LastWriteTime).lastwritetime
+
+        if($header -match '$env:updateat[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'updated_at: ' + (Get-Date $date -format g))
+        }
+        else
+        {
+          $new_header = $new_header + 'updated_at: ' + (Get-Date $date -format g) + "`r`n"
+        }
+        #metadata: ms.date
+        if($header -match 'ms.date:[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'ms.date: ' + (Get-Date $date -format d))
+        }
+        else
+        {
+          $new_header = $new_header + 'ms.date: ' + (Get-Date $date -format d) + "`r`n"
+        }
         
+        #metadata: ms.topic
+        $topicType = 'reference'
+        if($header -match 'Module Name')
+        {
+          $topicType = 'conceptual'
+        }
+        
+        if($header -match 'ms.topic:[\s|\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'ms.topic: ' + $topicType)
+        }
+        else
+        {
+          $new_header = $new_header + 'ms.topic: ' + $topicType + "`r`n"
+        }
+
+        #metadata: source_repo
+        if($header -match 'source_repo[\s|\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], $source_repo)
+        }
+        else
+        {
+          $new_header = $new_header + $source_repo +"`r`n"
+        }
+
+        #metadata: source_branch
+        if($header -match 'source_branch[\s|\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], $source_branch)
+        }
+        else
+        {
+          $new_header = $new_header + $source_branch + "`r`n"
+        }
+
+        #metadata: git_commit
+        $commitId = (git rev-list -1 HEAD $file)
+        if($header -match 'git_commit:[\s|\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'git_commit: ' + $commitId)
+        }
+        else
+        {
+          $new_header = $new_header + 'git_commit: ' + $commitId + "`r`n"
+        }
+
+        #filter invalid characters
+        if($header -match '{{' -or $header -match '}}')
+        {
+          $new_header = $new_header.replace('{{', '').replace('}}', '')
+        }
+        
+        #update file
+        Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+      }
+      Write-Host 'Finish processing files.'
+  - ps: |
+      function GetToc
+      {
+        $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:DocFolder
+        $tocPath = Join-Path $docPath "toc.yml"
+
         if(Test-Path $tocPath)
         {
           Remove-Item $tocPath
         }
-        New-Item -path $RootFolderPath -name toc.yml
-        GetToc $docPath $tocPath $env:Extension 0
+        New-Item $tocPath
+        DoGetToc $docPath $tocPath $env:Extension 0
       }
-      
-      function global:GetToc($folderPath, $tocPath, $extension, $level)
+
+      function global:DoGetToc($folderPath, $tocPath, $extension, $level)
       {
         Write-Host "constructing toc in $folderPath"
         $pre = ""
+
         for($i=0;$i -lt $level;$i++)
         {
-          $pre = -Join($pre, "    ")
+          $pre = $pre + "    "
         }
+
         Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $folderPath -Leaf))
         $subFolders = Get-ChildItem $folderPath -Directory | Select-Object FullName
 
         if($subFolders -eq $null)
         {
           $files = (Get-ChildItem $folderPath) | Where-Object { $_.Extension -eq $Extension } | select -ExpandProperty FullName
-          # finding landing page inside folders
           $landingPage = ""
+
           foreach($file in $files)
           {
             $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
-            if($found -and $matches[1].contains("Module Name"))
+            if($found -and $matches[1] -match 'Module Name')
             {
-              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative))
-              Write-Host "found landing page $file in $folderPath"
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace($env:DocFolder + '\', ''))
               $landingPage = $file
               break
             }
           }
           Add-Content -Path $tocPath -Value ($pre + "  items:")
-          $pre = -Join($pre, "    ")
+          $pre = $pre + "    "
           foreach($file in $files)
           {
             if($file -ne $landingPage)
             {
               Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $file -Leaf -Resolve).split('\.')[-2])
-              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative))
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace($env:DocFolder + '\', ''))
             }
           }
         }
@@ -83,16 +159,16 @@ build_script:
           Add-Content -Path $tocPath -Value ($pre + "  items:")
           foreach($subFolder in $subFolders)
           {
-            GetToc $subFolder.FullName $tocPath $extension ($level+1)
+            DoGetToc $subFolder.FullName $tocPath $extension ($level+1)
           }
         }
       }
-      DoGetToc
+      GetToc
 on_success:
   - git clone -q --branch=%TargetBranch% %ContentRepo% %TEMP%\AzurePowerShell
-  - copy %APPVEYOR_BUILD_FOLDER%\toc.yml %TEMP%\AzurePowerShell
-  - if exist %TEMP%\AzurePowerShell\%DocFolder% rmdir /s /q %TEMP%\AzurePowerShell\%DocFolder%
-  - robocopy %APPVEYOR_BUILD_FOLDER%\%DocFolder% %TEMP%\AzurePowerShell\%DocFolder% /e & IF %ERRORLEVEL% LEQ 1 exit 0
+  - ps: Get-ChildItem $env:TEMP\AzurePowerShell\$env:DocFolder -dir | Remove-Item -Recurse -Force
+  - robocopy %APPVEYOR_BUILD_FOLDER%\%DocFolder% %TEMP%\AzurePowerShell\%DocFolder% /e & IF %ERRORLEVEL% LEQ 1 exit 0  
+  - copy %APPVEYOR_BUILD_FOLDER%\%DocFolder%\toc.yml %TEMP%\AzurePowerShell\%DocFolder%
   - cd %TEMP%\AzurePowerShell
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
