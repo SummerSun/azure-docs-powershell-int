@@ -7,11 +7,17 @@ build_script:
       Write-Host "Begin download artifacts"
 
       $file_name = $env:APPVEYOR_REPO_TAG_NAME + ".zip"
-      $source = "https://github.com/summersun/poc/archive/" + $file_name
-      # https://github.com/Azure/azure-powershell/archive/v2.2.0-September2016.zip
-      $dest = "C:\application\data"
-      Invoke-WebRequest -Uri $source -OutFile $env:APPVEYOR_BUILD_FOLDER
+      Write-Host $file_name
+      $source = "http://github.com/summersun/poc/archive/" + $file_name
+      Write-Host $source
+      $dest = $env:APPVEYOR_BUILD_FOLDER +"\" + $file_name
+
+      Write-Host $dest
       
+      # https://github.com/Azure/azure-powershell/archive/v2.2.0-September2016.zip
+      
+      (New-Object Net.WebClient).DownloadFile($source, $dest)
+            
       7z x $file_name -o$env:APPVEYOR_BUILD_FOLDER -y
 
       # problem 1: find the target folders and files
