@@ -1,6 +1,6 @@
 environment:
   github_access_token:
-    secure: JSOJKfdgXW09TdfN75l84f7+22GElWNgPo1Vab449RFYe8+BEbO/btueR3g0qldG
+    secure: XgRTP/48Tcb8jdBahG9aZEhKeu2qBc5gCugjShWkT+zNqcQihEtKIIonzPaGcUV+
 
 build_script:
   - ps: |
@@ -123,7 +123,7 @@ build_script:
         New-Item $tocPath
         foreach($subFolder in (Get-ChildItem $docPath -Directory | Select-Object FullName))
         {
-          DoGetToc $subFolder.FullName $tocPath '.md' 0
+          DoGetToc $subFolder.FullName $tocPath $env.extension 0
         }
       }
 
@@ -142,7 +142,7 @@ build_script:
 
         if($subFolders -eq $null)
         {
-          $files = (Get-ChildItem $folderPath) | Where-Object { $_.Extension -eq $Extension } | select -ExpandProperty FullName
+          $files = (Get-ChildItem $folderPath) | Where-Object { $_.Extension -eq $env:extension } | select -ExpandProperty FullName
           $landingPage = ""
 
           foreach($file in $files)
@@ -150,7 +150,7 @@ build_script:
             $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
             if($found -and $matches[1] -match 'Module Name')
             {
-              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace($env:ps_source + '\', ''))
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace('\' + $env:ps_source, '.'))
               $landingPage = $file
               break
             }
@@ -162,7 +162,7 @@ build_script:
             if($file -ne $landingPage)
             {
               Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $file -Leaf -Resolve).split('\.')[-2])
-              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace($env:ps_source + '\', ''))
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace('\' + $env:ps_source, '.'))
             }
           }
         }
@@ -184,10 +184,24 @@ on_success:
       {
         $folderName = Split-Path -Path $folder.FullName -Leaf
         $target = Join-Path $env:TEMP\Azure $env:target_folder\$folderName
-        Remove-Item $target -Recurse -Force
+        if(Test-Path $target)
+        {
+          Remove-Item $target -Recurse -Force
+        }
         Copy-Item -Path $env:APPVEYOR_BUILD_FOLDER\$env:ps_source\$folderName -Destination $target -recurse -Force
       }
-  - copy %APPVEYOR_BUILD_FOLDER%\%ps_source%\toc.yml %TEMP%\Azure\%target_folder%\%ps_source%
+      
+      $tocFolder = Join-Path $env:TEMP\Azure $env:target_folder\$env:ps_source
+      
+      if(Test-Path $tocFolder)
+      {
+        Remove-Item $tocFolder -Recurse -Force
+      }
+      
+      New-Item $tocFolder -type Directory      
+      $toc = Join-Path $tocFolder 'toc.yml'
+      Set-Content $toc (Get-Content $toc | Out-String).replace('\', '/') -NoNewline      
+      Copy-item (Join-Path $env:APPVEYOR_BUILD_FOLDER\$env:ps_source 'toc.yml') $toc
   - cd %TEMP%\Azure
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
