@@ -1,41 +1,198 @@
 environment:
   github_access_token:
-    secure: XgRTP/48Tcb8jdBahG9aZEhKeu2qBc5gCugjShWkT+zNqcQihEtKIIonzPaGcUV+
+    secure: JSOJKfdgXW09TdfN75l84f7+22GElWNgPo1Vab449RFYe8+BEbO/btueR3g0qldG
 
 build_script:
   - ps: |
-      Write-Host "Begin download artifacts"
+      Write-Host "Begin processing files"
 
-      # try get release by tag
-      $uri = 'https://api.github.com/repos/summersun/poc/releases/tags/' + $env:APPVEYOR_REPO_TAG_NAME
-      $r = Invoke-WebRequest -Uri $uri
-      if(!$r.Headers.Status.contains('200 OK')) {
-        $host.SetShouldExit(-1)
+      $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:ps_source
+      $files = Get-ChildItem -Path $docPath -Recurse | where {$_.extension -eq $env:extension} | % { $_.FullName }
+      $pattern = '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
+
+      Write-Host "Found " $files.count "Files"
+
+      foreach($file in $files)
+      {
+        if(!((Get-Content $file | Out-String) -match $pattern))
+        {
+          continue
+        }
+
+        $header = $matches[1]
+        $new_header = $matches[1]
+
+        #metadata: updated_at
+        $date = [datetime](Get-ItemProperty -Path $file -Name LastWriteTime).lastwritetime
+
+        if($header -match 'updated_at[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'updated_at: ' + (Get-Date $date -format g))
+        }
+        else
+        {
+          $new_header = $new_header + 'updated_at: ' + (Get-Date $date -format g) + "`r`n"
+        }
+        #metadata: ms.date
+        if($header -match 'ms.date[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'ms.date: ' + (Get-Date $date -format d))
+        }
+        else
+        {
+          $new_header = $new_header + 'ms.date: ' + (Get-Date $date -format d) + "`r`n"
+        }
+        Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+        
+        (Get-Content $file | Out-String) -match $pattern | out-null
+        $header = $matches[1]
+        $new_header = $matches[1]
+
+        #metadata: ms.topic
+        $topicType = 'reference'
+        if($header -match 'Module Name')
+        {
+          $topicType = 'conceptual'
+        }
+        
+        if($header -match 'ms.topic[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'ms.topic: ' + $topicType)
+        }
+        else
+        {
+          $new_header = $new_header + 'ms.topic: ' + $topicType + "`r`n"
+        }
+        
+        #metadata: source_repo
+        if($header -match 'source_repo[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'source_repo: ' + $env:source_repo)
+        }
+        else
+        {
+          $new_header = $new_header + 'source_repo: ' + $env:source_repo + "`r`n"
+        }
+
+        #metadata: source_branch        
+        if($header -match 'source_branch[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'source_branch: ' + $env:source_branch)
+        }
+        else
+        {
+          $new_header = $new_header + 'source_branch: ' + $env:source_branch + "`r`n"
+        }
+
+        #metadata: gitcommit
+        $commitId = (git rev-list -1 HEAD $file)
+        $rel_path = Get-Item $file | Resolve-Path -Relative
+        $git_commit_path = $env:source_repo + '/blob/' + $commitId + '/' + $rel_path
+        $git_commit_url = (New-object System.Uri $git_commit_path).AbsoluteUri
+        
+        if($header -match 'gitcommit[\s\S].*')
+        {
+        
+          $new_header = $new_header.replace($matches[0], 'gitcommit: ' + $git_commit_url)
+        }
+        else
+        {
+          $new_header = $new_header + 'gitcommit: ' + $git_commit_url + "`r`n"
+        }
+
+        #filter invalid characters
+        if($header -match '{{' -or $header -match '}}')
+        {
+          $new_header = $new_header.replace('{{', '').replace('}}', '')
+        }
+        
+        #update file
+        Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
       }
-      
-      $file_name = $env:APPVEYOR_REPO_TAG_NAME + ".zip"      
-      $source = "http://github.com/summersun/poc/archive/" + $file_name
-      $dest = $env:APPVEYOR_BUILD_FOLDER +"\" + $file_name
+      Write-Host 'Finish processing files.'
+  - ps: |
+      function GetToc
+      {
+        $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:ps_source
+        $tocPath = Join-Path $docPath "toc.yml"
 
-      # https://github.com/Azure/azure-powershell/archive/v2.2.0-September2016.zip
+        if(Test-Path $tocPath)
+        {
+          Remove-Item $tocPath
+        }
+        New-Item $tocPath
+        foreach($subFolder in (Get-ChildItem $docPath -Directory | Select-Object FullName))
+        {
+          DoGetToc $subFolder.FullName $tocPath '.md' 0
+        }
+      }
 
-      (New-Object Net.WebClient).DownloadFile($source, $dest)
+      function global:DoGetToc($folderPath, $tocPath, $extension, $level)
+      {
+        Write-Host "constructing toc in $folderPath"
+        $pre = ""
 
-      7z x $file_name -o$env:APPVEYOR_BUILD_FOLDER -y
+        for($i=0;$i -lt $level;$i++)
+        {
+          $pre = $pre + "    "
+        }
 
-      # problem 1: find the target folders and files
-      # problem 2: process the files
-      # problem 3: generate toc
-      # problem 4: git push files
+        Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $folderPath -Leaf))
+        $subFolders = Get-ChildItem $folderPath -Directory | Select-Object FullName
+
+        if($subFolders -eq $null)
+        {
+          $files = (Get-ChildItem $folderPath) | Where-Object { $_.Extension -eq $Extension } | select -ExpandProperty FullName
+          $landingPage = ""
+
+          foreach($file in $files)
+          {
+            $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
+            if($found -and $matches[1] -match 'Module Name')
+            {
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace($env:ps_source + '\', ''))
+              $landingPage = $file
+              break
+            }
+          }
+          Add-Content -Path $tocPath -Value ($pre + "  items:")
+          $pre = $pre + "    "
+          foreach($file in $files)
+          {
+            if($file -ne $landingPage)
+            {
+              Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $file -Leaf -Resolve).split('\.')[-2])
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace($env:ps_source + '\', ''))
+            }
+          }
+        }
+        else
+        {
+          Add-Content -Path $tocPath -Value ($pre + "  items:")
+          foreach($subFolder in $subFolders)
+          {
+            DoGetToc $subFolder.FullName $tocPath $extension ($level+1)
+          }
+        }
+      }
+      GetToc
 on_success:
-  - git clone -q --branch=%TargetBranch% %ContentRepo% %TEMP%\AzurePowerShell
-  - ps: Get-ChildItem $env:TEMP\AzurePowerShell\$env:DocFolder -dir | Remove-Item -Recurse -Force
-  - robocopy %APPVEYOR_BUILD_FOLDER%\ %TEMP%\AzurePowerShell\%DocFolder% /e & IF %ERRORLEVEL% LEQ 1 exit 0  
-  - cd %TEMP%\AzurePowerShell
+  - git clone -q --branch=%target_branch% %content_repo% %TEMP%\Azure
+  - ps: |
+      $folders = Get-ChildItem $env:APPVEYOR_BUILD_FOLDER\$env:ps_source -Directory | Select-Object FullName
+      foreach($folder in $folders)
+      {
+        $folderName = Split-Path -Path $folder.FullName -Leaf
+        $target = Join-Path $env:TEMP\Azure $env:target_folder\$folderName
+        Remove-Item $target -Recurse -Force
+        Copy-Item -Path $env:APPVEYOR_BUILD_FOLDER\$env:ps_source\$folderName -Destination $target -recurse -Force
+      }
+  - copy %APPVEYOR_BUILD_FOLDER%\%ps_source%\toc.yml %TEMP%\Azure\%target_folder%\%ps_source%
+  - cd %TEMP%\Azure
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
-  - git config --global user.email %Email%
-  - git config --global user.name %Name%
+  - git config --global user.email %email%
+  - git config --global user.name %name%
   - git add -A
   - git commit -m "commit from appveyor"
-  - git push origin %TargetBranch%
+  - git push origin %target_branch%
