@@ -6,8 +6,13 @@ build_script:
   - ps: |
       Write-Host "Begin processing files"
 
-      $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:ps_source
-      $files = Get-ChildItem -Path $docPath -Recurse | where {$_.extension -eq $env:extension} | % { $_.FullName }
+      # assume there is only one root folder in source repo
+      if((Get-ChildItem $env:APPVEYOR_BUILD_FOLDER -Directory).count -ne 1)
+      {
+        $host.SetShouldExit(-1)
+      }
+      $root_folder = (Get-ChildItem $env:APPVEYOR_BUILD_FOLDER -Directory | Select-Object FullName -last 1).FullName
+      $files = Get-ChildItem -Path $root_folder -Recurse | where {$_.extension -eq $env:extension} | % { $_.FullName }
       $pattern = '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
 
       Write-Host "Found " $files.count "Files"
@@ -49,19 +54,19 @@ build_script:
         $new_header = $matches[1]
 
         #metadata: ms.topic
-        $topicType = 'reference'
+        $topic_type = 'reference'
         if($header -match 'Module Name')
         {
-          $topicType = 'conceptual'
+          $topic_type = 'conceptual'
         }
         
         if($header -match 'ms.topic[\s\S].*')
         {
-          $new_header = $new_header.replace($matches[0], 'ms.topic: ' + $topicType)
+          $new_header = $new_header.replace($matches[0], 'ms.topic: ' + $topic_type)
         }
         else
         {
-          $new_header = $new_header + 'ms.topic: ' + $topicType + "`r`n"
+          $new_header = $new_header + 'ms.topic: ' + $topic_type + "`r`n"
         }
         
         #metadata: source_repo
@@ -85,9 +90,9 @@ build_script:
         }
 
         #metadata: gitcommit
-        $commitId = (git rev-list -1 HEAD $file)
+        $commit_id = (git rev-list -1 HEAD $file)
         $rel_path = Get-Item $file | Resolve-Path -Relative
-        $git_commit_path = $env:source_repo + '/blob/' + $commitId + '/' + $rel_path
+        $git_commit_path = $env:source_repo + '/blob/' + $commit_id + '/' + $rel_path
         $git_commit_url = (New-object System.Uri $git_commit_path).AbsoluteUri
         
         if($header -match 'gitcommit[\s\S].*')
@@ -113,21 +118,27 @@ build_script:
   - ps: |
       function GetToc
       {
-        $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:ps_source
-        $tocPath = Join-Path $docPath "toc.yml"
-
-        if(Test-Path $tocPath)
+        # assume there is only one root folder in source repo
+        if((Get-ChildItem $env:APPVEYOR_BUILD_FOLDER -Directory).count -ne 1)
         {
-          Remove-Item $tocPath
+          $host.SetShouldExit(-1)
         }
-        New-Item $tocPath
-        foreach($subFolder in (Get-ChildItem $docPath -Directory | Select-Object FullName))
+        $root_folder  = (Get-ChildItem $env:APPVEYOR_BUILD_FOLDER -Directory | Select-Object FullName -last 1).FullName
+        $root_folder_name = Split-Path -Path $root_folder -Leaf
+        $toc_path = Join-Path $root_folder "toc.yml"
+
+        if(Test-Path $toc_path)
         {
-          DoGetToc $subFolder.FullName $tocPath $env.extension 0
+          Remove-Item $toc_path
+        }
+        New-Item $toc_path
+        foreach($subFolder in (Get-ChildItem $root_folder -Directory | Select-Object FullName))
+        {
+          DoGetToc $subFolder.FullName $root_folder_name $toc_path $env.extension 0
         }
       }
 
-      function global:DoGetToc($folderPath, $tocPath, $extension, $level)
+      function global:DoGetToc($folderPath, $root_folder_name, $toc_path, $extension, $level)
       {
         Write-Host "constructing toc in $folderPath"
         $pre = ""
@@ -137,41 +148,41 @@ build_script:
           $pre = $pre + "    "
         }
 
-        Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $folderPath -Leaf))
-        $subFolders = Get-ChildItem $folderPath -Directory | Select-Object FullName
+        Add-Content -Path $toc_path -Value ($pre + "- name: " + (Split-Path -Path $folderPath -Leaf))
+        $sub_folders = Get-ChildItem $folderPath -Directory | Select-Object FullName
 
-        if($subFolders -eq $null)
+        if($sub_folders -eq $null)
         {
           $files = (Get-ChildItem $folderPath) | Where-Object { $_.Extension -eq $env:extension } | select -ExpandProperty FullName
-          $landingPage = ""
+          $landing_page = ""
 
           foreach($file in $files)
           {
             $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
             if($found -and $matches[1] -match 'Module Name')
             {
-              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace('\' + $env:ps_source, '.'))
-              $landingPage = $file
+              Add-Content -Path $toc_path -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace('\' + $root_folder_name, '.'))
+              $landing_page = $file
               break
             }
           }
-          Add-Content -Path $tocPath -Value ($pre + "  items:")
+          Add-Content -Path $toc_path -Value ($pre + "  items:")
           $pre = $pre + "    "
           foreach($file in $files)
           {
-            if($file -ne $landingPage)
+            if($file -ne $landing_page)
             {
-              Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $file -Leaf -Resolve).split('\.')[-2])
-              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace('\' + $env:ps_source, '.'))
+              Add-Content -Path $toc_path -Value ($pre + "- name: " + (Split-Path -Path $file -Leaf -Resolve).split('\.')[-2])
+              Add-Content -Path $toc_path -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace('\' + $root_folder_name, '.'))
             }
           }
         }
         else
         {
-          Add-Content -Path $tocPath -Value ($pre + "  items:")
-          foreach($subFolder in $subFolders)
+          Add-Content -Path $toc_path -Value ($pre + "  items:")
+          foreach($sub_folder in $sub_folders)
           {
-            DoGetToc $subFolder.FullName $tocPath $extension ($level+1)
+            DoGetToc $sub_folder.FullName $root_folder_name $toc_path $extension ($level+1)
           }
         }
       }
@@ -179,29 +190,43 @@ build_script:
 on_success:
   - git clone -q --branch=%target_branch% %content_repo% %TEMP%\Azure
   - ps: |
-      $folders = Get-ChildItem $env:APPVEYOR_BUILD_FOLDER\$env:ps_source -Directory | Select-Object FullName
+      $source = Split-Path -Path (Get-ChildItem $env:APPVEYOR_BUILD_FOLDER -Directory | Select-Object FullName -last 1).FullName -Leaf
+      $folders = Get-ChildItem $env:APPVEYOR_BUILD_FOLDER\$source -Directory | Select-Object FullName
       foreach($folder in $folders)
       {
-        $folderName = Split-Path -Path $folder.FullName -Leaf
-        $target = Join-Path $env:TEMP\Azure $env:target_folder\$folderName
+        $folder_name = Split-Path -Path $folder.FullName -Leaf
+        $target = Join-Path $env:TEMP\Azure $env:target_folder\$folder_name
         if(Test-Path $target)
         {
           Remove-Item $target -Recurse -Force
         }
-        Copy-Item -Path $env:APPVEYOR_BUILD_FOLDER\$env:ps_source\$folderName -Destination $target -recurse -Force
+        Copy-Item -Path $env:APPVEYOR_BUILD_FOLDER\$source\$folder_name -Destination $target -recurse -Force
       }
-      
-      $tocFolder = Join-Path $env:TEMP\Azure $env:target_folder\$env:ps_source
-      
-      if(Test-Path $tocFolder)
+
+      $toc_folder = Join-Path $env:TEMP\Azure $env:target_folder\$source
+
+      if(Test-Path $toc_folder)
       {
-        Remove-Item $tocFolder -Recurse -Force
+        Remove-Item $toc_folder -Recurse -Force
       }
-      
-      New-Item $tocFolder -type Directory      
-      $toc = Join-Path $tocFolder 'toc.yml'
-      Set-Content $toc (Get-Content $toc | Out-String).replace('\', '/') -NoNewline      
-      Copy-item (Join-Path $env:APPVEYOR_BUILD_FOLDER\$env:ps_source 'toc.yml') $toc
+
+      # copy project toc
+      New-Item $toc_folder -type Directory
+      $toc = Join-Path $toc_folder 'toc.yml'      
+      Copy-item (Join-Path $env:APPVEYOR_BUILD_FOLDER\$source "toc.yml") $toc
+      Set-Content $toc (Get-Content $toc | Out-String).replace('\', '/') -NoNewline
+
+      # add content to global toc
+      $global_toc = Join-Path $env:TEMP\Azure $env:target_folder\toc.yml
+      if(!Test-Path $global_toc)
+      {
+        New-Item $global_toc
+      }
+      if(!((Get-Content $global_toc | Out-String) -match $source))
+      {
+        Add-Content -Path $global_toc -Value ("- name: " + $source)
+        Add-Content -Path $global_toc -Value ("  tocHref: " + $source + "\toc.yml")
+      }
   - cd %TEMP%\Azure
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
