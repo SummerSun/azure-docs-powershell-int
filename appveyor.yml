@@ -1,6 +1,10 @@
+branches:
+  only:
+    - master
+
 environment:
   github_access_token:
-    secure: XgRTP/48Tcb8jdBahG9aZEhKeu2qBc5gCugjShWkT+zNqcQihEtKIIonzPaGcUV+
+    secure: VMFbecLLHzDq/09YDPbcM0VDDSwwgY57vr5GXK6cZZ4Ti/Xs5RZoylzV8MMr1350
 
 build_script:
   - ps: |
@@ -72,27 +76,27 @@ build_script:
         #metadata: source_repo
         if($header -match 'source_repo[\s\S].*')
         {
-          $new_header = $new_header.replace($matches[0], 'source_repo: ' + $env:source_repo)
+          $new_header = $new_header.replace($matches[0], 'source_repo: ' + 'https://github.com/' + $env:APPVEYOR_REPO_NAME)
         }
         else
         {
-          $new_header = $new_header + 'source_repo: ' + $env:source_repo + "`r`n"
+          $new_header = $new_header + 'source_repo: ' + 'https://github.com/' + $env:APPVEYOR_REPO_NAME + "`r`n"
         }
 
         #metadata: source_branch        
         if($header -match 'source_branch[\s\S].*')
         {
-          $new_header = $new_header.replace($matches[0], 'source_branch: ' + $env:source_branch)
+          $new_header = $new_header.replace($matches[0], 'source_branch: ' + $env:APPVEYOR_REPO_BRANCH)
         }
         else
         {
-          $new_header = $new_header + 'source_branch: ' + $env:source_branch + "`r`n"
+          $new_header = $new_header + 'source_branch: ' + $env:APPVEYOR_REPO_BRANCH + "`r`n"
         }
 
         #metadata: gitcommit
         $commit_id = (git rev-list -1 HEAD $file)
         $rel_path = Get-Item $file | Resolve-Path -Relative
-        $git_commit_path = $env:source_repo + '/blob/' + $commit_id + '/' + $rel_path
+        $git_commit_path = 'https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + $commit_id + '/' + $rel_path
         $git_commit_url = (New-object System.Uri $git_commit_path).AbsoluteUri
         
         if($header -match 'gitcommit[\s\S].*')
@@ -218,7 +222,7 @@ on_success:
 
       # add content to global toc
       $global_toc = Join-Path $env:TEMP\Azure $env:target_folder\toc.yml
-      if(!Test-Path $global_toc)
+      if(!(Test-Path $global_toc))
       {
         New-Item $global_toc
       }
