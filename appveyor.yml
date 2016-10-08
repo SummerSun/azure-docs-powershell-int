@@ -194,6 +194,7 @@ build_script:
 on_success:
   - git clone -q --branch=%target_branch% %content_repo% %TEMP%\Azure
   - ps: |
+      # overwrite filds but not delete modules due to multiple repos input
       $source = Split-Path -Path (Get-ChildItem $env:APPVEYOR_BUILD_FOLDER -Directory | Select-Object FullName -last 1).FullName -Leaf
       $folders = Get-ChildItem $env:APPVEYOR_BUILD_FOLDER\$source -Directory | Select-Object FullName
       foreach($folder in $folders)
@@ -231,11 +232,58 @@ on_success:
         Add-Content -Path $global_toc -Value ("- name: " + $source)
         Add-Content -Path $global_toc -Value ("  tocHref: " + $source + "\toc.yml")
       }
+  - ps: |
+      # update breadcrumb.json
+      # newly added project shows up in level 3 and should not be the first one
+
+      $ErrorActionPreference = 'Stop'
+      $source = Split-Path -Path (Get-ChildItem $env:APPVEYOR_BUILD_FOLDER -Directory | Select-Object FullName -last 1).FullName -Leaf
+      $breadcrumb_path = Join-Path $env:TEMP\Azure $env:target_folder\breadcrumb.json
+      $breadcrumb = ((Get-Content -Raw $breadcrumb_path) | ConvertFrom-Json)[0]
+      $children = $breadcrumb.children
+      if($children -ne $null -and $children.count -gt 0)
+      {
+        $new_node = $true
+        foreach($c in $children.children)
+        {
+          if($c.href -match $source)
+          {
+            Write-Host 'No need to update breadcrumb'
+            $new_node = $false
+          }
+        }
+
+        if($new_node)
+        {
+          Write-Host 'updating breadcrumb'
+          $new_child = New-Object -TypeName PSObject
+          $new_child | Add-Member -MemberType NoteProperty -Name href -Value ($children[0].href + $source + "/")
+          $new_child | Add-Member -MemberType NoteProperty -Name homepage -Value $new_child.href
+          $new_child | Add-Member -MemberType NoteProperty -Name toc_title -Value $source
+          $new_child | Add-Member -MemberType NoteProperty -Name level -Value 3
+
+          if($children.children -eq $null)
+          {
+            $arr = @($new_child)
+            $children | Add-Member -MemberType NoteProperty -Name children -value $arr
+          }
+          else
+          {
+            $children.children += $new_child
+          }
+
+          # powershell read json array issue, have to insert array mark manually
+          Set-Content $breadcrumb_path '[' -NoNewline
+          Add-Content $breadcrumb_path ($breadcrumb | ConvertTo-Json -Depth 5) -NoNewline
+          Add-Content $breadcrumb_path ']' -NoNewline
+          Write-Host 'updating breadcrumb completed'
+        }
+      }
   - cd %TEMP%\Azure
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
   - git config --global user.email %email%
   - git config --global user.name %name%
   - git add -A
-  - git commit -m "commit from appveyor"
+  - git commit -m "triggered by appveyor, update azure powershell docs"
   - git push origin %target_branch%
