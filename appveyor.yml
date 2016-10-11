@@ -10,6 +10,18 @@ build_script:
   - ps: |
       Write-Host "Begin processing files"
 
+      function set_or_update_metadata ($header, $new_header, $key, $value)
+      {
+        if($header -match "$key[\s\S].*")
+        {
+          $new_header = $new_header.replace($matches[0], $key + ': ' + $value)
+        }
+        else
+        {
+          $new_header = $new_header + $key + ': ' + $value + "`r`n"
+        }
+        return $new_header
+      }
       # assume there is only one root folder in source repo
       if((Get-ChildItem $env:APPVEYOR_BUILD_FOLDER -Directory).count -ne 1)
       {
@@ -33,73 +45,27 @@ build_script:
 
         #metadata: updated_at
         $date = git log --pretty=format:%cd -n 1 --date=iso $file
-        if($header -match 'updated_at[\s\S].*')
-        {
-          $new_header = $new_header.replace($matches[0], 'updated_at: ' + (Get-Date $date -format g))
-        }
-        if($header -notmatch 'updated_at[\s\S].*')
-        {
-          $new_header = $new_header + 'updated_at: ' + (Get-Date $date -format g) + "`r`n"
-        }
-        #metadata: ms.date        
-        if($header -match 'ms.date[\s\S].*')
-        {
-          $new_header = $new_header.replace($matches[0], 'ms.date: ' + (Get-Date $date -format d))
-        }
-        if($header -notmatch 'ms.date[\s\S].*')
-        {
-          $new_header = $new_header + 'ms.date: ' + (Get-Date $date -format d) + "`r`n"
-        }
+        $new_header = set_or_update_metadata $header $new_header 'updated_at' (Get-Date $date -format g)
+
+        #metadata: ms.date
+        $new_header = set_or_update_metadata $header $new_header 'ms.date' (Get-Date $date -format d)
 
         #metadata: ms.topic
         $topic_type = 'reference'
         if($header -match 'Module Name')
         {
           $topic_type = 'conceptual'
-        }
-        
-        if($header -match 'ms.topic[\s\S].*')
-        {
-          $new_header = $new_header.replace($matches[0], 'ms.topic: ' + $topic_type)
-        }
-        else
-        {
-          $new_header = $new_header + 'ms.topic: ' + $topic_type + "`r`n"
-        }
-        
-        #metadata: source_repo
-        if($header -match 'source_repo[\s\S].*')
-        {
-          $new_header = $new_header.replace($matches[0], 'source_repo: ' + 'https://github.com/' + $env:APPVEYOR_REPO_NAME)
-        }
-        else
-        {
-          $new_header = $new_header + 'source_repo: ' + 'https://github.com/' + $env:APPVEYOR_REPO_NAME + "`r`n"
-        }
+        }        
+        $new_header = set_or_update_metadata $header $new_header 'ms.topic' $topic_type
 
-        #metadata: source_branch        
-        if($header -match 'source_branch[\s\S].*')
-        {
-          $new_header = $new_header.replace($matches[0], 'source_branch: ' + $env:APPVEYOR_REPO_BRANCH)
-        }
-        else
-        {
-          $new_header = $new_header + 'source_branch: ' + $env:APPVEYOR_REPO_BRANCH + "`r`n"
-        }
+        #metadata: content_git_url
+        $file_rel_path = (Get-Item $file | Resolve-Path -Relative)       
+        $content_git_url = (New-Object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + $env:APPVEYOR_REPO_BRANCH + '/' + $file_rel_path)).AbsoluteUri
+        $new_header = set_or_update_metadata $header $new_header 'content_git_url' $content_git_url
 
         #metadata: gitcommit
-        $git_commit_path = 'https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + (git rev-list -1 HEAD $file) + '/' + (Get-Item $file | Resolve-Path -Relative)
-        $git_commit_url = (New-object System.Uri $git_commit_path).AbsoluteUri
-        
-        if($header -match 'gitcommit[\s\S].*')
-        {
-        
-          $new_header = $new_header.replace($matches[0], 'gitcommit: ' + $git_commit_url)
-        }
-        else
-        {
-          $new_header = $new_header + 'gitcommit: ' + $git_commit_url + "`r`n"
-        }
+        $git_commit_url = (New-object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + (git rev-list -1 HEAD $file) + '/' + $file_rel_path)).AbsoluteUri
+        $new_header = set_or_update_metadata $header $new_header 'gitcommit' $git_commit_url
 
         #filter invalid characters
         if($header -match '{{' -or $header -match '}}')
