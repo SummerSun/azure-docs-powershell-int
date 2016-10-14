@@ -10,9 +10,9 @@ build_script:
   - ps: |
       Write-Host "Begin processing files"
 
-      function set_or_update_metadata ($header, $new_header, $key, $value)
+      function set_or_update_metadata ($header, $new_header, $key, $value, $overwrite=$false)
       {
-        if($header -match "$key[\s\S].*")
+        if($header -match "$key[\s\S].*" -and $overwrite)
         {
           $new_header = $new_header.replace($matches[0], $key + ': ' + $value)
         }
@@ -45,27 +45,45 @@ build_script:
 
         #metadata: updated_at
         $date = git log --pretty=format:%cd -n 1 --date=iso $file
-        $new_header = set_or_update_metadata $header $new_header 'updated_at' (Get-Date $date -format g)
+        $new_header = set_or_update_metadata $header $new_header 'updated_at' (Get-Date $date -format g) $true
 
         #metadata: ms.date
-        $new_header = set_or_update_metadata $header $new_header 'ms.date' (Get-Date $date -format d)
+        $new_header = set_or_update_metadata $header $new_header 'ms.date' (Get-Date $date -format d) $true
+
+        #metadata: content_git_url
+        $file_rel_path = (Get-Item $file | Resolve-Path -Relative)       
+        $content_git_url = (New-Object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + $env:APPVEYOR_REPO_BRANCH + '/' + $file_rel_path)).AbsoluteUri
+        $new_header = set_or_update_metadata $header $new_header 'content_git_url' $content_git_url  $true
+
+        #metadata: gitcommit
+        $git_commit_url = (New-object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + (git rev-list -1 HEAD $file) + '/' + $file_rel_path)).AbsoluteUri
+        $new_header = set_or_update_metadata $header $new_header 'gitcommit' $git_commit_url  $true
 
         #metadata: ms.topic
         $topic_type = 'reference'
         if($header -match 'Module Name')
         {
           $topic_type = 'conceptual'
-        }        
-        $new_header = set_or_update_metadata $header $new_header 'ms.topic' $topic_type
+        }
+        $new_header = set_or_update_metadata $header $new_header 'ms.topic' $topic_type $true
 
-        #metadata: content_git_url
-        $file_rel_path = (Get-Item $file | Resolve-Path -Relative)       
-        $content_git_url = (New-Object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + $env:APPVEYOR_REPO_BRANCH + '/' + $file_rel_path)).AbsoluteUri
-        $new_header = set_or_update_metadata $header $new_header 'content_git_url' $content_git_url
+        #metadata: ms.prod
+        $new_header = set_or_update_metadata $header $new_header 'ms.prod' $env:prod
 
-        #metadata: gitcommit
-        $git_commit_url = (New-object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + (git rev-list -1 HEAD $file) + '/' + $file_rel_path)).AbsoluteUri
-        $new_header = set_or_update_metadata $header $new_header 'gitcommit' $git_commit_url
+        #metadata: ms.service
+        $new_header = set_or_update_metadata $header $new_header 'ms.service' $env:service
+
+        #metadata: ms.technology
+        $new_header = set_or_update_metadata $header $new_header 'ms.technology' $env:technology
+        
+        #metadata: author
+        $new_header = set_or_update_metadata $header $new_header 'author' $env:author
+
+        #metadata: keywords
+        $new_header = set_or_update_metadata $header $new_header 'keywords' $env:keywords
+
+        #metadata: manager
+        $new_header = set_or_update_metadata $header $new_header 'manager' $env:manager
 
         #filter invalid characters
         if($header -match '{{' -or $header -match '}}')
