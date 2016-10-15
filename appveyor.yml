@@ -14,11 +14,13 @@ build_script:
       {
         $host.SetShouldExit(-1)
       }
+
       $root_folder = (Get-ChildItem $env:APPVEYOR_BUILD_FOLDER -Directory | Select-Object FullName -last 1).FullName
       $files = Get-ChildItem -Path $root_folder -Recurse | where {$_.extension -eq $env:extension} | % { $_.FullName }
-      $script_block = [script_block] {
+      $script_block = {
         param($file)
         $pattern = '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
+        
         function set_or_update_metadata ($header, $new_header, $key, $value, $overwrite=$false)
         {
           if($header -match "$key[\s\S].*" -and $overwrite)
@@ -31,60 +33,56 @@ build_script:
           }
           return $new_header
         }
-        Write-Host "Found " $files.count "Files"
-
-        foreach($file in $files)
+        
+        if((Get-Content $file | Out-String) -notmatch $pattern)
         {
-          if((Get-Content $file | Out-String) -notmatch $pattern)
-          {
-            continue
-          }
-
-          $header = $matches[1]
-          $new_header = $matches[1]
-
-          # set or update metadata
-          $date = git log --pretty=format:%cd -n 1 --date=iso $file
-          $new_header = set_or_update_metadata $header $new_header 'updated_at' (Get-Date $date -format g) $true
-
-          $new_header = set_or_update_metadata $header $new_header 'ms.date' (Get-Date $date -format d) $true
-
-          $file_rel_path = (Get-Item $file | Resolve-Path -Relative)       
-          $content_git_url = (New-Object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + $env:APPVEYOR_REPO_BRANCH + '/' + $file_rel_path)).AbsoluteUri
-          $new_header = set_or_update_metadata $header $new_header 'content_git_url' $content_git_url  $true
-
-          $git_commit_url = (New-object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + (git rev-list -1 HEAD $file) + '/' + $file_rel_path)).AbsoluteUri
-          $new_header = set_or_update_metadata $header $new_header 'gitcommit' $git_commit_url  $true
-
-          $topic_type = 'reference'
-          if($header -match 'Module Name')
-          {
-            $topic_type = 'conceptual'
-          }
-          $new_header = set_or_update_metadata $header $new_header 'ms.topic' $topic_type $true
-
-          $new_header = set_or_update_metadata $header $new_header 'ms.prod' $env:prod
-          $new_header = set_or_update_metadata $header $new_header 'ms.service' $env:service
-          $new_header = set_or_update_metadata $header $new_header 'ms.technology' $env:technology
-          $new_header = set_or_update_metadata $header $new_header 'author' $env:author
-          $new_header = set_or_update_metadata $header $new_header 'keywords' $env:keywords
-          $new_header = set_or_update_metadata $header $new_header 'manager' $env:manager
-
-          # filter invalid characters
-          if($header -match '{{' -or $header -match '}}')
-          {
-            $new_header = $new_header.replace('{{', '').replace('}}', '')
-          }
-
-          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+          continue
         }
+
+        $header = $matches[1]
+        $new_header = $matches[1]
+
+        # set or update metadata
+        $date = git log --pretty=format:%cd -n 1 --date=iso $file
+        $new_header = set_or_update_metadata $header $new_header 'updated_at' (Get-Date $date -format g) $true
+
+        $new_header = set_or_update_metadata $header $new_header 'ms.date' (Get-Date $date -format d) $true
+
+        $file_rel_path = (Get-Item $file | Resolve-Path -Relative)       
+        $content_git_url = (New-Object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + $env:APPVEYOR_REPO_BRANCH + '/' + $file_rel_path)).AbsoluteUri
+        $new_header = set_or_update_metadata $header $new_header 'content_git_url' $content_git_url  $true
+
+        $git_commit_url = (New-object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + (git rev-list -1 HEAD $file) + '/' + $file_rel_path)).AbsoluteUri
+        $new_header = set_or_update_metadata $header $new_header 'gitcommit' $git_commit_url  $true
+
+        $topic_type = 'reference'
+        if($header -match 'Module Name')
+        {
+          $topic_type = 'conceptual'
+        }
+        $new_header = set_or_update_metadata $header $new_header 'ms.topic' $topic_type $true
+
+        $new_header = set_or_update_metadata $header $new_header 'ms.prod' $env:prod
+        $new_header = set_or_update_metadata $header $new_header 'ms.service' $env:service
+        $new_header = set_or_update_metadata $header $new_header 'ms.technology' $env:technology
+        $new_header = set_or_update_metadata $header $new_header 'author' $env:author
+        $new_header = set_or_update_metadata $header $new_header 'keywords' $env:keywords
+        $new_header = set_or_update_metadata $header $new_header 'manager' $env:manager
+
+        # filter invalid characters
+        if($header -match '{{' -or $header -match '}}')
+        {
+          $new_header = $new_header.replace('{{', '').replace('}}', '')
+        }
+
+        Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
       }
       $MaxThreads = 8
       $RunspacePool = [RunspaceFactory ]::CreateRunspacePool(1, $MaxThreads)
       $RunspacePool.Open()
       $Jobs = @()
       $files | % {
-          $Job = [powershell]::Create().AddScript($ScriptBlock).AddArgument($_)
+          $Job = [powershell]::Create().AddScript($script_block).AddArgument($_)
           $Job.RunspacePool = $RunspacePool
           $Jobs += New-Object PSObject -Property @{
             RunNum = $_
