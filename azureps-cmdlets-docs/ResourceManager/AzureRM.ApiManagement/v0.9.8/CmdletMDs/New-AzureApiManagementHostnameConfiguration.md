@@ -2,15 +2,6 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
 online version: .\Import-AzureApiManagementHostnameCertificate.md
 schema: 2.0.0
-content_git_url: https://github.com/azure/azure-docs-powershell/
-gitcommit: https://github.com/azure/azure-docs-powershell/
-ms.topic: reference
-ms.prod: powershell
-ms.service: Azure Powershell
-ms.technology: Azure Powershell
-author: visual-studio-china
-keywords: content, powershell
-manager: visual-studio-china
 ---
 
 # New-AzureApiManagementHostnameConfiguration
