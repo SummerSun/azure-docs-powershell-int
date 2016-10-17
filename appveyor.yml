@@ -27,7 +27,7 @@ build_script:
           {
             $new_header = $new_header.replace($matches[0], $key + ': ' + $value)
           }
-          else
+          if($header -notmatch "$key[\s\S].*")
           {
             $new_header = $new_header + $key + ': ' + $value + "`r`n"
           }
@@ -48,11 +48,12 @@ build_script:
 
         $new_header = set_or_update_metadata $header $new_header 'ms.date' (Get-Date $date -format d) $true
 
+        Set-Location $env:APPVEYOR_BUILD_FOLDER
         $file_rel_path = (Get-Item $file | Resolve-Path -Relative)       
         $content_git_url = (New-Object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + $env:APPVEYOR_REPO_BRANCH + '/' + $file_rel_path)).AbsoluteUri
         $new_header = set_or_update_metadata $header $new_header 'content_git_url' $content_git_url  $true
 
-        $git_commit_url = (New-object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + (git rev-list -1 HEAD $file) + '/' + $file_rel_path)).AbsoluteUri
+        $git_commit_url = (New-Object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + (git rev-list -1 HEAD $file) + '/' + $file_rel_path)).AbsoluteUri
         $new_header = set_or_update_metadata $header $new_header 'gitcommit' $git_commit_url  $true
 
         $topic_type = 'reference'
@@ -194,7 +195,7 @@ on_success:
 
       # copy project toc
       New-Item $toc_folder -type Directory
-      $toc = Join-Path $toc_folder 'toc.yml'      
+      $toc = Join-Path $toc_folder 'toc.yml'
       Copy-item (Join-Path $env:APPVEYOR_BUILD_FOLDER\$source "toc.yml") $toc
       Set-Content $toc (Get-Content $toc | Out-String).replace('\', '/') -NoNewline
 
