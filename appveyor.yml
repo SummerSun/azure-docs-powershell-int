@@ -49,7 +49,7 @@ build_script:
         $new_header = set_or_update_metadata $header $new_header 'ms.date' (Get-Date $date -format d) $true
 
         Set-Location $env:APPVEYOR_BUILD_FOLDER
-        $file_rel_path = (Get-Item $file | Resolve-Path -Relative)       
+        $file_rel_path = (Get-Item $file | Resolve-Path -Relative)
         $content_git_url = (New-Object System.Uri ('https://github.com/' + $env:APPVEYOR_REPO_NAME + '/blob/' + $env:APPVEYOR_REPO_BRANCH + '/' + $file_rel_path)).AbsoluteUri
         $new_header = set_or_update_metadata $header $new_header 'content_git_url' $content_git_url  $true
 
@@ -115,15 +115,16 @@ build_script:
           Remove-Item $toc_path
         }
         New-Item $toc_path
+        Write-Host "constructing toc..."
         foreach($subFolder in (Get-ChildItem $root_folder -Directory | Select-Object FullName))
         {
           DoGetToc $subFolder.FullName $root_folder_name $toc_path $env.extension 0
         }
+        Write-Host "constructing toc completed."
       }
 
       function global:DoGetToc($folderPath, $root_folder_name, $toc_path, $extension, $level)
       {
-        Write-Host "constructing toc in $folderPath"
         $pre = ""
 
         for($i=0;$i -lt $level;$i++)
@@ -132,13 +133,12 @@ build_script:
         }
 
         Add-Content -Path $toc_path -Value ($pre + "- name: " + (Split-Path -Path $folderPath -Leaf))
-		$index = Get-ChildItem $folderPath | Where-Object {$_.Name -eq 'index.md'} | select -ExpandProperty FullName
-		if($index -ne $null)
-		{
-		  Add-Content -Path $toc_path -Value ($pre + "  href: " + (Get-Item $index | Resolve-Path -Relative).replace('\' + $root_folder_name, '.'))
-		}
-        
-        $sub_folders = Get-ChildItem $folderPath -Directory | Select-Object FullName
+        $index = Get-ChildItem $folderPath | Where-Object {$_.Name -eq 'index.md'} | select -ExpandProperty FullName
+        if($index -ne $null)
+        {
+          Add-Content -Path $toc_path -Value ($pre + "  href: " + (Get-Item $index | Resolve-Path -Relative).replace('\' + $root_folder_name, '.'))
+        }
+        $sub_folders = Get-ChildItem $folderPath -Directory
 
         if($sub_folders -eq $null)
         {
@@ -169,9 +169,9 @@ build_script:
         else
         {
           Add-Content -Path $toc_path -Value ($pre + "  items:")
-          if($sub_folders[0].FullName -match 'v\d(.\d)*')
+          if($sub_folders[0].Name -match 'v\d(.\d)*')
           {
-            $sub_folders = $sub_folders | Sort-Object -Property Name -descending
+            $sub_folders = $sub_folders | Sort-Object -Property Name -Descending
           }
           foreach($sub_folder in $sub_folders)
           {
