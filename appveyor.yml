@@ -9,16 +9,15 @@ environment:
 before_build:
   - git clone -q https://github.com/Visual-Studio-China/ci-scripts.git %TEMP%\scripts
 build_script:
-  - ps: $global:root_path = (ls $env:APPVEYOR_BUILD_FOLDER -Directory | select FullName -last 1).FullName
+  - ps: $global:root_path = (ls $env:APPVEYOR_BUILD_FOLDER -dir | select FullName -First 1).FullName
   - ps: $global:root_name = Split-Path $global:root_path -Leaf
   - ps: $global:toc_path = Join-Path $global:root_path "toc.yml"
   - cd %TEMP%\scripts
-  - ps: .\ci.ps1
+  - ps: .\process_files_and_toc.ps1
 on_success:
   - git clone -q --branch=%target_branch% %content_repo% %TEMP%\Azure
   - cd %TEMP%\scripts
-  - ps: .\copy_content.ps1
-  - ps: .\update_breadcrumb.ps1
+  - ps: .\update_content_repo.ps1
   - cd %TEMP%\Azure
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
