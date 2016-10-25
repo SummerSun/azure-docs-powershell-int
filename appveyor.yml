@@ -9,7 +9,7 @@ environment:
 before_build:
   - git clone -q https://github.com/Visual-Studio-China/ci-scripts.git %TEMP%\scripts
 build_script:
-  - ps: $global:root_path = (ls $env:APPVEYOR_BUILD_FOLDER -dir | select FullName -First 1).FullName
+  - ps: $global:root_path = (ls $env:APPVEYOR_BUILD_FOLDER -dir | select -First 1).FullName
   - ps: $global:root_name = Split-Path $global:root_path -Leaf
   - ps: $global:toc_path = Join-Path $global:root_path "toc.yml"
   - cd %TEMP%\scripts
@@ -20,9 +20,8 @@ on_success:
   - ps: .\update_content_repo.ps1
   - cd %TEMP%\Azure
   - git config --global credential.helper store
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
+  - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
   - git config --global user.email %email%
   - git config --global user.name %name%
   - git add -A
-  - git commit -m "Triggered by appveyor, update azure powershell docs."
-  - git push origin %target_branch%
+  - git diff --quiet --exit-code --cached || git commit -m "Update azure powershell docs." && git push origin %target_branch%
