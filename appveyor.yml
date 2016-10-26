@@ -1,7 +1,6 @@
 branches:
   only:
     - master
-
 environment:
   github_access_token:
     secure: VMFbecLLHzDq/09YDPbcM0VDDSwwgY57vr5GXK6cZZ4Ti/Xs5RZoylzV8MMr1350
@@ -14,15 +13,16 @@ build_script:
   - ps: $global:toc_path = Join-Path $global:root_path "toc.yml"
   - cd %TEMP%\scripts
   - ps: .\process_files_and_toc.ps1
+test: off
 on_success:
-  - git clone -q --branch=%target_branch% %content_repo% %TEMP%\Azure
+  - git clone -q --branch=%APPVEYOR_REPO_BRANCH% %content_repo% %TEMP%\Azure
   - cd %TEMP%\scripts
   - ps: .\update_content_repo.ps1
   - cd %TEMP%\Azure
   - git config --global credential.helper store
   - git config core.safecrlf false
   - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
-  - git config --global user.email %email%
-  - git config --global user.name %name%
+  - ps: git config --global user.email (git --no-pager log -1 --pretty=format:"%ae")
+  - ps: git config --global user.name (git --no-pager log -1 --pretty=format:"%an")
   - git add -A
-  - git diff --quiet --exit-code --cached || git commit -m "Update azure powershell docs." && git push origin %target_branch%
+  - git diff --quiet --exit-code --cached || git commit -m "Update azuread docs." && git push origin %APPVEYOR_REPO_BRANCH%
