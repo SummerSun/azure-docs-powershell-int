@@ -6,7 +6,7 @@ environment:
     secure: VMFbecLLHzDq/09YDPbcM0VDDSwwgY57vr5GXK6cZZ4Ti/Xs5RZoylzV8MMr1350
 
 before_build:
-  - git clone -q https://github.com/Visual-Studio-China/ci-scripts.git %TEMP%\scripts
+  - git clone -q --branch=develop https://github.com/Visual-Studio-China/ci-scripts.git %TEMP%\scripts
 build_script:
   - ps: $global:root_path = (ls $env:APPVEYOR_BUILD_FOLDER -dir | select -First 1).FullName
   - ps: $global:root_name = Split-Path $global:root_path -Leaf
@@ -25,4 +25,4 @@ on_success:
   - ps: git config --global user.email (git --no-pager log -1 --pretty=format:"%ae")
   - ps: git config --global user.name (git --no-pager log -1 --pretty=format:"%an")
   - git add -A
-  - git diff --quiet --exit-code --cached || git commit -m "Update azuread docs." && git push origin %APPVEYOR_REPO_BRANCH%
+  - git diff --quiet --exit-code --cached || git commit -m "Update azure powershell docs." && git push origin %APPVEYOR_REPO_BRANCH%
