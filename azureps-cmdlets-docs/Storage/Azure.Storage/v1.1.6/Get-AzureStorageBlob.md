@@ -42,6 +42,9 @@ PS C:\>Get-AzureStorageBlob -Container "ContainerName" -Blob blob*
 
 This command uses a blob name and wildcard to get a blob.
 
+Specifies a **PsApiManagementContext** object.
+This parameter is required.
+
 ### Example 2: Get a blob by using the pipeline
 ```
 PS C:\>Get-AzureStorageContainer -Name container* | Get-AzureStorageBlob
@@ -89,6 +92,9 @@ The final command uses the **Echo** command to display the total.
 Specifies a name or name pattern, which can be used for a wildcard search.
 If no blob name is specified, the cmdlet lists all the blobs in the specified container.
 If a value is specified for this parameter, the cmdlet lists all blobs with names that match this parameter.
+
+Specifies a **PsApiManagementContext** object.
+This parameter is required.
 
 ```yaml
 Type: String
