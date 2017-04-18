@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: D818C404-60E4-42DB-AADF-063305D9541B
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmLoadBalancerInboundNatRuleConfig.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmLoadBalancerInboundNatRuleConfig.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/54240664bdcbd2811db66e629281afa4d3218ec6
 ---
 
 # Remove-AzureRmLoadBalancerInboundNatRuleConfig

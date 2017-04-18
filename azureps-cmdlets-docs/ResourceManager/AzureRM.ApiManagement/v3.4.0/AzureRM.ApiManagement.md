@@ -5,6 +5,9 @@ Download Help Link: None
 Help Version: 4.0.0.0
 Locale: en-US
 ms.assetid: B24D0651-01BA-4DD6-9816-EC960880A605
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/AzureRM.ApiManagement.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/AzureRM.ApiManagement.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # AzureRM.ApiManagement Module

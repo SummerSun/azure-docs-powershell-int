@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 ms.assetid: 6493186F-064B-45B7-8DFD-7799B1F2E5C9
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNode.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNode.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Get-AzureRmAutomationDscNode

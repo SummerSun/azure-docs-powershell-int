@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 05E6155D-4F0E-406B-9312-77AD97EF66EE
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Compute/Commands.Compute/help/New-AzureRmVM.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Compute/Commands.Compute/help/New-AzureRmVM.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/13ade9d79232a90bf3d36b00febcd9ad7d358b24
 ---
 
 # New-AzureRmVM

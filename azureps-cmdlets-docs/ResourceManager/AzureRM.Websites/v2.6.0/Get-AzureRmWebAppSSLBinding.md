@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 ms.assetid: EE3D2BA0-32E7-4A37-BCAF-F0E8FAAC43CE
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSSLBinding.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSSLBinding.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/b6503ebd24f7bd5ce97202c332ef1533f499a833
 ---
 
 # Get-AzureRmWebAppSSLBinding

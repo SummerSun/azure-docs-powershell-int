@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: C48E204D-D7EC-4EFD-ADC5-C6F593313B9B
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmVirtualNetwork.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmVirtualNetwork.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/e60fe3fa029ddadb94ec8c908bf1baf82be00941
 ---
 
 # Remove-AzureRmVirtualNetwork

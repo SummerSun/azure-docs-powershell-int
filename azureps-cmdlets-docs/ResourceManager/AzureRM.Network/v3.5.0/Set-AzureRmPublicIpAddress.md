@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: EC798838-1850-4E88-B17F-D2F00F2D4EE9
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmPublicIpAddress.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmPublicIpAddress.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/e60fe3fa029ddadb94ec8c908bf1baf82be00941
 ---
 
 # Set-AzureRmPublicIpAddress

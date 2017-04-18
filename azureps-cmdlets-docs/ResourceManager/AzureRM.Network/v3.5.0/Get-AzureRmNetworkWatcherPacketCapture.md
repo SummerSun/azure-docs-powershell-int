@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkWatcherPacketCapture.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkWatcherPacketCapture.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/5daa0db5baf832bfd62df56acafa79eb966df4cf
 ---
 
 # Get-AzureRmNetworkWatcherPacketCapture

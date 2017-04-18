@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/New-AzureRmRouteFilter.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/New-AzureRmRouteFilter.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/c1fc273529b8b69e1cf229681cffa3a82a01ed4c
 ---
 
 # New-AzureRmRouteFilter

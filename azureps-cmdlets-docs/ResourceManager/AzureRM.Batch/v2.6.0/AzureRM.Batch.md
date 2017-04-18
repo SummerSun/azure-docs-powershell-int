@@ -5,6 +5,9 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 4.0.0.0
 Locale: en-US
 ms.assetid: 91FFC688-AE99-4963-823D-A8C66F64E0BA
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/AzureBatch/Commands.Batch/help/AzureRM.Batch.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/AzureBatch/Commands.Batch/help/AzureRM.Batch.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # AzureRM.Batch Module

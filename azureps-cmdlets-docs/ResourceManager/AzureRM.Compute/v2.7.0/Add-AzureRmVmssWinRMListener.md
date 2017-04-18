@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 987BD670-20F3-4105-A5BE-03E712AB2B56
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Compute/Commands.Compute/help/Add-AzureRmVmssWinRMListener.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Compute/Commands.Compute/help/Add-AzureRmVmssWinRMListener.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/1e0dbd9ea7d5072fb8029e35f1a03f4023d1f52b
 ---
 
 # Add-AzureRmVmssWinRMListener

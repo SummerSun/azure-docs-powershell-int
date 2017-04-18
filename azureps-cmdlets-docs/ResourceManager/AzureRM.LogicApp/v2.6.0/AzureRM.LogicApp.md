@@ -1,10 +1,15 @@
 ---
 Module Name: AzureRM.LogicApp
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link:
+  [object Object]:
+Help Version:
+  [object Object]: null
 Locale: en-US
 ms.assetid: 41DB973E-CAE3-409D-8B02-367AEF6180FA
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # AzureRM.LogicApp Module

@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: CBDF4BCB-7EB3-4D64-B19C-1314D4AB84E4
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmVirtualNetwork.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmVirtualNetwork.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/e60fe3fa029ddadb94ec8c908bf1baf82be00941
 ---
 
 # Get-AzureRmVirtualNetwork

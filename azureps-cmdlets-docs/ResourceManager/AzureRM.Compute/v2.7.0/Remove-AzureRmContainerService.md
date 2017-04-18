@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 8180092D-5B1D-43A0-B830-D009B30E2DDF
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzureRmContainerService.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzureRmContainerService.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/1e0dbd9ea7d5072fb8029e35f1a03f4023d1f52b
 ---
 
 # Remove-AzureRmContainerService

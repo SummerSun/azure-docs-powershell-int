@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 ms.assetid: 78AAF476-2E9E-4E60-9940-9A9AC6F9506A
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzureRmAppServicePlan.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzureRmAppServicePlan.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/188033f88f70f578d4879e2a78bf41bbfbaeaf0c
 ---
 
 # Remove-AzureRmAppServicePlan

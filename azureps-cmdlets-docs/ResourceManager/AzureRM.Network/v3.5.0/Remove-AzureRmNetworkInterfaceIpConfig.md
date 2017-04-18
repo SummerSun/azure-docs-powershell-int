@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: 015C7DB7-2B08-4033-9B6E-1738D4DDACDA
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmNetworkInterfaceIpConfig.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmNetworkInterfaceIpConfig.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/54240664bdcbd2811db66e629281afa4d3218ec6
 ---
 
 # Remove-AzureRmNetworkInterfaceIpConfig

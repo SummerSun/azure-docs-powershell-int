@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.AnalysisServices.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Remove-AzureRmAnalysisServicesServer.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Remove-AzureRmAnalysisServicesServer.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/2526f281fe0af40ef67662068fdbfa4ba9e7db43
 ---
 
 # Remove-AzureRmAnalysisServicesServer

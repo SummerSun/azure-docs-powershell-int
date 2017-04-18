@@ -4,6 +4,9 @@ Module Guid: eca73aa1-a68f-4ceb-9775-70759316a57b
 Download Help Link: None
 Help Version: 1.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/AzureRM.DataLakeAnalytics.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/AzureRM.DataLakeAnalytics.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/acaa012bbc3d2249dc7ee2c45b30f62c620d7998
 ---
 
 # AzureRM.DataLakeAnalytics Module

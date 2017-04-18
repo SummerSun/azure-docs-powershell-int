@@ -1,10 +1,15 @@
 ---
 Module Name: AzureRM.StreamAnalytics
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link:
+  [object Object]:
+Help Version:
+  [object Object]: null
 Locale: en-US
 ms.assetid: 98527FA7-7364-42DC-BC2B-EE75E8EC02A2
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/AzureRM.StreamAnalytics.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/AzureRM.StreamAnalytics.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # AzureRM.StreamAnalytics Module

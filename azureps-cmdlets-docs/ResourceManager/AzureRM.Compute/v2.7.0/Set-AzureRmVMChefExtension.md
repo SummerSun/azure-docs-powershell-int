@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: CC306D8C-A5EE-4655-B686-E5A77CCE5042
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMChefExtension.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMChefExtension.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/3ed7a9171076a468e59df5a509a5c943739c4d1b
 ---
 
 # Set-AzureRmVMChefExtension

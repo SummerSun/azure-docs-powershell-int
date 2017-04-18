@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: 1B39809C-90DA-4ECB-B949-D4A9A54ED982
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkInterfaceIpConfig.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkInterfaceIpConfig.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/54240664bdcbd2811db66e629281afa4d3218ec6
 ---
 
 # Get-AzureRmNetworkInterfaceIpConfig

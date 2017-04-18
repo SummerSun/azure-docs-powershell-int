@@ -4,6 +4,9 @@ Module Guid: acace26c-1775-4100-85c0-20c4d71eaa21
 Download Help Link: None_Azure
 Help Version: 0.0.1.0
 Locale: en-US
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/AzureRM.AnalysisServices.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/AzureRM.AnalysisServices.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/2526f281fe0af40ef67662068fdbfa4ba9e7db43
 ---
 
 # AzureRM.AnalysisServices Module

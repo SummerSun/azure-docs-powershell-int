@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: B2F2082F-4BAA-4FBE-8846-2D436A433570
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/New-AzureRmNetworkInterface.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Network/Commands.Network/help/New-AzureRmNetworkInterface.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/0ca268032e93b1357603636ac70a9e19397550f1
 ---
 
 # New-AzureRmNetworkInterface

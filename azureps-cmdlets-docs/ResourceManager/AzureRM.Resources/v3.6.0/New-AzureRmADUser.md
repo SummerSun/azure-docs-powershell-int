@@ -3,6 +3,9 @@ external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 ms.assetid: 86D8965D-D999-48A4-A4EE-9E054E5486EE
 online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmADUser.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmADUser.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # New-AzureRmADUser

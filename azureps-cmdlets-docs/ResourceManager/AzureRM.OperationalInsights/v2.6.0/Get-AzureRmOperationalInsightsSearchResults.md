@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 ms.assetid: 438F549D-1AF6-49FE-83AC-B45BAB701AB6
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzureRmOperationalInsightsSearchResults.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/3.6.0/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzureRmOperationalInsightsSearchResults.md
+gitcommit: https://github.com/Visual-Studio-China/azure-powershell/blob/ae94f1b0a47fd9b81fd22cbd281d848bc1cede7a
 ---
 
 # Get-AzureRmOperationalInsightsSearchResults
