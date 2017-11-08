@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 89299823-3382-402D-9458-519466748051
 online version:
 schema: 2.0.0
@@ -16,8 +17,8 @@ Adds a certificate to a key vault.
 
 ```
 Add-AzureKeyVaultCertificate [-VaultName] <String> [-Name] <String>
- [[-CertificatePolicy] <KeyVaultCertificatePolicy>] [-Tag <Hashtable>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [[-CertificatePolicy] <KeyVaultCertificatePolicy>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -171,6 +172,19 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

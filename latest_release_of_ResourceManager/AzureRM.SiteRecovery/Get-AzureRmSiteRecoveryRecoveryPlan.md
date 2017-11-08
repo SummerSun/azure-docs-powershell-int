@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 3B879056-5BF3-4262-8BAA-E79589149370
 online version:
 schema: 2.0.0
@@ -16,17 +17,19 @@ Gets a recovery plan in Site Recovery.
 
 ### Default (Default)
 ```
-Get-AzureRmSiteRecoveryRecoveryPlan [<CommonParameters>]
+Get-AzureRmSiteRecoveryRecoveryPlan [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-AzureRmSiteRecoveryRecoveryPlan -Name <String> [[-Path] <String>] [<CommonParameters>]
+Get-AzureRmSiteRecoveryRecoveryPlan -Name <String> [[-Path] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByFriendlyName
 ```
-Get-AzureRmSiteRecoveryRecoveryPlan -FriendlyName <String> [[-Path] <String>] [<CommonParameters>]
+Get-AzureRmSiteRecoveryRecoveryPlan -FriendlyName <String> [[-Path] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,6 +79,19 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

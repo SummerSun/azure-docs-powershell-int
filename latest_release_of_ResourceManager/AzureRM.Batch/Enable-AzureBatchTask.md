@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 67FB5D02-4F4B-4119-B3AC-0D205247253E
 online version:
 schema: 2.0.0
@@ -16,14 +17,14 @@ Reactivates a task.
 
 ### Id
 ```
-Enable-AzureBatchTask [-JobId] <String> [-Id] <String> -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Enable-AzureBatchTask [-JobId] <String> [-Id] <String> -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObject
 ```
-Enable-AzureBatchTask [-Task] <PSCloudTask> -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Enable-AzureBatchTask [-Task] <PSCloudTask> -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -143,17 +144,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSCloudTask
-
 Parameter 'Task' accepts value of type 'PSCloudTask' from the pipeline
 
 ## OUTPUTS

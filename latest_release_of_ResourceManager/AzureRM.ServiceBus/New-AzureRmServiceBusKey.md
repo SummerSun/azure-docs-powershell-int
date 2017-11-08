@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+Module Name: AzureRM.ServiceBus
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/New-AzureRmServiceBusKey.md
@@ -16,19 +17,19 @@ Regenerates the primary or secondary connection strings for the Service Bus name
 ### NamespaceAuthorizationRuleSet (Default)
 ```
 New-AzureRmServiceBusKey [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
- -RegenerateKey <String> [-WhatIf] [-Confirm]
+ -RegenerateKey <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### QueueAuthorizationRuleSet
 ```
-New-AzureRmServiceBusKey [-ResourceGroupName] <String> [[-Namespace] <String>] [-Queue] <String>
- [-Name] <String> -RegenerateKey <String> [-WhatIf] [-Confirm]
+New-AzureRmServiceBusKey [-ResourceGroupName] <String> [-Namespace] <String> [-Queue] <String> [-Name] <String>
+ -RegenerateKey <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TopicAuthorizationRuleSet
 ```
-New-AzureRmServiceBusKey [-ResourceGroupName] <String> [[-Namespace] <String>] [-Topic] <String>
- [-Name] <String> -RegenerateKey <String> [-WhatIf] [-Confirm]
+New-AzureRmServiceBusKey [-ResourceGroupName] <String> [-Namespace] <String> [-Topic] <String> [-Name] <String>
+ -RegenerateKey <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,22 +95,10 @@ Namespace Name.
 
 ```yaml
 Type: String
-Parameter Sets: NamespaceAuthorizationRuleSet
+Parameter Sets: (All)
 Aliases: NamespaceName
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: QueueAuthorizationRuleSet, TopicAuthorizationRuleSet
-Aliases: NamespaceName
-
-Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -193,15 +182,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 
-
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.ServiceBus.Models.ListKeysAttributes
-
 
 ## NOTES
 

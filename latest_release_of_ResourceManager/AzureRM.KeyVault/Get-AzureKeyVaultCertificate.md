@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 363FA51E-D075-4800-A4BE-BFF63FD25C90
 online version:
 schema: 2.0.0
@@ -16,27 +17,26 @@ Gets a certificate from a key vault.
 
 ### ByVaultName (Default)
 ```
-Get-AzureKeyVaultCertificate [-VaultName] <String> [<CommonParameters>]
-```
-
-### ByDeletedCertificates
-```
-Get-AzureKeyVaultCertificate [-VaultName] <String> [-Name] <String> [-InRemovedState] [<CommonParameters>]
+Get-AzureKeyVaultCertificate [-VaultName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ByCertificateName
 ```
-Get-AzureKeyVaultCertificate [-VaultName] <String> [-Name] <String> [[-Version] <String>] [<CommonParameters>]
+Get-AzureKeyVaultCertificate [-VaultName] <String> [-Name] <String> [[-Version] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByCertificateVersions
 ```
-Get-AzureKeyVaultCertificate [-VaultName] <String> [-Name] <String> [-IncludeVersions] [<CommonParameters>]
+Get-AzureKeyVaultCertificate [-VaultName] <String> [-Name] <String> [-IncludeVersions]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByDeletedCertificates
 ```
-Get-AzureKeyVaultCertificate [-VaultName] <String> [[-Name] <String>] [-InRemovedState] [<CommonParameters>]
+Get-AzureKeyVaultCertificate [-VaultName] <String> [[-Name] <String>] [-InRemovedState]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -125,7 +125,7 @@ Specifies the name of the certificate to get.
 
 ```yaml
 Type: String
-Parameter Sets: ByDeletedCertificates, ByCertificateName, ByCertificateVersions
+Parameter Sets: ByCertificateName, ByCertificateVersions
 Aliases: CertificateName
 
 Required: True
@@ -174,6 +174,19 @@ Required: False
 Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

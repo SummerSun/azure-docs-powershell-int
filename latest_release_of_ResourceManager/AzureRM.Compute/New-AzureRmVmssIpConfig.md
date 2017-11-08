@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 92F192A5-F75E-4EFE-B2D2-B0DF0B78D3B5
 online version:
 schema: 2.0.0
@@ -17,9 +18,9 @@ Creates an IP configuration for a network interface of a VMSS.
 ```
 New-AzureRmVmssIpConfig [[-Name] <String>] [[-Id] <String>] [[-SubnetId] <String>]
  [[-ApplicationGatewayBackendAddressPoolsId] <String[]>] [[-LoadBalancerBackendAddressPoolsId] <String[]>]
- [[-LoadBalancerInboundNatPoolsId] <String[]>] [-PrivateIPAddressVersion <String>]
+ [[-LoadBalancerInboundNatPoolsId] <String[]>] [-Primary] [-PrivateIPAddressVersion <String>]
  [-PublicIPAddressConfigurationName <String>] [-PublicIPAddressConfigurationIdleTimeoutInMinutes <Int32>]
- [-DnsSetting <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DnsSetting <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,6 +67,19 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DnsSetting
 The dns settings to be applied on the publicIP addresses.
 The domain name label of the Dns settings to be applied on the publicIP addresses.
@@ -74,7 +88,7 @@ The concatenation of the domain name label and vm index will be the domain name 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: PublicIPAddressDomainNameLabel
 
 Required: False
 Position: Named
@@ -147,6 +161,19 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Primary
+Specifies the primary IP Configuration in case the network interface has more than one IP Configuration.```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PrivateIPAddressVersion
 Specify the ip configuration is either IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
 
@@ -168,7 +195,7 @@ The idle timeout of the public IP address.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: PublicIPAddressIdleTimeoutInMinutes
 
 Required: False
 Position: Named
@@ -183,7 +210,7 @@ The publicIP address configuration name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: PublicIPAddressName
 
 Required: False
 Position: Named

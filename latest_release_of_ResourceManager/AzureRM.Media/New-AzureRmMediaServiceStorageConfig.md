@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
+Module Name: AzureRM.Media
 ms.assetid: 4D64CA4D-1066-4D3E-9317-60D37D9DE2BB
 online version:
 schema: 2.0.0
@@ -15,8 +16,8 @@ Create a storage account configuration for the media service cmdlets.
 ## SYNTAX
 
 ```
-New-AzureRmMediaServiceStorageConfig [-StorageAccountId] <String> [-IsPrimary] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-AzureRmMediaServiceStorageConfig [-DefaultProfile <IAzureContextContainer>] [-StorageAccountId] <String>
+ [-IsPrimary] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -96,6 +97,19 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

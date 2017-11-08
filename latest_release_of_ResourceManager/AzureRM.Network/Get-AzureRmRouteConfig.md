@@ -16,7 +16,8 @@ Gets routes from a route table.
 ## SYNTAX
 
 ```
-Get-AzureRmRouteConfig [-Name <String>] -RouteTable <PSRouteTable> [<CommonParameters>]
+Get-AzureRmRouteConfig -RouteTable <PSRouteTable> [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,6 +43,19 @@ The command passes that table to the current cmdlet by using the pipeline operat
 The current cmdlet gets the route named Route07 in the route table named RouteTable01.
 
 ## PARAMETERS
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 Specifies the name of the route that this cmdlet gets.
@@ -69,7 +83,7 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

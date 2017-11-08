@@ -15,7 +15,8 @@ original_content_git_url: https://github.com/Visual-Studio-China/azure-powershel
 ## SYNTAX
 
 ```
-Test-AzureRmDnsAvailability -DomainNameLabel <String> -Location <String> [<CommonParameters>]
+Test-AzureRmDnsAvailability -DomainNameLabel <String> -Location <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,6 +29,19 @@ Test-AzureRmDnsAvailability -DomainNameLabel <String> -Location <String> [<Commo
 ```
 
 ## PARAMETERS
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DomainNameLabel
 ```yaml

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 44C5AF58-ADC1-4BC6-9771-3FD8F0480106
 online version:
 schema: 2.0.0
@@ -16,12 +17,13 @@ Cancels an existing Backup job.
 
 ### IdFiltersSet
 ```
-Stop-AzureRmBackupJob -Vault <AzureRMBackupVault> -JobID <String> [<CommonParameters>]
+Stop-AzureRmBackupJob -Vault <AzureRMBackupVault> -JobID <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### JobFiltersSet
 ```
-Stop-AzureRmBackupJob -Job <AzureRMBackupJob> [<CommonParameters>]
+Stop-AzureRmBackupJob -Job <AzureRMBackupJob> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -103,6 +105,19 @@ Parameter Sets: IdFiltersSet
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

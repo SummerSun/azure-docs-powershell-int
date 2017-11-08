@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+Module Name: AzureRM.LogicApp
 ms.assetid: B8998AAA-05FC-4029-A284-B64E23326B22
 online version:
 schema: 2.0.0
@@ -18,8 +19,8 @@ Creates an integration account agreement.
 New-AzureRmIntegrationAccountAgreement -ResourceGroupName <String> -Name <String> -AgreementName <String>
  -AgreementType <String> -GuestPartner <String> -HostPartner <String> -GuestIdentityQualifier <String>
  -GuestIdentityQualifierValue <String> -HostIdentityQualifier <String> -HostIdentityQualifierValue <String>
- [-AgreementContent <String>] [-AgreementContentFilePath <String>] [-Metadata <Object>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AgreementContent <String>] [-AgreementContentFilePath <String>] [-Metadata <Object>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -291,6 +292,19 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

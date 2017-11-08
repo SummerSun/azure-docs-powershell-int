@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+Module Name: AzureRM.ServiceFabric
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzureRmServiceFabricClientCertificate.md
@@ -16,26 +17,28 @@ Add common name or thumbprint to the cluster for client authentication purposes.
 ### SingleUpdateWithThumbprint
 ```
 Add-AzureRmServiceFabricClientCertificate [-Admin] [-ResourceGroupName] <String> [-Name] <String>
- -Thumbprint <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Thumbprint <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SingleUpdateWithCommonName
 ```
 Add-AzureRmServiceFabricClientCertificate [-Admin] [-ResourceGroupName] <String> [-Name] <String>
- -CommonName <String> -IssuerThumbprint <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -CommonName <String> -IssuerThumbprint <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### MultipleUpdatesWithCommonName
 ```
 Add-AzureRmServiceFabricClientCertificate [-ResourceGroupName] <String> [-Name] <String>
- -ClientCertificateCommonName <PSClientCertificateCommonName[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -ClientCertificateCommonName <PSClientCertificateCommonName[]> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### MultipleUpdatesWithThumbprint
 ```
 Add-AzureRmServiceFabricClientCertificate [-ResourceGroupName] <String> [-Name] <String>
- [-AdminClientThumbprint <String[]>] [-ReadonlyClientThumbprint <String[]>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AdminClientThumbprint <String[]>] [-ReadonlyClientThumbprint <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -216,6 +219,19 @@ Shows what would happen if the cmdlet runs. The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

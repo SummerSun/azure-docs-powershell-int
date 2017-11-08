@@ -14,11 +14,12 @@ Creates a container group.
 
 ## SYNTAX
 
-### CreateContainerGroupBaseParamSet
+### CreateContainerGroupBaseParamSet (Default)
 ```
 New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> -Image <String> [-Location <String>]
  [-OsType <String>] [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>] [-Port <Int32>]
- [-Command <String>] [-EnvironmentVariable <Hashtable>] [-Tag <Hashtable>] [-WhatIf] [-Confirm]
+ [-Command <String>] [-EnvironmentVariable <Hashtable>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CreateContainerGroupWithRegistryParamSet
@@ -26,7 +27,8 @@ New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> -Image 
 New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> -Image <String> [-Location <String>]
  [-OsType <String>] [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>] [-Port <Int32>]
  [-Command <String>] [-EnvironmentVariable <Hashtable>] [-RegistryServerDomain <String>]
- -RegistryCredential <PSCredential> [-Tag <Hashtable>] [-WhatIf] [-Confirm]
+ -RegistryCredential <PSCredential> [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -376,16 +378,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 System.Collections.Hashtable
 
-
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.ContainerInstance.Models.PSContainerGroup
-
 
 ## NOTES
 

@@ -1,5 +1,6 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+Module Name: Azure
 ms.assetid: 7016BAA9-C25D-404E-9F75-2BE49FBF91A8
 online version:
 schema: 2.0.0
@@ -16,7 +17,8 @@ Creates a configuration object for automatic patching on a virtual machine.
 
 ```
 New-AzureVMSqlServerAutoPatchingConfig [-Enable] [-DayOfWeek <String>] [-MaintenanceWindowStartingHour <Int32>]
- [-MaintenanceWindowDuration <Int32>] [-PatchCategory <String>] [<CommonParameters>]
+ [-MaintenanceWindowDuration <Int32>] [-PatchCategory <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,6 +44,23 @@ You can specify this configuration item for other cmdlets, such as the Set-Azure
 
 ## PARAMETERS
 
+### -Enable
+Indicates that automated patching for the virtual machine is enabled.
+If you enable automated patching the cmdlet puts Windows Update into interactive mode.
+If you disable automated patching, Windows Update settings do not change.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DayOfWeek
 Specifies the day of the week when updates should be installed.
 
@@ -60,7 +79,6 @@ The acceptable values for this parameter are:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Everyday
 
 Required: False
 Position: Named
@@ -69,13 +87,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Enable
-Indicates that automated patching for the virtual machine is enabled.
-If you enable automated patching the cmdlet puts Windows Update into interactive mode.
-If you disable automated patching, Windows Update settings do not change.
+### -MaintenanceWindowStartingHour
+Specifies the hour of the day when maintenance window starts.
+This time defines when updates start to install.
 
 ```yaml
-Type: SwitchParameter
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,12 +120,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MaintenanceWindowStartingHour
-Specifies the hour of the day when maintenance window starts.
-This time defines when updates start to install.
+### -PatchCategory
+Specifies whether important updates should be included.
 
 ```yaml
-Type: Int32
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,14 +135,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PatchCategory
-Specifies whether important updates should be included.
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
 
-```yaml
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Accepted values: Important
+Aliases: iv
 
 Required: False
 Position: Named

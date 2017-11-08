@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+Module Name: AzureRM.MachineLearning
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzureRmMlCommitmentPlan.md
@@ -14,7 +15,8 @@ Retrieves the summary information for one or more commitment plans.
 ## SYNTAX
 
 ```
-Get-AzureRmMlCommitmentPlan [-ResourceGroupName <String>] [-Name <String>] [<CommonParameters>]
+Get-AzureRmMlCommitmentPlan [-ResourceGroupName <String>] [-Name <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,6 +30,8 @@ Depending on the paramenters passed, the cmdlet returns the a specific commitmen
 
 
 
+
+
 ```
 Get-AzureRmMlCommitmentPlan -ResourceGroupName "MyResourceGroup" -Name "MyCommitmentPlanName"
 ```
@@ -37,12 +41,16 @@ Get-AzureRmMlCommitmentPlan -ResourceGroupName "MyResourceGroup" -Name "MyCommit
 
 
 
+
+
 ```
 Get-AzureRmMlCommitmentPlan
 ```
 
 ### --------------------------  Example 3: Get all commitment plans in the current subscription and given resource group  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -74,6 +82,19 @@ The name of the resource group for the Azure ML commitment plan.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

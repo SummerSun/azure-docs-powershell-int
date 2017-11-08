@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 015E3BC9-C535-4EA2-8A30-C728385DBFF8
 online version:
 schema: 2.0.0
@@ -16,7 +17,7 @@ Creates a Backup vault.
 
 ```
 New-AzureRmBackupVault [-ResourceGroupName] <String> [-Name] <String> [-Region] <String>
- [[-Storage] <AzureBackupVaultStorageType>] [<CommonParameters>]
+ [[-Storage] <AzureBackupVaultStorageType>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -120,6 +121,19 @@ Accepted values: GeoRedundant, LocallyRedundant
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

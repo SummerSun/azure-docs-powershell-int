@@ -16,7 +16,8 @@ Gets an application gateway.
 ## SYNTAX
 
 ```
-Get-AzureRmApplicationGateway [-Name <String>] [-ResourceGroupName <String>] [<CommonParameters>]
+Get-AzureRmApplicationGateway [-Name <String>] [-ResourceGroupName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,6 +47,19 @@ PS C:\>$AppGwList = Get-AzureRmApplicationGateway
 This command gets a list of all the application gateways in the subscription and stores it in the $AppGwList variable.
 
 ## PARAMETERS
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 Specifies the name of the application gateway that this cmdlet gets.

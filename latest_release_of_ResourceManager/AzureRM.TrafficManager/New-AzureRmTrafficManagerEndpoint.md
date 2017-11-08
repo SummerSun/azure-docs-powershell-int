@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+Module Name: AzureRM.TrafficManager
 ms.assetid: A7A908A1-7326-4725-A3F9-4D05E40C5F73
 online version:
 schema: 2.0.0
@@ -18,7 +19,8 @@ Creates an endpoint in a Traffic Manager profile.
 New-AzureRmTrafficManagerEndpoint -Name <String> -ProfileName <String> -ResourceGroupName <String>
  -Type <String> [-TargetResourceId <String>] [-Target <String>] -EndpointStatus <String> [-Weight <UInt32>]
  [-Priority <UInt32>] [-EndpointLocation <String>] [-MinChildEndpoints <UInt32>]
- [-GeoMapping <System.Collections.Generic.List`1[System.String]>] [<CommonParameters>]
+ [-GeoMapping <System.Collections.Generic.List`1[System.String]>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -253,6 +255,19 @@ This parameter is used only if the Traffic Manager profile is configured with th
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

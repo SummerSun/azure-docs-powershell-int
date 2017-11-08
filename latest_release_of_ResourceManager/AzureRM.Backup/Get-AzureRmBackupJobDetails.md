@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 6187F603-5298-4854-94F3-0C38FCF3125F
 online version:
 schema: 2.0.0
@@ -16,12 +17,14 @@ Gets the details of a Backup job.
 
 ### JobsFiltersSet (Default)
 ```
-Get-AzureRmBackupJobDetails -Job <AzureRMBackupJob> [<CommonParameters>]
+Get-AzureRmBackupJobDetails -Job <AzureRMBackupJob> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### IdFiltersSet
 ```
-Get-AzureRmBackupJobDetails -Vault <AzureRMBackupVault> -JobId <String> [<CommonParameters>]
+Get-AzureRmBackupJobDetails -Vault <AzureRMBackupVault> -JobId <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -103,6 +106,19 @@ Parameter Sets: IdFiltersSet
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

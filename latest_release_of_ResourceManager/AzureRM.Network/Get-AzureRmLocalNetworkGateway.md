@@ -16,7 +16,8 @@ Gets a Local Network Gateway
 ## SYNTAX
 
 ```
-Get-AzureRmLocalNetworkGateway [-Name <String>] -ResourceGroupName <String> [<CommonParameters>]
+Get-AzureRmLocalNetworkGateway [-Name <String>] -ResourceGroupName <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,6 +35,19 @@ Get-AzureRmLocalNetworkGateway -Name myLocalGW -ResourceGroupName myRG
 Returns the object of the Local Network Gateway with the name "myLocalGW" within the resource group "myRG"
 
 ## PARAMETERS
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 ```yaml

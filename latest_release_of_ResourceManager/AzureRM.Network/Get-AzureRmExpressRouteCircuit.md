@@ -16,7 +16,8 @@ Gets an Azure ExpressRoute circuit from Azure.
 ## SYNTAX
 
 ```
-Get-AzureRmExpressRouteCircuit [-Name <String>] [-ResourceGroupName <String>] [<CommonParameters>]
+Get-AzureRmExpressRouteCircuit [-Name <String>] [-ResourceGroupName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,6 +33,19 @@ Get-AzureRmExpressRouteCircuit -Name $CircuitName -ResourceGroupName $rg | Remov
 ```
 
 ## PARAMETERS
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 The name of the ExpressRoute circuit.

@@ -19,7 +19,8 @@ Creates an SSL policy for an application gateway.
 New-AzureRmApplicationGatewaySslPolicy
  [-DisabledSslProtocols <System.Collections.Generic.List`1[System.String]>] [-PolicyType <String>]
  [-PolicyName <String>] [-CipherSuite <System.Collections.Generic.List`1[System.String]>]
- [-MinProtocolVersion <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MinProtocolVersion <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +44,19 @@ Ssl cipher suites to be enabled in the specified order to application gateway
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

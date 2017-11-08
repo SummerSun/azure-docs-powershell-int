@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: 3FC9E586-3962-437E-B89F-BB4EA1FBF403
 online version:
 schema: 2.0.0
@@ -16,7 +17,8 @@ Gets one or more recommended actions for an Azure SQL Elastic Pool Advisor.
 
 ```
 Get-AzureRmSqlElasticPoolRecommendedAction [-RecommendedActionName <String>] -ServerName <String>
- -ElasticPoolName <String> -AdvisorName <String> [-ResourceGroupName] <String> [<CommonParameters>]
+ -ElasticPoolName <String> -AdvisorName <String> [-ResourceGroupName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -230,6 +232,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

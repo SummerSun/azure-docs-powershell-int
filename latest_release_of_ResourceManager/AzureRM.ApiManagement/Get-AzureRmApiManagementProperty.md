@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 894297BF-2771-4871-9E4C-8684364DAC4B
 online version:
 schema: 2.0.0
@@ -15,22 +16,26 @@ original_content_git_url: https://github.com/Visual-Studio-China/azure-powershel
 
 ### Get all properties (Default)
 ```
-Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [<CommonParameters>]
+Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Get by property ID
 ```
-Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-PropertyId <String>] [<CommonParameters>]
+Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-PropertyId <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Find properties containing Name
 ```
-Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Name <String>] [<CommonParameters>]
+Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Name <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Find properties by Tag
 ```
-Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Tag <String>] [<CommonParameters>]
+Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Tag <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +53,7 @@ PS C:\> Get-AzureRmApiManagementProperty -Context $Context -Name $PropertyName
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -61,7 +66,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Find properties containing Name
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -74,7 +79,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Get by property ID
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -91,12 +96,25 @@ Key-value pairs in the form of a hash table. For example:
 ```yaml
 Type: String
 Parameter Sets: Find properties by Tag
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -114,3 +132,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

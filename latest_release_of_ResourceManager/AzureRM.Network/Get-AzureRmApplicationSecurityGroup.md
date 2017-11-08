@@ -45,7 +45,6 @@ PS C:\> Get-AzureRmApplicationSecurityGroup -ResourceGroupName MyResourceGroup -
 
 The command above returns the application security group MyApplicationSecurityGroup under the resource group MyResourceGroup.
 
-
 ## PARAMETERS
 
 ### -DefaultProfile

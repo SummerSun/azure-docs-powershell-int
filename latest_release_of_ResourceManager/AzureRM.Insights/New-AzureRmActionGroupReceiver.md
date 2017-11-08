@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: 9830CD16-D797-47EB-BEF5-6CFE3454BCAA
 online version:
 schema: 2.0.0
@@ -14,8 +15,22 @@ Creates an new action group receiver.
 
 ## SYNTAX
 
+### NewEmailReceiver (Default)
 ```
-New-AzureRmActionGroupReceiver -Name <String> [-EmailReceiver] [-EmailAddress <String>] [-SmsReceiver] [-CountryCode <String>] [-PhoneNumber <String>] [-WebhookReceiver] [-ServiceUri <String>] [<CommonParameters>]
+New-AzureRmActionGroupReceiver -Name <String> [-EmailReceiver] -EmailAddress <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### NewSmsReceiver
+```
+New-AzureRmActionGroupReceiver -Name <String> [-SmsReceiver] [-CountryCode <String>] -PhoneNumber <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### NewWebhookReceiver
+```
+New-AzureRmActionGroupReceiver -Name <String> [-WebhookReceiver] -ServiceUri <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +81,7 @@ Specifies to create an Email receiver
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: NewEmailReceiver
 Aliases: 
 
 Required: False
@@ -81,7 +96,7 @@ Specifies the address for the Email receiver.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: NewEmailReceiver
 Aliases: 
 
 Required: True
@@ -96,7 +111,7 @@ Specifies to create a SMS receiver
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: NewSmsReceiver
 Aliases: 
 
 Required: False
@@ -111,10 +126,10 @@ Specifies the country code for the SMS receiver.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: NewSmsReceiver
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -126,7 +141,7 @@ Specifies the phone number for the SMS receiver.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: NewSmsReceiver
 Aliases: 
 
 Required: True
@@ -141,7 +156,7 @@ Specifies to create a webhook receiver
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: NewWebhookReceiver
 Aliases: 
 
 Required: False
@@ -156,13 +171,26 @@ Specifies the URI for the webhook receiver.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: NewWebhookReceiver
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

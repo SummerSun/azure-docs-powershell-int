@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+Module Name: AzureRM.ServiceFabric
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Set-AzureRmServiceFabricUpgradeType.md
@@ -16,13 +17,15 @@ Change the Service Fabric upgrade type of the cluster.
 ### Automatic
 ```
 Set-AzureRmServiceFabricUpgradeType [-ResourceGroupName] <String> [-Name] <String>
- -UpgradeMode <ClusterUpgradeMode> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -UpgradeMode <ClusterUpgradeMode> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Manual
 ```
 Set-AzureRmServiceFabricUpgradeType [-ResourceGroupName] <String> [-Name] <String>
- -UpgradeMode <ClusterUpgradeMode> -Version <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -UpgradeMode <ClusterUpgradeMode> -Version <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -122,6 +125,19 @@ Shows what would happen if the cmdlet runs. The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

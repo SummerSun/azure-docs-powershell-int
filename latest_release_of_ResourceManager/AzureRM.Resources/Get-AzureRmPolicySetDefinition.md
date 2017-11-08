@@ -16,17 +16,20 @@ Gets policy set definitions.
 
 ### The list all policy set definitions parameter set. (Default)
 ```
-Get-AzureRmPolicySetDefinition [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Get-AzureRmPolicySetDefinition [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### The policy set definition name parameter set.
 ```
-Get-AzureRmPolicySetDefinition -Name <String> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Get-AzureRmPolicySetDefinition -Name <String> [-ApiVersion <String>] [-Pre]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### The policy set definition Id parameter set.
 ```
-Get-AzureRmPolicySetDefinition -Id <String> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Get-AzureRmPolicySetDefinition -Id <String> [-ApiVersion <String>] [-Pre]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,6 +108,19 @@ When set, indicates that the cmdlet should use pre-release API versions when aut
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

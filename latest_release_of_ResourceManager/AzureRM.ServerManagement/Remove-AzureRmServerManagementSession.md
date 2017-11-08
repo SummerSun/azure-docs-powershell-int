@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+Module Name: AzureRM.ServerManagement
 ms.assetid: 7476E6DC-6DE6-4199-A680-5717053A8CC5
 online version:
 schema: 2.0.0
@@ -17,12 +18,13 @@ Removes a Server Management session.
 ### ByName
 ```
 Remove-AzureRmServerManagementSession [-ResourceGroupName] <String> [-NodeName] <String>
- [-SessionName] <String> [<CommonParameters>]
+ [-SessionName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByObject
 ```
-Remove-AzureRmServerManagementSession [[-SessionName] <String>] [-Session] <Session> [<CommonParameters>]
+Remove-AzureRmServerManagementSession [[-SessionName] <String>] [-Session] <Session>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -111,13 +113,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Session
-
 Parameter 'Session' accepts value of type 'Session' from the pipeline
 
 ## OUTPUTS

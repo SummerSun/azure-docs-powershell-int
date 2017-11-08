@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module Name: AzureRM.EventHub
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Set-AzureRmEventHubNamespace.md
@@ -15,16 +16,17 @@ Updates the specified Event Hubs namespace.
 
 ### NamespaceParameterSet (Default)
 ```
-Set-AzureRmEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [[-SkuName] <String>] [[-SkuCapacity] <Int32>] [[-State] <NamespaceState>] [[-Tag] <Hashtable>]
- [-EnableAutoInflate] [[-MaximumThroughputUnits] <Int32>] [-WhatIf] [-Confirm]
+Set-AzureRmEventHubNamespace [-ResourceGroupName] <String> -Name <String> [-Location] <String>
+ [[-SkuName] <String>] [-SkuCapacity <Int32>] [-State <NamespaceState>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AutoInflateParameterSet
 ```
-Set-AzureRmEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [[-SkuName] <String>] [[-SkuCapacity] <Int32>] [[-State] <NamespaceState>] [[-Tag] <Hashtable>]
- [-EnableAutoInflate] [[-MaximumThroughputUnits] <Int32>] [-WhatIf] [-Confirm]
+Set-AzureRmEventHubNamespace [-ResourceGroupName] <String> -Name <String> [-Location] <String>
+ [[-SkuName] <String>] [-SkuCapacity <Int32>] [-State <NamespaceState>] [-Tag <Hashtable>] [-EnableAutoInflate]
+ [-MaximumThroughputUnits <Int32>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -176,10 +178,10 @@ Indicates whether AutoInflate is enabled
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: NamespaceParameterSet
+Parameter Sets: AutoInflateParameterSet
 Aliases: 
 
-Required: False
+Required: True
 Position: 6
 Default value: None
 Accept pipeline input: False
@@ -191,7 +193,7 @@ Upper limit of throughput units when AutoInflate is enabled, vaule should be wit
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
+Parameter Sets: AutoInflateParameterSet
 Aliases: 
 
 Required: False
@@ -215,6 +217,22 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

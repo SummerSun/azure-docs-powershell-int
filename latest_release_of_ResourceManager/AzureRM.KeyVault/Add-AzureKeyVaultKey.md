@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 846F781C-73A3-4BBE-ABD9-897371109FBE
 online version: http://go.microsoft.com/fwlink/?LinkId=690295
 schema: 2.0.0
@@ -17,15 +18,16 @@ Creates a key in a key vault or imports a key into a key vault.
 ### Create (Default)
 ```
 Add-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> -Destination <String> [-Disable]
- [-KeyOps <String[]>] [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-KeyOps <String[]>] [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Import
 ```
 Add-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> -KeyFilePath <String>
  [-KeyFilePassword <SecureString>] [-Destination <String>] [-Disable] [-KeyOps <String[]>]
- [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -179,8 +181,8 @@ extension, it imports the key as a software-protected key.
 ```yaml
 Type: String
 Parameter Sets: Create
-Aliases:
-Accepted values: HSM, Software
+Aliases: 
+Accepted values: HSM, Software, HSM, Software
 
 Required: True
 Position: Named
@@ -192,8 +194,8 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Import
-Aliases:
-Accepted values: HSM, Software
+Aliases: 
+Accepted values: HSM, Software, HSM, Software
 
 Required: False
 Position: Named
@@ -209,7 +211,7 @@ the key will fail. Use this parameter if you are preloading keys that you intend
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -227,7 +229,7 @@ parameter, the key does not expire.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -245,7 +247,7 @@ name extension.
 ```yaml
 Type: SecureString
 Parameter Sets: Import
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -269,7 +271,7 @@ When you specify this parameter, the *Destination* parameter is optional.
 ```yaml
 Type: String
 Parameter Sets: Import
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -297,7 +299,7 @@ the [JSON Web Key (JWK) specification](http://go.microsoft.com/fwlink/?LinkID=61
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -332,7 +334,7 @@ parameter, the key can be used immediately.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -365,7 +367,7 @@ FQDN of a key vault based on the name that this parameter specifies and your cur
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -382,6 +384,19 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

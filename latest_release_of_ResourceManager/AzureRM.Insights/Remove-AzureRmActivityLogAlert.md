@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: C7EC21C7-1C7E-49B2-9B33-486532FCDAEC
 online version:
 schema: 2.0.0
@@ -14,8 +15,22 @@ Removes an activity log alert.
 
 ## SYNTAX
 
+### Default parameters for remove an activity log alert
 ```
-Remove-AzureRmActivityLogAlert [-InputObject <PSActivityLogAlertResource>] [-ResourceId <String>] [-ResourceGroupName <String> -Name <String>] [<CommonParameters>]
+Remove-AzureRmActivityLogAlert -ResourceGroupName <String> -Name <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Parameters to remove an activity log alerts taking value from the pipe
+```
+Remove-AzureRmActivityLogAlert -InputObject <PSActivityLogAlertResource>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Parameters to remove an activity log alerts taking the value of ResourceId from the pipe
+```
+Remove-AzureRmActivityLogAlert -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,9 +61,7 @@ Removes an activity log alert using a PSActivityLogAlertResource as input.
 
 ### Example 3: Remove the ActivityLogAlert using the ResourceId parameter
 ```
-
 PS C:\>Find-AzureRmResource -ResourceGroupEquals "myResourceGroup" -ResourceNameEquals "myLogAlert" | Remove-AzureRmActivityLogAlert
-
 ```
 
 This command removes the ActivityLogAlert using the ResourceId parameter from the pipe.
@@ -59,8 +72,8 @@ This command removes the ActivityLogAlert using the ResourceId parameter from th
 The name of the activity log alert.
 
 ```yaml
-Type: System.String
-Parameter Sets: RemoveActivityLogAlertDeafultParamGroup
+Type: String
+Parameter Sets: Default parameters for remove an activity log alert
 Aliases: 
 
 Required: True
@@ -74,8 +87,8 @@ Accept wildcard characters: False
 The name of the resource group where the alert resource exists.
 
 ```yaml
-Type: System.String
-Parameter Sets: RemoveActivityLogAlertDeafultParamGroup
+Type: String
+Parameter Sets: Default parameters for remove an activity log alert
 Aliases: 
 
 Required: True
@@ -89,14 +102,14 @@ Accept wildcard characters: False
 Sets the InputObject tags property of the call to extract the required name, and resource group name properties.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
-Parameter Sets: RemoveActivityLogAlertFromPipeParamGroup
+Type: PSActivityLogAlertResource
+Parameter Sets: Parameters to remove an activity log alerts taking value from the pipe
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (FromPipeline)
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -104,14 +117,57 @@ Accept wildcard characters: False
 Sets the ResourceId tags property of the call to extract the required name, resource group name properties.
 
 ```yaml
-Type: System.String
-Parameter Sets: RemoveActivityLogAlertFromResourceIdParamGroup
+Type: String
+Parameter Sets: Parameters to remove an activity log alerts taking the value of ResourceId from the pipe
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

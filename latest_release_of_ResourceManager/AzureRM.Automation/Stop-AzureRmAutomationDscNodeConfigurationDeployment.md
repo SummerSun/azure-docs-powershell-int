@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
 online version:
 schema: 2.0.0
@@ -14,8 +15,18 @@ Stops a DSC Node configuration deployment in Automation. It only stops the curre
 
 ## SYNTAX
 
+### ByJobId (Default)
 ```
-Stop-AzureRmAutomationDscNodeConfigurationDeployment [-ResourceGroupName] <String> [-AutomationAccountName] <String> [<CommonParameters>]
+Stop-AzureRmAutomationDscNodeConfigurationDeployment -JobId <Guid> [-Force] [-PassThru]
+ [-ResourceGroupName] <String> -AutomationAccountName <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByInputObject
+```
+Stop-AzureRmAutomationDscNodeConfigurationDeployment [-PassThru] -InputObject <NodeConfigurationDeployment>
+ [-ResourceGroupName] <String> -AutomationAccountName <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,8 +44,17 @@ The above command stops the DSC node configuration deployment job with the jobId
 ## PARAMETERS
 
 ### -AutomationAccountName
-Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
+Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -ResourceGroupName
 Specifies the name of a resource group in which this cmdlet compiles a configuration.
@@ -51,28 +71,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -JobId
 Specifies the Job id of an existing deployment job.
 
 ```yaml
 Type: Guid
-Parameter Sets: (JobId)
+Parameter Sets: ByJobId
 Aliases: 
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -99,7 +107,7 @@ ps_force
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: ByJobId
 Aliases: 
 
 Required: False
@@ -137,6 +145,32 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Input object for Piping.```yaml
+Type: NodeConfigurationDeployment
+Parameter Sets: ByInputObject
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

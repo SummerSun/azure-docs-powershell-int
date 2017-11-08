@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: EAFB9C98-000C-4EAC-A32D-6B0F1939AA2F
 online version:
 schema: 2.0.0
@@ -14,9 +15,17 @@ Gets the metric values of a resource.
 
 ## SYNTAX
 
+### Parameters for Get-AzureRmMetric cmdlet in the default mode
 ```
-Get-AzureRmMetric [-ResourceId] <String> [-TimeGrain] <TimeSpan> [-StartTime <DateTime>] [-EndTime <DateTime>]
- [-MetricNames <String[]>] [-DetailedOutput] [<CommonParameters>]
+Get-AzureRmMetric [-ResourceId] <String> [-MetricNames <String[]>] [-DetailedOutput]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### Parameters for Get-AzureRmMetric cmdlet in the full param set mode
+```
+Get-AzureRmMetric [-ResourceId] <String> [[-TimeGrain] <TimeSpan>] [-AggregationType <AggregationType>]
+ [-StartTime <DateTime>] [-EndTime <DateTime>] -MetricNames <String[]> [-DetailedOutput]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -176,7 +185,7 @@ The default is the current time.
 
 ```yaml
 Type: DateTime
-Parameter Sets: (All)
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
 Required: False
@@ -191,10 +200,22 @@ Specifies an array of names of metrics.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the default mode
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String[]
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -222,7 +243,7 @@ The default is the current local time minus one hour.
 
 ```yaml
 Type: DateTime
-Parameter Sets: (All)
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
 Required: False
@@ -237,13 +258,39 @@ Specifies the time grain of the metric as a **TimeSpan** object in the format hh
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: (All)
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
-Required: True
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AggregationType
+The aggregation type of the query```yaml
+Type: AggregationType
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

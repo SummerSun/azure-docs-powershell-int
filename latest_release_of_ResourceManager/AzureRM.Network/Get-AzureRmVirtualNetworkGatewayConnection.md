@@ -16,7 +16,8 @@ Gets a Virtual Network Gateway Connection
 ## SYNTAX
 
 ```
-Get-AzureRmVirtualNetworkGatewayConnection [-Name <String>] -ResourceGroupName <String> [<CommonParameters>]
+Get-AzureRmVirtualNetworkGatewayConnection [-Name <String>] -ResourceGroupName <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,6 +35,19 @@ Get-AzureRmVirtualNetworkGatewayConnection -Name myTunnel -ResourceGroupName myR
 Returns the object of the Virtual Network Gateway Connection with the name "myTunnel" within the resource group "myRG"
 
 ## PARAMETERS
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 ```yaml

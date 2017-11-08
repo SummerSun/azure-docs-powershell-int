@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: DC870E11-2129-4906-8357-D9BC1CF2E08E
 online version:
 schema: 2.0.0
@@ -15,7 +16,8 @@ Gets all locations and the supported resource providers for each location.
 ## SYNTAX
 
 ```
-Get-AzureRmLocation [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Get-AzureRmLocation [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,6 +57,19 @@ Indicates that this cmdlet considers pre-release API versions when it automatica
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
