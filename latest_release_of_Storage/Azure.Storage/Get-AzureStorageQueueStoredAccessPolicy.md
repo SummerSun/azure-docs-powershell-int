@@ -46,7 +46,7 @@ Specifies the Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies a stored access policy, which includes the permissions for this Shared Access Signature (SAS) token.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies the Azure storage queue name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: N, Name
 

@@ -32,7 +32,7 @@ You can use this cmdlet to trigger a refresh of the information received from th
 Specifies the Azure Site Recovery Services Provider object.
 
 ```yaml
-Type: ASRRecoveryServicesProvider
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryServicesProvider
 Parameter Sets: (All)
 Aliases: 
 
@@ -45,7 +45,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

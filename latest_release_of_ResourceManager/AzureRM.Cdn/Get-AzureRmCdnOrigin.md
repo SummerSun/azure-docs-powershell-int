@@ -43,7 +43,7 @@ The **Get-AzureRmCdnOrigin** cmdlet gets an Azure Content Delivery Network (CDN)
 Specifies the CDN endpoint object to which the origin belongs.
 
 ```yaml
-Type: PSEndpoint
+Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint
 Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 Specifies the name of the endpoint to which the origin server belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies the name of the origin server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Specifies the name of the profile to which the origin server belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the origin server belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

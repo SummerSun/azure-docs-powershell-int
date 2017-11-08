@@ -47,7 +47,7 @@ This command removes the user ACE for Patti Fuller from the ContosoADL account.
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -68,7 +68,7 @@ The acceptable values for this parameter are:
 - Other
 
 ```yaml
-Type: AceType
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+AceType
 Parameter Sets: Remove specific ACE
 Aliases: 
 Accepted values: User, Group, Mask, Other
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 Specifies the ACL object that contains the entries to be removed.
 
 ```yaml
-Type: DataLakeStoreItemAce[]
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce[]
 Parameter Sets: Remove ACL Entries using ACL object
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 Indicates that this operation removes the default ACE from the specified ACL.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Remove specific ACE
 Aliases: 
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 Specifies the object ID of the AzureActive Directory user, group, or service principal for which to remove an ACE.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Remove specific ACE
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 Indicates a boolean response should be returned indicating the result of the delete operation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Store path of the item from which to remove an ACE, starting with the root directory (/).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -175,7 +175,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

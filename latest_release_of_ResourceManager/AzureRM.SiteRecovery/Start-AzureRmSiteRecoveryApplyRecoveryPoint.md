@@ -30,7 +30,7 @@ The **Start-AzureRmSiteRecoveryApplyRecoveryPoint** changes a recovery point for
 
 ### -DataEncryptionPrimaryCertFile
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 
 ### -DataEncryptionSecondaryCertFile
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 Specifies the recovery point object that this cmdlet changes.
 
 ```yaml
-Type: ASRRecoveryPoint
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPoint
 Parameter Sets: (All)
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies the Replication Protected Item object.
 
 ```yaml
-Type: ASRReplicationProtectedItem
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem
 Parameter Sets: (All)
 Aliases: 
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

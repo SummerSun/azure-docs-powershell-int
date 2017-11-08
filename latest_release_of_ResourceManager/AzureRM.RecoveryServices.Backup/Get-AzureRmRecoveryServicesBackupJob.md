@@ -78,7 +78,7 @@ Specifies the Backup management type.
 Currently, only AzureVM is supported.
 
 ```yaml
-Type: BackupManagementType
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL
@@ -97,7 +97,7 @@ For more information about **DateTime** objects, type `Get-Help Get-Date`.
 Use UTC format for dates.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 Specifies the name of the Backup job to get.
 
 ```yaml
-Type: JobBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +129,7 @@ The ID is the InstanceId property of an **AzureRmRecoveryServicesBackupJob** obj
 To obtain an **AzureRmRecoveryServicesBackupJob** object, use Get-AzureRmRecoveryServicesBackupJob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,7 +153,7 @@ The acceptable values for this parameter are:
 - Unregister
 
 ```yaml
-Type: JobOperation
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobOperation]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Backup, Restore, ConfigureBackup, DisableBackup, DeleteBackupData
@@ -177,7 +177,7 @@ The acceptable values for this parameter are:
 - CompletedWithWarnings
 
 ```yaml
-Type: JobStatus
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobStatus]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: InProgress, Cancelling, Cancelled, Completed, CompletedWithWarnings, Failed
@@ -196,7 +196,7 @@ If you specify this parameter, you must also specify the *From* parameter.
 Use UTC format for dates.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

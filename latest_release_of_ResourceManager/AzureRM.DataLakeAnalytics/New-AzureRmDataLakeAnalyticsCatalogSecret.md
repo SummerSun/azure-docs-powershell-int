@@ -45,7 +45,7 @@ This command gets the secret corresponding to the specified account, database, c
 Specifies the name of the Data Lake Analytics account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Specifies the host name for the database the secret is associated with in the format 'mydatabase.contoso.com'.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specify full URI
 Aliases: Host
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of the database that holds the secret.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Specifies the port number of the secret.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Specify full URI
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 Specifies the name and password of the secret.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Specifies the Uniform Resource Identifier (URI) of the secret.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: Specify host name and port
 Aliases: 
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

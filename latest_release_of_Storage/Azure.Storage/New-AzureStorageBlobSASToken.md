@@ -70,7 +70,7 @@ This example generates a blob SAS token with life time.
 Specifies the storage blob name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BlobNameWithPermission, BlobNameWithPolicy
 Aliases: 
 
@@ -86,7 +86,7 @@ Specifies the **CloudBlob** object.
 To obtain a **CloudBlob** object, use the [Get-AzureStorageBlob](./Get-AzureStorageBlob.md) cmdlet.
 
 ```yaml
-Type: CloudBlob
+Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlob
 Parameter Sets: BlobPipelineWithPolicy, BlobPipelineWithPermission
 Aliases: ICloudBlob
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Specifies the storage container name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BlobNameWithPermission, BlobNameWithPolicy
 Aliases: 
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 Specifies the storage context.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 Specifies when the shared access signature expires.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet return the full blob URI and the shared access signature token.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -162,7 +162,7 @@ Specifies the IP address or range of IP addresses from which to accept requests,
 The range is inclusive.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 Specifies the permissions for a storage blob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BlobNameWithPermission, BlobPipelineWithPermission
 Aliases: 
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 Specifies an Azure Stored Access Policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BlobPipelineWithPolicy, BlobNameWithPolicy
 Aliases: 
 
@@ -212,7 +212,7 @@ The acceptable values for this parameter are:
 The default value is HttpsOrHttp.
 
 ```yaml
-Type: SharedAccessProtocol
+Type: System.Nullable`1[Microsoft.WindowsAzure.Storage.SharedAccessProtocol]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HttpsOnly, HttpsOrHttp
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 Specifies the time at which the shared access signature becomes valid.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 

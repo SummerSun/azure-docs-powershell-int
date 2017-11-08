@@ -58,7 +58,7 @@ Specify an Azure region name.
 For a full list of Azure regions, see Azure Regionshttp://azure.microsoft.com/regions/ (http://azure.microsoft.com/regions/).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -79,7 +79,7 @@ Valid values are:
 If the status is Enabled, the endpoint is probed for endpoint health and is included in the traffic-routing method.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enabled, Disabled
@@ -110,7 +110,7 @@ Specify an Azure region name.
 For a full list of Azure regions, see Azure Regionshttp://azure.microsoft.com/regions/ (http://azure.microsoft.com/regions/).
 
 ```yaml
-Type: UInt32
+Type: System.Nullable`1[System.UInt32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Specifies the name of the Traffic Manager endpoint that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -146,7 +146,7 @@ If you specify a priority, you must specify priorities on all endpoints in the p
 If you do not specify priorities, Traffic Manager assigns default priority values to the endpoints, starting with one (1), in the order the profile lists the endpoints.
 
 ```yaml
-Type: UInt32
+Type: System.Nullable`1[System.UInt32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -162,7 +162,7 @@ Specifies the name of a Traffic Manager profile to which this cmdlet adds an end
 To obtain a profile, use the New-AzureRmTrafficManagerProfile or Get-AzureRmTrafficManagerProfile cmdlets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -178,7 +178,7 @@ Specifies the name of a resource group.
 This cmdlet creates a Traffic Manager endpoint in the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -196,7 +196,7 @@ Specify this parameter only for the ExternalEndpoints endpoint type.
 For other endpoint types, specify the *TargetResourceId* parameter instead.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -213,7 +213,7 @@ Specify this parameter only for the AzureEndpoints and NestedEndpoints endpoint 
 For the ExternalEndpoints endpoint type, specify the *Target* parameter instead.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -233,7 +233,7 @@ Valid values are:
 - NestedEndpoints
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureEndpoints, ExternalEndpoints, NestedEndpoints
@@ -252,7 +252,7 @@ The default value is one (1).
 This parameter is used only if the Traffic Manager profile is configured with the Weighted traffic-routing method.
 
 ```yaml
-Type: UInt32
+Type: System.Nullable`1[System.UInt32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

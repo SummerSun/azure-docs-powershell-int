@@ -42,7 +42,7 @@ Creates a new Service Bus queue `SB-Queue_exampl1` in the specified Service Bus 
 Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) idle interval, after which the queue is automatically deleted. The minimum duration is 5 minutes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 Specifies whether messages are deadlettered on expiration.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies the default message time-to-live (TTL).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Specifies the duplicate detection history time window, a [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) valuethat defines the duration of the duplicate detection history. The default value is 10 minutes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Specifies whether server-side batched operations are enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 Specifies whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies whether EnablePartitioning is enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Specifies whether the message is anonymously accessible.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Specifies the lock duration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 Specifies the maximum delivery count. A message is automatically deadlettered after this number of deliveries.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 Specifies the maximum size of the queue in megabytes, which is the size of memory allocated for the queue.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 Specifies the number of messages in the queue.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 Specifies whether the queue requires duplicate detection.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 Specifies whether this queue supports sessions.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 The size of the queue in bytes.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -290,7 +290,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 
 ### -Name
 Queue Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: QueueName
 
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 Namespace Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 The name of the resource group```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceGroup
 

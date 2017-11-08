@@ -58,7 +58,7 @@ When set, indicates the version of the resource provider API to use.
 If not specified, the API version is automatically determined as the latest available.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ e.g.
 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy set definition Id parameter set.
 Aliases: ResourceId
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 The policy set definition name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy set definition name parameter set.
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

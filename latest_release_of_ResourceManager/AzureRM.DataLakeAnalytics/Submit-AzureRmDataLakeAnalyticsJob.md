@@ -81,7 +81,7 @@ This command submits a Data Lake Analytics job.
 Specifies the Data Lake Analytics account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -101,7 +101,7 @@ The acceptable values for this parameter are:
 - SingleBox
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Semantic, Full, SingleBox
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet compiles the job without running it.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Analytics Units (DLAU) of the job, which indicates the maximum allowable parallelism of the job.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 Specifies the job name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 An ID that indicates the submission of this job is a part of a set of recurring jobs and also associated with a job pipeline.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 An optional friendly name for the pipeline associated with this job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 An optional uri that links to the originating service associated with this pipeline.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -209,7 +209,7 @@ If not specified, the priority is 1000.
 A low number indicates a higher job priority.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 An ID that indicates the submission of this job is a part of a set of recurring jobs with the same recurrence ID.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Submit job with script path for U-SQL with reucurrence information, Submit U-SQL Job with recurrence information, Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 An optional friendly name for the recurrence correlation between jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit job with script path for U-SQL with reucurrence information, Submit U-SQL Job with recurrence information, Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 An ID that identifies this specific run iteration of the pipeline.
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 Specifies the runtime version of the job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 Specifies the contents of the script to run.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit U-SQL Job, Submit U-SQL Job with recurrence information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 Specifies the local file path to the script to run.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit job with script path for U-SQL, Submit job with script path for U-SQL with reucurrence information, Submit job with script path for U-SQL with reucurrence and pipeline information
 Aliases: 
 
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

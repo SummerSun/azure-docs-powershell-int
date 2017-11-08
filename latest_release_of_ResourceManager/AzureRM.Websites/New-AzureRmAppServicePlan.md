@@ -48,7 +48,7 @@ The command specifies a Basic Tier and allocates two small workers.
 App Service Plan Object
 
 ```yaml
-Type: ServerFarmWithRichSku
+Type: Microsoft.Azure.Management.WebSites.Models.ServerFarmWithRichSku
 Parameter Sets: S2
 Aliases: 
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 App Service Environment Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 App Service Environment Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 Location 
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 App Service Plan Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Number Of Workers
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 Whether or not to enable Per Site Scaling
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 Tier
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Free, Shared, Basic, Standard, Premium
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 Size of web worker
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Small, Medium, Large, ExtraLarge
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -52,7 +52,7 @@ This command gets a list of all pipelines in the account "contosoadla"
 Name of the Data Lake Analytics account name under which want to retrieve the job pipeline.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ID of the specific job pipeline to return information for.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Specific Job Pipeline
 Aliases: Id
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 An optional filter which returns job pipeline(s) only submitted after the specified time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 An optional filter which returns job pipeline(s) only submitted before the specified time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: (All)
 Aliases: 
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

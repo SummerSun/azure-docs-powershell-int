@@ -36,7 +36,7 @@ This command gets the extension image type for the specified publisher and locat
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -52,7 +52,7 @@ Specifies the location of an extension.
 This cmdlet gets the type for an extension at the location that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,7 +69,7 @@ To obtain an extension publisher, use the Get-AzureRmVMImagePublisher cmdlet.
 This cmdlet gets the type for an extension from the publisher that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

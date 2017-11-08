@@ -54,7 +54,7 @@ Specifies the job to get.
 To obtain a **BackupJob** object, use the Get-AzureRmRecoveryServicesBackupJob cmdlet.
 
 ```yaml
-Type: JobBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase
 Parameter Sets: JobFilterSet
 Aliases: 
 
@@ -70,7 +70,7 @@ Specifies the ID of a Backup job.
 The ID is the InstanceId property of a **BackupJob** object.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: IdFilterSet
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

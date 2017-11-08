@@ -40,7 +40,7 @@ This command sets the primary and secondary keys for a subscription and activate
 Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,7 +56,7 @@ Specifies a subscription expiration date.
 The default value of this parameter is $Null.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Specifies a subscription name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 passthru
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +103,7 @@ This parameter is generated automatically if not specified.
 This parameter must be 1 to 300 characters long.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +120,7 @@ This parameter is generated automatically if not specified.
 This parameter must be 1 to 300 characters long.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -136,7 +136,7 @@ Specifies the subscription state.
 The default value of this parameter is $Null.
 
 ```yaml
-Type: PsApiManagementSubscriptionState
+Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionState]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Suspended, Active, Expired, Submitted, Rejected, Cancelled
@@ -153,7 +153,7 @@ Specifies the subscription state comment.
 The default value of this parameter is $Null.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 Specifies the subscription ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

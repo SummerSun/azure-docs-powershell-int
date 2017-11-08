@@ -31,7 +31,7 @@ The **Remove-AzureRMSiteRecoveryPolicy** cmdlet removes an Azure Site Recovery r
 Specifies the Site Recovery policy object.
 
 ```yaml
-Type: ASRPolicy
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRPolicy
 Parameter Sets: (All)
 Aliases: 
 
@@ -44,7 +44,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

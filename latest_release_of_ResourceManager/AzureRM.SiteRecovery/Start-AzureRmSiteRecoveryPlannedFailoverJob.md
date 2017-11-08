@@ -53,7 +53,7 @@ The acceptable values for this parameter are:
 - No
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Yes, No
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Specifies the primary certificate file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 Specifies the secondary certificate file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +103,7 @@ The acceptable values for this parameter are:
 - RecoveryToPrimary
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: PrimaryToRecovery, RecoveryToPrimary
@@ -133,7 +133,7 @@ With this setting enabled, the virtual machine is shut down immediately.
 Synchronization starts after shutdown to complete the failover operation.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: ForDownTime, ForSynchronization
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery protection entity object.
 
 ```yaml
-Type: ASRProtectionEntity
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity
 Parameter Sets: ByPEObject
 Aliases: 
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 Specifies a recovery plan object.
 
 ```yaml
-Type: ASRRecoveryPlan
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlan
 Parameter Sets: ByRPObject
 Aliases: 
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 ### -ReplicationProtectedItem
 ```yaml
-Type: ASRReplicationProtectedItem
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem
 Parameter Sets: ByRPIObject
 Aliases: 
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -Server
 ```yaml
-Type: ASRServer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRServer
 Parameter Sets: ByPEObject
 Aliases: 
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 
 ### -ServicesProvider
 ```yaml
-Type: ASRRecoveryServicesProvider
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryServicesProvider
 Parameter Sets: ByRPIObject
 Aliases: 
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -67,7 +67,7 @@ Specifies the URI to a base image blob in Azure Blob Storage.
 An SAS can be specified as the value for this parameter.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: bs
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -96,7 +96,7 @@ Specifies the URI of a blob in Blob Storage.
 The parameter supports SAS URI, although patching scenarios destination cannot be an SAS URI.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: dst
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 Specifies the path of the local .vhd file.
 
 ```yaml
-Type: FileInfo
+Type: System.IO.FileInfo
 Parameter Sets: (All)
 Aliases: lf
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 Specifies the number of uploader threads to be used when uploading the .vhd file.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: th
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet overwrites an existing blob in the specified destination URI, if one exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: o
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

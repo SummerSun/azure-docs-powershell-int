@@ -36,7 +36,7 @@ The **Get-AzureRmSchedulerJob** cmdlet gets Azure Scheduler jobs.
 Specifies the name of a job collection that contains jobs to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name, ResourceName
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 Specifies the name of a job to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +72,7 @@ The acceptable values for this parameter are:
 - Completed
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enabled, Disabled, Faulted, Completed
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Specifies the resource group of the jobs to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

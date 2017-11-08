@@ -43,7 +43,7 @@ The **Get-AzureRmCdnCustomDomain** cmdlet gets an Azure Content Delivery Network
 Specifies the CDN endpoint object of which the custom domain is a member.
 
 ```yaml
-Type: PSEndpoint
+Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint
 Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
@@ -59,7 +59,7 @@ Specifies the name of the custom domain.
 The name of the custom domain differs from the host name of the custom domain.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specifies the name of the endpoint to which the custom domain belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 Specifies the name of the Profile to which the custom domain belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the custom domain belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

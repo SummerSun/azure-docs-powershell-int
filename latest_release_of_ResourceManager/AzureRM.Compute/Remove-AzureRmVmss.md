@@ -45,7 +45,7 @@ This command removes the virtual machine with instance ID 3 from the VMSS named 
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +76,7 @@ Specifies, as a string array, the ID of the instances that need to be started.
 For instance: `-InstanceId "0", "3"`
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that the VMSS belongs to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Species the name of the VMSS that this cmdlet removes.
 If you specify the *InstanceId* parameter, the cmdlet will remove the specified virtual machine from the VMSS named by this parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

@@ -165,7 +165,7 @@ Specifies the name of the Redis Cache to get.
 Use with the *ResourceGroupName* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific Redis Cache
 Aliases: 
 
@@ -182,7 +182,7 @@ Specifies the name of the resource group that contains the Redis Cache to get.
 If you specify only the *ResourceGroupName* parameter, this operation gets every Redis Cache in the specified resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: All In Resource Group, Specific Redis Cache
 Aliases: 
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

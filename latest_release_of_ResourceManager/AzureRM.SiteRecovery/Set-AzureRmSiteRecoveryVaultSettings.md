@@ -39,7 +39,7 @@ This does not apply to recovery services vaults.
 Specifies an **ARSVault** object.
 
 ```yaml
-Type: ARSVault
+Type: Microsoft.Azure.Commands.RecoveryServices.ARSVault
 Parameter Sets: AzureRecoveryServicesVault
 Aliases: 
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 Specifies an **ASRVault** object.
 
 ```yaml
-Type: ASRVault
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRVault
 Parameter Sets: AzureSiteRecoveryVault
 Aliases: 
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

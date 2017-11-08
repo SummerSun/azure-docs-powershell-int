@@ -44,7 +44,7 @@ This URL lets users conntect to a supplementary portal and use additional featur
 Specifies the CDN profile.
 
 ```yaml
-Type: PSProfile
+Type: Microsoft.Azure.Commands.Cdn.Models.Profile.PSProfile
 Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Specifies the name of the CDN profile.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group name to which the profile belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

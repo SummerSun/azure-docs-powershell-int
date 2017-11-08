@@ -110,7 +110,7 @@ The acceptable values for this parameter are:
 - Anonymous.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Windows, Basic, Anonymous
@@ -127,7 +127,7 @@ Specifies the Windows authentication credentials (user name and password) to be 
 This cmdlet encrypts the credential data you specify here.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 Specifies the database name of the linked service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -158,7 +158,7 @@ Specifies a **PSDataFactory** object.
 This cmdlet encrypts data for the data factory that this parameter specifies.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory
 Parameter Sets: ByFactoryObject
 Aliases: 
 
@@ -174,7 +174,7 @@ Specifies the name of a data factory.
 This cmdlet encrypts data for the data factory that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -190,7 +190,7 @@ Specifies the name of the gateway.
 This cmdlet encrypts data for the gateway that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -206,7 +206,7 @@ Specifies the non-credential part of the Open Database Connectivity (ODBC) conne
 This parameter is applicable only for the ODBC linked service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -222,7 +222,7 @@ Specifies the name of an Azure resource group.
 This cmdlet encrypts data for the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 Specifies the server name of the linked service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -264,7 +264,7 @@ The acceptable values for this parameter are:
 - OnPremisesSybaseLinkedService
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: OnPremisesSqlLinkedService, OnPremisesFileSystemLinkedService, OnPremisesOracleLinkedService, OnPremisesOdbcLinkedService, OnPremisesPostgreSqlLinkedService, OnPremisesTeradataLinkedService, OnPremisesMySQLLinkedService, OnPremisesDB2LinkedService, OnPremisesSybaseLinkedService, HdfsLinkedService
@@ -283,7 +283,7 @@ For an on-premises ODBC linked service, use the credential part of the connectio
 For on premises file system linked service, if the file system is local to the gateway computer, use Local or localhost, and if the file system is on a server different from the gateway computer, use \\\\servername.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: (All)
 Aliases: 
 
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

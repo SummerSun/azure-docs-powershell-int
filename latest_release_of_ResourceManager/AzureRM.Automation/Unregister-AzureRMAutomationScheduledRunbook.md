@@ -48,7 +48,7 @@ This command removes the association between the runbook named Runbk01 and the s
 Specifies an Automation account for the runbook on which this cmdlet operates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ps_force
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 Specifies the ID of a scheduled runbook.
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: ByJobScheduleId
 Aliases: 
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for the scheduled runbook.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 Specifies the name of the runbook that this cmdlet dissociates from a schedule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRunbookNameAndScheduleName
 Aliases: Name
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Specifies the name of the schedule from which this cmdlet dissociates a runbook.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRunbookNameAndScheduleName
 Aliases: 
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -154,7 +154,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

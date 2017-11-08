@@ -42,7 +42,7 @@ Creates a new Service Bus topic `SB-Topic_exampl1` in the specified Service Bus 
 Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 Specifies the duration after which the message expires, starting from when the message is sent to Service Bus.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Indicates whether server-side batched operations are enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 Specifies whether to enable the topic to be partitioned across multiple message brokers. 
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies whether to enable subscription partitioning.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Indicates whether filtering is enabled for messages before publishing.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Indicates whether the message allows anonymous access.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 Indicates whether the topic is express enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 The maximum size of the topic in megabytes, which is the size of memory allocated for the topic.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 Indicates whether the topic requires duplication detection.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 Specifies the size of the topic in bytes.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 Indicates whether the topic supports ordering.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -277,7 +277,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 
 ### -Name
 Topic Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: TopicName
 
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 Namespace Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 The name of the resource group```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceGroup
 

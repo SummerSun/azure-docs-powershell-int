@@ -86,7 +86,7 @@ Specifies the API version that is supported by the resource Provider.
 You can specify a different version than the default version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,7 +105,7 @@ The acceptable values for this parameter are:
 - Complete
 
 ```yaml
-Type: DeploymentMode
+Type: Microsoft.Azure.Management.ResourceManager.Models.DeploymentMode
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to test.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 Specifies the full path of a JSON template file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Deployment via template file without parameters, Deployment via template file and template parameters object, Deployment via template file and template parameters file, Deployment via template file template parameters uri
 Aliases: 
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 Specifies the full path of a JSON file that contains the names and values of the template parameters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Deployment via template file and template parameters file, Deployment via template uri and template parameters file
 Aliases: 
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 Specifies a hash table of template parameter names and values.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Deployment via template file and template parameters object, Deployment via template uri and template parameters object
 Aliases: 
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 Specifies the URI of a template parameters file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Deployment via template file template parameters uri, Deployment via template uri and template parameters uri
 Aliases: 
 
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 Specifies the URI of a JSON template file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Deployment via template uri and template parameters object, Deployment via template uri and template parameters file, Deployment via template uri and template parameters uri, Deployment via template uri without parameters
 Aliases: 
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

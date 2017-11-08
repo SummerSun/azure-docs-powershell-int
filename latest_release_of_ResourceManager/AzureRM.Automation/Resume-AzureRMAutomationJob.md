@@ -41,7 +41,7 @@ This command resumes the job that has the specified ID.
 Specifies the name of an Automation account in which this cmdlet resume a job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 Specifies the ID of a job that this cmdlet resumes.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: JobId
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet resumes a job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

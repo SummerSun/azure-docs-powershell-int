@@ -49,7 +49,7 @@ This command sets a new value for the variable named StringVariable22 in the Azu
 Specifies the name of the Automation account in which the variable is stored.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 Specifies a description for the variable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UpdateVariableDescription
 Aliases: 
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 Specifies whether cmdlet encrypts the value of the variable for storage.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: UpdateVariableValue
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 Specifies the name of the variable that this cmdlet modifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 Specifies the resource group for which this cmdlet modifies a variable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 Specifies a value for the variable.
 
 ```yaml
-Type: Object
+Type: System.Object
 Parameter Sets: UpdateVariableValue
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

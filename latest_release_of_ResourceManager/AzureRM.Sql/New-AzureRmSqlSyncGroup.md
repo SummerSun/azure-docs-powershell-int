@@ -60,7 +60,7 @@ This command creates a sync group for an Azure SQL Database. "schema.json" is a 
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 The policy of resolving confliction between hub and member database in the sync group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HubWin, MemberWin
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 The name of the Azure SQL Database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 The SQL authentication credential of the hub database.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,7 +122,7 @@ The frequency (in seconds) of doing data synchronization.
 Default is -1, which means the auto synchronization is not enabled.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 The sync group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: SyncGroupName
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 The name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 The path of the schema file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 The name of the Azure SQL Server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 The database used to store sync related metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 The resource group the sync metadata database belongs to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 The server on which the sync metadata database is hosted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -243,7 +243,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

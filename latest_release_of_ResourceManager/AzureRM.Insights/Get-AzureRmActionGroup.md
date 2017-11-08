@@ -59,7 +59,7 @@ This command lists one (a list with a single element) action group.
 The name of the action group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 The resource group name```yaml
-Type: String
+Type: System.String
 Parameter Sets: BySubscriptionOrResourceGroup
 Aliases: 
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 

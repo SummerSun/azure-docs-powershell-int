@@ -38,7 +38,7 @@ The **Resume-AzureRmSiteRecoveryJob** cmdlet resumes a suspended Azure Site Reco
 Specifies the comments for the job log.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery job object.
 
 ```yaml
-Type: ASRJob
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRJob
 Parameter Sets: ByObject
 Aliases: 
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Specifies the unique name for the job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

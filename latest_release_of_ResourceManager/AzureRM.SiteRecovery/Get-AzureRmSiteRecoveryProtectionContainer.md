@@ -61,7 +61,7 @@ Protection policies define replication settings for protected items and can be a
 
 ### -Fabric
 ```yaml
-Type: ASRFabric
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRFabric
 Parameter Sets: ByObjectWithName, ByObjectWithFriendlyName, ByFabricObject
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies the friendly name of the protection container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectWithFriendlyName, ByObjectWithFriendlyNameLegacy
 Aliases: 
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 Specifies the name of the protection container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectWithName, ByObjectWithNameLegacy
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

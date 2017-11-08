@@ -48,7 +48,7 @@ The final command then removes the region named East US from that instance then 
 Specifies the **PsApiManagement** instance that this cmdlet removes the additional deployment region from.
 
 ```yaml
-Type: PsApiManagement
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +81,7 @@ Valid values are:
 - Australia Southeast
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

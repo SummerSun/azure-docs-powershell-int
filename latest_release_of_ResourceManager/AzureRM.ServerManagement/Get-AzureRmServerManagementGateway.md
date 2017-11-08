@@ -85,7 +85,7 @@ The cmdlet uses the *ResourceGroupName* and *GatewayName* parameters through the
 When this parameter is specified, this cmdlet will include detailed status for the gateway.
 
 ```yaml
-Type: Gateway
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Gateway
 Parameter Sets: Single-ByObject
 Aliases: 
 
@@ -102,7 +102,7 @@ Specifies the name of the Server Management Gateway for which this cmdlet gets g
 When you specify the *GatewayName* parameter, this cmdlet will include detailed status on the gateway.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Single-ByName
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group for which this cmdlet gets gateways.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Many-ByResourceGroup, Single-ByName
 Aliases: 
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -48,7 +48,7 @@ This command gets a **PsApiManagement** object, adds two premium SKU units for t
 Specifies the **PsApiManagement** instance that this cmdlet adds additional deployment regions to.
 
 ```yaml
-Type: PsApiManagement
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 Parameter Sets: (All)
 Aliases: 
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 Specifies the SKU capacity of the deployment region.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +96,7 @@ Valid values are:
 - Australia Southeast
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,7 +116,7 @@ Valid values are:
 - Premium
 
 ```yaml
-Type: PsApiManagementSku
+Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Developer, Standard, Premium
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies a virtual network configuration.
 
 ```yaml
-Type: PsApiManagementVirtualNetwork
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
 Parameter Sets: (All)
 Aliases: 
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

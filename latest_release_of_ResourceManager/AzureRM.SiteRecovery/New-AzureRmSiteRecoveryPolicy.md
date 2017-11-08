@@ -45,7 +45,7 @@ The replication policy is used to specify replication settings such as the repli
 Specifies the frequency of the application consistent snapshot in hours.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -64,7 +64,7 @@ Valid values are:
 -  Kerberos
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 Accepted values: Certificate, Kerberos
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 
 ### -Compression
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 Accepted values: Enable, Disable
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -Encryption
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToAzure
 Aliases: 
 Accepted values: Enable, Disable
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 Specifies a friendly name which identifies the Site Recovery replication policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Specifies the Azure storage account ID of the replication target.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToAzure
 Aliases: 
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 Specifies the number of hours to retain recovery points.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ### -ReplicaDeletion
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 Accepted values: Required, NotRequired
@@ -172,7 +172,7 @@ Valid values are:
 - 900
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: 30, 300, 900
@@ -192,7 +192,7 @@ Valid values are:
 - Offline
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 Accepted values: Online, Offline
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 Specifies the port used for replication.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 
@@ -228,7 +228,7 @@ Valid values are:
 - HyperVReplicaAzure
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HyperVReplica2012R2, HyperVReplica2012, HyperVReplicaAzure
@@ -245,7 +245,7 @@ Specifies the replication start time.
 It must be no later than 24-hours from the start of the job.
 
 ```yaml
-Type: TimeSpan
+Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: (All)
 Aliases: 
 
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

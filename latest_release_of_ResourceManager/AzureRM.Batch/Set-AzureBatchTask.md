@@ -48,7 +48,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 Specifies the **PSCloudTask** to which this cmdlet updates the Batch service.
 
 ```yaml
-Type: PSCloudTask
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudTask
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

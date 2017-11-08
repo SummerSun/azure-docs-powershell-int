@@ -37,7 +37,7 @@ Returns the specified authorization rule description for a specified namespace.
 The name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 
 ### -Name
 ServiceBus Namespace AuthorizationRule Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AuthorizationRuleName
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 ServiceBus Namespace Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
 

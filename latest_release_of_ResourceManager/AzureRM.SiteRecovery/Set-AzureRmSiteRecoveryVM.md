@@ -33,7 +33,7 @@ The **Set-AzureRmSiteRecoveryVM** cmdlet sets the recovery-side protection optio
 Specifies the name of the target virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -52,7 +52,7 @@ The acceptable values for this parameter are:
 - SelectedByUser
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NotSelected, SelectedByUser
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Specifies the primary network adapter card.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 Specifies the recovery network ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 Specifies the static IP address that is assigned to primary network adapter controller on recovery.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 Specifies the Azure virtual network subnet name with which to attach the primary network adapter controller on recovery.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 Specifies the target virtual machine size.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery virtual machine object.
 
 ```yaml
-Type: ASRVirtualMachine
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRVirtualMachine
 Parameter Sets: (All)
 Aliases: 
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

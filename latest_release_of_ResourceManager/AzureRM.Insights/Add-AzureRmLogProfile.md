@@ -79,7 +79,7 @@ Accept wildcard characters: False
 Specifies the name of the profile.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 Specifies the retention policy, in days. This is the number of days the logs are preserved in the storage account specified. To retain the data forever set this to **0**. If it's not specified, then it defaults to **0**. Normal standard storage or event hub billing rates will apply for data retention.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 Specifies the ID of the Service Bus rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,7 +126,7 @@ Specifies the ID of the Storage account. ID is the fully qualified Resource ID o
 /subscriptions/40gpe80s-9sb7-4f07-9042-b1b6a92ja9fk/resourceGroups/activitylogRG/providers/Microsoft.Storage/storageAccounts/activitylogstorageaccount
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

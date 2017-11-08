@@ -56,7 +56,7 @@ Specifies the Backup item for which this cmdlet enables protection.
 To obtain an **AzureRmBackupItem**, use the Get-AzureRmBackupItem cmdlet.
 
 ```yaml
-Type: AzureRMBackupContainerContextObject
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupContainerContextObject
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +72,7 @@ Specifies protection policy that this cmdlet associates with an item.
 To obtain an **AzureRmBackupProtectionPolicy** object, use the Get-AzureRmBackupProtectionPolicy cmdlet.
 
 ```yaml
-Type: AzureRMBackupProtectionPolicy
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupProtectionPolicy
 Parameter Sets: (All)
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

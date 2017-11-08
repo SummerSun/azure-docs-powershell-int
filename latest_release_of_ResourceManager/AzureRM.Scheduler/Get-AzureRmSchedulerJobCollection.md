@@ -36,7 +36,7 @@ The **Get-AzureRmSchedulerJobCollection** cmdlet gets job collections in Azure S
 Specifies the name of a job collection.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name, ResourceName
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 Specifies resource group from which this cmdlet gets job collections.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

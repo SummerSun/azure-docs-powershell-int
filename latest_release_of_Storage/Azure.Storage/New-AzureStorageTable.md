@@ -46,7 +46,7 @@ Specifies the storage context.
 To create it, you can use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies a name for the new table.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: N, Table
 

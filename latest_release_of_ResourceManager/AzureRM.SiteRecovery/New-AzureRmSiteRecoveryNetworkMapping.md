@@ -38,7 +38,7 @@ The **New-AzureRMSiteRecoveryNetworkMapping** cmdlet creates a mapping between t
 Specifies the Azure virtual network ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToAzure
 Aliases: 
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 
 ### -Name
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 Specifies the primary network object.
 
 ```yaml
-Type: ASRNetwork
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRNetwork
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Specifies the recovery network object.
 
 ```yaml
-Type: ASRNetwork
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRNetwork
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

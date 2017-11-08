@@ -46,7 +46,7 @@ The cmdlet uses the specified resource group and name of the lab to set the poli
 Specifies, as an array, the days of the week for when the virtual machines of the lab must be started.
 
 ```yaml
-Type: DayOfWeek[]
+Type: System.DayOfWeek[]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet disables the policy for the virtual machines in the lab.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Disable
 Aliases: 
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet enables the policy for the virtual machines in the lab.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Enable
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies the name of the lab for which this cmdlet sets the automatic start policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that the lab belongs to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 Specifies the time when the virtual machines of the lab must be started.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -153,7 +153,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

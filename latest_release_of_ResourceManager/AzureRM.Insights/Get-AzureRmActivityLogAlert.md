@@ -59,7 +59,7 @@ This command lists one (a list with a single element) activity log alert.
 The name of the activity log alert.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Default parameters for get an activity log alert
 Aliases: 
 
@@ -75,7 +75,7 @@ The name of the resource group where the alert resource exists.
 If Name is not null or empty, this parameter must contain and non empty string.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Default parameters for get an activity log alert
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameters to make sure the resource group is given when the name is given
 Aliases: 
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -75,7 +75,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Specifies the ID of the compute node that contains the Batch node file that this cmdlet deletes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -121,7 +121,7 @@ Specifies **PSNodeFile** object that represent the node file that this cmdlet de
 To obtain a **PSNodeFile**, use the Get-AzureBatchNodeFile cmdlet.
 
 ```yaml
-Type: PSNodeFile
+Type: Microsoft.Azure.Commands.Batch.Models.PSNodeFile
 Parameter Sets: InputObject
 Aliases: 
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 Specifies the ID of the job that contains the task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task
 Aliases: 
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Specifies the name of the node file that this cmdlet deletes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task, ComputeNode
 Aliases: 
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute nodes for which this cmdlet removes a file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode
 Aliases: 
 
@@ -182,7 +182,7 @@ Indicates that this cmdlet deletes the folder and all subfolders and files under
 This cmdlet is relevant only if the path is a folder.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 Specifies the ID of the task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task
 Aliases: 
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -228,7 +228,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -241,7 +241,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

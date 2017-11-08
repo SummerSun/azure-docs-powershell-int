@@ -58,7 +58,7 @@ Specifies the Azure storage context.
 You can create it by using the **New-AzureStorageContext** cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ If no name is specified, the cmdlet gets a list of all the queues.
 If a full or partial name is specified, the cmdlet gets all queues that match the name pattern.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: QueueName
 Aliases: N, Queue
 
@@ -90,7 +90,7 @@ Accept wildcard characters: True
 Specifies a prefix used in the name of the queues you want to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: QueuePrefix
 Aliases: 
 

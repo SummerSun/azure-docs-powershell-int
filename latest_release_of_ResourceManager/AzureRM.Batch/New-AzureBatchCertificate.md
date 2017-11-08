@@ -56,7 +56,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +72,7 @@ Specifies the path of the certificate file.
 The certificate file must be in either .cer or .pfx format.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: File
 Aliases: 
 
@@ -88,7 +88,7 @@ Specifies the password to access the certificate private key.
 You must specify this parameter if you specify a certificate in .pfx format.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Specifies the raw certificate data in either .cer or .pfx format.
 
 ```yaml
-Type: Byte[]
+Type: System.Byte[]
 Parameter Sets: RawData
 Aliases: 
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

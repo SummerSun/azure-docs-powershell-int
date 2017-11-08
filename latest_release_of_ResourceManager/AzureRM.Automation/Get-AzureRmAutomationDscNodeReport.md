@@ -80,7 +80,7 @@ Specifies the name of an Automation account.
 This cmdlet exports reports for a DSC node that belongs to the account that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +96,7 @@ Specifies an end time.
 This cmdlet gets reports that Automation received before this time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: ByAll
 Aliases: 
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 Specifies the unique ID of the DSC node report for this cmdlet to get.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ById
 Aliases: ReportId
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet gets the latest DSC report for the specified node only.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByLatest
 Aliases: 
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Specifies the unique ID of the DSC node for which this cmdlet gets reports.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group that contains the DSC node for which this cmdlet gets reports.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -172,7 +172,7 @@ Specifies a start time.
 This cmdlet gets reports that Automation received after this time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: ByAll
 Aliases: 
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

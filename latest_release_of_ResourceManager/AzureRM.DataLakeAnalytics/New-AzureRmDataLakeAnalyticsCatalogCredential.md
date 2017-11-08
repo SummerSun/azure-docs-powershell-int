@@ -62,7 +62,7 @@ This command creates the specified credential for the specified account, databas
 Specifies the Data Lake Analytics account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Specifies the user name and corresponding password of the credential.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies the name and password of the credential.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the host name of the external data source the credential can connect to in the format mydatabase.contoso.com.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specify full URI
 Aliases: 
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 Specifies the name of the database in the Data Lake Analytics acocunt that the credential will be stored in.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 Specifies the port number used to connect to the specified DatabaseHost using this credential.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Specify full URI
 Aliases: 
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 Specifies the full Uniform Resource Identifier (URI) of the external data source this credential can connect to.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: Specify host name and port
 Aliases: 
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

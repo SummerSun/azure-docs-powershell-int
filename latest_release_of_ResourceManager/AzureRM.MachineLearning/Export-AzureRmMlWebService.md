@@ -60,7 +60,7 @@ Export-AzureRmMlWebService -WebService $svc -OutputFile "C:\mlservice.json"
 Do not ask for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 The file path for exported definition.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Export to file.
 Aliases: 
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Specifies that the definition will be exported as a JSON string.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Export to JSON string.
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 The web service definition object to be exported.
 
 ```yaml
-Type: WebService
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -136,7 +136,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

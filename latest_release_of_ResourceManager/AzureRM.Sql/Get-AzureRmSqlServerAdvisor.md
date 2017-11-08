@@ -163,7 +163,7 @@ This command gets advisor named CreateIndex from the server named wi-runner-aust
 Specifies the name of the advisor that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 Indicates that the cmdlet includes the recommended actions of the advisors that are included in the response.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 Specifies name of the resource group of the server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 Specifies the name of the server for the advisor that this cmdlet requests.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

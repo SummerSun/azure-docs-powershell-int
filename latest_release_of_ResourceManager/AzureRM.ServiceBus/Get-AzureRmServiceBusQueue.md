@@ -35,7 +35,7 @@ Returns the description of the queue.
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 
 ### -Name
 Queue Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: QueueName
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 Namespace Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 The name of the resource group```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceGroup
 

@@ -147,7 +147,7 @@ This command returns metrics for an Azure SQL elastic database pool named Elasti
 Specifies the name of the elastic pool that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the elastic pool that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 Specifies the name of the server that contains the elastic pool that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

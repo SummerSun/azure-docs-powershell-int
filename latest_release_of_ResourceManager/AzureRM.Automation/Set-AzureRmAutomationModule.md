@@ -56,7 +56,7 @@ This command imports an updated version of an existing module named ContosoModul
 Specifies the name of the Automation account for which this cmdlet updates a module.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Specifies the URL of the .zip file that contains the new version of a module that this cmdlet imports.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: ContentLink
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Specifies the version of the module to which this cmdlet updates Automation.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Specifies the name of the module that this cmdlet imports.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet updates a module.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

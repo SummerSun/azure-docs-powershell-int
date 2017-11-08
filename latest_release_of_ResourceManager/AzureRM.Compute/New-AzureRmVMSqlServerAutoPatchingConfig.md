@@ -50,7 +50,7 @@ If you enable automated patching the cmdlet puts Windows Update into interactive
 If you disable automated patching, Windows Update settings do not change.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +76,7 @@ The acceptable values for this parameter are:
 - Everyday
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Specifies the hour of the day when maintenance window starts.
 This time defines when updates start to install.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +109,7 @@ Automated patching avoids performing an action that can affect a virtual machine
 Specify a multiple of 30 minutes.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 Specifies whether important updates should be included.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -InformationAction
 @{Text=}```yaml
-Type: ActionPreference
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 ### -InformationVariable
 @{Text=}```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: iv
 

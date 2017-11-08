@@ -44,7 +44,7 @@ Gets details of Primary and Secondary connectionstrings and keys for the authori
 Resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 EventHub Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventhubAuthorizationRuleSet
 Aliases: EventHubName
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 AuthorizationRule Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AuthorizationRuleName
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NamespaceAuthorizationRuleSet
 Aliases: NamespaceName
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventhubAuthorizationRuleSet
 Aliases: NamespaceName
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

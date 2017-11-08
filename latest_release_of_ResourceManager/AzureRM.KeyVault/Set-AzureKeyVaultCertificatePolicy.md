@@ -54,7 +54,7 @@ This command sets the policy for the TestCert01 certificate in the ContosoKV01 k
 Specifies the certificate policy.
 
 ```yaml
-Type: KeyVaultCertificatePolicy
+Type: Microsoft.Azure.Commands.KeyVault.Models.KeyVaultCertificatePolicy
 Parameter Sets: ByValue
 Aliases: 
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Specifies the type of certificate to the issuer.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Expanded
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 Indicates that the certificate policy is disabled.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Expanded
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 Specifies how many days before expiry the automatic notification process begins.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 Specifies the percentage of the lifetime after which the automatic process for the notification begins.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 Specifies the name of the issuer for this certificate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Expanded
 Aliases: 
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 Indicates that the key is not exportable.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Expanded
 Aliases: 
 
@@ -193,7 +193,7 @@ The acceptable values for this parameter are:
 - RSA-HSM
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: RSA, RSA-HSM
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 Specifies the name of the certificate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: CertificateName
 
@@ -240,7 +240,7 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 Specifies the number of days before expiry after which the automatic process for certificate renewal begins.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: Expanded
 Aliases: 
 
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 Specifies the percentage of the lifetime after which the automatic process for certificate renewal begins.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: Expanded
 Aliases: 
 
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 Indicates that the certificate reuse the key during renewal.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: Expanded
 Aliases: 
 
@@ -304,7 +304,7 @@ The acceptable values for this parameter are:
 - application/x-pem-file
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Expanded
 Aliases: 
 Accepted values: application/x-pkcs12, application/x-pem-file
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 Specifies the subject name of the certificate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Expanded
 Aliases: 
 
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 Specifies the number of months the certificate is valid.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: Expanded
 Aliases: 
 
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 Specifies the name of a key vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -381,7 +381,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

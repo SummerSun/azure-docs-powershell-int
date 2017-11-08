@@ -49,7 +49,7 @@ Specifies the name of the Batch account that this cmdlet creates.
 Batch account names must be between 3 and 24 characters long and contain only numbers and lowercase letters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 Specifies the resource ID of the storage account to be used for auto storage.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -80,7 +80,7 @@ Specifies the region where this cmdlet creates the account.
 For more information, see [Azure Regions](https://azure.microsoft.com/en-us/regions).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group in which this cmdlet creates the account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -112,7 +112,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

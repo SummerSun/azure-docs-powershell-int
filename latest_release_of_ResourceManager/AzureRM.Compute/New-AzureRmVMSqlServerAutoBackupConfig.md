@@ -90,7 +90,7 @@ If you specify this parameter, automated backup sets a backup schedule for all c
 This updates your Managed Backup settings to follow this schedule.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 Specifies the number of days to retain a backup.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet enables encryption.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies a password to encrypt the certificate that is used to perform SQL Server encrypted backups.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: (All)
 Aliases: 
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 Specifies the Uniform Resource Identifier (URI) of the blob storage account.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 Specifies the storage key of the blob storage account.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: (All)
 Aliases: 
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. If you do not specify a profile, this cmdlet reads from the local default profile.```yaml
-Type: AzureSMProfile
+Type: Microsoft.WindowsAzure.Commands.Utilities.Common.AzureSMProfile
 Parameter Sets: (All)
 Aliases: 
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 
 ### -InformationAction
 @{Text=}```yaml
-Type: ActionPreference
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -InformationVariable
 @{Text=}```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: iv
 
@@ -221,7 +221,7 @@ To obtain an **AzureStorageContext** object, use the New-AzureStorageContext cmd
 The default is the storage account that is associated with the SQL Server virtual machine.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: StorageContextSqlServerAutoBackup
 Aliases: 
 
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -BackupScheduleType
 Backup schedule type, manual or automated```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -BackupSystemDbs
 Backup system databases```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 
 ### -FullBackupFrequency
 Sql Server Full Backup frequency, daily or weekly```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -273,7 +273,7 @@ Accept wildcard characters: False
 
 ### -FullBackupStartHour
 Hour of the day (0-23) when the Sql Server Full Backup should start```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 ### -FullBackupWindowInHours
 Sql Server Full Backup window in hours```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 
 ### -LogBackupFrequencyInMinutes
 Sql Server Log Backup frequency, once every 1-60 minutes```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 

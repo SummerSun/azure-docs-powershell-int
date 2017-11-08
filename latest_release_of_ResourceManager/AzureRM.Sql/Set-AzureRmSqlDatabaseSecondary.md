@@ -49,7 +49,7 @@ In the latter case, the secondary database is synchronized with the primary befo
 Indicates that this failover operation permits data loss.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByFailoverParams
 Aliases: 
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure SQL Database Secondary.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 Indicates that this operation is a failover.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByFailoverParams
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the partner Azure SQL Database is assigned.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the Azure SQL Database Secondary is assigned.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 Specifies the name of the SQL Server that hosts the Azure SQL Database Secondary.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -155,7 +155,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

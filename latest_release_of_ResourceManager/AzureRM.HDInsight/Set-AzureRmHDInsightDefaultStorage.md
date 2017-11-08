@@ -70,7 +70,7 @@ Specifies the HDInsight cluster configuration object that this cmdlet modifies.
 This object is created by the **New-AzureRmHDInsightClusterConfig** cmdlet.
 
 ```yaml
-Type: AzureHDInsightConfig
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig
 Parameter Sets: (All)
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 Specifies the account key for the default Azure Storage account that the HDInsight cluster will use.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 Specifies the name of the default storage account that the HDInsight cluster will use.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 Gets or sets the type of the default storage account. Defaults to AzureStorage
 
 ```yaml
-Type: StorageType
+Type: System.Nullable`1[Microsoft.Azure.Commands.HDInsight.Models.Management.StorageType]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureStorage, AzureDataLakeStore
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

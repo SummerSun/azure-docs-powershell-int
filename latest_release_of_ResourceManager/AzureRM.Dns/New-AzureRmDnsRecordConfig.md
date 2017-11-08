@@ -187,7 +187,7 @@ To create a **RecordSet** using only one line of pn_PowerShell_short, or to crea
 Specifies the domain name for a canonical name (CNAME) record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CName
 Aliases: 
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 Specifies the mail exchange server name for a mail exchange (MX) record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Mx
 Aliases: 
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 Specifies an IPv4 address for an A record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: A
 Aliases: 
 
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 Specifies an IPv6 address for an AAAA record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Aaaa
 Aliases: 
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 Specifies the name server name for a name server (NS) record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Ns
 Aliases: 
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 Specifies the port for a service (SRV) record.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: Srv
 Aliases: 
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 Specifies the preference for an MX record.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: Mx
 Aliases: 
 
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 Specifies the priority for an SRV record.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: Srv
 Aliases: 
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 Specifies the target domain name of a pointer resource (PTR) record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Ptr
 Aliases: 
 
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 Specifies the target for an SRV record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Srv
 Aliases: 
 
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 Specifies the value for a TXT record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Txt
 Aliases: 
 
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 Specifies the weight for an SRV record.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: Srv
 Aliases: 
 
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

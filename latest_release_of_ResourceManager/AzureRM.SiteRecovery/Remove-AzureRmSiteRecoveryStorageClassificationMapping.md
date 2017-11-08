@@ -32,7 +32,7 @@ The **Remove-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet removes a 
 Specifies a storage classification mapping that this cmdlet removes.
 
 ```yaml
-Type: ASRStorageClassificationMapping
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRStorageClassificationMapping
 Parameter Sets: (All)
 Aliases: 
 
@@ -45,7 +45,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

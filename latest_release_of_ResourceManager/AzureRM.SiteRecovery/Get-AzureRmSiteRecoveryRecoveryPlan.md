@@ -43,7 +43,7 @@ The **Get-AzureRmSiteRecoveryRecoveryPlan** cmdlet gets a recovery plan in Azure
 Specifies the friendly name of the recovery plan that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFriendlyName
 Aliases: 
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 Specifies the name of the recovery plan that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies the file path to which this cmdlet saves the recovery plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName, ByFriendlyName
 Aliases: 
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

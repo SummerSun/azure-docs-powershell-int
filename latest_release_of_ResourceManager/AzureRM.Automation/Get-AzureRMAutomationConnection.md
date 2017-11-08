@@ -69,7 +69,7 @@ This command gets metadata for the connection named ContosoConnection.
 Specifies the name of the Automation account for which this cmdlet gets connections.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 Specifies the name of a connection type for which this cmdlet retrieves connections.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByConnectionTypeName
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 Specifies the name of a connection that this cmdlet retrieves.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByConnectionName
 Aliases: 
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet gets connections.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

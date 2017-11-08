@@ -86,7 +86,7 @@ The above command deploys the DSC node configuration named "Config01.Node1" to t
 Specifies the name of a resource group in which this cmdlet compiles a configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 Specifies the Job Schedule id of an existing scheduled deployment job.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ByJobScheduleId
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

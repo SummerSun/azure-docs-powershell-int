@@ -58,7 +58,7 @@ This command returns information about the Stream Analytics job StreamingJob in 
 Specifies the name of the Azure Stream Analytics job to retrieve.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: For stream analytics objects in the given resource group
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Indicates the cmdlet will retrieve the Azure Stream Analytics job, but not return information on its inputs, outputs, and transformation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the Azure Stream Analytics job belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: For stream analytics objects in the given resource group
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

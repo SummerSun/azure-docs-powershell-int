@@ -82,7 +82,7 @@ The command uses variables assigned in previous commands for some parameters.
 Specifies the name of the computer.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +99,7 @@ To obtain a credential, use the Get-Credential cmdlet.
 For more information, type `Get-Help Get-Credential`.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,7 +116,7 @@ This is decoded to a binary array that is saved as a file on the virtual machine
 The maximum length of the binary array is 65535 bytes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet disables password authentication.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Linux
 Aliases: 
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet enables auto update.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
 Aliases: 
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 Indicates that the type of operating system is Linux.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Linux
 Aliases: 
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 Indicates that the settings require that the virtual machine agent be installed on the virtual machine.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
 Aliases: 
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 Specifies the time zone for the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Windows, WindowsWinRmHttps
 Aliases: 
 
@@ -221,7 +221,7 @@ To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
 Create a virtual machine object by using the New-AzureRmVMConfig cmdlet.
 
 ```yaml
-Type: PSVirtualMachine
+Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 Parameter Sets: (All)
 Aliases: VMProfile
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 Indicates that the type of operating system is Windows.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
 Aliases: 
 
@@ -252,7 +252,7 @@ Specifies the URI of a WinRM certificate.
 This needs to be stored in a Key Vault.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: WindowsWinRmHttps
 Aliases: 
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 Indicates that this operating system uses HTTP WinRM.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
 Aliases: 
 
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 Indicates that this operating system uses HTTPS WinRM.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: WindowsWinRmHttps
 Aliases: 
 

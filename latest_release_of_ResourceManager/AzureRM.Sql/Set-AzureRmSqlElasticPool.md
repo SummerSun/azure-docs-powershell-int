@@ -87,7 +87,7 @@ values for different editions are as follows:
 
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,7 +106,7 @@ For details about which values are valid, see the table for your specific size p
 The default value is zero (0).
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -130,7 +130,7 @@ editions are as follows:
 - Premium. 125 DTUs
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -154,7 +154,7 @@ edition. The acceptable values for this parameter are:
 - Free
 
 ```yaml
-Type: DatabaseEdition
+Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseEdition
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Premium, Basic, Standard, DataWarehouse, Stretch, Free, PremiumRS
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 Specifies the name of the elastic pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the elastic pool is assigned.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 Specifies the name of the server that hosts the elastic pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -216,7 +216,7 @@ Specifies the storage limit, in megabytes, for the elastic pool. For more inform
 New-AzureRmSqlElasticPool cmdlet.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -234,7 +234,7 @@ form of a hash table. For example:
 `@{key0="value0";"key 1"=$null;key2="value2"}`
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tag
 
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -265,7 +265,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

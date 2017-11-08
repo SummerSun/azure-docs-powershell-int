@@ -60,7 +60,7 @@ Specifies the Backup item for which this cmdlet enables protection.
 To obtain an **AzureRmRecoveryServicesBackupItem**, use the Get-AzureRmRecoveryServicesBackupItem cmdlet.
 
 ```yaml
-Type: ItemBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase
 Parameter Sets: ModifyProtection
 Aliases: 
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of the Backup item.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AzureVMComputeEnableProtection, AzureVMClassicComputeEnableProtection
 Aliases: 
 
@@ -91,7 +91,7 @@ Specifies protection policy that this cmdlet associates with an item.
 To obtain an **AzureRmRecoveryServicesBackupProtectionPolicy** object, use the Get-AzureRmRecoveryServicesBackupProtectionPolicy cmdlet.
 
 ```yaml
-Type: PolicyBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.PolicyBase
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Specifies the name of the resource group.
 Specify this parameter only for ARM virtual machines.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AzureVMComputeEnableProtection
 Aliases: 
 
@@ -123,7 +123,7 @@ Specifies the service name.
 Specify this parameter only for ASM virtual machines.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AzureVMClassicComputeEnableProtection
 Aliases: 
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -45,7 +45,7 @@ This command regenerates the secondary key for the media service named MediaServ
 Specifies the name of the media service that this cmdlet regenerates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name, ResourceName
 
@@ -61,7 +61,7 @@ Specifies the key type of the media service.
 The acceptable values for this parameter are: Primary or Secondary.
 
 ```yaml
-Type: KeyType
+Type: Microsoft.Azure.Management.Media.Models.KeyType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Primary, Secondary
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the media service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -108,7 +108,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

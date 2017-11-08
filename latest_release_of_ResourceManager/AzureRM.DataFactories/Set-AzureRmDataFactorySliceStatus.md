@@ -52,7 +52,7 @@ Specifies a **PSDataFactory** object.
 This cmdlet modifies the status of slices that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory
 Parameter Sets: ByFactoryObject
 Aliases: 
 
@@ -68,7 +68,7 @@ Specifies the name of a data factory.
 This cmdlet modifies the status of slices that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 Specifies the name of the dataset for which this cmdlet modifies slices.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +109,7 @@ For more information about **DateTime** objects, type `Get-Help Get-Date`.
 The default time zone designator is UTC.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -125,7 +125,7 @@ Specifies the name of an Azure resource group.
 This cmdlet modifies the status of slices that belong to the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -141,7 +141,7 @@ Specifies the start of a time period as a **DateTime** object.
 This time is the beginning of a data slice.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -168,7 +168,7 @@ Data processing failed.
 Skipped processing the data slice.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Failed, InProgress, Ready, Skipped, Waiting
@@ -190,7 +190,7 @@ Sets the status of each slice for the dataset in the specified time range.
 Sets the status of each slice for the dataset and all the dependent datasets, which are used as input datasets for activities in the pipeline.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Individual, UpstreamInPipeline
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

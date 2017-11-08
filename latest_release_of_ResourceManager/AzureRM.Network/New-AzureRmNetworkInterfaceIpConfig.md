@@ -144,7 +144,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 Specifies the name of the network interface IP configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 
 ### -Primary
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 Specifies the static IP address of the network interface IP configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -267,7 +267,7 @@ The acceptable values for this parameter are:
 - IPv6
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: IPv4, IPv6
@@ -284,7 +284,7 @@ Specifies a **PublicIPAddress** object.
 This cmdlet creates a reference to a public IP Address to associate with this network interface IP configuration.
 
 ```yaml
-Type: PSPublicIpAddress
+Type: Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 This cmdlet creates a reference to a public IP Address to associate with this network interface IP configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -315,7 +315,7 @@ Specifies a **Subnet** object.
 This cmdlet creates a reference to a subnet in which this network interface IP configuration is created.
 
 ```yaml
-Type: PSSubnet
+Type: Microsoft.Azure.Commands.Network.Models.PSSubnet
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 Specifies a reference to a subnet in which this network interface IP configuration is created.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 

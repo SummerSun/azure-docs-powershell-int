@@ -58,7 +58,7 @@ That cmdlet enables that endpoint.
 Specifies the name of the Traffic Manager endpoint that this cmdlet enables.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -74,7 +74,7 @@ Specifies the name of a Traffic Manager profile in which this cmdlet enables an 
 To obtain a profile, use the Get-AzureRmTrafficManagerProfile cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -90,7 +90,7 @@ Specifies the name of a resource group.
 This cmdlet enables a Traffic Manager endpoint in the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -106,7 +106,7 @@ Specifies the Traffic Manager endpoint that this cmdlet enables.
 To obtain a **TrafficManagerEndpoint** object, use the Get-AzureRmTrafficManagerEndpoint cmdlet.
 
 ```yaml
-Type: TrafficManagerEndpoint
+Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint
 Parameter Sets: Object
 Aliases: 
 
@@ -126,7 +126,7 @@ Valid values are:
 - NestedEndpoints
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 Accepted values: AzureEndpoints, ExternalEndpoints, NestedEndpoints
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

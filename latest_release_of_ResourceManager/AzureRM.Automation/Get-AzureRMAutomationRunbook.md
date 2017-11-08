@@ -46,7 +46,7 @@ This command gets all runbooks in the Azure Automation account named Contoso17.
 Specifies the name of an Automation account in which this cmdlet gets runbooks.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies the name of a runbook that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRunbookName
 Aliases: RunbookName
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group for which this cmdlet gets runbooks.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

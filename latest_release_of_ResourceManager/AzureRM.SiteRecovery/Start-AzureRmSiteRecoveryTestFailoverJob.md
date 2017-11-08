@@ -90,7 +90,7 @@ You can check whether the job succeeded by using the Get-AzureRmSiteRecoveryJob 
 Specifies the Azure virtual network ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRPObjectWithAzureVMNetworkId, ByPEObjectWithAzureVMNetworkId, ByRPIObjectWithAzureVMNetworkId
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 Specifies the primary certificate file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Specifies the secondary certificate file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -139,7 +139,7 @@ The acceptable values for this parameter are:
 - RecoveryToPrimary
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: PrimaryToRecovery, RecoveryToPrimary
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery protection entity object.
 
 ```yaml
-Type: ASRProtectionEntity
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity
 Parameter Sets: ByPEObject, ByPEObjectWithVMNetwork, ByPEObjectWithAzureVMNetworkId
 Aliases: 
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 Specifies a recovery plan object.
 
 ```yaml
-Type: ASRRecoveryPlan
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlan
 Parameter Sets: ByRPObject, ByRPObjectWithVMNetwork, ByRPObjectWithAzureVMNetworkId
 Aliases: 
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 
 ### -ReplicationProtectedItem
 ```yaml
-Type: ASRReplicationProtectedItem
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem
 Parameter Sets: ByRPIObject, ByRPIObjectWithVMNetwork, ByRPIObjectWithAzureVMNetworkId
 Aliases: 
 
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery virtual machine network.
 
 ```yaml
-Type: ASRNetwork
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRNetwork
 Parameter Sets: ByRPObjectWithVMNetwork, ByPEObjectWithVMNetwork, ByRPIObjectWithVMNetwork
 Aliases: 
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

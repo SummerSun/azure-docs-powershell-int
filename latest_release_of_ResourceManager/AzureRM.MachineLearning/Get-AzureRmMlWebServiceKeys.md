@@ -61,7 +61,7 @@ $mlService is an object of type Microsoft.Azure.Management.MachineLearning.WebSe
 The name of the web service for which the access keys are retrieved.
 
 ```yaml
-Type: WebService
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
 Parameter Sets: Get the access kesy for the given web service instance.
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 The name of the web service for which the access keys are retrieved.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get an Azure ML web service's access keys given its name and resource group.
 Aliases: 
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 The resource group for the web service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get an Azure ML web service's access keys given its name and resource group.
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

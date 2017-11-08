@@ -128,7 +128,7 @@ This command gets all the container registries in the subscription.
 Container Registry Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RegistryNameParameterSet
 Aliases: ContainerRegistryName, RegistryName, ResourceName
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupParameterSet
 Aliases: 
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RegistryNameParameterSet
 Aliases: 
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

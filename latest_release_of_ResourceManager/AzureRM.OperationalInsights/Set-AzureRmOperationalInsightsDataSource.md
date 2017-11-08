@@ -36,7 +36,7 @@ The **Set-AzureRmOperationalInsightsDataSource** cmdlet updates a data source.
 Specifies the data source that this cmdlet updates.
 
 ```yaml
-Type: PSDataSource
+Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource
 Parameter Sets: (All)
 Aliases: 
 
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

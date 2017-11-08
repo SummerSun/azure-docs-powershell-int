@@ -65,7 +65,7 @@ This command creates a new webhook receiver in memory.
 Specifies the name for the receiver.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 Specifies to create an Email receiver
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: NewEmailReceiver
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 Specifies the address for the Email receiver.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewEmailReceiver
 Aliases: 
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 Specifies to create a SMS receiver
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: NewSmsReceiver
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Specifies the country code for the SMS receiver.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewSmsReceiver
 Aliases: 
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 Specifies the phone number for the SMS receiver.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewSmsReceiver
 Aliases: 
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 Specifies to create a webhook receiver
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: NewWebhookReceiver
 Aliases: 
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 Specifies the URI for the webhook receiver.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewWebhookReceiver
 Aliases: 
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

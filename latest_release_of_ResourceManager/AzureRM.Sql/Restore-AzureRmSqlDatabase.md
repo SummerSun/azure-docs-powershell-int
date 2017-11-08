@@ -110,7 +110,7 @@ Specifies the deletion date as a **DateTime** object.
 To get a **DateTime** object, use the Get-Date cmdlet.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: FromDeletedDatabaseBackup
 Aliases: 
 
@@ -133,7 +133,7 @@ The acceptable values for this parameter are:
 - Free
 
 ```yaml
-Type: DatabaseEdition
+Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseEdition
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Premium, Basic, Standard, DataWarehouse, Stretch, Free, PremiumRS
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 Specifies the name of the elastic pool in which to put the SQL database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -165,7 +165,7 @@ Indicates that this cmdlet restores a database from a backup of a deleted SQL da
 You can use the Get-AzureRMSqlDeletedDatabaseBackup cmdlet to get the backup of a deleted SQL database.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: FromDeletedDatabaseBackup
 Aliases: 
 
@@ -181,7 +181,7 @@ Indicates that this cmdlet restores a SQL database from a geo-redundant backup.
 You can use the Get-AzureRMSqlDatabaseGeoBackup cmdlet to get a geo-redundant backup.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: FromGeoBackup
 Aliases: 
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet restores a SQL database from a long term retention backup.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: FromLongTermRetentionBackup
 Aliases: 
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet restores a SQL database from a point-in-time backup.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: FromPointInTimeBackup
 Aliases: 
 
@@ -229,7 +229,7 @@ To get a **DateTime** object, use **Get-Date** cmdlet.
 Use this parameter together with the *FromPointInTimeBackup* parameter.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: FromPointInTimeBackup
 Aliases: 
 
@@ -241,7 +241,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: FromDeletedDatabaseBackup
 Aliases: 
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which this cmdlet assigns the SQL database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 Specifies the ID of the resource to restore.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Id
 
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 Specifies the name of the SQL database server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 Specifies the name of the service objective.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 Specifies the name of the database to restore to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

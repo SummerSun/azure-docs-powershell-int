@@ -71,7 +71,7 @@ After bootstrapping, the virtual machine refers to the BootstrapOptions specifie
 
 ### -AutoUpgradeMinorVersion
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Specifies configuration settings in the client_rb option.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Specifies the version of the bootstrap configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -ChefDaemonInterval
 Specifies the frequency (in minutes) at which the chef-service runs. If in case you don't want the chef-service to be installed on the Azure VM then set value as 0 in this field.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ChefServiceInterval
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 Specifies the Chef server link, as a URL.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 Specifies the full path of the Chef client.rb.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -163,7 +163,7 @@ service - Configures the chef-client to run automatically in the background as a
 task - Configures the chef-client to run automatically in the background as a secheduled task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: none, service, task
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -JsonAttribute
 A JSON string to be added to the first run of chef-client. e.g. -JsonAttribute '{"foo" : "bar"}'```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet creates a Windows virtual machine.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Linux
 Aliases: 
 
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 Specifies the location of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 Specifies the name of the Chef extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ExtensionName
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 Specifies the organization name of the Chef extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 Specifies the Chef node run list.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 The encryption key used to encrypt and decrypt the data bag item values.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -310,7 +310,7 @@ Accept wildcard characters: False
 The path to the file that contains the encryption key used to encrypt and decrypt the data bag item values.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 Specifies the version of the extension to use for this virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: HandlerVersion, Version
 
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 
 ### -ValidationClientName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -353,7 +353,7 @@ Accept wildcard characters: False
 Specifies the Chef validator .pem file path
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -369,7 +369,7 @@ Specifies the name of a virtual machine.
 This cmdlet adds the Chef extension for the virtual machine that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName
 
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet creates a Windows virtual machine.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Windows
 Aliases: 
 
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -416,7 +416,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

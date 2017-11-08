@@ -66,7 +66,7 @@ Specifies the version of the resource provider API to use.
 If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Specifies the fully qualified resource ID for the policy assignment that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy assignment Id parameter set.
 Aliases: ResourceId
 
@@ -105,7 +105,7 @@ The acceptable values for this parameter are:
 - Suspend
 
 ```yaml
-Type: ActionPreference
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Specifies an information variable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: iv
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies the name of the policy assignment that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy assignment name parameter set.
 Aliases: 
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 Specifies the ID of the policy definition of the policy assignments that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy assignment name parameter set., The policy assignment Id parameter set.
 Aliases: 
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 Specifies the scope at which the policy is applied for the assignment that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy assignment name parameter set.
 Aliases: 
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

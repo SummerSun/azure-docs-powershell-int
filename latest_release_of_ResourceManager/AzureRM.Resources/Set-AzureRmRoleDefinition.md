@@ -76,7 +76,7 @@ Only include the properties that are to be updated in the JSON.
 Id property is Required.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: InputFileParameterSet
 Aliases: 
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 Role definition object to be updated
 
 ```yaml
-Type: PSRoleDefinition
+Type: Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleDefinition
 Parameter Sets: RoleDefinitionParameterSet
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

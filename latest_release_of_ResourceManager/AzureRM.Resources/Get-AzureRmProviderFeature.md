@@ -52,7 +52,7 @@ This command gets information for the feature named AllowPreReleaseRegions for t
 Specifies the name of the feature to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetFeature
 Aliases: 
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet gets all features.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ListAvailableParameterSet
 Aliases: 
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 Specifies the namespace for which this cmdlet gets provider features.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListAvailableParameterSet
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetFeature
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -47,7 +47,7 @@ This command modifies the specified API Management certificate.
 Specifies the ID of the certificate to modify.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 passthru
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -93,7 +93,7 @@ Specifies an array of bytes of the certificate file in .pfx format.
 This parameter is required if you do not specify the *PfxFilePath* parameter.
 
 ```yaml
-Type: Byte[]
+Type: System.Byte[]
 Parameter Sets: Raw
 Aliases: 
 
@@ -109,7 +109,7 @@ Specifies the path to the certificate file in .pfx format to create and upload.
 This parameter is required if you do not specify the *PfxBytes* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Load from file
 Aliases: 
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 Specifies the password for the certificate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

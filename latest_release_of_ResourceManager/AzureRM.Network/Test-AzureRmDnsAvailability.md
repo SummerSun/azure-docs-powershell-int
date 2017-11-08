@@ -32,7 +32,7 @@ Test-AzureRmDnsAvailability -DomainNameLabel <String> -Location <String>
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -45,7 +45,7 @@ Accept wildcard characters: False
 
 ### -DomainNameLabel
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainQualifiedName
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 
 ### -Location
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

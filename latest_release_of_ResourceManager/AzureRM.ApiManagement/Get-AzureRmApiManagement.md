@@ -57,7 +57,7 @@ This command gets all API Management service by name.
 Specifies the name of API Management service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific API Management Service
 Aliases: 
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group under in which this cmdlet gets the API Management service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: All In Resource Group, Specific API Management Service
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

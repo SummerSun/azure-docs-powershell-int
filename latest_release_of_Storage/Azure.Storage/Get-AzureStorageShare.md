@@ -64,7 +64,7 @@ If the previous call fails in the specified interval, this cmdlet retries the re
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +83,7 @@ This parameter can help reduce network connection problems in low bandwidth envi
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +99,7 @@ Specifies an Azure Storage context.
 To obtain a context, use the [New-AzureStorageContext](./New-AzureStorageContext.md) cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -115,7 +115,7 @@ Specifies the name of the file share.
 This cmdlet gets the file share that this parameter specifies, or nothing if you specify the name of a file share that does not exist.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific
 Aliases: 
 
@@ -131,7 +131,7 @@ Specifies the prefix for file shares.
 This cmdlet gets file shares that match the prefix that this parameter specifies, or no file shares if no file shares match the specified prefix.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: MatchingPrefix
 Aliases: 
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 

@@ -53,7 +53,7 @@ This command uses the Get-AzureRmOperationalInsightsWorkspace cmdlet to get the 
 Specifies the workspace name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Specifies the Azure resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -88,7 +88,7 @@ Valid values are:
 - premium
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: free, standard, premium
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Specifies the resource tags for the workspace.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 Specifies the workspace to be updated.
 
 ```yaml
-Type: PSWorkspace
+Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
 Parameter Sets: ByObject
 Aliases: 
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -RetentionInDays
 The workspace data retention in days. 730 days is the maximum allowed for all other Skus.```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 

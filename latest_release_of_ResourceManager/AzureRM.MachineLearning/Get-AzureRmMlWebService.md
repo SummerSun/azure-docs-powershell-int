@@ -64,7 +64,7 @@ Get-AzureRmMlWebService -ResourceGroupName "myresourcegroup"
 The name of the web service for which the details are retrieved.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 The resource group from which the details for the web service are retrieved.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Region
 The name of region```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

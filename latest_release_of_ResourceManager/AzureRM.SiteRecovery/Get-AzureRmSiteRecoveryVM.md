@@ -44,7 +44,7 @@ The **Get-AzureRmSiteRecoveryVM** cmdlet gets information about virtual machines
 Specifies the friendly name of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectWithFriendlyName
 Aliases: 
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectWithName
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery protection container object.
 
 ```yaml
-Type: ASRProtectionContainer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionContainer
 Parameter Sets: ByObject
 Aliases: 
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: ASRProtectionContainer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionContainer
 Parameter Sets: ByObjectWithName, ByObjectWithFriendlyName
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

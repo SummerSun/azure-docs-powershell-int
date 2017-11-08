@@ -38,7 +38,7 @@ This command tests whether the file Test.csv exists in the ContosoADL account.
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Store path of the item to test, starting with the root directory (/).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -73,7 +73,7 @@ The acceptable values for this parameter are:
 - Folder
 
 ```yaml
-Type: PathType
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+PathType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Any, File, Folder
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

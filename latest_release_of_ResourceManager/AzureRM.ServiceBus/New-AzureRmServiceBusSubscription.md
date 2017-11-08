@@ -41,7 +41,7 @@ Creates	the subscription `SB-TopicSubscription-Example1` for the specified Servi
 Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) idle interval, after which the subscription is automatically deleted. The minimum duration is 5 minutes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 Indicates if a subscription has dead letter support on Filter evaluation exceptions.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 Indicates if a subscription has deadletter support when a message expires.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Indicates whether server-side batched operations are enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Indicates whether the entity description is read-only
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Specifies the lock duration time span for the subscription.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies the number of maximum deliveries. A message is automatically deadlettered after this number of deliveries.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 Specifies whether a subscription supports the concept of sessions.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -182,7 +182,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 
 ### -DefaultMessageTimeToLive
 Timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself. For Standard = Timespan.Max and Basic = 14 dyas```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 
 ### -Name
 Subscription Name```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: SubscriptionName
 
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 Namespace Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 The name of the resource group```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceGroup
 
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 
 ### -Topic
 Topic Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: TopicName
 

@@ -45,7 +45,7 @@ Specifies the node for which this cmdlet removes.
 This parameter may be used instead of the *ResourceGroupName* and *NodeName* parameters.
 
 ```yaml
-Type: Node
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Node
 Parameter Sets: ByObject
 Aliases: 
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Specifies the name of the node for which this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that the node belongs to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

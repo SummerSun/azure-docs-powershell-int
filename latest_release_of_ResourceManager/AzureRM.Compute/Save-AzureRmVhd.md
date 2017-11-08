@@ -72,7 +72,7 @@ This command downloads a .vhd file and specifies the storage key.
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Specifies the local file path of the saved image.
 
 ```yaml
-Type: FileInfo
+Type: System.IO.FileInfo
 Parameter Sets: (All)
 Aliases: lf
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 Specifies the number of download threads that this cmdlet uses during download.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: th
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet replaces the file specified by *LocalFilePath* file if it exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: o
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupParameterSetName
 Aliases: 
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 Specifies the Uniform Resource Identifier (URI) of the blob in `Azure`.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: src, Source
 
@@ -163,7 +163,7 @@ Specifies the storage key of the blob storage account.
 If you do not specify a key, this cmdlet attempts to determine the storage key of the account in *SourceUri* from Azure.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: StorageKeyParameterSetName
 Aliases: sk
 

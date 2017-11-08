@@ -53,7 +53,7 @@ The final command creates an image named 'ImageName01' in resource group 'Resour
 Specifies the data disk object.
 
 ```yaml
-Type: ImageDataDisk[]
+Type: Microsoft.Azure.Management.Compute.Models.ImageDataDisk[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Specifies a location.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 Specifies the operating system Disk.
 
 ```yaml
-Type: ImageOSDisk
+Type: Microsoft.Azure.Management.Compute.Models.ImageOSDisk
 Parameter Sets: (All)
 Aliases: 
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 Specifies the source virtual machine ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 Specifies that resources and resource groups can be tagged with a set of name-value pairs.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

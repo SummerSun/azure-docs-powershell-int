@@ -50,7 +50,7 @@ Specifies an existing **Node** object that is used to get the *ResourceGroupName
 You must also specify a value for the *SessionName* parameter.
 
 ```yaml
-Type: Node
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Node
 Parameter Sets: ByNode
 Aliases: 
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 Specifies the name of the node where the session is located.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNodeName
 Aliases: 
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group for which this cmdlet gets the retrieve the session.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNodeName
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 Specifies an existing **Session** object that is used to get the *ResourceGroupName*, the *NodeName*, and the *SessionName* parameters.
 
 ```yaml
-Type: Session
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Session
 Parameter Sets: BySession
 Aliases: 
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 Specifies the name of the session in which this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNodeName
 Aliases: 
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BySession
 Aliases: 
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -30,7 +30,7 @@ New-AzureVMSqlServerKeyVaultCredentialConfig [-Enable] [[-CredentialName] <Strin
 
 ### -Enable
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 
 ### -CredentialName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -AzureKeyVaultUrl
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalSecret
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Profile
 @{Text=}```yaml
-Type: AzureSMProfile
+Type: Microsoft.WindowsAzure.Commands.Utilities.Common.AzureSMProfile
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -InformationAction
 @{Text=}```yaml
-Type: ActionPreference
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -InformationVariable
 @{Text=}```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: iv
 

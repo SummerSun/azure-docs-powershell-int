@@ -42,7 +42,7 @@ Updates the specified topic with a new description in the specified namespace. T
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -58,7 +58,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 ServiceBus Topic definition.```yaml
-Type: TopicAttributes
+Type: Microsoft.Azure.Commands.ServiceBus.Models.TopicAttributes
 Parameter Sets: (All)
 Aliases: TopicObj
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -Name
 Topic Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: TopicName
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 Namespace Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 The name of the resource group```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceGroup
 

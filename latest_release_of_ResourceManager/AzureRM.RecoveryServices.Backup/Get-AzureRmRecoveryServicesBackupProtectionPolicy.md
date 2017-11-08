@@ -72,7 +72,7 @@ Specifies the Backup management type.
 Currently, only AzureVM is supported.
 
 ```yaml
-Type: BackupManagementType
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType]
 Parameter Sets: WorkloadBackupManagementTypeParamSet
 Aliases: 
 Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Specifies the name of the policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: PolicyNameParamSet
 Aliases: 
 
@@ -104,7 +104,7 @@ Specifies the workload type.
 Currently, only AzureVM is supported.
 
 ```yaml
-Type: WorkloadType
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType]
 Parameter Sets: WorkloadParamSet, WorkloadBackupManagementTypeParamSet
 Aliases: 
 Accepted values: AzureVM, AzureSQLDatabase
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

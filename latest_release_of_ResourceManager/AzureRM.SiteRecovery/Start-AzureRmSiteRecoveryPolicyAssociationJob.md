@@ -40,7 +40,7 @@ The **Start-AzureRmSiteRecoveryPolicyAssociationJob** cmdlet initiates an associ
 Specifies the Site Recovery policy object.
 
 ```yaml
-Type: ASRPolicy
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRPolicy
 Parameter Sets: (All)
 Aliases: 
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 Specifies the primary protection container on which to apply the protection profile settings.
 
 ```yaml
-Type: ASRProtectionContainer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionContainer
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 Specifies the recovery protection container on which to apply the protection profile settings.
 
 ```yaml
-Type: ASRProtectionContainer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionContainer
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

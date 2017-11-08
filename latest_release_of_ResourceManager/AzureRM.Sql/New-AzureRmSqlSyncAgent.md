@@ -58,7 +58,7 @@ This command creates a sync agent for an Azure SQL server.
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 The sync agent name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: SyncAgentName
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 The name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 The name of the Azure SQL Server the sync agent is in.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 The database used to store sync related metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SyncDatabaseComponent
 Aliases: 
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 The resource group the sync metadata database belongs to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SyncDatabaseComponent
 Aliases: 
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 The resource ID of  the sync metadata database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SyncDatabaseResourceID
 Aliases: 
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 The server on which the sync metadata database is hosted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SyncDatabaseComponent
 Aliases: 
 
@@ -179,7 +179,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

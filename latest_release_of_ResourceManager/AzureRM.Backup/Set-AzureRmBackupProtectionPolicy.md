@@ -62,7 +62,7 @@ To obtain a **DateTime** object, use the Get-Date cmdlet.
 For information about **DateTime** objects, type `Get-Help Get-Date`.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Indicates that the backup operation runs on a Daily schedule.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: DailyScheduleParamSet
 Aliases: 
 
@@ -102,7 +102,7 @@ The acceptable values for this parameter are:
 - Sunday
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: WeeklyScheduleParamSet
 Aliases: 
 Accepted values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
@@ -119,7 +119,7 @@ Specifies the new name for the policy.
 This name must be unique in a vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -135,7 +135,7 @@ Specifies protection policy that this cmdlet modifies.
 To obtain an **AzureRmBackupProtectionPolicy** object, use the Get-AzureRmBackupProtectionPolicy cmdlet.
 
 ```yaml
-Type: AzureRMBackupProtectionPolicy
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupProtectionPolicy
 Parameter Sets: (All)
 Aliases: 
 
@@ -151,7 +151,7 @@ Specifies an array of retention policies for the backup policy.
 To obtain **AzureRmBackupRetentionPolicy** objects, use the New-AzureRmBackupRetentionPolicyObject cmdlet.
 
 ```yaml
-Type: AzureRMBackupRetentionPolicy[]
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupRetentionPolicy[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 Indicates that the backup operation runs on a Weekly schedule.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: WeeklyScheduleParamSet
 Aliases: 
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

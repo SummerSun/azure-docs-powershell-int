@@ -71,7 +71,7 @@ The example first creates a web service definition, that only contains the field
 The set of assets (e.g. modules, datasets) that make up the web service.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -87,7 +87,7 @@ The new value for the web service's description.
 This is visible in the service's Swagger API schema.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 The settings that control the diagnostics traces collection for the web service.
 
 ```yaml
-Type: DiagnosticsConfiguration
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.DiagnosticsConfiguration
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 Do not ask for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 The definition for the web service's input(s), provided as a Swagger schema construct.
 
 ```yaml
-Type: ServiceInputOutputSpecification
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.ServiceInputOutputSpecification
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -148,7 +148,7 @@ Specifies that this web serviceis readonly.
 Once set, the web service can longer be updated, including changing the value of this property, and can only be deleted.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 Updates one or both of the access keys used to authenticate calls to the service's runtime APIs.
 
 ```yaml
-Type: WebServiceKeys
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebServiceKeys
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 The name of the web service resource to be updated.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 The definition for the web service's output(s), provided as a Swagger schema construct.
 
 ```yaml
-Type: ServiceInputOutputSpecification
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.ServiceInputOutputSpecification
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 The definition of the graph package that defines this web service.
 
 ```yaml
-Type: GraphPackage
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.GraphPackage
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -224,7 +224,7 @@ The set of global parameters values defined for the web service, given as a glob
 If no default value is specified, the parameter is considered to be required.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 Updates for the configuration of the service's realtime endpoint.
 
 ```yaml
-Type: RealtimeConfiguration
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.RealtimeConfiguration
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 The resource group that contains the web service to be updated.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -270,7 +270,7 @@ A set of updates to apply to the web service provided as a web service definitio
 Only non-static fields are modified.
 
 ```yaml
-Type: WebService
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
 Parameter Sets: Create a new Azure ML webservice from a WebService instance definition.
 Aliases: 
 
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 Rotates the access key for the storage account associated with the web service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -301,7 +301,7 @@ The new value for the web service's title.
 This is visible in the service's Swagger API schema.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -332,7 +332,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -345,7 +345,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

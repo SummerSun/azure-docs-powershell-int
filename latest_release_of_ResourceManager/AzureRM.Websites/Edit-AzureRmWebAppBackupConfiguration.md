@@ -41,7 +41,7 @@ The **Edit-AzureRmWebAppBackupConfiguration** cmdlet edits the current configura
 Databases of type DatabaseBackupSetting[]
 
 ```yaml
-Type: DatabaseBackupSetting[]
+Type: Microsoft.Azure.Management.WebSites.Models.DatabaseBackupSetting[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 Frequency Interval
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Frequency Unit
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Keep At Least One Backup Option
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 WebApp Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 Retention Period In Days
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 WebApp Slot Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 StartTime in UTC
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 Storage Account Url
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 WebApp Object
 
 ```yaml
-Type: Site
+Type: Microsoft.Azure.Management.WebSites.Models.Site
 Parameter Sets: FromWebApp
 Aliases: 
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

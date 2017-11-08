@@ -44,7 +44,7 @@ This command gets the backup with ID "12345" from the Web App named WebAppStanda
 Backup Id
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Webapp Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 Slot Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Piped WebApp
 
 ```yaml
-Type: Site
+Type: Microsoft.Azure.Management.WebSites.Models.Site
 Parameter Sets: FromWebApp
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

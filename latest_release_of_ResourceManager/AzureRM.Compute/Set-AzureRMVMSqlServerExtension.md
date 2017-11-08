@@ -79,7 +79,7 @@ Specifies the automatic SQL Server backup settings.
 To create an **AutoBackupSettings** object , use the New-AzureVMSqlServerAutoBackupConfig cmdlet.
 
 ```yaml
-Type: AutoBackupSettings
+Type: Microsoft.Azure.Commands.Compute.AutoBackupSettings
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,7 +95,7 @@ Specifies the automatic SQL Server patching settings.
 To create an **AutoPatchingSettings** object , use the New-AzureVMSqlServerAutoPatchingConfig cmdlet.
 
 ```yaml
-Type: AutoPatchingSettings
+Type: Microsoft.Azure.Commands.Compute.AutoPatchingSettings
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -KeyVaultCredentialSettings
 ```yaml
-Type: KeyVaultCredentialSettings
+Type: Microsoft.Azure.Commands.Compute.KeyVaultCredentialSettings
 Parameter Sets: (All)
 Aliases: 
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 Specifies the location of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Specifies the name of the SQL Server the extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 Specifies the version of the SQL Server extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: HandlerVersion
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine on which this cmdlet sets the SQL Server extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

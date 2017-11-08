@@ -164,7 +164,7 @@ This command gets the recommended action named IR_\[test_schema\]_\[test_table_0
 Specifies the name of the advisor for which this cmdlet requests recommended actions.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 Specifies the name of the elastic pool for which this cmdlet requests recommended actions.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 Specifies the name of the recommended action that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the server that contains this elastic pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 Specifies the name of the server the elastic pool is in.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

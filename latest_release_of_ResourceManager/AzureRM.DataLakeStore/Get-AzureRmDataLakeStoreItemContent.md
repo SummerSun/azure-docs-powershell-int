@@ -61,7 +61,7 @@ This command gets the first two new line separated rows in the file MyFile.txt i
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -89,7 +89,7 @@ The acceptable values for this parameter are:
 - BigEndianUTF32
 
 ```yaml
-Type: FileSystemCmdletProviderEncoding
+Type: Microsoft.PowerShell.Commands.FileSystemCmdletProviderEncoding
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Unknown, String, Unicode, Byte, BigEndianUnicode, UTF8, UTF7, UTF32, Ascii, Default, Oem, BigEndianUTF32
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Preview file content
 Aliases: 
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 The number of rows (new line delimited) from the beginning of the file to preview. If no new line is encountered in the first 4mb of data, only that data will be returned.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Preview file rows from the head of the file
 Aliases: 
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies the length, in bytes, of the content to get.
 
 ```yaml
-Type: Int64
+Type: System.Int64
 Parameter Sets: Preview file content
 Aliases: 
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 Specifies the number of bytes to skip in a file before getting content.
 
 ```yaml
-Type: Int64
+Type: System.Int64
 Parameter Sets: Preview file content
 Aliases: 
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Store path of a file, starting with the root directory (/).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 The number of rows (new line delimited) from the end of the file to preview. If no new line is encountered in the first 4mb of data, only that data will be returned.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Preview file rows from the tail of the file
 Aliases: 
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -211,7 +211,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

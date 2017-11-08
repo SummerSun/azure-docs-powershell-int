@@ -58,7 +58,7 @@ The second command modifies the containers from which the Storage Insight named 
 Specifies the list of containers that provide the data.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies the name of a Storage Insight.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Specifies the name of an Azure resource group that contains a workspace.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByWorkspaceName
 Aliases: 
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Specifies the access key for the storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 Specifies the list of tables that contain the data.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 Specifies the workspace that contains the Storage Insight.
 
 ```yaml
-Type: PSWorkspace
+Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
 Parameter Sets: ByWorkspaceObject
 Aliases: 
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 Specifies the name of a workspace.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByWorkspaceName
 Aliases: 
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

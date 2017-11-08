@@ -50,7 +50,7 @@ This command gets the Web App named ContosoSite that belongs to the resource gro
 App Service Plan object
 
 ```yaml
-Type: ServerFarmWithRichSku
+Type: Microsoft.Azure.Management.WebSites.Models.ServerFarmWithRichSku
 Parameter Sets: S2
 Aliases: 
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 Location
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S3
 Aliases: 
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 WebApp Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

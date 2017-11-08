@@ -63,7 +63,7 @@ The Sample.ps1.zip was previously uploaded by using **Publish-AzureRmVMDscConfig
 Specifies the name of the configuration file that was previously uploaded by the Publish-AzureRmVMDscConfiguration cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ConfigurationArchiveBlob
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 Species name of the Azure storage container where the configuration archive is located.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ContainerName
 
@@ -94,7 +94,7 @@ Specifies the name of the resource group that contains the storage account that 
 This parameter is optional if the storage account and virtual machine are both in the same resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 Specifies the Azure storage account name that is used to download the ArchiveBlobName.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountName
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 Specifies the storage endpoint suffix.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageEndpointSuffix
 
@@ -141,7 +141,7 @@ By default extension handler is not autoupdated.
 Use the *AutoUpdate* parameter to enable auto update of the extension handler to the latest version as and when it is available.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Specifies a hash table that contains the arguments to the configuration function.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 Specifies the path of a .psd1 file that specifies the data for the configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 Specifies the name of the configuration that the DSC Extension invokes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -202,7 +202,7 @@ Specifies the data collection type.
 The acceptable values for this parameter are: Enable and Disable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enable, Disable
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 Specifies the path of the resource extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -262,7 +262,7 @@ Specifies the name of the Azure Resource Manager resource that represents the ex
 The default value is Microsoft.Powershell.DSC.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 Specifies the version of the DSC extension that Set-AzureRmVMDscExtension applies the settings to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: HandlerVersion
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine where DSC extension handler is installed.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 Specifies the WMF version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: 4.0, 5.0, 5.1, latest
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -355,7 +355,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

@@ -119,7 +119,7 @@ PS C:\> New-AzureRmRoleDefinition -InputFile C:\Temp\roleDefinition.json
 File name containing a single json role definition.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: InputFileParameterSet
 Aliases: 
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 Role definition object.
 
 ```yaml
-Type: PSRoleDefinition
+Type: Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleDefinition
 Parameter Sets: RoleDefinitionParameterSet
 Aliases: 
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

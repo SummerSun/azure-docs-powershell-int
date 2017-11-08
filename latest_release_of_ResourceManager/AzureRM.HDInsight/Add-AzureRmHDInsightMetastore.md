@@ -90,7 +90,7 @@ Specifies the HDInsight cluster configuration object that this cmdlet modifies.
 This object is created by the **New-AzureRmHDInsightClusterConfig** cmdlet.
 
 ```yaml
-Type: AzureHDInsightConfig
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 Specifies the credentials to use for the AzureSQL Server database.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Specifies the database on the AzureSQL Server instance to use for this metastore.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -136,7 +136,7 @@ Specifies the type of metastore.
 Possible values are HiveMetastore or OozieMetastore.
 
 ```yaml
-Type: AzureHDInsightMetastoreType
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightMetastoreType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HiveMetastore, OozieMetastore
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 Specifies the AzureSQL Server instance to use for this metastore.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

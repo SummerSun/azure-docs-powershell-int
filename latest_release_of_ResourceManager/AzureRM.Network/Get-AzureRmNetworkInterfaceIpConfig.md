@@ -41,7 +41,7 @@ The first command gets an existing network interface called mynic and stores it 
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 Specifies the name of the network IP configuration that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Specifies a **NetworkInterface** object that contains the network IP configuration that this cmdlet gets.
 
 ```yaml
-Type: PSNetworkInterface
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkInterface
 Parameter Sets: (All)
 Aliases: 
 

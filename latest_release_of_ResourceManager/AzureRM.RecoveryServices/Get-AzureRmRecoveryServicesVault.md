@@ -36,7 +36,7 @@ The **Get-AzureRmRecoveryServicesVault** cmdlet gets a list of Recovery Services
 Specifies the name of the vault to query for.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure resource group in which to create or from which to retrieve the specified Recovery Services object.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

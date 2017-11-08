@@ -171,7 +171,7 @@ Key Vault managed storage account name. Cmdlet constructs the FQDN of a managed 
 name from vault name, currently selected environment and manged storage account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountName
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 Specifies the storage service version to use to execute the request made using the account SAS URI.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocAccountSas
 Aliases: 
 
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 Blob Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceBlobSas, StoredPolicyServiceBlobSas
 Aliases: 
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 Container Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceBlobSas, AdhocServiceContainerSas, StoredPolicyServiceBlobSas, StoredPolicyServiceContainerSas
 Aliases: 
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 Disables the use of sas definition for generation of sas token.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 End Partition Key
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceTableSas, StoredPolicyServiceTableSas
 Aliases: endpk
 
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 End Row Key
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceTableSas, StoredPolicyServiceTableSas
 Aliases: endrk
 
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 IP, or IP range ACL (access control list) of the request that would be accepted by Azure Storage.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocAccountSas, AdhocServiceBlobSas, AdhocServiceContainerSas, AdhocServiceFileSas, AdhocServiceShareSas, AdhocServiceQueueSas, AdhocServiceTableSas, StoredPolicyServiceBlobSas, StoredPolicyServiceContainerSas, StoredPolicyServiceFileSas, StoredPolicyServiceShareSas, StoredPolicyServiceQueueSas, StoredPolicyServiceTableSas
 Aliases: 
 
@@ -307,7 +307,7 @@ Storage sas definition name. Cmdlet constructs the FQDN of a storage sas definit
 name, currently selected environment, storage account name and sas definition name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: SasDefinitionName
 
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 Sas definition parameters that will be used to create the sas token.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: RawSas
 Aliases: 
 
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 Path to the cloud file to generate sas token against.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceFileSas, StoredPolicyServiceFileSas
 Aliases: 
 
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 Permission. Values include 'Query','Add','Update','Process'
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: AdhocAccountSas, AdhocServiceBlobSas, AdhocServiceContainerSas, AdhocServiceFileSas, AdhocServiceShareSas, AdhocServiceQueueSas, AdhocServiceTableSas
 Aliases: 
 Accepted values: Add, Create, Delete, List, Process, Read, Query, Update, Write
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 Policy Identifier
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: StoredPolicyServiceBlobSas, StoredPolicyServiceContainerSas, StoredPolicyServiceFileSas, StoredPolicyServiceShareSas, StoredPolicyServiceQueueSas, StoredPolicyServiceTableSas
 Aliases: 
 
@@ -383,7 +383,7 @@ Accept wildcard characters: False
 Protocol can be used in the request with the SAS token.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocAccountSas, AdhocServiceBlobSas, AdhocServiceContainerSas, AdhocServiceFileSas, AdhocServiceShareSas, AdhocServiceQueueSas, AdhocServiceTableSas, StoredPolicyServiceBlobSas, StoredPolicyServiceContainerSas, StoredPolicyServiceFileSas, StoredPolicyServiceShareSas, StoredPolicyServiceQueueSas, StoredPolicyServiceTableSas
 Aliases: 
 Accepted values: HttpsOnly, HttpsOrHttp
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 Queue Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceQueueSas, StoredPolicyServiceQueueSas
 Aliases: 
 
@@ -414,7 +414,7 @@ Accept wildcard characters: False
 Resource types that this SAS token applies to. Values include 'Service','Container','Object'
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: AdhocAccountSas
 Aliases: 
 Accepted values: Service, Container, Object
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 Service types that this SAS token applies to. Values include 'Blob','File','Queue','Table'
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: AdhocAccountSas
 Aliases: 
 Accepted values: Blob, File, Queue, Table
@@ -446,7 +446,7 @@ Accept wildcard characters: False
 Share Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceFileSas, AdhocServiceShareSas, StoredPolicyServiceFileSas, StoredPolicyServiceShareSas
 Aliases: 
 
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 Specifies the query parameters to override response headers.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: AdhocServiceBlobSas, AdhocServiceContainerSas, AdhocServiceFileSas, AdhocServiceShareSas, StoredPolicyServiceBlobSas, StoredPolicyServiceContainerSas, StoredPolicyServiceFileSas, StoredPolicyServiceShareSas
 Aliases: 
 Accepted values: CacheControl, ContentDisposition, ContentEncoding, ContentLanguage, ContentType
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 Start Partition Key
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceTableSas, StoredPolicyServiceTableSas
 Aliases: startpk
 
@@ -492,7 +492,7 @@ Accept wildcard characters: False
 Start Row Key
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceTableSas, StoredPolicyServiceTableSas
 Aliases: startrk
 
@@ -507,7 +507,7 @@ Accept wildcard characters: False
 Table Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocServiceTableSas, StoredPolicyServiceTableSas
 Aliases: 
 
@@ -524,7 +524,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -539,7 +539,7 @@ Accept wildcard characters: False
 Specifies the signed storage service version to use to authenticate requests made with the SAS token.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AdhocAccountSas, AdhocServiceBlobSas, AdhocServiceContainerSas, AdhocServiceFileSas, AdhocServiceShareSas, AdhocServiceQueueSas, AdhocServiceTableSas, StoredPolicyServiceBlobSas, StoredPolicyServiceContainerSas, StoredPolicyServiceFileSas, StoredPolicyServiceShareSas, StoredPolicyServiceQueueSas, StoredPolicyServiceTableSas
 Aliases: 
 
@@ -554,7 +554,7 @@ Accept wildcard characters: False
 Validity period that will get used to set the expiry time of sas token from the time it gets generated
 
 ```yaml
-Type: TimeSpan
+Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: AdhocAccountSas, AdhocServiceBlobSas, AdhocServiceContainerSas, AdhocServiceFileSas, AdhocServiceShareSas, AdhocServiceQueueSas, AdhocServiceTableSas
 Aliases: 
 
@@ -570,7 +570,7 @@ Vault name.
 Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -586,7 +586,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -599,7 +599,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

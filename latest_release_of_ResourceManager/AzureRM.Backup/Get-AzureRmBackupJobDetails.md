@@ -68,7 +68,7 @@ Specifies a job for which this cmdlet gets details.
 To obtain an **AzureRmBackupJob** object, use the Get-AzureRmBackupJob cmdlet.
 
 ```yaml
-Type: AzureRMBackupJob
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupJob
 Parameter Sets: JobsFiltersSet
 Aliases: 
 
@@ -85,7 +85,7 @@ The ID is the **InstanceId** property of an **AzureRmBackupJob** object.
 To obtain an **AzureRmBackupJob** object, use Get-AzureRmBackupJob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: IdFiltersSet
 Aliases: 
 
@@ -101,7 +101,7 @@ Specifies the Backup vault for which this cmdlet gets job details.
 To obtain an **AzureRmBackupVault** object, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml
-Type: AzureRMBackupVault
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupVault
 Parameter Sets: IdFiltersSet
 Aliases: 
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -39,7 +39,7 @@ Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,7 +56,7 @@ This cmdlet gets the Azure Storage service metrics properties for the metrics ty
 The acceptable values for this parameter are: Hour and Minute.
 
 ```yaml
-Type: ServiceMetricsType
+Type: Microsoft.WindowsAzure.Commands.Storage.Common.ServiceMetricsType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Hour, Minute
@@ -81,7 +81,7 @@ The acceptable values for this parameter are:
 The value of File is not currently supported.
 
 ```yaml
-Type: StorageServiceType
+Type: Microsoft.WindowsAzure.Commands.Storage.Common.StorageServiceType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Blob, Table, Queue, File

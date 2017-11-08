@@ -42,7 +42,7 @@ The **Get-AzureRmServerManagementNode** cmdlet gets one or more Azure Server Man
 Specifies an existing node from which to get the *ResourceGroupName* and the *NodeName* parameters.
 
 ```yaml
-Type: Node
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Node
 Parameter Sets: ByNode
 Aliases: 
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 Specifies the name of the node for which this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNodeName
 Aliases: 
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group in which the nodes belong to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNodeName
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

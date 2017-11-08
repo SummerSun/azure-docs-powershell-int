@@ -59,7 +59,7 @@ Updates the authorization rule \`MyAuthRuleName\` to grant Manage rights to the 
 Resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ Required if 'AuthruleObj' not specified.
 Rights; for example, @("Listen","Send","Manage")
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: NamespaceAuthorizationRuleSet, EventhubAuthorizationRuleSet
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: AuthoRulePropertiesSet
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -118,7 +118,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 EventHub Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventhubAuthorizationRuleSet
 Aliases: EventHubName
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 {{Fill InputObject Description}}
 
 ```yaml
-Type: SharedAccessAuthorizationRuleAttributes
+Type: Microsoft.Azure.Commands.EventHub.Models.SharedAccessAuthorizationRuleAttributes
 Parameter Sets: NamespaceAuthorizationRuleSet, EventhubAuthorizationRuleSet
 Aliases: AuthRuleObj
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: SharedAccessAuthorizationRuleAttributes
+Type: Microsoft.Azure.Commands.EventHub.Models.SharedAccessAuthorizationRuleAttributes
 Parameter Sets: AuthoRuleInputObjectSet
 Aliases: AuthRuleObj
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 AuthorizationRule Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AuthorizationRuleName
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NamespaceAuthorizationRuleSet
 Aliases: NamespaceName
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventhubAuthorizationRuleSet
 Aliases: NamespaceName
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

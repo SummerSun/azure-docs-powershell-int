@@ -31,7 +31,7 @@ The **Remove-AzureRMSiteRecoveryNetworkMapping** cmdlet removes a network mappin
 Specifies the network mapping object.
 
 ```yaml
-Type: ASRNetworkMapping
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRNetworkMapping
 Parameter Sets: (All)
 Aliases: 
 
@@ -44,7 +44,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

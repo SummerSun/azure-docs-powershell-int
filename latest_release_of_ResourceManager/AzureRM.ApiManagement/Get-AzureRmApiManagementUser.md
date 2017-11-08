@@ -81,7 +81,7 @@ This command gets all users within the specified group.
 Specifies an instance of **PsApiManagementContext**.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +98,7 @@ If this parameter is specified, this cmdlet finds a user by email.
 This parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find users
 Aliases: 
 
@@ -115,7 +115,7 @@ If this parameter is specified, this cmdlet finds a user by first name.
 This parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find users
 Aliases: 
 
@@ -132,7 +132,7 @@ If specified, this cmdlet finds all users within the specified group.
 This parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find users
 Aliases: 
 
@@ -149,7 +149,7 @@ If specified, this cmdlet finds users by last name.
 This parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find users
 Aliases: 
 
@@ -166,7 +166,7 @@ If specified, this cmdlet finds users in this state.
 This parameter is optional.
 
 ```yaml
-Type: PsApiManagementUserState
+Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState]
 Parameter Sets: Find users
 Aliases: 
 Accepted values: Active, Blocked
@@ -184,7 +184,7 @@ If specified, this cmdlet finds the user by this identifier.
 This parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get user by ID
 Aliases: 
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

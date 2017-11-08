@@ -56,7 +56,7 @@ That cmdlet enables that profile.
 Specifies the name of the Traffic Manager profile that this cmdlet enables.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -72,7 +72,7 @@ Specifies the name of a resource group.
 This cmdlet enables a Traffic Manager profile in the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -88,7 +88,7 @@ Specifies a **TrafficManagerProfile** object to enable.
 To obtain a **TrafficManagerProfile** object, use the Get-AzureRmTrafficManagerProfile cmdlet.
 
 ```yaml
-Type: TrafficManagerProfile
+Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile
 Parameter Sets: Object
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

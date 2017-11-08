@@ -65,7 +65,7 @@ The **Get-AzureRmSiteRecoveryNetwork** cmdlet gets information about Azure Site 
 
 ### -Fabric
 ```yaml
-Type: ASRFabric
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRFabric
 Parameter Sets: ByFabricObject, ByName, ByFriendlyName
 Aliases: 
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 Specifies the friendly name of the virtual machine network.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFriendlyNameLegacy
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFriendlyName
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine network.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNameLegacy
 Aliases: 
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -Server
 ```yaml
-Type: ASRServer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRServer
 Parameter Sets: ByServerObject, ByNameLegacy, ByFriendlyNameLegacy
 Aliases: 
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

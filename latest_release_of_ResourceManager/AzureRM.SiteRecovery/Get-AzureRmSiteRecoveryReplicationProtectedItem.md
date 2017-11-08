@@ -50,7 +50,7 @@ The **Get-AzureRmSiteRecoveryReplicationProtectedItem** cmdlet gets the properti
 Specifies the friendly name of the Replication Protected Item that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectWithFriendlyName
 Aliases: 
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 Specifies the name of the Replication Protected Item that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectWithName
 Aliases: 
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 Specifies the Protectable Item corresponding to the Replication Protected Item.
 
 ```yaml
-Type: ASRProtectableItem
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectableItem
 Parameter Sets: ByProtectableItemObject
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 Specifies the Azure Site Recovery Protection Container object.
 
 ```yaml
-Type: ASRProtectionContainer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionContainer
 Parameter Sets: ByObject, ByObjectWithName, ByObjectWithFriendlyName
 Aliases: 
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

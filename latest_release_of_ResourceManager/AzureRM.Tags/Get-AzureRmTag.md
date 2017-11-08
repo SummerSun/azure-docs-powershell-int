@@ -109,7 +109,7 @@ Using the *Detailed* parameter is the equivalent of using the *Name* parameter f
 Indicates that this operation adds information about tag values to the output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,7 +126,7 @@ By default, **Get-AzureRmTag** gets basic information about all predefined tags 
 When you specify the *Name* parameter, the *Detailed* parameter has no effect.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

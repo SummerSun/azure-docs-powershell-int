@@ -51,7 +51,7 @@ This command sets HttpLoggingEnabled to true for Web App ContosoWebApp associate
 App Service Plan Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 App Settings HashTable
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: S1
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Destination slot name for auto swap
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 Connection Strings HashTable
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: S1
 Aliases: 
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 Default Documents String Array
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: S1
 Aliases: 
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 Detailed Error Logging Enabled Boolean
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: S1
 Aliases: 
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 WebApp HostNames String Array
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: S1
 Aliases: 
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 HttpLoggingEnabled Boolean
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: S1
 Aliases: 
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 Managed Pipeline Mode Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 Accepted values: Classic, Integrated
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 WebApp Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 Net Framework Version
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 The number of workers to be allocated
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 Php Version
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 Request Tracing Enabled
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: S1
 Aliases: 
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 Use 32-bit Worker Process Boolean
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 WebApp Object
 
 ```yaml
-Type: Site
+Type: Microsoft.Azure.Management.WebSites.Models.Site
 Parameter Sets: S2
 Aliases: 
 
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 WebSocketsEnabled Boolean
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: S1
 Aliases: 
 
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

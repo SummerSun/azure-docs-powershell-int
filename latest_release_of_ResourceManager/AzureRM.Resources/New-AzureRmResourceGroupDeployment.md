@@ -117,7 +117,7 @@ Specifies the API version that is supported by the resource Provider.
 You can specify a different version than the default version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,7 +138,7 @@ The acceptable values for this parameter are:
 - None
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -171,7 +171,7 @@ Specifies the deployment mode. The acceptable values for this parameter are:
 - Incremental
 
 ```yaml
-Type: DeploymentMode
+Type: Microsoft.Azure.Management.ResourceManager.Models.DeploymentMode
 Parameter Sets: (All)
 Aliases: 
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group deployment to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DeploymentName
 
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to deploy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -232,7 +232,7 @@ Specifies the full path of a JSON template file.
 This can be a custom template or a gallery template that is saved as a JSON file, such as one created by using the **Save-AzureRmResourceGroupGalleryTemplate** cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Deployment via template file without parameters, Deployment via template file and template parameters object, Deployment via template file and template parameters file, Deployment via template file template parameters uri
 Aliases: 
 
@@ -251,7 +251,7 @@ Template parameters are dynamically added to the command when you specify a temp
 To use the dynamic parameters, type a minus sign (-) to indicate a parameter name and then use the Tab key to cycle through the available parameters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Deployment via template file and template parameters file, Deployment via template uri and template parameters file
 Aliases: 
 
@@ -269,7 +269,7 @@ If a template has parameters, you must specify parameter values.
 Template parameters are dynamically added to the command when you specify a template.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Deployment via template file and template parameters object, Deployment via template uri and template parameters object
 Aliases: 
 
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 Specifies the URI of a template parameters file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Deployment via template file template parameters uri, Deployment via template uri and template parameters uri
 Aliases: 
 
@@ -300,7 +300,7 @@ Specifies the URI of a JSON template file.
 This file can be a custom template or a gallery template that is saved as a JSON file, such as by using **Save-AzureRmResourceGroupGalleryTemplate**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Deployment via template uri and template parameters object, Deployment via template uri and template parameters file, Deployment via template uri and template parameters uri, Deployment via template uri without parameters
 Aliases: 
 
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -331,7 +331,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

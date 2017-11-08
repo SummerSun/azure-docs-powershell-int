@@ -70,7 +70,7 @@ The fourth command passes the load balancer in $slb to **Set-AzureRmLoadBalancer
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -86,7 +86,7 @@ Specifies a load balancer.
 This cmdlet sets the goal state for a front-end configuration for the load balancer that this parameter specifies.
 
 ```yaml
-Type: PSLoadBalancer
+Type: Microsoft.Azure.Commands.Network.Models.PSLoadBalancer
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Specifies the name of the front-end IP configuration to set.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -117,7 +117,7 @@ Specifies the private IP address of the load balancer that is associated with th
 Specify this parameter only if you also specify the *Subnet* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceSubnet, SetByResourceIdSubnet
 Aliases: 
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies the **PublicIpAddress** object that is associated with the front-end IP configuration to set.
 
 ```yaml
-Type: PSPublicIpAddress
+Type: Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress
 Parameter Sets: SetByResourcePublicIpAddress
 Aliases: 
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 Specifies the ID of the **PublicIpAddress** object that is associated with the front-end IP configuration that this cmdlet sets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceIdPublicIpAddress
 Aliases: 
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 Specifies the **Subnet** object that contains the front-end IP configuration that this cmdlet sets.
 
 ```yaml
-Type: PSSubnet
+Type: Microsoft.Azure.Commands.Network.Models.PSSubnet
 Parameter Sets: SetByResourceSubnet
 Aliases: 
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 Specifies the ID of the subnet that contains the front-end IP configuration that this cmdlet sets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceIdSubnet
 Aliases: 
 

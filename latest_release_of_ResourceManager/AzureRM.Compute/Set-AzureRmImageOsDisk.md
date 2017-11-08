@@ -54,7 +54,7 @@ The final command creates an image named 'ImageName01' in resource group 'Resour
 Specifies the Uri of the blob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Specifies the caching mode of the disk.
 
 ```yaml
-Type: CachingTypes
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.CachingTypes]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, ReadOnly, ReadWrite
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 Specifies the size of the disk in GB.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 Specifies a local image object.
 
 ```yaml
-Type: PSImage
+Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSImage
 Parameter Sets: (All)
 Aliases: 
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 Specifies the ID of a managed disk.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 Specifies the OS state.
 
 ```yaml
-Type: OperatingSystemStateTypes
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.OperatingSystemStateTypes]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Generalized, Specialized
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 Specifies the OS type.
 
 ```yaml
-Type: OperatingSystemTypes
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.OperatingSystemTypes]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Windows, Linux
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 Specifies the ID of a snapshot.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 The Storage Account type of Os Image Disk
 
 ```yaml
-Type: StorageAccountTypes
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.StorageAccountTypes]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: StandardLRS, PremiumLRS
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

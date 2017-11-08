@@ -110,7 +110,7 @@ The command gets the container group with the resource Id.
 The container group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetContainerGroupInResourceGroupParamSet
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 The resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListContainerGroupParamSet
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetContainerGroupInResourceGroupParamSet
 Aliases: 
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 The resource id.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetContainerGroupByResourceIdParamSet
 Aliases: 
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

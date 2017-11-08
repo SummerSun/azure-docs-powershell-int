@@ -80,7 +80,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +96,7 @@ Specifies an object reference to the compute node where task scheduling is disab
 This object reference is created by using the Get-AzureBatchComputeNode cmdlet and storing the returned compute node object in a variable.
 
 ```yaml
-Type: PSComputeNode
+Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
 Parameter Sets: InputObject
 Aliases: 
 
@@ -126,7 +126,7 @@ Currently running tasks will be able to complete and data retention periods will
 No new tasks will be scheduled on this node.
 
 ```yaml
-Type: DisableComputeNodeSchedulingOption
+Type: System.Nullable`1[Microsoft.Azure.Batch.Common.DisableComputeNodeSchedulingOption]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Requeue, Terminate, TaskCompletion
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 Specifies the ID of the compute node where task scheduling is disabled.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -159,7 +159,7 @@ Specifies the ID of the batch pool that contains the compute node where task sch
 If you use the *PoolId* parameter, do not use the *ComputeNode* parameter in that same command.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

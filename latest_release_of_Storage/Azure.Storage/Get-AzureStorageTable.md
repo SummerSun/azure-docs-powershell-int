@@ -58,7 +58,7 @@ Specifies the storage context.
 To create it, you can use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ If the table name is empty, the cmdlet lists all the tables.
 Otherwise, it lists all tables that match the specified name or the regular name pattern.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TableName
 Aliases: N, Table
 
@@ -91,7 +91,7 @@ Specifies a prefix used in the name of the table or tables you want to get.
 You can use this to find all tables that start with the same string, such as table.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TablePrefix
 Aliases: 
 

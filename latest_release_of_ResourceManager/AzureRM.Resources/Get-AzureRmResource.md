@@ -86,7 +86,7 @@ This command gets a resource of the type microsoft.web/sites, named ContosoWebsi
 
 ### -ApiVersion
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -ExpandProperties
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -ExtensionResourceName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource at the tenant level., Lists the resources based on the specified scope at the tenant level., Get resource by name and group, Get a resource by name and type., Get resource by name, group and type
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -ExtensionResourceType
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource at the tenant level., Lists the resources based on the specified scope at the tenant level., Get resource by name and group, Get a resource by name and type., Get resource by name, group and type
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource collection
 Aliases: 
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 ### -IsCollection
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Get a single resource at the tenant level., Lists the resources based on the specified scope at the tenant level., Get resource by name and group, Get a resource by name and type., Get resource collection
 Aliases: 
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 
 ### -ODataQuery
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 
 ### -Pre
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource by name and group
 Aliases: 
 
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource by name, group and type
 Aliases: 
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource collection
 Aliases: 
 
@@ -232,7 +232,7 @@ Specifies the fully qualified resource ID, including the subscription, as in the
 This cmdlet gets the resource that has this ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource by its Id.
 Aliases: Id
 
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 
 ### -ResourceName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource at the tenant level., Get resource by name, group and type
 Aliases: Name
 
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get resource by name and group, Get a resource by name and type.
 Aliases: Name
 
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 
 ### -ResourceType
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource at the tenant level., Get resource by name, group and type
 Aliases: 
 
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get a resource by name and type.
 Aliases: 
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource collection
 Aliases: 
 
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet operates at the tenant level.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Get a single resource at the tenant level., Lists the resources based on the specified scope at the tenant level.
 Aliases: 
 
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 
 ### -Top
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: Lists the resources based on the specified scope at the tenant level.
 Aliases: 
 
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

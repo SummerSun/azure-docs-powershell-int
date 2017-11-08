@@ -72,7 +72,7 @@ Specify the DataFactory parameter in subsequent cmdlets to use the data factory 
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Specifies the name of the data factory about which to get information.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DataFactoryName
 
@@ -103,7 +103,7 @@ Specifies the name of an Azure resource group.
 This cmdlet gets information about data factories that belong to the group this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

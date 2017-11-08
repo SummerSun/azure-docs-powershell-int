@@ -36,7 +36,7 @@ The **Stop-AzureRmSiteRecoveryJob** cmdlet stops an Azure Site Recovery job.
 Specifies the Site Recovery job object to stop.
 
 ```yaml
-Type: ASRJob
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRJob
 Parameter Sets: ByObject
 Aliases: 
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 Specifies the unique name for the Site Recovery job to stop.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

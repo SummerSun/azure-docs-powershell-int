@@ -53,7 +53,7 @@ The **Get-AzureRmSiteRecoveryStorageClassification** cmdlet gets storage classif
 
 ### -Fabric
 ```yaml
-Type: ASRFabric
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRFabric
 Parameter Sets: ByFabricObject
 Aliases: 
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Specifies the friendly name of the storage classification that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFriendlyName
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 Specifies the name of the storage classification that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Server
 ```yaml
-Type: ASRServer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRServer
 Parameter Sets: ByServerObject
 Aliases: 
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

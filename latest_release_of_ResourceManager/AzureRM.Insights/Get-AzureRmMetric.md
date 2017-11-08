@@ -168,7 +168,7 @@ Indicates that this cmdlet displays detailed output.
 By default, output is summarized.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -184,7 +184,7 @@ Specifies the end time of the query in local time.
 The default is the current time.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 Specifies an array of names of metrics.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the default mode
 Aliases: 
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 Specifies the resource ID of the metric.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -242,7 +242,7 @@ Specifies the start time of the query in local time.
 The default is the current local time minus one hour.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 Specifies the time grain of the metric as a **TimeSpan** object in the format hh:mm:ss.
 
 ```yaml
-Type: TimeSpan
+Type: System.TimeSpan
 Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 
 ### -AggregationType
 The aggregation type of the query```yaml
-Type: AggregationType
+Type: System.Nullable`1[Microsoft.Azure.Management.Monitor.Models.AggregationType]
 Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
@@ -283,7 +283,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

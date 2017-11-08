@@ -54,7 +54,7 @@ This command gets the Automation account named ContosoAutomationAccount in the r
 Specifies the name of the Automation account that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAutomationAccountName
 Aliases: AutomationAccountName
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group in which this cmdlet gets Automation accounts.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAll
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAutomationAccountName
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

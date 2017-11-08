@@ -89,7 +89,7 @@ The value of the "asymmetric" credential type.
 It represents the base 64 encoded certificate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SpObjectIdWithCertValueParameterSet, SPNWithCertValueParameterSet
 Aliases: 
 
@@ -106,7 +106,7 @@ The default end date value is one year from today.
 For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 The object id of the service principal to add the credentials to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SpObjectIdWithPasswordParameterSet, SpObjectIdWithCertValueParameterSet
 Aliases: ServicePrincipalObjectId
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 The password to be associated with the application.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SpObjectIdWithPasswordParameterSet, SPNWithPasswordParameterSet
 Aliases: 
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 The name (SPN) of the service principal to add the credentials to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SPNWithCertValueParameterSet, SPNWithPasswordParameterSet
 Aliases: SPN
 
@@ -168,7 +168,7 @@ The default start date value is today.
 For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

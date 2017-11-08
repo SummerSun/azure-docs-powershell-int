@@ -89,7 +89,7 @@ Specifies the HDInsight cluster configuration object that this cmdlet modifies.
 This object is created by the **New-AzureRmHDInsightClusterConfig** cmdlet.
 
 ```yaml
-Type: AzureHDInsightConfig
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig
 Parameter Sets: (All)
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Specifies the name of the script action.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +124,7 @@ The acceptable values for this parameter are:
 - ZookeeperNode
 
 ```yaml
-Type: ClusterNodeType
+Type: Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HeadNode, WorkerNode, ZookeeperNode, EdgeNode
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 Specifies the parameters for the script action.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 Specifies the public URI for the script action (a PowerShell or Bash script).
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

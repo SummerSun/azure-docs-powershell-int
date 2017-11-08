@@ -59,7 +59,7 @@ This command gets all of the Storage accounts in the subscription.
 Specifies the name of the Storage account to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameParameterSet
 Aliases: StorageAccountName, AccountName
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the Storage account to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupParameterSet
 Aliases: 
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameParameterSet
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

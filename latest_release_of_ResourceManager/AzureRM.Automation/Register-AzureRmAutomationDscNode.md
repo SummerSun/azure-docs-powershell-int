@@ -45,7 +45,7 @@ Valid values are:
 - StopConfiguration
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: ContinueConfiguration, StopConfiguration
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies whether new configurations that this DSC node downloads from the Azure Automation DSC pull server replace the existing modules already on the target node.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies the name of an Automation account in which this cmdlet registers a virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Specifies the location in which this cmdlet registers a virtual machine.
 To obtain valid locations, use the Get-AzureRMLocation cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure virtual machine that this cmdlet registers for management.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the Azure virtual machine that this cmdlet registers.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -142,7 +142,7 @@ Valid values are:
 - ApplyOnly
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: ApplyAndMonitor, ApplyAndAutocorrect, ApplyOnly
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 Specifies the frequency, in minutes, at which the background application of DSC attempts to implement the current configuration on the target node.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 Specifies the name of the node configuration that this cmdlet configures the virtual machine to pull from Azure Automation DSC.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 Specifies whether to restart the virtual machine, if needed.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 Specifies the frequency, in minutes, at which the local Configuration Manager contacts the Azure Automation DSC pull server to download the latest node configuration.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -219,7 +219,7 @@ Specifies the name of a resource group.
 The Automation account with which this cmdlet registers a virtual machine belongs to the resource group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

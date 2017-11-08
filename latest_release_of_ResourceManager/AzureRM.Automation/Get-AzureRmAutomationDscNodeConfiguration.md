@@ -67,7 +67,7 @@ This command gets metadata for a DSC node configuration with the name ContosoCon
 Specifies the name of an Automation account that contains the DSC node configurations for which this cmdlet gets metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 Specifies the name of DSC configuration for which this cmdlet gets node configuration metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByConfigurationName
 Aliases: 
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 Specifies the name of the DSC node configuration for which this cmdlet gets metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNodeConfigurationName
 Aliases: NodeConfigurationName
 
@@ -113,7 +113,7 @@ Specifies the name of a resource group.
 This cmdlet gets metadata for DSC node configurations in the resource group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -132,7 +132,7 @@ Valid values are:
 - Good
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAll, ByConfigurationName
 Aliases: 
 Accepted values: Good, Bad
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

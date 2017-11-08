@@ -121,7 +121,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +137,7 @@ Specifies an OData expand clause.
 Specify a value for this parameter to get associated entities of the main entity to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,7 +153,7 @@ Specifies an OData filter clause for tasks.
 If you do not specify a filter, this cmdlet returns all tasks for the Batch account or job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ODataFilter, ParentObject
 Aliases: 
 
@@ -169,7 +169,7 @@ Specifies the ID of the task that this cmdlet gets.
 You cannot specify wildcard characters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -185,7 +185,7 @@ Specifies the job that contains tasks that this cmdlet gets.
 To obtain a **PSCloudJob** object, use the Get-AzureBatchJob cmdlet.
 
 ```yaml
-Type: PSCloudJob
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudJob
 Parameter Sets: ParentObject
 Aliases: 
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 Specifies the ID of the job that contains the tasks that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ODataFilter, Id
 Aliases: 
 
@@ -217,7 +217,7 @@ If you specify a value of zero (0) or less, the cmdlet does not use an upper lim
 The default value is 1000.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: ODataFilter, ParentObject
 Aliases: 
 
@@ -233,7 +233,7 @@ Specifies an OData select clause.
 Specify a value for this parameter to get specific properties rather than all object properties.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -48,7 +48,7 @@ The acceptable values for this parameter are:
 - RecoveryToPrimary
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: PrimaryToRecovery, RecoveryToPrimary
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 Specifies the protection entity object.
 
 ```yaml
-Type: ASRProtectionEntity
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity
 Parameter Sets: ByPEObject
 Aliases: 
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 Specifies a recovery plan object.
 
 ```yaml
-Type: ASRRecoveryPlan
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlan
 Parameter Sets: ByRPObject
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -ReplicationProtectedItem
 ```yaml
-Type: ASRReplicationProtectedItem
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem
 Parameter Sets: ByRPIObject
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

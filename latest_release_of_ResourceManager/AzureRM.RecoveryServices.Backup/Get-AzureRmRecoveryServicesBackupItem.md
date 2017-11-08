@@ -62,7 +62,7 @@ The acceptable values for this parameter are:
  AzureSQL
 
 ```yaml
-Type: BackupManagementType
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType
 Parameter Sets: GetItemsForVault
 Aliases: 
 Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL
@@ -79,7 +79,7 @@ Specifies a container object from which this cmdlet gets backup items.
 To obtain an **AzureRmRecoveryServicesBackupContainer**, use the Get-AzureRmRecoveryServicesBackupContainer cmdlet.
 
 ```yaml
-Type: ContainerBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerBase
 Parameter Sets: GetItemsForContainer
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 Specifies the name of the container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +119,7 @@ There is a protection error.
 Protection is disabled.
 
 ```yaml
-Type: ItemProtectionState
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemProtectionState
 Parameter Sets: (All)
 Aliases: 
 Accepted values: IRPending, ProtectionError, Protected, ProtectionStopped
@@ -139,7 +139,7 @@ The acceptable values for this parameter are:
 - Unhealthy
 
 ```yaml
-Type: ItemProtectionStatus
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemProtectionStatus
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Healthy, Unhealthy
@@ -159,7 +159,7 @@ The acceptable values for this parameter are:
 - AzureSQLDatabase
 
 ```yaml
-Type: WorkloadType
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureVM, AzureSQLDatabase
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

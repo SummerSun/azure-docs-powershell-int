@@ -70,7 +70,7 @@ Gets all AD service principals.
 Object id of the service principal.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ObjectIdParameterSet
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 Fetches all service principals that have the display name starting with this value.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SearchStringParameterSet
 Aliases: 
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 SPN of the service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EmptyParameterSet
 Aliases: SPN
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SPNParameterSet
 Aliases: SPN
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

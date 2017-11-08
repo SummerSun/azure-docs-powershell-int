@@ -67,7 +67,7 @@ This command gets the compilation job with the specified ID in the Automation ac
 Specifies the name of the Automation account that contains DSC compilation jobs that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 Specifies the name of the DSC configuration for which this cmdlet gets compilation jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByConfigurationName
 Aliases: Name
 
@@ -98,7 +98,7 @@ Specifies an end time.
 This cmdlet gets compilations jobs that started up to the time that this parameter specifies.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: ByAll, ByConfigurationName
 Aliases: 
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 Specifies the unique ID of the DSC compilation job that this cmdlet gets.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ByJobId
 Aliases: JobId
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group in which this cmdlet gets DSC compilation jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -144,7 +144,7 @@ Specifies a start time.
 This cmdlet gets jobs that start at or after the time that this parameter specifies.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: ByAll, ByConfigurationName
 Aliases: 
 
@@ -173,7 +173,7 @@ Valid values are:
 - New
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAll, ByConfigurationName
 Aliases: 
 Accepted values: Completed, Failed, Queued, Starting, Resuming, Running, Stopped, Stopping, Suspended, Suspending, Activating
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

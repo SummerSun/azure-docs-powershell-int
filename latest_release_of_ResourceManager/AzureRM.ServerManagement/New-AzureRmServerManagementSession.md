@@ -45,7 +45,7 @@ To obtain a credential object, use the Get-Credential cmdlet.
 For more information, type `Get-Help Get-Credential`.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -62,7 +62,7 @@ Specifies the node for which this cmdlet creates the session on.
 This parameter may be used instead of the *ResourceGroupName* and *NodeName* parameters.
 
 ```yaml
-Type: Node
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Node
 Parameter Sets: ByNode
 Aliases: 
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Specifies the name of the node for which this cmdlet creates a session.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies the resource group of the node that this cmdlet creates a session for.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the name to use for the session.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

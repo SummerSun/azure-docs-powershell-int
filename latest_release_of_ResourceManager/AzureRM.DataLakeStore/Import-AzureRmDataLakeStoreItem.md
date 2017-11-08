@@ -48,7 +48,7 @@ This command uploads the file SrcFile.csv and adds it to the MyFiles folder in t
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -64,7 +64,7 @@ Specify the maximum number of files to upload in parallel for a folder upload.
 The default value is five (5).
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Store path to which to upload a file or folder, starting with the root directory (/).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 Optionally indicates the diagnostic log level to use to record events during the file or folder import. Default is Error.
 
 ```yaml
-Type: LogLevel
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.LogLevel
 Parameter Sets: Include diagnostic logging
 Aliases: 
 Accepted values: Debug, Information, Error, None
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 Specifies the path for the diagnostic log to record events to during the file or folder import.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Include diagnostic logging
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Indicates that this operation can overwrite the destination file if it already exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 Indicates that this operation uploads the file as a binary file.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 Specifies the local path of the file or folder to upload.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -171,7 +171,7 @@ Specifies the maximum number of threads to use per file.
 The default value is ten (10).
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 Indicates that this operation should upload all items in all subfolders.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 Indicates that this operation should resume a previously canceled or failed upload.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -232,7 +232,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

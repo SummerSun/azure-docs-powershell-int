@@ -76,7 +76,7 @@ Specifies a container object for which this cmdlet gets backup items.
 To obtain an **AzureRmBackupContainer**, use the Get-AzureRmBackupContainer cmdlet.
 
 ```yaml
-Type: AzureRMBackupContainer
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupContainer
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +96,7 @@ The acceptable values for this parameter are:
 - NotProtected
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Protected, Protecting, NotProtected
@@ -114,7 +114,7 @@ The acceptable values for this parameter are: IRPending, Protected, ProtectionEr
 If the *ProtectionStatus* parameter has the value Protected, you can use the *Status* parameter value to filter items.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: IRPending, ProtectionStopped, ProtectionError, Protected
@@ -131,7 +131,7 @@ Specifies the type of item that this cmdlet gets.
 Currently, the only supported value is AzureVM.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureVM
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -66,7 +66,7 @@ The command specifies other required information that includes the publisher and
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -82,7 +82,7 @@ Indicates that this cmdlet prevents the Azure guest agent from automatically upd
 By default, this cmdlet enables the guest agent to update the extensions.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 Specifies the extension type.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Type
 
@@ -115,7 +115,7 @@ The value can be any string different from the current value.
 If forceUpdateTag is not changed, updates to public or protected settings are still applied by the handler.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 Specifies the location of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 Specifies the name of an extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ExtensionName
 
@@ -161,7 +161,7 @@ Specifies private configuration for the extension, as a hash table.
 This cmdlet encrypts the private configuration.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Settings
 Aliases: 
 
@@ -177,7 +177,7 @@ Specifies private configuration for the extension, as a string.
 This cmdlet encrypts the private configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SettingString
 Aliases: 
 
@@ -193,7 +193,7 @@ Specifies the name of the extension publisher.
 The publisher provides a name when the publisher registers an extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -224,7 +224,7 @@ Specifies public configuration for the extension, as a hash table.
 This cmdlet does not encrypt public configuration.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Settings
 Aliases: 
 
@@ -240,7 +240,7 @@ Specifies public configuration for the extension, as a string.
 This cmdlet does not encrypt public configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SettingString
 Aliases: 
 
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 Specifies the version of the extension to use for this virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: HandlerVersion, Version
 
@@ -271,7 +271,7 @@ Specifies the name of a virtual machine.
 This cmdlet modifies extensions for the virtual machine that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName
 
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -303,7 +303,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

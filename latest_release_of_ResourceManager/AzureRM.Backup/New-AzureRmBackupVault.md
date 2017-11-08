@@ -63,7 +63,7 @@ Specifies a name for the Azure Backup vault.
 The name must be unique in a resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -80,7 +80,7 @@ For hybrid backup scenarios, we recommend that you create a vault in a region cl
 For backup of Azure infrastructure as a service (IaaS) virtual machines, the vault becomes the point of discovery for local virtual machines.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +97,7 @@ To create a resource group, use the New-AzureRMResourceGroup cmdlet.
 The resource group and the Azure Backup vault do not have to be in the same region.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,7 +114,7 @@ The acceptable values for this parameter are: LocallyRedundant and GeoRedundant.
 The default value is GeoRedundant.
 
 ```yaml
-Type: AzureBackupVaultStorageType
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureBackupVaultStorageType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: GeoRedundant, LocallyRedundant
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

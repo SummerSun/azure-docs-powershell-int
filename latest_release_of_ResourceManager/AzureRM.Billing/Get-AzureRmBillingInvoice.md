@@ -70,7 +70,7 @@ Get most recent 10 invoices of the subscription and include the download Url in 
 Generate the download url of the invoices.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: List
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 Get the latest invoice.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Latest
 Aliases: 
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 Determines the maximum number of records to return.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: List
 Aliases: 
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

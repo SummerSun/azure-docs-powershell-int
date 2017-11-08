@@ -85,7 +85,7 @@ This command adds a database named Database01 to the elastic pool named ElasticP
 Specifies the name of the database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -108,7 +108,7 @@ The acceptable values for this parameter are:
 - Free
 
 ```yaml
-Type: DatabaseEdition
+Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseEdition
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Premium, Basic, Standard, DataWarehouse, Stretch, Free, PremiumRS
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 Specifies name of the elastic pool in which to move the database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -141,7 +141,7 @@ You can specify either this parameter or *MaxSizeGB*.
 See the *MaxSizeGB* parameter for acceptable values per edition.
 
 ```yaml
-Type: Int64
+Type: System.Int64
 Parameter Sets: (All)
 Aliases: 
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 The read scale option to assign to the Azure SQL Database.(Enabled/Disabled)
 
 ```yaml
-Type: DatabaseReadScale
+Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseReadScale
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Disabled, Enabled
@@ -174,7 +174,7 @@ service objectives, see [Azure SQL Database Service Tiers and Performance Levels
 in the Microsoft Developer Network Library.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 Specifies the name of resource group to which the server is assigned.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 Specifies the name of the server that hosts the database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -221,7 +221,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tag
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -252,7 +252,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

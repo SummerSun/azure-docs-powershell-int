@@ -45,7 +45,7 @@ If you do not specify the *ResoureGroupName* parameter, this cmdlet gets all Cog
 Specifies the name of the Cognitive Services account to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameParameterSet
 Aliases: CognitiveServicesAccountName, AccountName
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group the Cognitive Services account is assigned to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupParameterSet
 Aliases: 
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameParameterSet
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

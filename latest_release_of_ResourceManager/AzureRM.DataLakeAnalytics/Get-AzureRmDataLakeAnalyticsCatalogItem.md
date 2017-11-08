@@ -45,7 +45,7 @@ This command gets a list of tables in the specified database.
 Specifies the Data Lake Analytics account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -75,7 +75,7 @@ The acceptable values for this parameter are:
 - TablePartition
 
 ```yaml
-Type: CatalogItemType
+Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+CatalogItemType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Database, Schema, Assembly, Table, TablePartition, TableValuedFunction, TableStatistics, ExternalDataSource, View, Procedure, Secret, Credential, Types, Package
@@ -92,7 +92,7 @@ Specifies the multi-part path to the item to retrieve, or to the parent item of 
 The parts of the path should be separated by a period (.).
 
 ```yaml
-Type: CatalogPathInstance
+Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.CatalogPathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

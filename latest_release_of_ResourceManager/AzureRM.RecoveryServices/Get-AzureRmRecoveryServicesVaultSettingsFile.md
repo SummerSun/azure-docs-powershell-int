@@ -58,7 +58,7 @@ The last command gets the vault credentials file for $Vault01 using the credenti
 Indicates the vault credentials file is applicable to Azure Backup.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForBackupVaultType
 Aliases: 
 
@@ -74,7 +74,7 @@ Specifies the path to the Azure Site Recovery vault settings file.
 You can download this file from the Azure Site Recovery vault portal and store it locally.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -90,7 +90,7 @@ Specifies the site friendly name.
 Use this parameter if you are downloading the vault credentials for a Hyper-V site.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ForSite
 Aliases: 
 
@@ -106,7 +106,7 @@ Specifies the site identifier.
 Use this parameter if you are downloading the vault credentials for a Hyper-V site.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ForSite
 Aliases: 
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 Indicates the vault credentials file is applicable to Azure Site Recovery.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForSite, ByDefault
 Aliases: 
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 Specifies the Azure Site Recovery vault object.
 
 ```yaml
-Type: ARSVault
+Type: Microsoft.Azure.Commands.RecoveryServices.ARSVault
 Parameter Sets: (All)
 Aliases: 
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

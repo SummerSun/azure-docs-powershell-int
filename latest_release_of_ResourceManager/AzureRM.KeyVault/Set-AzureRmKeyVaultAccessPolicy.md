@@ -161,7 +161,7 @@ When you run this command, specify your own vault name but you must specify the 
 For future use.
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: ByObjectId
 Aliases: 
 
@@ -177,7 +177,7 @@ Enables you to specify an object ID without validating that the object exists in
 Use this parameter only if you want to grant access to your key vault to an object ID that refers to a delegated security group from another Azure tenant.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByObjectId
 Aliases: 
 
@@ -193,7 +193,7 @@ Specifies the user email address of the user to whom to grant permissions.
 This email address must exist in the directory associated with the current subscription and be unique.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByEmailAddress
 Aliases: 
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 Enables the Microsoft.Compute resource provider to retrieve secrets from this key vault when this key vault is referenced in resource creation, for example when creating a virtual machine.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForVault
 Aliases: 
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 Enables the Azure disk encryption service to get secrets and unwrap keys from this key vault.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForVault
 Aliases: 
 
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 Enables Azure Resource Manager to get secrets from this key vault when this key vault is referenced in a template deployment.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForVault
 Aliases: 
 
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 Specifies the object ID of the user or service principal in Azure Active Directory for which to grant permissions.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectId
 Aliases: 
 
@@ -269,7 +269,7 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -298,7 +298,7 @@ The acceptable values for this parameter are:
 - Manageissuers
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId, ByEmailAddress
 Aliases: 
 Accepted values: get, list, delete, create, import, update, managecontacts, getissuers, listissuers, setissuers, deleteissuers, manageissuers, all
@@ -332,7 +332,7 @@ The acceptable values for this parameter are:
 - Purge
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId, ByEmailAddress
 Aliases: 
 Accepted values: decrypt, encrypt, unwrapKey, wrapKey, verify, sign, get, list, update, create, import, delete, backup, restore, recover, purge, all
@@ -358,7 +358,7 @@ The acceptable values for this parameter are:
 - Purge
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId, ByEmailAddress
 Aliases: 
 Accepted values: get, list, set, delete, backup, restore, recover, purge, all
@@ -374,7 +374,7 @@ Accept wildcard characters: False
 Specifies managed storage account and sas definition operation permissions to grant to a user or service principal.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId, ByEmailAddress
 Aliases: 
 Accepted values: get, list, delete, set, update, regeneratekey, getsas, listsas, deletesas, setsas, all
@@ -390,7 +390,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -407,7 +407,7 @@ Specify the application ID, also known as client ID, registered for the applicat
 The application with the service principal name that this parameter specifies must be registered in the Azure directory that contains your current subscription.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByServicePrincipalName
 Aliases: SPN
 
@@ -423,7 +423,7 @@ Specifies the user principal name of the user to whom to grant permissions.
 This user principal name must exist in the directory associated with the current subscription.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByUserPrincipalName
 Aliases: UPN
 
@@ -439,7 +439,7 @@ Specifies the name of a key vault.
 This cmdlet modifies the access policy for the key vault that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -454,7 +454,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -470,7 +470,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -483,7 +483,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

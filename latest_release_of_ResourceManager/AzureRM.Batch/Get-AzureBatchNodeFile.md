@@ -148,7 +148,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -164,7 +164,7 @@ Specifies the compute node, as a **PSComputeNode** object, that contains the Bat
 To obtain a compute node object, use the Get-AzureBatchComputeNode cmdlet.
 
 ```yaml
-Type: PSComputeNode
+Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
 Parameter Sets: ParentComputeNode
 Aliases: 
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 Specifies the ID of the compute node that contains the Batch node files.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode_Id, ComputeNode_ODataFilter
 Aliases: 
 
@@ -195,7 +195,7 @@ Specifies an OData filter clause.
 This cmdlet returns properties for node files that match the filter that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_ODataFilter, ParentTask, ComputeNode_ODataFilter, ParentComputeNode
 Aliases: 
 
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 Specifies the ID of the job that contains the target task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_Id, Task_ODataFilter
 Aliases: 
 
@@ -227,7 +227,7 @@ If you specify a value of zero (0) or less, the cmdlet does not use an upper lim
 The default value is 1000.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Task_ODataFilter, ParentTask, ComputeNode_ODataFilter, ParentComputeNode
 Aliases: 
 
@@ -243,7 +243,7 @@ Specifies the name of the node file for which this cmdlet retrieves properties.
 You cannot specify wildcard characters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode_Id, Task_Id
 Aliases: 
 
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute node from which to get properties of node files.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode_Id, ComputeNode_ODataFilter
 Aliases: 
 
@@ -274,7 +274,7 @@ Indicates that this cmdlet returns a recursive list of files.
 Otherwise, it returns only the files in the root folder.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Task_ODataFilter, ParentTask, ComputeNode_ODataFilter, ParentComputeNode
 Aliases: 
 
@@ -290,7 +290,7 @@ Specifies the task, as a **PSCloudTask** object, with which the node files are a
 To obtain a task object, use the Get-AzureBatchTask cmdlet.
 
 ```yaml
-Type: PSCloudTask
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudTask
 Parameter Sets: ParentTask
 Aliases: 
 
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 Specifies the ID of the task for which this cmdlet gets properties of node files.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_Id, Task_ODataFilter
 Aliases: 
 
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

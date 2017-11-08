@@ -45,7 +45,7 @@ This command updates the specified recovery plan, and then publishes it.
 Specifies the path of the recovery plan file of the recovery plan that this cmdlet updates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRPFile
 Aliases: 
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Specifies a recovery plan that this cmdlet updates.
 
 ```yaml
-Type: ASRRecoveryPlan
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlan
 Parameter Sets: ByRPObject
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

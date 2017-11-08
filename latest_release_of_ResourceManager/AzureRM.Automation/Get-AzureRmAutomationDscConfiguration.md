@@ -52,7 +52,7 @@ This command gets metadata for a DSC configuration named MyConfiguration in the 
 Specifies the name of the Automation account that contains DSC configurations that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 Specifies the name of the DSC configuration that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByConfigurationName
 Aliases: ConfigurationName
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet gets DSC configurations.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -44,7 +44,7 @@ This command gets the backup configuration from the Web App named WebAppStandard
 WebApp Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Slot Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 WebApp Name
 
 ```yaml
-Type: Site
+Type: Microsoft.Azure.Management.WebSites.Models.Site
 Parameter Sets: FromWebApp
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

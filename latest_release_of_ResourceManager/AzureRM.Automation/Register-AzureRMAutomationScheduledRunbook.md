@@ -47,7 +47,7 @@ This command associates the runbook named Runbk01 with the schedule named Sched0
 Specifies an Automation account for the runbook on which this cmdlet operates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -65,7 +65,7 @@ The values are runbook parameter values.
 When the runbook starts in response to the associated schedule, these parameters are passed to the runbook.
 
 ```yaml
-Type: IDictionary
+Type: System.Collections.IDictionary
 Parameter Sets: ByRunbookNameAndScheduleName
 Aliases: 
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for the scheduled runbook.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 Specifies the name of the runbook that this cmdlet associates to a schedule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRunbookNameAndScheduleName
 Aliases: Name
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 The name of the hybrid runbook worker group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRunbookNameAndScheduleName
 Aliases: HybridWorker
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Specifies the name of the schedule to which this cmdlet associates a runbook.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRunbookNameAndScheduleName
 Aliases: 
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

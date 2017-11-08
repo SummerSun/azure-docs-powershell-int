@@ -96,7 +96,7 @@ subscription (Contoso Subscription 1) by default.
 The credentials, tenant and subscription used for communication with azure
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 Specifies the ID of the subscription to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListByIdInTenant
 Aliases: 
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 Specifies the name of the subscription to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListByNameInTenant
 Aliases: 
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Specifies the ID of the tenant that contains subscriptions to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

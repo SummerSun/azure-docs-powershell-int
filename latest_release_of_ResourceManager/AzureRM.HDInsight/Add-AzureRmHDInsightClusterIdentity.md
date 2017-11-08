@@ -85,7 +85,7 @@ This command adds Cluster Identity info to the cluster named your-hadoop-001, al
 Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 Specifies file contents of the certificate that will be used when accessing Azure Data Lake Store.
 
 ```yaml
-Type: Byte[]
+Type: System.Byte[]
 Parameter Sets: CertificateFileContents
 Aliases: 
 
@@ -116,7 +116,7 @@ Specifies the file path to the certificate that will be used to authenticate as 
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CertificateFilePath
 Aliases: 
 
@@ -132,7 +132,7 @@ Specifies the password for the certificate that will be used to authenticate as 
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -148,7 +148,7 @@ Specifies the HDInsight cluster configuration object that this cmdlet modifies.
 This object is created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ```yaml
-Type: AzureHDInsightConfig
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig
 Parameter Sets: (All)
 Aliases: 
 
@@ -164,7 +164,7 @@ Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

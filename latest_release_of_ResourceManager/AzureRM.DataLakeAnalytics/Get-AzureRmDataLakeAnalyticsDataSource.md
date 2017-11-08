@@ -58,7 +58,7 @@ This command gets all Data Lake Store accounts from a Data Lake Analytics accoun
 Specifies the Data Lake Analytics account that this cmdlet gets data sources.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure Blob Storage data source.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a Blob storage account
 Aliases: AzureBlob
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a Data Lake Store account
 Aliases: 
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Specifies the resource group name that contains the data source.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

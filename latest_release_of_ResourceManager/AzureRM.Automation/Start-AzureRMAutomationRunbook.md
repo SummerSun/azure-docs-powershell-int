@@ -56,7 +56,7 @@ The cmdlet waits up to 1000 seconds for the results.
 
 ### -AutomationAccountName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +72,7 @@ Specifies the number of seconds this cmdlet waits for a job to finish before it 
 The default value is 10800, or three hours.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: BySynchronousReturnJobOutput
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -Name
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: RunbookName
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Parameters
 ```yaml
-Type: IDictionary
+Type: System.Collections.IDictionary
 Parameter Sets: (All)
 Aliases: 
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 Specifies which Hybrid Worker Group on which to run the runbook.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: HybridWorker
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet waits for job to complete, suspend, or fail, and then returns control to Azure PowerShell.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: BySynchronousReturnJobOutput
 Aliases: 
 
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

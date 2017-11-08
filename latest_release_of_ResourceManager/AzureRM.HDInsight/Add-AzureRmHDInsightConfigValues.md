@@ -89,7 +89,7 @@ Specifies the HDInsight cluster configuration object that this cmdlet modifies.
 This object is created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ```yaml
-Type: AzureHDInsightConfig
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig
 Parameter Sets: (All)
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Specifies the Core Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 Specifies the HBase Env configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 Specifies the HBase Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 Specifies the HDFS configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 Specifies the Hive Env configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 Specifies the Hive Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 Specifies the MapRed Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 Specifies the Oozie Env configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 Specifies the Oozie Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 Specifies the RServer configurations. Valid only for RServer clusters.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 Specifies the Spark2 Defaults configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Spark2
 Aliases: 
 
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 Specifies the Spark2 Thrift SparkConf configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Spark2
 Aliases: 
 
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 Specifies the Spark Defaults configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Spark1
 Aliases: 
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 Specifies the Spark Thrift SparkConf configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Spark1
 Aliases: 
 
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 Specifies the Storm Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 Specifies the Tez Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 Specifies the WebHCat Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 Specifies the YARN Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -128,7 +128,7 @@ The second command creates a profile without a schedule or a fixed date, and the
 Specifies the default capacity.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 Specifies the end of the time window.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
 Aliases: 
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 Specifies the maximum capacity.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 Specifies the minimum capacity.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 Specifies the name of the profile to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -215,7 +215,7 @@ The acceptable values for this parameter are:
 Not all of these values are supported.
 
 ```yaml
-Type: RecurrenceFrequency
+Type: Microsoft.Azure.Management.Monitor.Management.Models.RecurrenceFrequency
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
 Aliases: 
 Accepted values: None, Second, Minute, Hour, Day, Week, Month, Year
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 Specifies the time zone of the schedule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
 Aliases: 
 
@@ -306,7 +306,7 @@ Accept wildcard characters: False
 Specifies the start of the time window.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
 Aliases: 
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 Specifies the time zone of the time window.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
 Aliases: 
 
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -46,7 +46,7 @@ To obtain a **DateTime** object for this parameter, use the Get-Date cmdlet.
 For more information, type `Get-Help Get-Date`.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: ByParam
 Aliases: 
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery job.
 
 ```yaml
-Type: ASRJob
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRJob
 Parameter Sets: ByObject
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies a unique name that identifies the job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -92,7 +92,7 @@ Specifies the start time for the jobs.
 This cmdlet gets all jobs that started after the specified time.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: ByParam
 Aliases: 
 
@@ -117,7 +117,7 @@ The acceptable values for this parameter are:
 - Suspended
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByParam
 Aliases: 
 Accepted values: NotStarted, InProgress, Succeeded, Other, Failed, Cancelled, Suspended
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 Specifies the ID of the object targeted by the job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByParam
 Aliases: 
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

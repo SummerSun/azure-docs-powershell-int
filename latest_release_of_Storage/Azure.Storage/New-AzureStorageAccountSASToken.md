@@ -50,7 +50,7 @@ Specifies the Azure storage context.
 You can use the New-AzureStorageContext cmdlet to get an **AzureStorageContext** object.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 Specifies the time at which the shared access signature becomes invalid.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +81,7 @@ Specifies the IP address or range of IP addresses from which to accept requests,
 The range is inclusive.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +98,7 @@ Permissions are valid only if they match the specified resource type.
 For more information about acceptable permission values, see Constructing an Account SAShttp://go.microsoft.com/fwlink/?LinkId=799514
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +119,7 @@ The acceptable values for this parameter are:
 The default value is HttpsOrHttp.
 
 ```yaml
-Type: SharedAccessProtocol
+Type: System.Nullable`1[Microsoft.WindowsAzure.Storage.SharedAccessProtocol]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HttpsOnly, HttpsOrHttp
@@ -141,7 +141,7 @@ The acceptable values for this parameter are:
 - Object
 
 ```yaml
-Type: SharedAccessAccountResourceTypes
+Type: Microsoft.WindowsAzure.Storage.SharedAccessAccountResourceTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Service, Container, Object
@@ -164,7 +164,7 @@ The acceptable values for this parameter are:
 - Table
 
 ```yaml
-Type: SharedAccessAccountServices
+Type: Microsoft.WindowsAzure.Storage.SharedAccessAccountServices
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Blob, File, Queue, Table
@@ -181,7 +181,7 @@ Specifies the time, as a **DateTime** object, at which the SAS becomes valid.
 To get a **DateTime** object, use the Get-Date cmdlet.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 

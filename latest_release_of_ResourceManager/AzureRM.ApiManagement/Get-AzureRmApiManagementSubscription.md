@@ -78,7 +78,7 @@ This command gets all subscriptions for the product.
 Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +94,7 @@ Specifies a product identifier.
 If specified, this cmdlet finds all subscriptions by the product identifier.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get by product ID
 Aliases: 
 
@@ -110,7 +110,7 @@ Specifies a subscription identifier.
 If specified, this cmdlet finds subscription by the identifier.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get by subsctiption ID
 Aliases: 
 
@@ -126,7 +126,7 @@ Specifies a user identifier.
 If specified, this cmdlet finds all subscriptions by the user identifier.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get by user ID
 Aliases: 
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

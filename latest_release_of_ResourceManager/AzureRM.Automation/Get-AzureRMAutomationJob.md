@@ -67,7 +67,7 @@ This command gets all running jobs in the Automation account named Contoso17.
 Specifies the name of an Automation account for which this cmdlet gets jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,7 +84,7 @@ You can specify a string that can be converted to a valid **DateTimeOffset**.
 This cmdlet gets jobs that have an end time at or before the value that this parameter specifies.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: ByAll, ByRunbookName
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 Specifies the ID of a job that this cmdlet gets.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ByJobId
 Aliases: JobId
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group in which this cmdlet gets jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 Specifies the name of a runbook for which this cmdlet gets jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRunbookName
 Aliases: Name
 
@@ -145,7 +145,7 @@ Specifies the start time of a job as a **DateTimeOffset** object.
 This cmdlet gets jobs that have a start time at or after the value that this parameter specifies.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: ByAll, ByRunbookName
 Aliases: 
 
@@ -174,7 +174,7 @@ Valid values are:
 - Suspending
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAll, ByRunbookName
 Aliases: 
 Accepted values: Completed, Failed, Queued, Starting, Resuming, Running, Stopped, Stopping, Suspended, Suspending, Activating
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

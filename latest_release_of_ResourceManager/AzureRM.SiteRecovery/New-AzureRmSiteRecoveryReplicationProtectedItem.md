@@ -55,7 +55,7 @@ Use this cmdlet to enable replication for a protectable item.
 Specifies the name of the Azure Site Recovery Replication Protected Item.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -71,7 +71,7 @@ Specifies the operating system family.
 The acceptable values for this parameter are: Windows or Linux.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: HyperVSiteToAzure
 Aliases: 
 Accepted values: Windows, Linux
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Specifies the name of the operating system disk.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: HyperVSiteToAzure
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 Specifies the Azure Site Recovery Protectable Item.
 
 ```yaml
-Type: ASRProtectableItem
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectableItem
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 Specifies the Azure Site Recovery Protection Container mapping object to use for replication.
 
 ```yaml
-Type: ASRProtectionContainerMapping
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionContainerMapping
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies the ID of the Azure storage account that this cmdlet replicates to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 Indicates that the cmdlet waits for completion.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -179,7 +179,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -110,7 +110,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,7 +126,7 @@ Specifies an Open Data Protocol (OData) expand clause.
 Specify a value for this parameter to get associated entities of the main entity that you get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -142,7 +142,7 @@ Specifies the OData filter clause to use when querying for pools.
 If you do not specify a filter, all pools under the Batch account specified with the *BatchContext* parameter are returned.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ODataFilter
 Aliases: 
 
@@ -158,7 +158,7 @@ Specifies the ID of the pool to get.
 You cannot specify wildcard characters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -175,7 +175,7 @@ If you specify a value of zero (0) or less, the cmdlet does not use an upper lim
 The default value is 1000.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: ODataFilter
 Aliases: 
 
@@ -191,7 +191,7 @@ Specifies an OData select clause.
 Specify a value for this parameter to get specific properties rather than all object properties.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

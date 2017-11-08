@@ -179,7 +179,7 @@ This command gets all Autoscale-related events associated with a particular reso
 Specifies a caller.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -195,7 +195,7 @@ Indicates that this operation included detailed output.
 If you do not specify this parameter, the output is summarized.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -211,7 +211,7 @@ Specifies the end time of the query in local time.
 The default is the current time.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 Specifies the resource ID to which the autoscale setting is associated.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -243,7 +243,7 @@ This parameter is optional.
 The default is the current local time minus one hour.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -261,7 +261,7 @@ The fault is an empty string (i.e.
 no filter)
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -42,7 +42,7 @@ Specifies the storage type for the backup data.
 The acceptable values for this parameter are: LocallyRedundant and GeoRedundant.
 
 ```yaml
-Type: AzureBackupVaultStorageType
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureBackupVaultStorageType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: GeoRedundant, LocallyRedundant
@@ -59,7 +59,7 @@ Specifies a Backup vault that this cmdlet modifies.
 To obtain an **AzureRmBackupVault** object, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml
-Type: AzureRMBackupVault
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupVault
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

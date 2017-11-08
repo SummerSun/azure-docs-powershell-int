@@ -44,7 +44,7 @@ Specifies the path to the Site Recovery vault settings file.
 To store this file locally, download it from the Site Recovery vault portal once the command completes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Default, ForSite
 Aliases: 
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Specifies the site friendly name for the vault when the site is a Hyper-V site.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ForSite
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specifies the site identifier for the vault when the site is a Hyper-V site.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ForSite
 Aliases: 
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 Specifies the vault object for the site.
 
 ```yaml
-Type: ASRVault
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRVault
 Parameter Sets: Default, ForSite
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

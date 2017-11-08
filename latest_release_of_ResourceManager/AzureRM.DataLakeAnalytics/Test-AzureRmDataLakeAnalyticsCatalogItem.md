@@ -38,7 +38,7 @@ This command tests whether a specified Schema item exists.
 Specifies the Data Lake Analytics account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -68,7 +68,7 @@ The acceptable values for this parameter are:
 - Types
 
 ```yaml
-Type: CatalogItemType
+Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+CatalogItemType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Database, Schema, Assembly, Table, TablePartition, TableValuedFunction, TableStatistics, ExternalDataSource, View, Procedure, Secret, Credential, Types, Package
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 Specifies the path to the item to fetch, or the path to the parent item of the items to list.
 
 ```yaml
-Type: CatalogPathInstance
+Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.CatalogPathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

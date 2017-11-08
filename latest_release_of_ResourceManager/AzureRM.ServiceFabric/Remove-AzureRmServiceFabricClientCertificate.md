@@ -59,7 +59,7 @@ This command will remove client certificate with thumbprint '5F3660C715EBBDA31DB
 Specify client certificate thumbprint that only has admin permission.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: MultipleUpdatesWithThumbprint
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specify client common name, issuer thumbprint, and authentication type.
 
 ```yaml
-Type: PSClientCertificateCommonName[]
+Type: Microsoft.Azure.Commands.ServiceFabric.Models.PSClientCertificateCommonName[]
 Parameter Sets: MultipleUpdatesWithCommonName
 Aliases: CertCommonName
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 Specify client certificate common name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SingleUpdateWithCommonName
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Specify client certificate issuer thumbprint.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SingleUpdateWithCommonName
 Aliases: 
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 Specify the name of the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ClusterName
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 Specify client certificate thumbprint that has read only permission.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: MultipleUpdatesWithThumbprint
 Aliases: 
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 Specify client certificate thumbprint.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SingleUpdateWithThumbprint
 Aliases: ClientCertificateThumbprint
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

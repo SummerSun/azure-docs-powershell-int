@@ -44,7 +44,7 @@ This command gets a list of all compute policies in the account "contosoadla"
 Name of the account to get the compute policy or policies from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Name of the compute policy to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ComputePolicyName
 
@@ -75,7 +75,7 @@ Name of resource group under which you the account exists.
 Optional and will attempt to discover if not provided.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -70,7 +70,7 @@ This command gets details about the pipeline run with ID "61eb095a-fe23-4591-8a9
 The data factory object.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
 Parameter Sets: ByFactoryObjectByRunId, ByFactoryObjectByPipeline
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 The data factory name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryNameByRunId, ByFactoryNameByPipeline
 Aliases: 
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 The time at or after which the pipeline run was updated in ISO8601 format.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: ByFactoryObjectByPipeline, ByFactoryNameByPipeline
 Aliases: 
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 The time at or before which the pipeline run was updated in ISO8601 format.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: ByFactoryObjectByPipeline, ByFactoryNameByPipeline
 Aliases: 
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 The pipeline name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryObjectByPipeline, ByFactoryNameByPipeline
 Aliases: 
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 The Run ID of the pipeline.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryNameByRunId, ByFactoryObjectByRunId
 Aliases: 
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryNameByRunId, ByFactoryNameByPipeline
 Aliases: 
 

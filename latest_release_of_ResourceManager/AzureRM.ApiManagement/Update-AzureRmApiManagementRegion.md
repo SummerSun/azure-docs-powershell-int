@@ -34,7 +34,7 @@ To update a deployment of an API Management use the modified **PsApiManagementIn
 Specifies the **PsApiManagement** instance to update an existing deployment region in.
 
 ```yaml
-Type: PsApiManagement
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 Parameter Sets: (All)
 Aliases: 
 
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 Specifies the new SKU capacity value for the deployment region.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -82,7 +82,7 @@ Valid values are:
 - Australia Southeast
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +103,7 @@ Valid values are:
 - Premium
 
 ```yaml
-Type: PsApiManagementSku
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Developer, Standard, Premium
@@ -120,7 +120,7 @@ Specifies a virtual network configuration for the deployment region.
 Passing $null will remove virtual network configuration for the region.
 
 ```yaml
-Type: PsApiManagementVirtualNetwork
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
 Parameter Sets: (All)
 Aliases: 
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

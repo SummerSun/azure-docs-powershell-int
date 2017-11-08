@@ -105,7 +105,7 @@ If you specify this parameter you must also specify the *Name* and *VaultName* p
 If you do not specify the *IncludeVersions* parameter, this cmdlet gets the current version of the secret with the specified *Name*.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: BySecretVersions
 Aliases: 
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 
 ### -InRemovedState
 Specifies whether to show the previously deleted secrets in the output.```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByDeletedSecrets
 Aliases: 
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 Specifies the name of the secret to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BySecretName, BySecretVersions
 Aliases: SecretName
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByDeletedSecrets
 Aliases: SecretName
 
@@ -161,7 +161,7 @@ Specifies the name of the key vault to which the secret belongs.
 This cmdlet constructs the fully qualified domain name (FQDN) of a key vault based on the name that this parameter specifies and your current environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -177,7 +177,7 @@ Specifies the secret version.
 This cmdlet constructs the FQDN of a secret based on the key vault name, your currently selected environment, the secret name, and the secret version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BySecretName
 Aliases: SecretVersion
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

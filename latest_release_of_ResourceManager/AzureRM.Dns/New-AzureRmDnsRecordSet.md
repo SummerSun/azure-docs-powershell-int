@@ -214,7 +214,7 @@ You can use the New-AzureRmDnsRecordConfig cmdlet to create DNS record objects.
 See the examples for more information.
 
 ```yaml
-Type: DnsRecordBase[]
+Type: Microsoft.Azure.Commands.Dns.DnsRecordBase[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -232,7 +232,7 @@ It will be removed in a future release.
 To control whether this cmdlet prompts you for comfirmation, use the *Confirm* parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -248,7 +248,7 @@ Specifies an array of metadata to associate with the RecordSet.
 Metadata is specified using name-value pairs that are represented as hash tables, for example @(@{"Name"="dept"; "Value"="shopping"}, @{"Name"="env"; "Value"="production"}).
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 Specifies the name of the **RecordSet** to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet overwrites the specified **RecordSet** if it already exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -306,7 +306,7 @@ Valid values are:
 SOA records are created automatically when the zone is created and cannot be created manually.
 
 ```yaml
-Type: RecordType
+Type: Microsoft.Azure.Management.Dns.Models.RecordType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: A, AAAA, CNAME, MX, NS, PTR, SOA, SRV, TXT
@@ -325,7 +325,7 @@ You must also specify the *ZoneName* parameter to specify the zone name.
 Alternatively, you can specify the zone and resource group by passing in a DNS Zone object using the *Zone* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -340,7 +340,7 @@ Accept wildcard characters: False
 Specifies the Time to Live (TTL) for the DNS RecordSet.
 
 ```yaml
-Type: UInt32
+Type: System.UInt32
 Parameter Sets: (All)
 Aliases: 
 
@@ -356,7 +356,7 @@ Specifies the DnsZone in which to create the **RecordSet**.
 Alternatively, you can specify the zone using the *ZoneName* and *ResourceGroupName* parameters.
 
 ```yaml
-Type: DnsZone
+Type: Microsoft.Azure.Commands.Dns.DnsZone
 Parameter Sets: Object
 Aliases: 
 
@@ -374,7 +374,7 @@ You must also specify the resource group containing the zone using the *Resource
 Alternatively, you can specify the zone and resource group by passing in a DNS Zone object using the *Zone* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -389,7 +389,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -405,7 +405,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -65,7 +65,7 @@ The **Edit-AzureRmSiteRecoveryRecoveryPlan** cmdlet edits an Azure Site Recovery
 Specifies an array of protected entities to add.
 
 ```yaml
-Type: ASRProtectionEntity[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity[]
 Parameter Sets: AddProtectedEntities
 Aliases: 
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 
 ### -AddProtectedItems
 ```yaml
-Type: ASRReplicationProtectedItem[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem[]
 Parameter Sets: AddReplicationProtectedItems
 Aliases: 
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 Indicates that this operation appends the group to the recovery plan object.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: AppendGroup
 Aliases: 
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 Specifies a Site Recovery plan group.
 
 ```yaml
-Type: ASRRecoveryPlanGroup
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlanGroup
 Parameter Sets: AddProtectedEntities, RemoveProtectedEntities, AddReplicationProtectedItems, RemoveReplicationProtectedItems
 Aliases: 
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Specifies a recovery plan.
 
 ```yaml
-Type: ASRRecoveryPlan
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlan
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 Removes the specified Site Recovery recovery plan group.
 
 ```yaml
-Type: ASRRecoveryPlanGroup
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlanGroup
 Parameter Sets: RemoveGroup
 Aliases: 
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Specifies an array of protected entities.
 
 ```yaml
-Type: ASRProtectionEntity[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity[]
 Parameter Sets: RemoveProtectedEntities
 Aliases: 
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 ### -RemoveProtectedItems
 ```yaml
-Type: ASRReplicationProtectedItem[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem[]
 Parameter Sets: RemoveReplicationProtectedItems
 Aliases: 
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -100,7 +100,7 @@ Indicates whether to enable diagnostics.
 Specify $True to enable diagnostics, or $False to disable diagnostics.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 Specifies the ID of the resource.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 Indicates whether retention of diagnostic information is enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 Specifies the retention policy, in days.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -ServiceBusRuleId
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 Specifies the ID of the Storage account in which to save the data.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 The Id of the workspace
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 
 ### -EventHubAuthorizationRuleId
 The event hub rule id```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

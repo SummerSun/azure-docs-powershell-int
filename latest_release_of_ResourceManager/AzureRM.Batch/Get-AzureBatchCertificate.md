@@ -110,7 +110,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,7 +126,7 @@ Specifies an OData filter clause.
 If you specify this parameter, this cmdlet gets the certificates that match the filter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ODataFilter
 Aliases: 
 
@@ -143,7 +143,7 @@ If you specify a value of zero (0) or less, the cmdlet does not use an upper lim
 The default value is 1000.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: ODataFilter
 Aliases: 
 
@@ -159,7 +159,7 @@ Specifies an OData select clause.
 Specify a value for this parameter to get specific properties rather than all object properties.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 Specifies the thumbprint of the certificate that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Thumbprint
 Aliases: 
 
@@ -190,7 +190,7 @@ Specifies the algorithm used to derive the *Thumbprint* parameter.
 Currently, the only valid value is sha1.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Thumbprint
 Aliases: 
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

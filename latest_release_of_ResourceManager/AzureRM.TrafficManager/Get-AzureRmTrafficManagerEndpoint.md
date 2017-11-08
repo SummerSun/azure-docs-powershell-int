@@ -50,7 +50,7 @@ This command gets the Azure endpoint named contoso from the profile named Contos
 Specifies the name of the Traffic Manager endpoint that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 Specifies the name of the Traffic Manager endpoint that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -81,7 +81,7 @@ Specifies the name of a resource group.
 This cmdlet gets a Traffic Manager endpoint in the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 Specifies the Traffic Manager endpoint that this cmdlet gets.
 
 ```yaml
-Type: TrafficManagerEndpoint
+Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint
 Parameter Sets: Object
 Aliases: 
 
@@ -116,7 +116,7 @@ Valid values are:
 - NestedEndpoints
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 Accepted values: AzureEndpoints, ExternalEndpoints, NestedEndpoints
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

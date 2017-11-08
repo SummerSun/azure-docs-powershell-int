@@ -57,7 +57,7 @@ Specifies the name of a data factory.
 This cmdlet removes a linked service from the data factory that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Runs the cmdlet without prompting for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 Specifies the LinkedService object to remove.
 
 ```yaml
-Type: PSLinkedService
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSLinkedService
 Parameter Sets: ByInputObject
 Aliases: 
 
@@ -118,7 +118,7 @@ Specifies the name of the linked service to remove.
 Name of the linked service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: LinkedServiceName
 
@@ -135,7 +135,7 @@ This cmdlet removes a linked service from the group that this parameter specifie
 
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 The Azure resource ID of the linked service to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByResourceId
 Aliases: 
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

@@ -82,7 +82,7 @@ Specifies the identifier of the existing API.
 If you specify this parameter, the cmdlet sets the API-scope policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: API level, Operation level
 Aliases: 
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 Specifies the instance of **PsApiManagementContext**.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,7 +113,7 @@ Specifies the format of the policy.
 The default value is "application/vnd.ms-azure-apim.policy+xml".
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -130,7 +130,7 @@ If specified with ApiId will set operation-scope policy.
 This parameters is required.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Operation level
 Aliases: 
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 passthru
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -161,7 +161,7 @@ Specifies the policy document as a string.
 This parameter is required if the -*PolicyFilePath* is not specified.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -177,7 +177,7 @@ Specifies the policy document file path.
 This parameter is required if the *Policy* parameter is not specified.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -193,7 +193,7 @@ Specifies the identifier of the existing product.
 If this parameter is specified, the cmdlet sets the product-scope policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Product level
 Aliases: 
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

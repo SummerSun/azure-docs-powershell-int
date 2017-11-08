@@ -44,7 +44,7 @@ The **Get-AzureRmSiteRecoveryServicesProvider** cmdlet gets information on the A
 Specifies the Azure Site Recovery Fabric object.
 
 ```yaml
-Type: ASRFabric
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRFabric
 Parameter Sets: (All)
 Aliases: 
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Specifies the friendly name of the Azure Site Recovery Provider that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFriendlyName
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure Site Recovery Provider that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -64,7 +64,7 @@ Specifies an ID for the API to import.
 If you do not specify this parameter, an ID is generated for you.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 This parameter is optional with a default value of Http. The Soap option is only applicable when importing WSDL and will create a SOAP Passthrough API.
 
 ```yaml
-Type: PsApiManagementApiType
+Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiType]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Http, Soap
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,7 +113,7 @@ Must be 1 to 400 characters long.
 The default value is $Null.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +129,7 @@ Specifies the specification format.
 psdx_paramvalues Wadl, Wsdl, and Swagger.
 
 ```yaml
-Type: PsApiManagementApiFormat
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiFormat
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Wadl, Swagger, Wsdl
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 Specifies the specification file path.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: From Local File
 Aliases: 
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 Specifies the specification URL.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: From URL
 Aliases: 
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 Local name of WSDL Endpoint (port) to be imported. Must be 1 to 400 characters long. This parameter is optional and only required for importing Wsdl. Default value is $null.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 Local name of WSDL Service to be imported. Must be 1 to 400 characters long. This parameter is optional and only required for importing Wsdl . Default value is $null.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

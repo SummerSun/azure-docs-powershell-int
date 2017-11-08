@@ -31,7 +31,7 @@ Update-AzureRmSiteRecoveryPolicy -Policy <ASRPolicy> [-ReplicationMethod <String
 
 ### -ApplicationConsistentSnapshotFrequencyInHours
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -44,7 +44,7 @@ Accept wildcard characters: False
 
 ### -Authentication
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Certificate, Kerberos
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 
 ### -Compression
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enable, Disable
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -Encryption
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enable, Disable
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -Policy
 ```yaml
-Type: ASRPolicy
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRPolicy
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -RecoveryAzureStorageAccountId
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -RecoveryPoints
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -ReplicaDeletion
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Required, NotRequired
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -ReplicationFrequencyInSeconds
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: 30, 300, 900
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -ReplicationMethod
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Online, Offline
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -ReplicationPort
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: (All)
 Aliases: 
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
 ### -ReplicationStartTime
 ```yaml
-Type: TimeSpan
+Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: (All)
 Aliases: 
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

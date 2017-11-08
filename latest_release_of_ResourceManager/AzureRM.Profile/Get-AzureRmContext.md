@@ -76,7 +76,7 @@ In this example, all currently available contexts are displayed.  The user may s
 The credentials, account, tenant and subscription used for communication with azure
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 List all available contexts in the current session.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ListAllContexts
 Aliases: 
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 The name of the context
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetSingleContext
 Aliases: 
 

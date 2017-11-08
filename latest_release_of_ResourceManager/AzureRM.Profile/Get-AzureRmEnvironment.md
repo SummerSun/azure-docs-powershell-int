@@ -110,7 +110,7 @@ This example shows how to get the endpoints and metadata for the AzureUSGovernme
 The credentials, account, tenant and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure instance to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

@@ -63,7 +63,7 @@ If you specify a value of BlobStorage for the *Kind* parameter, you must specify
 If you specify a value of Storage for this *Kind* parameter, do not specify the *AccessTier* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 
 ### -AssignIdentity
 Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Specifies the name of the custom domain of the Storage account.
 The default value is Storage.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +108,7 @@ Indicates whether this cmdlet enables Storage Service encryption on the Storage 
 Azure Blob and Azure File Services are supported.
 
 ```yaml
-Type: EncryptionSupportServiceEnum
+Type: System.Nullable`1[Microsoft.Azure.Commands.Management.Storage.StorageAccountBaseCmdlet+EncryptionSupportServiceEnum]
 Parameter Sets: (All)
 Aliases: 
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -EnableHttpsTrafficOnly
 Indicates whether or not the Storage Account only enable https traffic.```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -145,7 +145,7 @@ The acceptable values for this parameter are:
 - Suspend
 
 ```yaml
-Type: ActionPreference
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 Specifies an information variable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: iv
 
@@ -185,7 +185,7 @@ Blob storage account which supports storage of Blobs only.
 The default value is Storage.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 Specifies the location of the Storage account to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 Specifies the name of the Storage account to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountName, AccountName
 
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 
 ### -NetworkRuleSet
 Storage Account NetworkRuleSet```yaml
-Type: PSNetworkRuleSet
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet
 Parameter Sets: (All)
 Aliases: 
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group in which to add the Storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -270,7 +270,7 @@ Read access geo-redundant storage.
 Premium locally-redundant storage.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountType, AccountType, Type
 
@@ -287,7 +287,7 @@ If you specify a value of BlobStorage for the *Kind* parameter, you must specify
 If you specify a value of Storage for this *Kind* parameter, do not specify the *AccessTier* parameter.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 Indicates whether to enable indirect CName validation.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

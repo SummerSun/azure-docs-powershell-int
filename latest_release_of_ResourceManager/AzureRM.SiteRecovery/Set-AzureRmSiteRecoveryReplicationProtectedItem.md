@@ -33,7 +33,7 @@ The **Set-AzureRmSiteRecoveryReplicationProtectedItem** cmdlet sets the recovery
 Specifies the license type selection for Windows Server virtual machines migrated through Hybrid use benefit.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NoLicenseType, WindowsServer
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 Specifies the name of the recovery virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -65,7 +65,7 @@ Specifies the network interface card (NIC) properties set by user or set by defa
 You can specify NotSelected to go back to the default values.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NotSelected, SelectedByUser
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Specifies the NIC of the virtual machine for which this cmdlet sets the recovery network property.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 Specifies the ID of the Azure virtual network for which this cmdlet recovers the Protected Item.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 Specifies the static IP address that should be assigned to primary NIC on recovery.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 Specifies the name of the Subnet on the recovery Azure virtual network for which this cmdlet recovers the Protected Item.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Specifies the Azure Site Recovery Replication Protected Item.
 
 ```yaml
-Type: ASRReplicationProtectedItem
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem
 Parameter Sets: (All)
 Aliases: 
 
@@ -157,7 +157,7 @@ Specifies the recovery virtual machine size.
 The value should be from the set of sizes supported by Azure virtual machines.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

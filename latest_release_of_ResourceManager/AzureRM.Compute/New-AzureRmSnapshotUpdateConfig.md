@@ -57,7 +57,7 @@ This command updates an existing snapshot with name 'Snapshot01' in resource gro
 Specifies whether this cmdlet creates a snapshot in the virtual machine from a platform or user image, creates an empty disk, or attaches an existing disk.
 
 ```yaml
-Type: DiskCreateOption
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.DiskCreateOption]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Empty, Attach, FromImage, Import, Copy
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Specifies the disk encryption key object on a snapshot.
 
 ```yaml
-Type: KeyVaultAndSecretReference
+Type: Microsoft.Azure.Management.Compute.Models.KeyVaultAndSecretReference
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Specifies the size of the disk in GB.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 Enable encryption settings.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 Specifies the image reference on a snapshot.
 
 ```yaml
-Type: ImageDiskReference
+Type: Microsoft.Azure.Management.Compute.Models.ImageDiskReference
 Parameter Sets: (All)
 Aliases: 
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 Specifies the Key encryption key on a snapshot.
 
 ```yaml
-Type: KeyVaultAndKeyReference
+Type: Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
 Parameter Sets: (All)
 Aliases: 
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 Specifies the OS type.
 
 ```yaml
-Type: OperatingSystemTypes
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.OperatingSystemTypes]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Windows, Linux
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 Specifies the Sku name of the storage account.
 
 ```yaml
-Type: StorageAccountTypes
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.StorageAccountTypes]
 Parameter Sets: (All)
 Aliases: AccountType
 Accepted values: StandardLRS, PremiumLRS
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 Specifies the source resource ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 Specifies the source Uri.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 Specifies the storage account ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 Specifies that resources and resource groups can be tagged with a set of name-value pairs.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

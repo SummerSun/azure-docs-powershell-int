@@ -40,7 +40,7 @@ This command changes the default data source and the Tags property of the accoun
 Optionally allow/block Azure originating IPs through the firewall.
 
 ```yaml
-Type: FirewallAllowAzureIpsState
+Type: System.Nullable`1[Microsoft.Azure.Management.DataLake.Analytics.Models.FirewallAllowAzureIpsState]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enabled, Disabled
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 Optionally enable/disable existing firewall rules.
 
 ```yaml
-Type: FirewallState
+Type: System.Nullable`1[Microsoft.Azure.Management.DataLake.Analytics.Models.FirewallState]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enabled, Disabled
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 The optional maximum supported degree of parallelism to update the account with.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 The optional maximum supported jobs running under the account at the same time to set.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Analytics account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 The optional number of days that job metadata is retained to set in the account.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 The desired commitment tier for this account to use.
 
 ```yaml
-Type: TierType
+Type: System.Nullable`1[Microsoft.Azure.Management.DataLake.Analytics.Models.TierType]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Consumption, Commitment100AUHours, Commitment500AUHours, Commitment1000AUHours, Commitment5000AUHours, Commitment10000AUHours, Commitment50000AUHours, Commitment100000AUHours, Commitment500000AUHours
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

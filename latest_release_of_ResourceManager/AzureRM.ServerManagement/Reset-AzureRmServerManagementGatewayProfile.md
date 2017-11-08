@@ -47,7 +47,7 @@ Specifies the gateway for which the cmdlet resets the profile for.
 May be specified instead of ResourceGoupName and GatewayName
 
 ```yaml
-Type: Gateway
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Gateway
 Parameter Sets: ByObject
 Aliases: 
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 Specifies the name of the gateway for which the cmdlet resets the profile.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that the gateway belongs to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -42,7 +42,7 @@ Adds **Manage** to the access rights of the authorization rule `SBAuthoRule1` of
 The name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -58,7 +58,7 @@ The rights; for example
 @("Listen","Send","Manage"). Required if 'AuthruleObj' not specified.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -89,7 +89,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -InputObj
 ServiceBus Queue AuthorizationRule Object.```yaml
-Type: SharedAccessAuthorizationRuleAttributes
+Type: Microsoft.Azure.Commands.ServiceBus.Models.SharedAccessAuthorizationRuleAttributes
 Parameter Sets: (All)
 Aliases: AuthRuleObj
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -Name
 AuthorizationRule Name - Required if 'AuthruleObj' not specified.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AuthorizationRuleName
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 Namespace Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 
 ### -Queue
 Queue Name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: QueueName
 

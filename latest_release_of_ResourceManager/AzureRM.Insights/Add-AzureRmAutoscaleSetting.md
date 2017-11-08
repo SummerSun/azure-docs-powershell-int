@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Disables an existing Autoscale setting.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies the location of the Autoscale setting.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameters for Add-AzureRmAutoscaleSetting cmdlet in the create semantics
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the name of the Autoscale setting to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameters for Add-AzureRmAutoscaleSetting cmdlet in the create semantics
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group for the resource associated with the Autoscale setting.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,7 +153,7 @@ Specifies an **AutoscaleSetting** object.
 You can use the Get-AzureRmAutoscaleSetting cmdlet to get an **AutoscaleSetting** object or you can construct one in a Windows PowerShell script.
 
 ```yaml
-Type: PSAutoscaleSetting
+Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSAutoscaleSetting
 Parameter Sets: Parameters for Add-AzureRmAutoscaleSetting cmdlet in the update semantics
 Aliases: 
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 Specifies the ID of the resource to autoscale.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameters for Add-AzureRmAutoscaleSetting cmdlet in the create semantics
 Aliases: 
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

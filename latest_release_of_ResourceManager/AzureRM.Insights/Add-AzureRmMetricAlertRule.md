@@ -82,7 +82,7 @@ Accept wildcard characters: False
 Specifies a description of the rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +98,7 @@ Disables the rule.
 If you do not specify this parameter, the rule is enabled.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 Specifies the location where the rule is defined.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +129,7 @@ Specifies the name of the metric the rule is monitoring.
 Specify this parameter only for metric-based rules.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 Specifies the name of the rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -165,7 +165,7 @@ The acceptable values for this parameter are:
 - LessThanOrEqual
 
 ```yaml
-Type: ConditionOperator
+Type: Microsoft.Azure.Management.Monitor.Management.Models.ConditionOperator
 Parameter Sets: (All)
 Aliases: 
 Accepted values: GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group for the rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 Specifies the ID of the resource the rule is monitoring. NOTE: This property cannot be updated for an existing alert rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 Specifies the threshold of the rule.
 
 ```yaml
-Type: Double
+Type: System.Double
 Parameter Sets: (All)
 Aliases: 
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 Specifies the aggregation operator to apply to the time window when the rule is being evaluated.
 
 ```yaml
-Type: TimeAggregationOperator
+Type: System.Nullable`1[Microsoft.Azure.Management.Monitor.Management.Models.TimeAggregationOperator]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Average, Minimum, Maximum, Total, Last
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 Specifies the time window size for the rule to compute its data.
 
 ```yaml
-Type: TimeSpan
+Type: System.TimeSpan
 Parameter Sets: (All)
 Aliases: 
 
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

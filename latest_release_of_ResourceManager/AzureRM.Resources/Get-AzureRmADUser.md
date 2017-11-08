@@ -70,7 +70,7 @@ Gets all AD users
 
 ### -Mail
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: MailParameterSet
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 Object id of the user.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ObjectIdParameterSet
 Aliases: 
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 The user display name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SearchStringParameterSet
 Aliases: 
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 UPN of the user.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EmptyParameterSet
 Aliases: UPN
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UPNParameterSet
 Aliases: UPN
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

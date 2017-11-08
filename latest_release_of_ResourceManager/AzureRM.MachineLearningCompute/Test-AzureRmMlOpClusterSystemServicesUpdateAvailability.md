@@ -58,7 +58,7 @@ PS C:\> Find-AzureRmResource -ResourceType Microsoft.MachineLearningCompute/oper
 The operationalization cluster object.
 
 ```yaml
-Type: PSOperationalizationCluster
+Type: Microsoft.Azure.Commands.MachineLearningCompute.Models.PSOperationalizationCluster
 Parameter Sets: Test for update availability from an OperationalizationCluster instance definition.
 Aliases: Cluster
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 The name of the operationalization cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Test for update availability from cmdlet input parameters.
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 The name of the resource group for the operationalization cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Test for update availability from cmdlet input parameters.
 Aliases: 
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 The Azure resource id for the operationalization cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Test for update availability from an Azure resouce id.
 Aliases: 
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

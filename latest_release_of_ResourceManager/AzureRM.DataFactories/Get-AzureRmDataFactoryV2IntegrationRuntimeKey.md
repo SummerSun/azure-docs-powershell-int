@@ -54,7 +54,7 @@ The cmdlet retrieves keys for an integration runtime named 'test-selfhost-ir'.
 The data factory name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByIntegrationRuntimeName
 Aliases: 
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 The integration runtime object.
 
 ```yaml
-Type: PSIntegrationRuntime
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime
 Parameter Sets: ByIntegrationRuntimeObject
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 The integration runtime name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByIntegrationRuntimeName
 Aliases: IntegrationRuntimeName
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByIntegrationRuntimeName
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 The Azure resource ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByResourceId
 Aliases: Id
 

@@ -82,7 +82,7 @@ This command add several IpRule with IpRule objects, input with JSON.
 The Array of IpAddressOrRange, add IpRules with the input IpAddressOrRange and default Action Allow to NetworkRule Property.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: IpRuleString
 Aliases: 
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 The Array of IpRule objects to add to the NetworkRule Property.
 
 ```yaml
-Type: PSIpRule[]
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSIpRule[]
 Parameter Sets: IpRuleObject
 Aliases: 
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 Specifies the name of the Storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountName, AccountName
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group contains the Storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 The Array of VirtualNetworkResourceId, will add VirtualNetworkRule with input VirtualNetworkResourceId and default Action Allow to NetworkRule Property.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: NetWorkRuleString
 Aliases: SubnetId, VirtualNetworkId
 
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 The Array of VirtualNetworkRule objects to add to the NetworkRule Property.
 
 ```yaml
-Type: PSVirtualNetworkRule[]
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSVirtualNetworkRule[]
 Parameter Sets: NetworkRuleObject
 Aliases: 
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -188,7 +188,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

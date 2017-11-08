@@ -53,7 +53,7 @@ That virtual machine belongs to the service named ContosoService27.
 Specifies the name of the virtual machine that this cmdlet registers.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group for the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: V2VM
 Aliases: 
 
@@ -89,7 +89,7 @@ To obtain information about a virtual machine, use the Get-AzureRMVM cmdlet.
 The service name is the **DeploymentName** property of the virtual machine object.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: V1VM
 Aliases: 
 
@@ -105,7 +105,7 @@ Specifies the Backup vault to which this cmdlet registers virtual machine.
 To obtain an **AzureRmBackupVault** object, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml
-Type: AzureRMBackupVault
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupVault
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

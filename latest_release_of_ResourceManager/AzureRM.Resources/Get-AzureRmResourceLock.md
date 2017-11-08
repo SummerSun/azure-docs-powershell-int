@@ -83,7 +83,7 @@ Specifies the version of the resource provider API to use.
 If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +99,7 @@ Indicates that this cmdlet returns all locks at or above the specified scope.
 If you do not specify this parameter, the cmdlet returns all locks at, above, or below the scope.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -123,7 +123,7 @@ The acceptable values for this parameter are:
 - Suspend
 
 ```yaml
-Type: ActionPreference
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 Specifies an information variable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: iv
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Specifies the ID of the lock that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: A lock, by Id.
 Aliases: Id, ResourceId
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 Specifies the name of the lock that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: A lock at the resource group scope., A lock at the resource group resource scope., A lock at the specified scope., A lock at the subscription scope., A lock at the subscription resource scope., A lock at the tenant resource scope.
 Aliases: ExtensionResourceName, Name
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -199,7 +199,7 @@ Specifies the name of the resource group for which the lock applies.
 This cmdlet gets locks for this resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: A lock at the resource group scope., A lock at the resource group resource scope.
 Aliases: 
 
@@ -215,7 +215,7 @@ Specifies the name of the resource for which this lock applies.
 This cmdlet gets locks for this resource.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: A lock at the resource group resource scope., A lock at the subscription resource scope., A lock at the tenant resource scope.
 Aliases: 
 
@@ -231,7 +231,7 @@ Specifies the resource type of the resource for which this lock applies.
 This cmdlet gets locks for this resource.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: A lock at the resource group resource scope., A lock at the subscription resource scope., A lock at the tenant resource scope.
 Aliases: 
 
@@ -247,7 +247,7 @@ Specifies the scope to which the lock applies.
 The cmdlet gets locks for this scope.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: A lock at the specified scope.
 Aliases: 
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet operates at the tenant level.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: A lock at the tenant resource scope.
 Aliases: 
 
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

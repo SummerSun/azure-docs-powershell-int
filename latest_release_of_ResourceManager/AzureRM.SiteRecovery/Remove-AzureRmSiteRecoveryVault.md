@@ -31,7 +31,7 @@ The **Remove-AzureRmSiteRecoveryVault** cmdlet deletes an Azure Site Recovery va
 Specifies the Site Recovery vault object.
 
 ```yaml
-Type: ASRVault
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRVault
 Parameter Sets: (All)
 Aliases: 
 
@@ -44,7 +44,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

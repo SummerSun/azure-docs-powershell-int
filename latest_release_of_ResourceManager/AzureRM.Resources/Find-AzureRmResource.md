@@ -81,7 +81,7 @@ Specifies the version of the resource provider API to use.
 If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet expands the properties of the resource.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,7 +114,7 @@ For instance:
 `Microsoft.Sql/Servers/Databases`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
 Aliases: 
 
@@ -138,7 +138,7 @@ The acceptable values for this parameter are:
 - Suspend
 
 ```yaml
-Type: ActionPreference
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Specifies an information variable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: iv
 
@@ -169,7 +169,7 @@ Specifies an Open Data Protocol (OData) style filter.
 This cmdlet appends this value to the request in addition to any other filters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -201,7 +201,7 @@ This cmdlet matches resource groups of which this value is a substring.
 The cmdlet searches for resources in those resource groups.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
 Aliases: ResourceGroupName
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 The resource group name for a full match.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
 Aliases: 
 
@@ -232,7 +232,7 @@ Specifies a partial name of a resource.
 The cmdlet searches for resources which contain this value as a substring.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
 Aliases: Name
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 The resource name for a full match. e.g. if your resource name is testResource, you can specify testResource.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
 Aliases: 
 
@@ -267,7 +267,7 @@ For instance, for a database, the resource type is as follows:
 This cmdlet searches for resources of the specified type.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope.
 Aliases: 
 
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
 Aliases: 
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 The tag filter for the OData query. The expected format is @{tagName=$null} or @{tagName = 'tagValue'}.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Lists resources by a tag object specified as a hashset.
 Aliases: 
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 
 ### -TagName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists resources by a tag specified as a individual name and value parameters.
 Aliases: 
 
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 
 ### -TagValue
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists resources by a tag specified as a individual name and value parameters.
 Aliases: 
 
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet operates at the tenant level.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Lists the resources based on the specified scope at the tenant level.
 Aliases: 
 
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 Specifies the number of resources to retrieve.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -363,7 +363,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

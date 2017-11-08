@@ -56,7 +56,7 @@ Specifies the name of a data factory.
 This cmdlet removes a pipeline from the data factory that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Runs the cmdlet without prompting for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +102,7 @@ Specifies a Pipeline object.
 This cmdlet removes the pipeline that this parameter specifies.
 
 ```yaml
-Type: PSPipeline
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSPipeline
 Parameter Sets: ByInputObject
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 Specifies the name of the pipeline to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: PipelineName
 
@@ -133,7 +133,7 @@ Specifies the name of an Azure resource group.
 This cmdlet removes a pipeline from the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 The Azure resource ID of the pipeline to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByResourceId
 Aliases: 
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

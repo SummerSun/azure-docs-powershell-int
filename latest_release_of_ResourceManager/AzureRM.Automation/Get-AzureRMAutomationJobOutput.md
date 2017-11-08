@@ -39,7 +39,7 @@ This command gets all of the output of the job that has the specified ID.
 Specifies the name of an Automation account for which this cmdlet gets job output.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 Specifies the ID of a job for which this cmdlet gets output.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: JobId
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet gets job output.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -86,7 +86,7 @@ You can specify a string that can be converted to a valid **DateTimeOffset**.
 The cmdlet retrieves output created after this time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: (All)
 Aliases: 
 
@@ -110,7 +110,7 @@ Valid values are:
 - Warning
 
 ```yaml
-Type: StreamType
+Type: Microsoft.Azure.Commands.Automation.Common.StreamType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Any, Progress, Output, Warning, Error, Debug, Verbose
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

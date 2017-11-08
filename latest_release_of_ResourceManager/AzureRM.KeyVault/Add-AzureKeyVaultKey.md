@@ -149,7 +149,7 @@ stored in $tags.
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -179,7 +179,7 @@ software-protected key.
 extension, it imports the key as a software-protected key.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Create
 Aliases: 
 Accepted values: HSM, Software, HSM, Software
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Import
 Aliases: 
 Accepted values: HSM, Software, HSM, Software
@@ -209,7 +209,7 @@ Indicates that the key you are adding is set to an initial state of disabled. An
 the key will fail. Use this parameter if you are preloading keys that you intend to enable later.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -227,7 +227,7 @@ parameter uses Coordinated Universal Time (UTC). To obtain a **DateTime** object
 parameter, the key does not expire.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -245,7 +245,7 @@ Specifies a password for the imported file as a **SecureString** object. To obta
 name extension.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: Import
 Aliases: 
 
@@ -269,7 +269,7 @@ override this default, set the *Destination* parameter to HSM so that the key is
 When you specify this parameter, the *Destination* parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Import
 Aliases: 
 
@@ -297,7 +297,7 @@ the [JSON Web Key (JWK) specification](http://go.microsoft.com/fwlink/?LinkID=61
 - Restore
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -315,7 +315,7 @@ vault, and your current environment. The name must be a string of 1 through 63 c
 that contains only 0-9, a-z, A-Z, and - (the dash symbol).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: KeyName
 
@@ -332,7 +332,7 @@ uses UTC. To obtain a **DateTime** object, use the **Get-Date** cmdlet. If you d
 parameter, the key can be used immediately.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -349,7 +349,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -365,7 +365,7 @@ Specifies the name of the key vault to which this cmdlet adds the key. This cmdl
 FQDN of a key vault based on the name that this parameter specifies and your current environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -381,7 +381,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

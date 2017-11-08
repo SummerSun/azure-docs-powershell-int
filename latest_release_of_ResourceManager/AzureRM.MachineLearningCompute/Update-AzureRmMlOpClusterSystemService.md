@@ -50,7 +50,7 @@ Starts a system services update on the specified cluster.
 The operationalization cluster object.
 
 ```yaml
-Type: PSOperationalizationCluster
+Type: Microsoft.Azure.Commands.MachineLearningCompute.Models.PSOperationalizationCluster
 Parameter Sets: Start a system services update from an PSOperationalizationCluster instance definition.
 Aliases: Cluster
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 The name of the operationalization cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Start a system services update from cmdlet input parameters.
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 The name of the resource group for the operationalization cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Start a system services update from cmdlet input parameters.
 Aliases: 
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 The Azure resource id for the operationalization cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Start a system services update from an Azure resouce id.
 Aliases: 
 
@@ -126,7 +126,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

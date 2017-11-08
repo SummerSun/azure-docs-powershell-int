@@ -72,7 +72,7 @@ This command adds the recovery plan named RecoveryPlan.xml to the Azure Site Rec
 
 ### -Azure
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: EnterpriseToAzure, EnterpriseToAzureLegacy
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -FailoverDeploymentModel
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToAzure, EnterpriseToAzureLegacy, HyperVSiteToAzureLegacy
 Aliases: 
 Accepted values: Classic, ResourceManager
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Name
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, EnterpriseToEnterpriseLegacy, EnterpriseToAzureLegacy, HyperVSiteToAzureLegacy
 Aliases: 
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 Specifies the path of the recovery plan file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRPFile
 Aliases: 
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 
 ### -PrimaryFabric
 ```yaml
-Type: ASRFabric
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRFabric
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure
 Aliases: 
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -PrimaryServer
 ```yaml
-Type: ASRServer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRServer
 Parameter Sets: EnterpriseToEnterpriseLegacy, EnterpriseToAzureLegacy
 Aliases: 
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -PrimarySite
 ```yaml
-Type: ASRSite
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRSite
 Parameter Sets: HyperVSiteToAzureLegacy
 Aliases: 
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 ### -ProtectionEntityList
 ```yaml
-Type: ASRProtectionEntity[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity[]
 Parameter Sets: EnterpriseToEnterpriseLegacy, EnterpriseToAzureLegacy, HyperVSiteToAzureLegacy
 Aliases: 
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -RecoveryFabric
 ```yaml
-Type: ASRFabric
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRFabric
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 
 ### -RecoveryServer
 ```yaml
-Type: ASRServer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRServer
 Parameter Sets: EnterpriseToEnterpriseLegacy
 Aliases: 
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 ### -ReplicationProtectedItem
 ```yaml
-Type: ASRReplicationProtectedItem[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem[]
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure
 Aliases: 
 
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

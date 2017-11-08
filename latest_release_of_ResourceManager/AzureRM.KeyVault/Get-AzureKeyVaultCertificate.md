@@ -96,7 +96,7 @@ This command will return metadata such as the deletion date, and the scheduled p
 Indicates that this operation gets all versions of the certificate.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByCertificateVersions
 Aliases: 
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -InRemovedState
 Specifies whether to include previously deleted certificates in the output.```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByDeletedCertificates
 Aliases: 
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 Specifies the name of the certificate to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByCertificateName, ByCertificateVersions
 Aliases: CertificateName
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByDeletedCertificates
 Aliases: CertificateName
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Specifies the name of a key vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 Specifies the version of a certificate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByCertificateName
 Aliases: CertificateVersion
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -108,7 +108,7 @@ To obtain a **DateTime** object, use the Get-Date cmdlet.
 For more information about **DateTime** objects, type `Get-Help Get-Date`.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: FiltersSet
 Aliases: 
 
@@ -124,7 +124,7 @@ Specifies a job that this cmdlet gets.
 To obtain an **AzureRmBackupJob** object, use the Get-AzureRmBackupJob cmdlet.
 
 ```yaml
-Type: AzureRMBackupJob
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupJob
 Parameter Sets: JobsListFilter
 Aliases: 
 
@@ -141,7 +141,7 @@ The ID is the **InstanceId** property of an **AzureRmBackupJob** object.
 To obtain an **AzureRmBackupJob** object, use Get-AzureRmBackupJob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FiltersSet
 Aliases: 
 
@@ -165,7 +165,7 @@ The acceptable values for this parameter are:
 - Unregister
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FiltersSet
 Aliases: 
 Accepted values: Backup, ConfigureBackup, DeleteBackupData, Register, Restore, UnProtect, Unregister
@@ -191,7 +191,7 @@ The acceptable values for this parameter are:
 You can specify this parameter to find all in progress jobs or all failed jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FiltersSet
 Aliases: 
 Accepted values: Cancelled, Cancelling, Completed, CompletedWithWarnings, Failed, InProgress
@@ -209,7 +209,7 @@ The default value is the current system time.
 If you specify this parameter, you must also specify the *From* parameter.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: FiltersSet
 Aliases: 
 
@@ -225,7 +225,7 @@ Specifies the type of container for which this cmdlet gets backup jobs.
 Currently, the only supported value is AzureVM.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FiltersSet
 Aliases: 
 Accepted values: AzureVM
@@ -242,7 +242,7 @@ Specifies the Backup vault for which this cmdlet gets jobs.
 To obtain an **AzureRmBackupVault** object, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml
-Type: AzureRMBackupVault
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupVault
 Parameter Sets: FiltersSet
 Aliases: 
 
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

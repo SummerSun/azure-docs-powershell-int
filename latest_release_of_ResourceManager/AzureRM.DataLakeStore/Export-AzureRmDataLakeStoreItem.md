@@ -48,7 +48,7 @@ This command downloads the file TestSource.csv from the Data Lake Store to C:\Te
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -64,7 +64,7 @@ Specifies the maximum number of files to download in parallel for a folder downl
 The default value is five (5).
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 Specifies the local file path to which to download the file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 Optionally indicates the diagnostic log level to use to record events during the file or folder import. Default is Error.
 
 ```yaml
-Type: LogLevel
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.LogLevel
 Parameter Sets: Include diagnostic logging
 Aliases: 
 Accepted values: Debug, Information, Error, None
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 Specifies the path for the diagnostic log to record events to during the file or folder import.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Include diagnostic logging
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Indicates that this operation can overwrite the destination file if it already exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 Specifies the path of the item to download from the Data Lake Store, starting from the root directory (/).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -156,7 +156,7 @@ Specifies the maximum number of threads to use per file.
 The default value is ten (10).
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 Indicates that a folder download is recursive.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -187,7 +187,7 @@ Indicates that the file or files being copied are a continuation of a previous d
 The download attempts to resume from the last file that was not fully downloaded.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -218,7 +218,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

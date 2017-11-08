@@ -52,7 +52,7 @@ Valid values are: Daily and Hourly.
 The default value is Daily.
 
 ```yaml
-Type: AggregationGranularity
+Type: Microsoft.Azure.Commerce.UsageAggregates.Models.AggregationGranularity
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Daily, Hourly
@@ -72,7 +72,7 @@ If you do not specify this parameter, the data is retrieved from the beginning o
 We recommend that you follow the next link in the response to page though the data.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Even though you query by reported time, the cmdlet aggregates the response data 
 The resource usage data is the useful pivot for analyzing the data.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the reported start time for when resource usage was recorded in the Azure billing system.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -128,7 +128,7 @@ For example, if you are running three websites, by default you will get three li
 However, when the value is $False, all the data for the same **subscriptionId**, **meterId**, **usageStartTime**, and **usageEndTime** is collapsed into a single line item.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

@@ -43,7 +43,7 @@ The **Remove-AzureRmServerManagementSession** cmdlet removes an Azure Server Man
 Specifies the name of the node on which this cmdlet removes the session.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that the session belongs to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -75,7 +75,7 @@ Specifies the session that this cmdlet removes.
 This parameter may be used instead of the *ResourceGroupName*, *NodeName* and *SessionName* parameters.
 
 ```yaml
-Type: Session
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Session
 Parameter Sets: ByObject
 Aliases: 
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Specifies the name of the session that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObject
 Aliases: 
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

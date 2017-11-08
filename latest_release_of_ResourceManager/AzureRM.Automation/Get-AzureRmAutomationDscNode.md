@@ -92,7 +92,7 @@ This command gets metadata on all DSC nodes in the Automation account named Cont
 Specifies the name of the Automation account that contains the DSC nodes that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +108,7 @@ Specifies the name of a DSC configuration.
 This cmdlet gets DSC nodes that match the node configurations generated from the configuration that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByConfiguration
 Aliases: 
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Specifies the unique ID of the DSC node that this cmdlet gets.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ById
 Aliases: NodeId
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 Specifies the name of a DSC node that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: NodeName
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Specifies the name of a node configuration that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNodeConfiguration
 Aliases: 
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group in which this cmdlet gets DSC nodes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -191,7 +191,7 @@ Valid values are:
 - Unresponsive
 
 ```yaml
-Type: DscNodeStatus
+Type: Microsoft.Azure.Commands.Automation.Common.DscNodeStatus
 Parameter Sets: ByAll, ByName, ByNodeConfiguration
 Aliases: 
 Accepted values: Compliant, NotCompliant, Failed, Pending, Received, Unresponsive
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

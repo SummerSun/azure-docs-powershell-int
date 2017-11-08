@@ -69,7 +69,7 @@ This command disables the ActivityLogAlert using the ResourceId parameter from t
 The name of the activity log alert.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Default parameters for disable an activity log alert
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 The name of the resource group where the alert resource is going to exist.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Default parameters for disable an activity log alert
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 Sets the InputObject tags property of the call to extract the required name, resource group name, and the optional tag properties.
 
 ```yaml
-Type: PSActivityLogAlertResource
+Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 Parameter Sets: Parameters to disable an activity log alerts taking value from the pipe
 Aliases: 
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 Sets the ResourceId tags property of the call to extract the required name, resource group name properties.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameters to disable an activity log alerts taking the value of ResourceId from the pipe
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

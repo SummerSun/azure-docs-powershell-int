@@ -46,7 +46,7 @@ This command sets the properties for a certificate issuer, and then stores it in
 Specifies the account ID for the certificate issuer.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Expanded
 Aliases: 
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies the API key for the certificate issuer.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: Expanded
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies the certificate issuer to update.
 
 ```yaml
-Type: KeyVaultCertificateIssuer
+Type: Microsoft.Azure.Commands.KeyVault.Models.KeyVaultCertificateIssuer
 Parameter Sets: ByValue
 Aliases: 
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 Specifies the type of certificate issuer.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Expanded
 Aliases: 
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 Specifies the name of the Issuer.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: IssuerName
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 Organization details to be used with the issuer.
 
 ```yaml
-Type: KeyVaultCertificateOrganizationDetails
+Type: Microsoft.Azure.Commands.KeyVault.Models.KeyVaultCertificateOrganizationDetails
 Parameter Sets: Expanded
 Aliases: 
 
@@ -137,7 +137,7 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 Specifies the name of the key vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -183,7 +183,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
